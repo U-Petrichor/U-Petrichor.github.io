@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Shared Inventory Mod（共享存储模组） | Petrichor' Blog</title><meta name="author" content="Petrichor"><meta name="copyright" content="Petrichor"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="介绍 Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段 这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求 这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能  最终目标 实现远程交换物品 实现大容量背包 实现多种工作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shared Inventory Mod（共享存储模组）">
+<meta property="og:url" content="https://u-petrichor.github.io/2025/09/15/Minecraft/SharedInventoryMod/index.html">
+<meta property="og:site_name" content="Petrichor&#39; Blog">
+<meta property="og:description" content="介绍 Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段 这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求 这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能  最终目标 实现远程交换物品 实现大容量背包 实现多种工作">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://u-petrichor.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2025-09-14T16:00:48.000Z">
+<meta property="article:modified_time" content="2025-09-14T19:06:39.520Z">
+<meta property="article:author" content="Petrichor">
+<meta property="article:tag" content="Minecraft">
+<meta property="article:tag" content="SharedInventoryMod">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://u-petrichor.github.io/img/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Shared Inventory Mod（共享存储模组）",
+  "url": "https://u-petrichor.github.io/2025/09/15/Minecraft/SharedInventoryMod/",
+  "image": "https://u-petrichor.github.io/img/avatar.jpg",
+  "datePublished": "2025-09-14T16:00:48.000Z",
+  "dateModified": "2025-09-14T19:06:39.520Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Petrichor",
+      "url": "https://u-petrichor.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/avatar.jpg"><link rel="canonical" href="https://u-petrichor.github.io/2025/09/15/Minecraft/SharedInventoryMod/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Shared Inventory Mod（共享存储模组）',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom-dark.css"><link rel="stylesheet" href="/css/custom-light.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%95%99%E7%A8%8B/"><i class="fa-fw fas fa-book"></i><span> 教程</span></a></li><li><a class="site-page child" href="/categories/%E6%B8%B8%E6%88%8F/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/categories/%E5%85%B6%E4%BB%96/"><i class="fa-fw fas fa-folder"></i><span> 其他</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th-list"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Petrichor' Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Shared Inventory Mod（共享存储模组）</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%95%99%E7%A8%8B/"><i class="fa-fw fas fa-book"></i><span> 教程</span></a></li><li><a class="site-page child" href="/categories/%E6%B8%B8%E6%88%8F/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/categories/%E5%85%B6%E4%BB%96/"><i class="fa-fw fas fa-folder"></i><span> 其他</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th-list"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Shared Inventory Mod（共享存储模组）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-14T16:00:48.000Z" title="发表于 2025-09-15 00:00:48">2025-09-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-09-14T19:06:39.520Z" title="更新于 2025-09-15 03:06:39">2025-09-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F/Minecraft/">Minecraft</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%B8%B8%E6%88%8F/Minecraft/SharedInventoryMod/">SharedInventoryMod</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul>
+<li>Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段</li>
+<li>这个模组的创作理念是因为我<strong>懒</strong>，过去似乎没有任何一个模组可以同时满足<strong>大容量背包</strong>和<strong>远程交换物品</strong>，所以我就想自己写一个模组来满足我的需求</li>
+<li>这个模组的原理是多名玩家<strong>绑定同一个核心</strong>，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能</li>
+</ul>
+<h2 id="最终目标"><a href="#最终目标" class="headerlink" title="最终目标"></a>最终目标</h2><ol>
+<li>实现远程交换物品</li>
+<li>实现大容量背包</li>
+<li>实现多种工作台(工作台、熔炉、锻造台等等)</li>
+<li>实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)</li>
+<li>实现物品排序以及搜索功能</li>
+<li>更好看的外观以及UI</li>
+<li>移植到基岩版本以及Forge版本（太过遥远）</li>
+</ol>
+<h2 id="目前状态"><a href="#目前状态" class="headerlink" title="目前状态"></a>目前状态</h2><h3 id="最新版已实现功能"><a href="#最新版已实现功能" class="headerlink" title="最新版已实现功能"></a>最新版已实现功能</h3><ol>
+<li>实现了远程交换物品</li>
+<li>实现了大容量背包</li>
+<li>仅仅实现了内嵌工作台</li>
+<li>糟糕的贴图</li>
+<li>没法排序和搜索</li>
+<li>版本都没有移植完</li>
+</ol>
+<h3 id="已知BUG"><a href="#已知BUG" class="headerlink" title="已知BUG"></a>已知BUG</h3><p>暂无</p>
+<h3 id="下次更新已实现功能预告"><a href="#下次更新已实现功能预告" class="headerlink" title="下次更新已实现功能预告"></a>下次更新已实现功能预告</h3><p>暂无</p>
+<h3 id="反馈方式"><a href="#反馈方式" class="headerlink" title="反馈方式"></a>反馈方式</h3><p>如果你有发现任何BUG，请及时以以下方式向我反馈</p>
+<ul>
+<li>邮件: <a href="mailto:&#117;&#95;&#112;&#x65;&#x74;&#x72;&#105;&#x63;&#x68;&#x6f;&#x72;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#111;&#109;">u_petrichor@163.com</a></li>
+<li>QQ群:970039533（我是群主，也欢迎你来水群）</li>
+<li>Bilibili私信或视频评论区发送消息（不太可靠）</li>
+</ul>
+<h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><ol>
+<li>百度网盘:<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3">https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3</a></li>
+<li>qBittorrent：（暂未提供，稍等等）</li>
+<li>Q群：970039533（我是群主，也欢迎你来水群）</li>
+</ol>
+<h1 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h1><p>安装模组的教程我就省略了</p>
+<h2 id="关键物品合成表"><a href="#关键物品合成表" class="headerlink" title="关键物品合成表"></a>关键物品合成表</h2><h3 id="存储核心-Shared-Inventory-Core"><a href="#存储核心-Shared-Inventory-Core" class="headerlink" title="存储核心(Shared Inventory Core)"></a>存储核心(Shared Inventory Core)</h3><h3 id="共享背包-Shared-Inventory-Backpack"><a href="#共享背包-Shared-Inventory-Backpack" class="headerlink" title="共享背包(Shared Inventory Backpack)"></a>共享背包(Shared Inventory Backpack)</h3><h1 id="历代更新内容介绍"><a href="#历代更新内容介绍" class="headerlink" title="历代更新内容介绍"></a>历代更新内容介绍</h1><h2 id="0-4"><a href="#0-4" class="headerlink" title="0.4"></a>0.4</h2><p>第一个发布的版本（bushi，主要是之前的版本删掉了）</p>
+<ol>
+<li>实现了远程交换物品</li>
+<li>实现了大容量背包</li>
+<li>仅仅实现了内嵌工作台</li>
+<li>糟糕的贴图</li>
+</ol>
+<hr>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://u-petrichor.github.io">Petrichor</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://u-petrichor.github.io/2025/09/15/Minecraft/SharedInventoryMod/">https://u-petrichor.github.io/2025/09/15/Minecraft/SharedInventoryMod/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://u-petrichor.github.io" target="_blank">Petrichor' Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Minecraft/">Minecraft</a><a class="post-meta__tags" href="/tags/SharedInventoryMod/">SharedInventoryMod</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/09/14/tutorials/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="qBittorrent使用教程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">qBittorrent使用教程</div></div><div class="info-2"><div class="info-item-1">本站的所有资源都提供百度网盘、磁力链接以及Q群文件（970039533）三种下载方式，百度网盘无会员龟速下载，所以根据自己的情况选择下载方式 qBittorrent下载和使用教程先介绍一下qBittorrent，qBittorrent是一款免费、开源的BitTorrent客户端，功能强大且无广告，只要有用户有已经下载好的内容，并且电脑联网可上传文件，就可以使用qBittorrent下载资源。所以说如果你有充足的存储空间，为了文件长期可下载，请保留下载好的文件，给后来的用户提供下载服务。 下载与安装qBittorrent这里以Windows10系统为例 官网下载地址访问qBittorrent官方网站：https://www.qbittorrent.org/ 点击Download 根据自己的操作系统选择下载版本 选择下载版本 静静等待下载完成，如果没有科学上网可能速度较慢。下载完成后直接安装即可，安装过程中并没有任何要修改的地方，直接点击下一步即可，直到安装完成qBittorrent后续下载的文件路径可以单独设置，所以无需担心qBittorrent本体的下载位置 初始配置语言设置 启...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Petrichor</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/U-Petrichor"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/U-Petrichor" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/442831003?spm_id_from=333.1007.0.0" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E7%9B%AE%E6%A0%87"><span class="toc-text">最终目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%89%8D%E7%8A%B6%E6%80%81"><span class="toc-text">目前状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E6%96%B0%E7%89%88%E5%B7%B2%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD"><span class="toc-text">最新版已实现功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E7%9F%A5BUG"><span class="toc-text">已知BUG</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%B7%B2%E5%AE%9E%E7%8E%B0%E5%8A%9F%E8%83%BD%E9%A2%84%E5%91%8A"><span class="toc-text">下次更新已实现功能预告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E9%A6%88%E6%96%B9%E5%BC%8F"><span class="toc-text">反馈方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-text">下载链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-text">使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E7%89%A9%E5%93%81%E5%90%88%E6%88%90%E8%A1%A8"><span class="toc-text">关键物品合成表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E6%A0%B8%E5%BF%83-Shared-Inventory-Core"><span class="toc-text">存储核心(Shared Inventory Core)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E8%83%8C%E5%8C%85-Shared-Inventory-Backpack"><span class="toc-text">共享背包(Shared Inventory Backpack)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%86%E4%BB%A3%E6%9B%B4%E6%96%B0%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D"><span class="toc-text">历代更新内容介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-4"><span class="toc-text">0.4</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Petrichor</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script src="/js/custom.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
