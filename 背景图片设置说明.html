@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Petrichor' Blog | Petrichor' Blog</title><meta name="author" content="Petrichor"><meta name="copyright" content="Petrichor"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="博客背景图片设置说明当前背景设置目前博客使用了渐变色背景和增强的卡片样式： Dark主题 页面背景: 深夜渐变 (#0d2538 → #1b3b52 → #0f2027) 卡片背景: 深色渐变 + 毛玻璃效果 头像背景: 青绿色渐变光晕  Light主题 页面背景: 温暖日光渐变 (#ffecd2 → #fcb69f → #ff9a9e) 卡片背景: 浅色渐变 + 毛玻璃效果 头像背景: 粉色渐变">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Petrichor&#39; Blog">
+<meta property="og:url" content="https://u-petrichor.github.io/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html">
+<meta property="og:site_name" content="Petrichor&#39; Blog">
+<meta property="og:description" content="博客背景图片设置说明当前背景设置目前博客使用了渐变色背景和增强的卡片样式： Dark主题 页面背景: 深夜渐变 (#0d2538 → #1b3b52 → #0f2027) 卡片背景: 深色渐变 + 毛玻璃效果 头像背景: 青绿色渐变光晕  Light主题 页面背景: 温暖日光渐变 (#ffecd2 → #fcb69f → #ff9a9e) 卡片背景: 浅色渐变 + 毛玻璃效果 头像背景: 粉色渐变">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://u-petrichor.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2025-09-14T19:22:07.791Z">
+<meta property="article:modified_time" content="2025-09-14T19:22:07.791Z">
+<meta property="article:author" content="Petrichor">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://u-petrichor.github.io/img/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/avatar.jpg"><link rel="canonical" href="https://u-petrichor.github.io/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Petrichor\' Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom-dark.css"><link rel="stylesheet" href="/css/custom-light.css"><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="/css/bounce.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%95%99%E7%A8%8B/"><i class="fa-fw fas fa-book"></i><span> 教程</span></a></li><li><a class="site-page child" href="/categories/%E6%B8%B8%E6%88%8F/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/categories/%E5%85%B6%E4%BB%96/"><i class="fa-fw fas fa-folder"></i><span> 其他</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th-list"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Petrichor' Blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 分类</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E6%95%99%E7%A8%8B/"><i class="fa-fw fas fa-book"></i><span> 教程</span></a></li><li><a class="site-page child" href="/categories/%E6%B8%B8%E6%88%8F/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/categories/%E5%85%B6%E4%BB%96/"><i class="fa-fw fas fa-folder"></i><span> 其他</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th-list"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title"></h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><h1 id="博客背景图片设置说明"><a href="#博客背景图片设置说明" class="headerlink" title="博客背景图片设置说明"></a>博客背景图片设置说明</h1><h2 id="当前背景设置"><a href="#当前背景设置" class="headerlink" title="当前背景设置"></a>当前背景设置</h2><p>目前博客使用了渐变色背景和增强的卡片样式：</p>
+<h3 id="Dark主题"><a href="#Dark主题" class="headerlink" title="Dark主题"></a>Dark主题</h3><ul>
+<li><strong>页面背景</strong>: 深夜渐变 (#0d2538 → #1b3b52 → #0f2027)</li>
+<li><strong>卡片背景</strong>: 深色渐变 + 毛玻璃效果</li>
+<li><strong>头像背景</strong>: 青绿色渐变光晕</li>
+</ul>
+<h3 id="Light主题"><a href="#Light主题" class="headerlink" title="Light主题"></a>Light主题</h3><ul>
+<li><strong>页面背景</strong>: 温暖日光渐变 (#ffecd2 → #fcb69f → #ff9a9e)</li>
+<li><strong>卡片背景</strong>: 浅色渐变 + 毛玻璃效果</li>
+<li><strong>头像背景</strong>: 粉色渐变光晕</li>
+</ul>
+<h2 id="如何更换为背景图片"><a href="#如何更换为背景图片" class="headerlink" title="如何更换为背景图片"></a>如何更换为背景图片</h2><h3 id="1-准备图片"><a href="#1-准备图片" class="headerlink" title="1. 准备图片"></a>1. 准备图片</h3><p>将背景图片放置在 <code>source/img/</code> 目录下，建议：</p>
+<ul>
+<li>分辨率: 1920x1080 或更高</li>
+<li>格式: JPG&#x2F;PNG&#x2F;WebP</li>
+<li>文件大小: 控制在 500KB 以内</li>
+<li>命名示例: <code>bg-dark.jpg</code>, <code>bg-light.jpg</code></li>
+</ul>
+<h3 id="2-修改CSS文件"><a href="#2-修改CSS文件" class="headerlink" title="2. 修改CSS文件"></a>2. 修改CSS文件</h3><h4 id="Dark主题背景图片-custom-dark-css"><a href="#Dark主题背景图片-custom-dark-css" class="headerlink" title="Dark主题背景图片 (custom-dark.css)"></a>Dark主题背景图片 (custom-dark.css)</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 将这段代码 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="number">#0d2538</span> <span class="number">0%</span>, <span class="number">#1b3b52</span> <span class="number">50%</span>, <span class="number">#0f2027</span> <span class="number">100%</span>) fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 替换为 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: </span><br><span class="line">    <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">13</span>, <span class="number">37</span>, <span class="number">56</span>, <span class="number">0.7</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">27</span>, <span class="number">59</span>, <span class="number">82</span>, <span class="number">0.5</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">15</span>, <span class="number">32</span>, <span class="number">39</span>, <span class="number">0.7</span>) <span class="number">100%</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">&#x27;/img/bg-dark.jpg&#x27;</span>) center/cover fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Light主题背景图片-custom-light-css"><a href="#Light主题背景图片-custom-light-css" class="headerlink" title="Light主题背景图片 (custom-light.css)"></a>Light主题背景图片 (custom-light.css)</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 将这段代码 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="number">#ffecd2</span> <span class="number">0%</span>, <span class="number">#fcb69f</span> <span class="number">50%</span>, <span class="number">#ff9a9e</span> <span class="number">100%</span>) fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">51</span>, <span class="number">51</span>, <span class="number">51</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 替换为 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: </span><br><span class="line">    <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">236</span>, <span class="number">210</span>, <span class="number">0.6</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">252</span>, <span class="number">182</span>, <span class="number">159</span>, <span class="number">0.4</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">154</span>, <span class="number">158</span>, <span class="number">0.6</span>) <span class="number">100%</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">&#x27;/img/bg-light.jpg&#x27;</span>) center/cover fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">51</span>, <span class="number">51</span>, <span class="number">51</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-卡片背景调整"><a href="#3-卡片背景调整" class="headerlink" title="3. 卡片背景调整"></a>3. 卡片背景调整</h3><p>使用背景图片后，建议增加卡片的不透明度以保持可读性：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Dark主题卡片调整 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-class">.card</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">13</span>, <span class="number">37</span>, <span class="number">56</span>, <span class="number">0.85</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">27</span>, <span class="number">59</span>, <span class="number">82</span>, <span class="number">0.75</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">15</span>, <span class="number">32</span>, <span class="number">39</span>, <span class="number">0.85</span>) <span class="number">100%</span>);</span><br><span class="line">  <span class="attribute">backdrop-filter</span>: <span class="built_in">blur</span>(<span class="number">12px</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Light主题卡片调整 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-class">.card</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.9</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">236</span>, <span class="number">210</span>, <span class="number">0.8</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">252</span>, <span class="number">182</span>, <span class="number">159</span>, <span class="number">0.75</span>) <span class="number">100%</span>);</span><br><span class="line">  <span class="attribute">backdrop-filter</span>: <span class="built_in">blur</span>(<span class="number">12px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-应用更改"><a href="#4-应用更改" class="headerlink" title="4. 应用更改"></a>4. 应用更改</h3><p>修改完成后运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h2 id="背景图片建议"><a href="#背景图片建议" class="headerlink" title="背景图片建议"></a>背景图片建议</h2><h3 id="Dark主题适合的图片"><a href="#Dark主题适合的图片" class="headerlink" title="Dark主题适合的图片"></a>Dark主题适合的图片</h3><ul>
+<li>星空、夜景、深色抽象图案</li>
+<li>色调偏冷色系 (蓝、紫、青)</li>
+<li>避免过于明亮的图片</li>
+</ul>
+<h3 id="Light主题适合的图片"><a href="#Light主题适合的图片" class="headerlink" title="Light主题适合的图片"></a>Light主题适合的图片</h3><ul>
+<li>日出日落、温暖风景、浅色纹理</li>
+<li>色调偏暖色系 (橙、粉、黄)</li>
+<li>避免过于深暗的图片</li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li><strong>性能考虑</strong>: 背景图片会影响加载速度，建议压缩优化</li>
+<li><strong>响应式</strong>: 确保图片在不同设备上显示良好</li>
+<li><strong>可读性</strong>: 始终保持文字内容的清晰可读</li>
+<li><strong>备份</strong>: 修改前备份原始CSS文件</li>
+</ol>
+<h2 id="恢复渐变背景"><a href="#恢复渐变背景" class="headerlink" title="恢复渐变背景"></a>恢复渐变背景</h2><p>如需恢复当前的渐变背景，只需删除 <code>url()</code> 部分，保留 <code>linear-gradient()</code> 即可。</p>
+</div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Petrichor</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/U-Petrichor" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/442831003?spm_id_from=333.1007.0.0" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">偷懒中~~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/15/Minecraft/SharedInventoryMod/" title="Shared Inventory Mod（共享存储模组）">Shared Inventory Mod（共享存储模组）</a><time datetime="2025-09-14T16:00:48.000Z" title="发表于 2025-09-15 00:00:48">2025-09-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/14/tutorials/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="qBittorrent使用教程">qBittorrent使用教程</a><time datetime="2025-09-14T09:32:04.000Z" title="发表于 2025-09-14 17:32:04">2025-09-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/14/hello-world/" title="Hello World">Hello World</a><time datetime="2025-09-13T19:36:09.249Z" title="发表于 2025-09-14 03:36:09">2025-09-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/%E8%BD%AF%E4%BB%B6/"><span class="card-category-list-name">软件</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/Minecraft/"><span class="card-category-list-name">Minecraft</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/Minecraft/SharedInventoryMod/"><span class="card-category-list-name">SharedInventoryMod</span><span class="card-category-list-count">1</span></a></li></ul></li></ul></li>
+          </ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">3.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-14T22:02:33.722Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Petrichor</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
+      serverURL: 'https://waline-docs-mocha.vercel.app',
+      pageview: true,
+      dark: 'html[data-theme="dark"]',
+      comment: true,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
+    else {
+      btf.getCSS('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.css')
+        .then(() => import('https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
+    }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
+  }
+
+  if ('Waline' === 'Waline' || !false) {
+    if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script></div><script src="/js/custom.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="啊~~~" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
