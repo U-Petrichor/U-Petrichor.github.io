@@ -76,14 +76,6 @@ html[data-theme='light'] .search-dialog .search-nav {
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* 代码块 */
-html[data-theme='light'] pre, html[data-theme='light'] code {
-  color: #6c5ce7;
-}
-html[data-theme='light'] .highlight, html[data-theme='light'] pre code {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(108, 92, 231, 0.1);
-}
 
 /* 引用块条纹强调 */
 html[data-theme='light'] blockquote {
@@ -328,15 +320,7 @@ html[data-theme='light'] .post-content table tr:nth-child(even) {
   background: rgba(255, 245, 245, 0.5);
 }
 
-/* 代码块样式 */
-html[data-theme='light'] .post-content code {
-  color: var(--warm-green) !important;
-  background: var(--warm-surface1);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: 'Fira Code', 'Consolas', monospace;
-  border: 1px solid rgba(0, 184, 148, 0.2);
-}
+
 
 /* 引用块样式 */
 html[data-theme='light'] .post-content blockquote {
@@ -387,4 +371,32 @@ html[data-theme='light'] .custom-right-menus .menu-item:hover {
   background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
   color: #ffffff !important;
   box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);
+}
+
+/* 修复：恢复代码块（包括 plaintext）为 Butterfly 默认背景（light） */
+html[data-theme='light'] figure.highlight table,
+html[data-theme='light'] figure.highlight td,
+html[data-theme='light'] figure.highlight th {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='light'] figure.highlight table,
+html[data-theme='light'] figure.highlight td,
+html[data-theme='light'] figure.highlight th {
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+html[data-theme='light'] figure.highlight,
+html[data-theme='light'] figure.highlight .highlight-tools {
+  box-shadow: none !important;
+}
+/* 调整代码块工具栏复制与展开按钮的间距（light） */
+html[data-theme='light'] figure.highlight .highlight-tools {
+  gap: 6px;
+}
+html[data-theme='light'] figure.highlight .highlight-tools .expand {
+  margin-left: 4px;
 }

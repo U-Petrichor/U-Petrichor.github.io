@@ -76,13 +76,6 @@ html[data-theme='dark'] .search-dialog .search-nav {
   background: rgba(10, 20, 28, 0.5);
 }
 
-/* 代码块 */
-html[data-theme='dark'] pre, html[data-theme='dark'] code {
-  color: #f4a261;
-}
-html[data-theme='dark'] .highlight, html[data-theme='dark'] pre code {
-  background: rgba(0, 0, 0, 0.25);
-}
 
 /* 引用块条纹强调 */
 html[data-theme='dark'] blockquote {
@@ -328,14 +321,7 @@ html[data-theme='dark'] .post-content table tr:nth-child(even) {
   background: rgba(69, 71, 90, 0.3);
 }
 
-/* 代码块样式 - 使用Green */
-html[data-theme='dark'] .post-content code {
-  color: var(--ctp-green) !important;
-  background: var(--ctp-surface1);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: 'Fira Code', 'Consolas', monospace;
-}
+
 
 /* 引用块样式 - 使用Peach */
 html[data-theme='dark'] .post-content blockquote {
@@ -385,4 +371,33 @@ html[data-theme='dark'] body::before {
   transform: translateY(-1px);
   background: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);
   color: #0a1118 !important;
+}
+
+html[data-theme='dark'] figure.highlight table,
+html[data-theme='dark'] figure.highlight td,
+html[data-theme='dark'] figure.highlight th {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] figure.highlight table,
+html[data-theme='dark'] figure.highlight td,
+html[data-theme='dark'] figure.highlight th {
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+/* 避免表格样式对代码块工具栏/容器产生影响 */
+html[data-theme='dark'] figure.highlight,
+html[data-theme='dark'] figure.highlight .highlight-tools {
+  box-shadow: none !important;
+}
+
+/* 调整代码块工具栏复制与展开按钮的间距（dark） */
+html[data-theme='dark'] figure.highlight .highlight-tools {
+  gap: 6px; /* 相邻控件之间增加 6px 间距 */
+}
+html[data-theme='dark'] figure.highlight .highlight-tools .expand {
+  margin-left: 4px; /* 展开图标与前一元素稍微拉开 */
 }
