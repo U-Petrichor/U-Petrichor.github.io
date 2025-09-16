@@ -1,0 +1,39 @@
+/* Unified custom interactions for both themes */
+@media (min-width: 901px) {
+  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
+  }
+
+  /* 覆盖任何 img:hover 的旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
+  }
+
+  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
+  #aside-content .card-info .avatar-img,
+  #sidebar-menus .avatar-img {
+    transform-origin: center center;
+    transition: transform 0.25s ease-in-out !important;
+    will-change: transform;
+  }
+  #aside-content .card-info .avatar-img:hover,
+  #sidebar-menus .avatar-img:hover {
+    transform: scale(1.06) !important;
+  }
+
+  /* 3) 侧栏社交图标悬停放大 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
+  }
+}

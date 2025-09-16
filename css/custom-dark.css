@@ -401,3 +401,41 @@ html[data-theme='dark'] figure.highlight .highlight-tools {
 html[data-theme='dark'] figure.highlight .highlight-tools .expand {
   margin-left: 4px; /* 展开图标与前一元素稍微拉开 */
 }
+
+/* Avatar & social icons interaction override - dark theme */
+@media (min-width: 901px) {
+  /* 1) 禁用头像默认旋转动画（主题在 .avatar-img 或其 img 上可能设置 animation 或 :hover rotate） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
+  }
+
+  /* 覆盖任何 :hover 旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
+  }
+
+  /* 2) 改为鼠标移入微放大（带平滑过渡），移出还原 */
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img img {
+    transition: transform 0.25s ease-in-out !important;
+  }
+  #aside-content .card-info .avatar-img:hover img,
+  #sidebar-menus .avatar-img:hover img {
+    transform: scale(1.06) !important; /* 微放大 */
+  }
+
+  /* 3) 社交图标悬停放大（教程需求），避免影响布局 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
+  }
+}
