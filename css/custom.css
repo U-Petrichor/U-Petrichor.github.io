@@ -58,3 +58,34 @@
   padding: 4px;
   border-radius: 4px;
 }
+
+/* 固定吸底、水平居中显示网易云外链播放器 */
+.netease-fixed-player {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 2000;
+  width: 330px; /* 与 iframe 一致，避免拉伸 */
+  height: 110px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+/* 让 iframe 完整撑满容器 */
+.netease-fixed-player iframe {
+  width: 330px !important;
+  height: 110px !important;
+  border: 0;
+}
+
+/* 移动端自适应：略微缩小宽度，避免遮挡 */
+@media (max-width: 420px) {
+  .netease-fixed-player,
+  .netease-fixed-player iframe {
+    width: 300px !important;
+    height: 110px !important;
+  }
+}
