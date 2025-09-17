@@ -216,7 +216,7 @@
 <h3 id="下次更新已实现功能预告"><a href="#下次更新已实现功能预告" class="headerlink" title="下次更新已实现功能预告"></a>下次更新已实现功能预告</h3><p>暂无</p>
 <h3 id="反馈方式"><a href="#反馈方式" class="headerlink" title="反馈方式"></a>反馈方式</h3><p>如果你有发现任何<strong>BUG</strong>，有任何<strong>建议</strong>，或者有<strong>合作意愿</strong>，欢迎联系我</p>
 <ul>
-<li>邮件: <a href="mailto:&#117;&#95;&#112;&#101;&#116;&#114;&#105;&#99;&#x68;&#111;&#114;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#x6d;">u_petrichor@163.com</a></li>
+<li>邮件: <a href="mailto:&#x75;&#x5f;&#x70;&#101;&#116;&#114;&#105;&#99;&#x68;&#111;&#x72;&#x40;&#49;&#54;&#x33;&#46;&#99;&#111;&#x6d;">u_petrichor@163.com</a></li>
 <li>QQ群:970039533（我是群主，也欢迎你来水群）</li>
 <li>Bilibili私信或视频评论区发送消息（不太可靠）</li>
 </ul>
@@ -297,24 +297,7 @@
 POWERMODE.shake = false;
 POWERMODE.mobile = true;
 document.body.addEventListener('input', POWERMODE);
-</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="啊~~~" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
-  const destroyAplayer = () => {
-    if (window.aplayers) {
-      for (let i = 0; i < window.aplayers.length; i++) {
-        if (!window.aplayers[i].options.fixed) {
-          window.aplayers[i].destroy()
-        }
-      }
-    }
-  }
-
-  const runMetingJS = () => {
-    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
-  }
-
-  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
-  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
-})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="啊~~~" data-fontsize="15px" data-random="false" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
   const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
   window.pjax = new Pjax({
