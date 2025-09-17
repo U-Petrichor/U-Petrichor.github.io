@@ -1,1557 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Hello World</title>
-    <url>/2025/09/14/hello-world/</url>
-    <content><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server$ hexo server
-
-More info: Server
-Generate static files$ hexo generate
-
-More info: Generating
-Deploy to remote sites$ hexo deploy
-
-More info: Deployment
-]]></content>
-  </entry>
-  <entry>
-    <title>Shared Inventory Mod（共享存储模组）</title>
-    <url>/2025/09/15/Minecraft/SharedInventoryMod/</url>
-    <content><![CDATA[介绍
-Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段
-这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求
-这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能
-
-最终目标
-实现远程交换物品
-实现大容量背包
-实现多种工作台(工作台、熔炉、锻造台等等)
-实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)
-实现物品排序以及搜索功能
-更好看的外观以及UI
-移植到基岩版本以及Forge版本（太过遥远）
-
-最新版已实现功能
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-没法排序和搜索
-版本都没有移植完
-
-已知BUG暂无
-下次更新已实现功能预告暂无
-反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
-
-邮件: u_petrichor@163.com
-QQ群:970039533（我是群主，也欢迎你来水群）
-Bilibili私信或视频评论区发送消息（不太可靠）
-
-下载链接
-百度网盘:https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3
-qBittorrent：SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里
-如果你不会用qBittorrent：三分钟学会用磁力链接
-请不要使用百度网盘、迅雷等下载这个磁力链接
-
-
-Q群：970039533（我是群主，也欢迎你来水群）
-
-使用教程安装模组的教程我就省略了
-关键物品合成表存储核心(Shared Inventory Core)共享背包(Shared Inventory Backpack)历代更新内容介绍0.4第一个发布的版本（bushi，主要是之前的版本删掉了）
-
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-
-
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Waline的配置以及去掉部分登录选项</title>
+      <link href="/2025/09/16/tutorials/Waline%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%8E%BB%E6%8E%89%E9%83%A8%E5%88%86%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/"/>
+      <url>/2025/09/16/tutorials/Waline%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%8E%BB%E6%8E%89%E9%83%A8%E5%88%86%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/</url>
+      
+        <content type="html"><![CDATA[<p>开篇吐槽（可以不看）：煎熬的几天，抱着先搞定功能再调整网页外观，没想到这个评论的配置卡我这么久，其实昨天就已经可以正常登录了，但是waline默认提供的登录方式足足有5种，但对于我这种大概率没什么人看的内容，费心思去争取国内的登陆方式是没有必要的，所以我就想能不能仅仅留几个我目前会实现的登陆方式，比如说只留下此时我实现的Github登录。为了这个目的我是到处找攻略，问AI，但还是没有找到一个能自始至终一步步详细指导的文章，所以就有了这篇文章。</p><h1 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h1><p>我先简单说一下我当时的情况</p><hr>]]></content>
+      
+      
       <categories>
-        <category>游戏</category>
-        <category>Minecraft</category>
-        <category>SharedInventoryMod</category>
+          
+          <category> 教程 </category>
+          
+          <category> 配置 </category>
+          
       </categories>
-      <tags>
-        <tag>Minecraft</tag>
-        <tag>SharedInventoryMod</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Waline的配置以及去掉部分登录选项</title>
-    <url>/2025/09/16/tutorials/Waline%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%8E%BB%E6%8E%89%E9%83%A8%E5%88%86%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/</url>
-    <content><![CDATA[开篇吐槽（可以不看）：煎熬的几天，抱着先搞定功能再调整网页外观，没想到这个评论的配置卡我这么久，其实昨天就已经可以正常登录了，但是waline默认提供的登录方式足足有5种，但对于我这种大概率没什么人看的内容，费心思去争取国内的登陆方式是没有必要的，所以我就想能不能仅仅留几个我目前会实现的登陆方式，比如说只留下此时我实现的Github登录。为了这个目的我是到处找攻略，问AI，但还是没有找到一个能自始至终一步步详细指导的文章，所以就有了这篇文章。
-前情提要我先简单说一下我当时的情况
-
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Shared Inventory Mod（共享存储模组）</title>
+      <link href="/2025/09/15/Minecraft/SharedInventoryMod/"/>
+      <url>/2025/09/15/Minecraft/SharedInventoryMod/</url>
+      
+        <content type="html"><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><ul><li>Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段</li><li>这个模组的创作理念是因为我<strong>懒</strong>，过去似乎没有任何一个模组可以同时满足<strong>大容量背包</strong>和<strong>远程交换物品</strong>，所以我就想自己写一个模组来满足我的需求</li><li>这个模组的原理是多名玩家<strong>绑定同一个核心</strong>，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能</li></ul><h2 id="最终目标"><a href="#最终目标" class="headerlink" title="最终目标"></a>最终目标</h2><ol><li>实现远程交换物品</li><li>实现大容量背包</li><li>实现多种工作台(工作台、熔炉、锻造台等等)</li><li>实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)</li><li>实现物品排序以及搜索功能</li><li>更好看的外观以及UI</li><li>移植到基岩版本以及Forge版本（太过遥远）</li></ol><h3 id="最新版已实现功能"><a href="#最新版已实现功能" class="headerlink" title="最新版已实现功能"></a>最新版已实现功能</h3><ol><li>实现了远程交换物品</li><li>实现了大容量背包</li><li>仅仅实现了内嵌工作台</li><li>糟糕的贴图</li><li>没法排序和搜索</li><li>版本都没有移植完</li></ol><h3 id="已知BUG"><a href="#已知BUG" class="headerlink" title="已知BUG"></a>已知BUG</h3><p>暂无</p><h3 id="下次更新已实现功能预告"><a href="#下次更新已实现功能预告" class="headerlink" title="下次更新已实现功能预告"></a>下次更新已实现功能预告</h3><p>暂无</p><h3 id="反馈方式"><a href="#反馈方式" class="headerlink" title="反馈方式"></a>反馈方式</h3><p>如果你有发现任何<strong>BUG</strong>，有任何<strong>建议</strong>，或者有<strong>合作意愿</strong>，欢迎联系我</p><ul><li>邮件: <a href="mailto:&#117;&#95;&#x70;&#101;&#x74;&#x72;&#105;&#x63;&#104;&#111;&#x72;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#111;&#x6d;">u_petrichor@163.com</a></li><li>QQ群:970039533（我是群主，也欢迎你来水群）</li><li>Bilibili私信或视频评论区发送消息（不太可靠）</li></ul><h2 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h2><ol><li>百度网盘:<a href="https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3">https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3</a></li><li>qBittorrent：<a href="magnet:?xt=urn:btih:51f1e7521e8b8e813d27ac7a5f7ea240c9488522&dn=SharedInventoryMod&xl=762626&tr=http%3A%2F%2F1337.abcvg.info%3A80%2Fannounce&tr=http%3A%2F%2Fbt.okmp3.ru%3A2710%2Fannounce&tr=http%3A%2F%2Fchihaya.de%3A80%2Fannounce&tr=http%3A%2F%2Fipv6.rer.lol%3A6969%2Fannounce&tr=http%3A%2F%2Flucke.fenesisu.moe%3A6969%2Fannounce&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=http%3A%2F%2Ftk.greedland.net%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.hificode.in%3A6969%2Fannounce&tr=http%3A%2F%2Ftorrentsmd.com%3A8080%2Fannounce&tr=http%3A%2F%2Ftracker.beeimg.com%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.bt4g.com%3A2095%2Fannounce&tr=http%3A%2F%2Ftracker.ipv6tracker.ru%3A80%2Fannounce&tr=http%3A%2F%2Ftracker.mywaifu.best%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.netmap.top%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.privateseedbox.xyz%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.renfei.net%3A8080%2Fannounce&tr=http%3A%2F%2Ftracker.sbsub.com%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.skyts.net%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.tritan.gg%3A8080%2Fannounce&tr=http%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.xiaoduola.xyz%3A6969%2Fannounce&tr=http%3A%2F%2Fwww.all4nothin.net%3A80%2Fannounce.php&tr=http%3A%2F%2Fwww.genesis-sp.org%3A2710%2Fannounce&tr=http%3A%2F%2Fwww.torrentsnipe.info%3A2701%2Fannounce&tr=http%3A%2F%2Fwww.wareztorrent.com%3A80%2Fannounce&tr=https%3A%2F%2F1337.abcvg.info%3A443%2Fannounce&tr=https%3A%2F%2Ftr.abiir.top%3A443%2Fannounce&tr=https%3A%2F%2Ftr.nyacat.pw%3A443%2Fannounce&tr=https%3A%2F%2Ftr.zukizuki.org%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.aburaya.live%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.bjut.jp%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.expli.top%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.ghostchu-services.top%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.itscraftsoftware.my.id%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.jdx3.org%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.kuroy.me%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.leechshield.link%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.lilithraws.org%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.yemekyedim.com%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.zhuqiy.top%3A443%2Fannounce&tr=https%3A%2F%2Ftracker1.520.jp%3A443%2Fannounce&tr=udp%3A%2F%2Fd40969.acod.regrucolo.ru%3A6969%2Fannounce&tr=udp%3A%2F%2Fdiscord.heihachi.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Fevan.im%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fextracker.dahrkael.net%3A6969%2Fannounce&tr=udp%3A%2F%2Fleet-tracker.moe%3A1337%2Fannounce&tr=udp%3A%2F%2Fmartin-gebhardt.eu%3A25%2Fannounce&tr=udp%3A%2F%2Fns-1.x-fins.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.free-tracker.ga%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Fp2p.publictracker.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fretracker.hotplug.ru%3A2710%2Fannounce&tr=udp%3A%2F%2Fretracker.lanta.me%3A2710%2Fannounce&tr=udp%3A%2F%2Ft.overflow.biz%3A6969%2Fannounce&tr=udp%3A%2F%2Fthouvenin.cloud%3A6969%2Fannounce&tr=udp%3A%2F%2Ftorrent.i.ng%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.0x7c0.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.darkness.services%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.deadorbit.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.ducks.party%3A1984%2Fannounce&tr=udp%3A%2F%2Ftracker.dump.cl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.fnix.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.gigantino.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.gmi.gd%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.kmzs123.cn%3A17272%2Fannounce&tr=udp%3A%2F%2Ftracker.kmzs123.top%3A17272%2Fannounce&tr=udp%3A%2F%2Ftracker.ololosh.space%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.qu.ax%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.skyts.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.srv00.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.therarbg.to%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.tryhackx.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.valete.tf%3A9999%2Fannounce&tr=udp%3A%2F%2Ftracker.yume-hatsuyuki.moe%3A6969%2Fannounce&tr=udp%3A%2F%2Fttk2.nbaonlineservice.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fudp.tracker.projectk.org%3A23333%2Fannounce&tr=udp%3A%2F%2Fwww.torrent.eu.org%3A451%2Fannounce&tr=wss%3A%2F%2Ftracker.openwebtorrent.com%3A443%2Fanno">SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里</a><ul><li>如果你不会用qBittorrent：<a href="/2025/09/14/tutorials/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="qBittorrent使用教程">三分钟学会用磁力链接</a></li><li>请不要使用<strong>百度网盘</strong>、<strong>迅雷</strong>等下载这个磁力链接</li></ul></li><li>Q群：970039533（我是群主，也欢迎你来水群）</li></ol><h1 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h1><p>安装模组的教程我就省略了</p><h2 id="关键物品合成表"><a href="#关键物品合成表" class="headerlink" title="关键物品合成表"></a>关键物品合成表</h2><h3 id="存储核心-Shared-Inventory-Core"><a href="#存储核心-Shared-Inventory-Core" class="headerlink" title="存储核心(Shared Inventory Core)"></a>存储核心(Shared Inventory Core)</h3><h3 id="共享背包-Shared-Inventory-Backpack"><a href="#共享背包-Shared-Inventory-Backpack" class="headerlink" title="共享背包(Shared Inventory Backpack)"></a>共享背包(Shared Inventory Backpack)</h3><h1 id="历代更新内容介绍"><a href="#历代更新内容介绍" class="headerlink" title="历代更新内容介绍"></a>历代更新内容介绍</h1><h2 id="0-4"><a href="#0-4" class="headerlink" title="0.4"></a>0.4</h2><p>第一个发布的版本（bushi，主要是之前的版本删掉了）</p><ol><li>实现了远程交换物品</li><li>实现了大容量背包</li><li>仅仅实现了内嵌工作台</li><li>糟糕的贴图</li></ol><hr>]]></content>
+      
+      
       <categories>
-        <category>教程</category>
-        <category>配置</category>
+          
+          <category> 游戏 </category>
+          
+          <category> Minecraft </category>
+          
+          <category> SharedInventoryMod </category>
+          
       </categories>
-      <tags>
-        <tag>配置</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>qBittorrent使用教程</title>
-    <url>/2025/09/14/tutorials/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[本站的所有资源都提供百度网盘、磁力链接以及Q群文件（970039533）三种下载方式，百度网盘无会员龟速下载，所以根据自己的情况选择下载方式
-qBittorrent下载和使用教程先介绍一下qBittorrent，qBittorrent是一款免费、开源的BitTorrent客户端，功能强大且无广告，只要有用户有已经下载好的内容，并且电脑联网可上传文件，就可以使用qBittorrent下载资源。所以说如果你有充足的存储空间，为了文件长期可下载，请保留下载好的文件，给后来的用户提供下载服务。
-下载与安装qBittorrent这里以Windows10系统为例
-官网下载地址访问qBittorrent官方网站：https://www.qbittorrent.org/
-点击Download
-根据自己的操作系统选择下载版本
-选择下载版本
-静静等待下载完成，如果没有科学上网可能速度较慢。下载完成后直接安装即可，安装过程中并没有任何要修改的地方，直接点击下一步即可，直到安装完成qBittorrent后续下载的文件路径可以单独设置，所以无需担心qBittorrent本体的下载位置
-初始配置语言设置
-启动后如果是英文界面
-在顶部的菜单点击”Tools” → “Options”
-在”Behavior”选项卡中
-将”Language”改为”简体中文”
-重启软件
-
-下载设置
-在顶部的菜单点击”Tools” → “Options”
-在”下载”选项卡中
-设置”保存文件到”路径
-建议选择空间充足的磁盘
-下载完成后建议不要乱动文件，否则需要重新设置路径
-
-添加Tracker服务器Tracker服务器可以帮助你更快地找到其他用户，提高下载速度。以下是我收集的公共tracker列表：
-Tracker服务器列表以下是公共tracker列表，可以复制粘贴到qBittorrent中使用：
-http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya.de:80/announcehttp://ipv6.rer.lol:6969/announcehttp://lucke.fenesisu.moe:6969/announcehttp://nyaa.tracker.wf:7777/announcehttp://tk.greedland.net:80/announcehttp://torrent.hificode.in:6969/announcehttp://torrentsmd.com:8080/announcehttp://tracker.beeimg.com:6969/announcehttp://tracker.bt4g.com:2095/announcehttp://tracker.ipv6tracker.ru:80/announcehttp://tracker.mywaifu.best:6969/announcehttp://tracker.netmap.top:6969/announcehttp://tracker.privateseedbox.xyz:2710/announcehttp://tracker.renfei.net:8080/announcehttp://tracker.sbsub.com:2710/announcehttp://tracker.skyts.net:6969/announcehttp://tracker.tritan.gg:8080/announcehttp://tracker.vanitycore.co:6969/announcehttp://tracker.xiaoduola.xyz:6969/announcehttp://www.all4nothin.net:80/announce.phphttp://www.genesis-sp.org:2710/announcehttp://www.torrentsnipe.info:2701/announcehttp://www.wareztorrent.com:80/announcehttps://1337.abcvg.info:443/announcehttps://tr.abiir.top:443/announcehttps://tr.nyacat.pw:443/announcehttps://tr.zukizuki.org:443/announcehttps://tracker.aburaya.live:443/announcehttps://tracker.bjut.jp:443/announcehttps://tracker.expli.top:443/announcehttps://tracker.foreverpirates.co:443/announcehttps://tracker.ghostchu-services.top:443/announcehttps://tracker.itscraftsoftware.my.id:443/announcehttps://tracker.jdx3.org:443/announcehttps://tracker.kuroy.me:443/announcehttps://tracker.leechshield.link:443/announcehttps://tracker.lilithraws.org:443/announcehttps://tracker.yemekyedim.com:443/announcehttps://tracker.zhuqiy.top:443/announcehttps://tracker1.520.jp:443/announceudp://d40969.acod.regrucolo.ru:6969/announceudp://discord.heihachi.pw:6969/announceudp://evan.im:6969/announceudp://exodus.desync.com:6969/announceudp://extracker.dahrkael.net:6969/announceudp://leet-tracker.moe:1337/announcehttp://0123456789nonexistent.com:80/announcehttp://1337.abcvg.info:80/announcehttp://207.241.226.111:6969/announcehttp://207.241.231.226:6969/announcehttp://[2a04:ac00:1:3dd8::1:2710]:2710/announcehttp://bittorrent-tracker.e-n-c-r-y-p-t.net:1337/announcehttp://bt.okmp3.ru:2710/announcehttp://bt.poletracker.org:2710/announcehttp://bt1.xxxxbt.cc:6969/announcehttp://buny.uk:6969/announcehttp://ipv6.rer.lol:6969/announcehttp://lucke.fenesisu.moe:6969/announcehttp://ns3109441.mypdns.org:6969/announcehttp://nyaa.tracker.wf:7777/announcehttp://open.trackerlist.xyz:80/announcehttp://p4p.arenabg.com:1337/announcehttp://retracker.hotplug.ru:2710/announcehttp://seeders-paradise.org:80/announcehttp://t.overflow.biz:6969/announcehttp://taciturn-shadow.spb.ru:6969/announcehttp://tk.greedland.net:80/announcehttp://torrentsmd.com:8080/announcehttp://tr.nyacat.pw:80/announcehttp://tracker.23794.top:6969/announcehttp://tracker.beeimg.com:6969/announcehttp://tracker.bt-hash.com:80/announcehttp://tracker.bt4g.com:2095/announcehttp://tracker.darkness.services:6969/announcehttp://tracker.dler.com:6969/announcehttp://tracker.dler.org:6969/announcehttp://tracker.dmcomic.org:2710/announcehttp://tracker.ghostchu-services.top:80/announcehttp://tracker.ipv6tracker.org:80/announcehttp://tracker.ipv6tracker.ru:80/announcehttp://tracker.lintk.me:2710/announcehttp://tracker.moxing.party:6969/announcehttp://tracker.mywaifu.best:6969/announcehttp://tracker.netmap.top:6969/announcehttp://tracker.privateseedbox.xyz:2710/announcehttp://tracker.qu.ax:6969/announcehttp://tracker.renfei.net:8080/announcehttp://tracker.skyts.net:6969/announcehttp://tracker.tritan.gg:8080/announcehttp://tracker.waaa.moe:6969/announcehttp://tracker.xiaoduola.xyz:6969/announcehttp://tracker.zhuqiy.top:80/announcehttp://tracker2.itzmx.com:6961/announcehttp://tracker810.xyz:11450/announcehttp://wepzone.net:6969/announcehttp://www.all4nothin.net:80/announce.phphttp://www.wareztorrent.com:80/announcehttps://1337.abcvg.info:443/announcehttps://sparkle.ghostchu-services.top:443/announcehttps://threads.canofsocks.com:443/announcehttps://tr.abiir.top:443/announcehttps://tr.abir.ga:443/announcehttps://tr.nyacat.pw:443/announcehttps://tr.zukizuki.org:443/announcehttps://tracker.aburaya.live:443/announcehttps://tracker.bjut.jp:443/announcehttps://tracker.bt4g.com:443/announcehttps://tracker.expli.top:443/announcehttps://tracker.foreverpirates.co:443/announcehttps://tracker.gcrenwp.top:443/announcehttps://tracker.ghostchu-services.top:443/announcehttps://tracker.itscraftsoftware.my.id:443/announcehttps://tracker.jdx3.org:443/announcehttps://tracker.kuroy.me:443/announcehttps://tracker.leechshield.link:443/announcehttps://tracker.lilithraws.org:443/announcehttps://tracker.linvk.com:443/announcehttps://tracker.moeblog.cn:443/announcehttps://tracker.pmman.tech:443/announcehttps://tracker.yemekyedim.com:443/announcehttps://tracker.zhuqiy.top:443/announcehttps://tracker1.520.jp:443/announceudp://207.241.226.111:6969/announceudp://207.241.231.226:6969/announceudp://52.58.128.163:6969/announceudp://[2a03:7220:8083:cd00::1]:451/announceudp://[2a04:ac00:1:3dd8::1:2710]:2710/announceudp://[2a0f:e586:f:f::81]:6969/announceudp://admin.52ywp.com:6969/announceudp://bittorrent-tracker.e-n-c-r-y-p-t.net:1337/announceudp://bt.ktrackers.com:6666/announceudp://bt.rer.lol:2710/announceudp://bt.rer.lol:6969/announceudp://concen.org:6969/announceudp://d40969.acod.regrucolo.ru:6969/announceudp://discord.heihachi.pw:6969/announceudp://evan.im:6969/announceudp://exodus.desync.com:6969/announceudp://extracker.dahrkael.net:6969/announceudp://ipv4.rer.lol:2710/announceudp://ipv4announce.sktorrent.eu:6969/announceudp://isk.richardsw.club:6969/announceudp://leet-tracker.moe:1337/announceudp://martin-gebhardt.eu:25/announceudp://open.demonii.com:1337/announceudp://open.dstud.io:6969/announceudp://open.free-tracker.ga:6969/announceudp://open.stealth.si:80/announceudp://opentor.org:2710/announceudp://opentracker.io:6969/announceudp://p2p.publictracker.xyz:6969/announceudp://p4p.arenabg.com:1337/announceudp://retracker.hotplug.ru:2710/announceudp://retracker.lanta.me:2710/announceudp://retracker01-msk-virt.corbina.net:80/announceudp://t.overflow.biz:6969/announceudp://thouvenin.cloud:6969/announceudp://torrent.i.ng:6969/announceudp://tr3.ysagin.top:2715/announceudp://tr4ck3r.duckdns.org:6969/announceudp://tracker-udp.gbitt.info:80/announceudp://tracker.0x7c0.com:6969/announceudp://tracker.bitcoinindia.space:6969/announceudp://tracker.bittor.pw:1337/announceudp://tracker.breizh.pm:6969/announceudp://tracker.cyberia.is:6969/announceudp://tracker.darkness.services:6969/announceudp://tracker.ddunlimited.net:6969/announceudp://tracker.deadorbit.nl:6969/announceudp://tracker.dler.com:6969/announceudp://tracker.dler.org:6969/announceudp://tracker.ducks.party:1984/announceudp://tracker.filemail.com:6969/announceudp://tracker.fnix.net:6969/announceudp://tracker.gigantino.net:6969/announceudp://tracker.gmi.gd:6969/announceudp://tracker.iperson.xyz:6969/announceudp://tracker.kmzs123.cn:17272/announceudp://tracker.kmzs123.top:17272/announceudp://tracker.ololosh.space:6969/announceudp://tracker.opentrackr.org:1337/announceudp://tracker.qu.ax:6969/announceudp://tracker.skyts.net:6969/announceudp://tracker.srv00.com:6969/announceudp://tracker.therarbg.to:6969/announceudp://tracker.tiny-vps.com:6969/announceudp://tracker.torrent.eu.org:451/announceudp://tracker.torrust-demo.com:6969/announceudp://tracker.tryhackx.org:6969/announceudp://tracker.yume-hatsuyuki.moe:6969/announceudp://tracker1.myporn.club:9337/announceudp://tracker2.dler.org:80/announceudp://tracker2.itzmx.com:6961/announceudp://tracker3.itzmx.com:6961/announceudp://tracker4.itzmx.com:2710/announceudp://ttk2.nbaonlineservice.com:6969/announceudp://udp.tracker.projectk.org:23333/announceudp://wepzone.net:6969/announceudp://www.torrent.eu.org:451/announcewss://tracker.openwebtorrent.com:443/announce
-
-如何添加Tracker：
-
-复制上面的tracker列表
-在qBittorrent中右键点击正在下载的任务
-选择”属性” → “Trackers”选项卡
-点击”添加”按钮，粘贴tracker列表
-点击”确定”保存
-
-为什么不建议全局添加Tracker?
-
-因为有些网站的资源是不允许外传的，所以还是建议单个添加(反正我目前是单个添加)
-
-开始使用
-在开始使用前，先说一件重要的事，请不要使用迅雷、百度网盘等类似软件下载本网站的资源，具体原因请自行了解
-然而这些软件都会自行检测剪贴板内容并强行弹窗，如果遇到这种情况千万不要使用其余软件下载
-如果觉得这些弹窗很烦人，可以在对应软件的设置里关闭
-
-如何下载种子
-通过磁力链接
-
-一般来说都会有类似”magnet:?……”的内容，将完整的内容复制，打开qBittorrent之后按下Ctrl+V即可打开下载选项
-在弹出的下载选项里面进行如图所示的设置，即可开始下载
-
-
-拖拽添加
-
-直接将.torrent文件拖拽到qBittorrent窗口(一般来说是下面中样式的文件)
-
-
-
-如何分享文件
-制作torrent文件并分享给别人
-
-打开qBittorrent
-点击”工具” → “生成 Torrent(C)”
-选择要分享的文件或文件夹(推荐分享文件夹)
-点击”创建”
-保存.torrent文件
-
-
-直接复制磁力链接分享给别人
-
-同样要先制作种子，跟1中步骤一样
-鼠标右键点击制作好的种子，选择图中的选项
-
-
-
-界面介绍
-这篇只是为了让大家能更方便的下载文件才写，关于qBittorrent的更多技巧还需要自行钻研，不过这里还是大致介绍一下主界面的内容
-本人也不是这方面的专家，只是一个普通的使用者，我把自己常用的功能都在这张图上写出来了，希望能帮到你   
-
-
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Minecraft </tag>
+            
+            <tag> SharedInventoryMod </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>qBittorrent使用教程</title>
+      <link href="/2025/09/14/tutorials/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+      <url>/2025/09/14/tutorials/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>本站的所有资源都提供<strong>百度网盘</strong>、<strong>磁力链接</strong>以及<strong>Q群文件</strong>（970039533）三种下载方式，百度网盘无会员龟速下载，所以根据自己的情况选择下载方式</p><h1 id="qBittorrent下载和使用教程"><a href="#qBittorrent下载和使用教程" class="headerlink" title="qBittorrent下载和使用教程"></a>qBittorrent下载和使用教程</h1><p>先介绍一下qBittorrent，qBittorrent是一款<strong>免费</strong>、<strong>开源</strong>的BitTorrent客户端，功能强大且<strong>无广告</strong>，只要有用户有已经下载好的内容，并且电脑联网可上传文件，就可以使用qBittorrent下载资源。所以说如果你有<strong>充足的存储空间</strong>，为了文件长期可下载，<strong>请保留</strong>下载好的文件，给后来的用户提供下载服务。</p><h2 id="下载与安装qBittorrent"><a href="#下载与安装qBittorrent" class="headerlink" title="下载与安装qBittorrent"></a>下载与安装qBittorrent</h2><p>这里以<strong>Windows10</strong>系统为例</p><h3 id="官网下载地址"><a href="#官网下载地址" class="headerlink" title="官网下载地址"></a>官网下载地址</h3><p>访问qBittorrent官方网站：<a href="https://www.qbittorrent.org/">https://www.qbittorrent.org/</a></p><p><strong>点击Download</strong><br><img src="/img/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B1.png" alt="点击Download"></p><p><strong>根据自己的操作系统选择下载版本</strong><br><img src="/img/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B2.png" alt="选择对应版本"></p><p><strong>选择下载版本</strong><br><img src="/img/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B3.png" alt="选择下载版本"></p><p>静静等待下载完成，如果没有科学上网可能速度较慢。<br>下载完成后直接安装即可，安装过程中并没有任何要修改的地方，直接点击下一步即可，直到安装完成<br>qBittorrent后续下载的文件路径可以单独设置，所以无需担心qBittorrent本体的下载位置</p><h2 id="初始配置"><a href="#初始配置" class="headerlink" title="初始配置"></a>初始配置</h2><h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><ul><li>启动后如果是英文界面</li><li>在顶部的菜单点击”Tools” → “Options”</li><li>在”Behavior”选项卡中</li><li>将”Language”改为”简体中文”</li><li>重启软件</li></ul><h3 id="下载设置"><a href="#下载设置" class="headerlink" title="下载设置"></a>下载设置</h3><ul><li>在顶部的菜单点击”Tools” → “Options”</li><li>在”下载”选项卡中</li><li>设置”保存文件到”路径</li><li>建议选择空间充足的磁盘</li><li>下载完成后建议不要乱动文件，否则需要重新设置路径</li></ul><h3 id="添加Tracker服务器"><a href="#添加Tracker服务器" class="headerlink" title="添加Tracker服务器"></a>添加Tracker服务器</h3><p>Tracker服务器可以帮助你更快地找到其他用户，提高下载速度。以下是我收集的公共tracker列表：</p><h3 id="Tracker服务器列表"><a href="#Tracker服务器列表" class="headerlink" title="Tracker服务器列表"></a>Tracker服务器列表</h3><p>以下是公共tracker列表，可以复制粘贴到qBittorrent中使用：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br></pre></td><td class="code"><pre><span class="line">http://1337.abcvg.info:80/announce</span><br><span class="line"></span><br><span class="line">http://bt.okmp3.ru:2710/announce</span><br><span class="line"></span><br><span class="line">http://chihaya.de:80/announce</span><br><span class="line"></span><br><span class="line">http://ipv6.rer.lol:6969/announce</span><br><span class="line"></span><br><span class="line">http://lucke.fenesisu.moe:6969/announce</span><br><span class="line"></span><br><span class="line">http://nyaa.tracker.wf:7777/announce</span><br><span class="line"></span><br><span class="line">http://tk.greedland.net:80/announce</span><br><span class="line"></span><br><span class="line">http://torrent.hificode.in:6969/announce</span><br><span class="line"></span><br><span class="line">http://torrentsmd.com:8080/announce</span><br><span class="line"></span><br><span class="line">http://tracker.beeimg.com:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.bt4g.com:2095/announce</span><br><span class="line"></span><br><span class="line">http://tracker.ipv6tracker.ru:80/announce</span><br><span class="line"></span><br><span class="line">http://tracker.mywaifu.best:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.netmap.top:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.privateseedbox.xyz:2710/announce</span><br><span class="line"></span><br><span class="line">http://tracker.renfei.net:8080/announce</span><br><span class="line"></span><br><span class="line">http://tracker.sbsub.com:2710/announce</span><br><span class="line"></span><br><span class="line">http://tracker.skyts.net:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.tritan.gg:8080/announce</span><br><span class="line"></span><br><span class="line">http://tracker.vanitycore.co:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.xiaoduola.xyz:6969/announce</span><br><span class="line"></span><br><span class="line">http://www.all4nothin.net:80/announce.php</span><br><span class="line"></span><br><span class="line">http://www.genesis-sp.org:2710/announce</span><br><span class="line"></span><br><span class="line">http://www.torrentsnipe.info:2701/announce</span><br><span class="line"></span><br><span class="line">http://www.wareztorrent.com:80/announce</span><br><span class="line"></span><br><span class="line">https://1337.abcvg.info:443/announce</span><br><span class="line"></span><br><span class="line">https://tr.abiir.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tr.nyacat.pw:443/announce</span><br><span class="line"></span><br><span class="line">https://tr.zukizuki.org:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.aburaya.live:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.bjut.jp:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.expli.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.foreverpirates.co:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.ghostchu-services.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.itscraftsoftware.my.id:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.jdx3.org:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.kuroy.me:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.leechshield.link:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.lilithraws.org:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.yemekyedim.com:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.zhuqiy.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker1.520.jp:443/announce</span><br><span class="line"></span><br><span class="line">udp://d40969.acod.regrucolo.ru:6969/announce</span><br><span class="line"></span><br><span class="line">udp://discord.heihachi.pw:6969/announce</span><br><span class="line"></span><br><span class="line">udp://evan.im:6969/announce</span><br><span class="line"></span><br><span class="line">udp://exodus.desync.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://extracker.dahrkael.net:6969/announce</span><br><span class="line"></span><br><span class="line">udp://leet-tracker.moe:1337/announce</span><br><span class="line"></span><br><span class="line">http://0123456789nonexistent.com:80/announce</span><br><span class="line"></span><br><span class="line">http://1337.abcvg.info:80/announce</span><br><span class="line"></span><br><span class="line">http://207.241.226.111:6969/announce</span><br><span class="line"></span><br><span class="line">http://207.241.231.226:6969/announce</span><br><span class="line"></span><br><span class="line">http://[2a04:ac00:1:3dd8::1:2710]:2710/announce</span><br><span class="line"></span><br><span class="line">http://bittorrent-tracker.e-n-c-r-y-p-t.net:1337/announce</span><br><span class="line"></span><br><span class="line">http://bt.okmp3.ru:2710/announce</span><br><span class="line"></span><br><span class="line">http://bt.poletracker.org:2710/announce</span><br><span class="line"></span><br><span class="line">http://bt1.xxxxbt.cc:6969/announce</span><br><span class="line"></span><br><span class="line">http://buny.uk:6969/announce</span><br><span class="line"></span><br><span class="line">http://ipv6.rer.lol:6969/announce</span><br><span class="line"></span><br><span class="line">http://lucke.fenesisu.moe:6969/announce</span><br><span class="line"></span><br><span class="line">http://ns3109441.mypdns.org:6969/announce</span><br><span class="line"></span><br><span class="line">http://nyaa.tracker.wf:7777/announce</span><br><span class="line"></span><br><span class="line">http://open.trackerlist.xyz:80/announce</span><br><span class="line"></span><br><span class="line">http://p4p.arenabg.com:1337/announce</span><br><span class="line"></span><br><span class="line">http://retracker.hotplug.ru:2710/announce</span><br><span class="line"></span><br><span class="line">http://seeders-paradise.org:80/announce</span><br><span class="line"></span><br><span class="line">http://t.overflow.biz:6969/announce</span><br><span class="line"></span><br><span class="line">http://taciturn-shadow.spb.ru:6969/announce</span><br><span class="line"></span><br><span class="line">http://tk.greedland.net:80/announce</span><br><span class="line"></span><br><span class="line">http://torrentsmd.com:8080/announce</span><br><span class="line"></span><br><span class="line">http://tr.nyacat.pw:80/announce</span><br><span class="line"></span><br><span class="line">http://tracker.23794.top:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.beeimg.com:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.bt-hash.com:80/announce</span><br><span class="line"></span><br><span class="line">http://tracker.bt4g.com:2095/announce</span><br><span class="line"></span><br><span class="line">http://tracker.darkness.services:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.dler.com:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.dler.org:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.dmcomic.org:2710/announce</span><br><span class="line"></span><br><span class="line">http://tracker.ghostchu-services.top:80/announce</span><br><span class="line"></span><br><span class="line">http://tracker.ipv6tracker.org:80/announce</span><br><span class="line"></span><br><span class="line">http://tracker.ipv6tracker.ru:80/announce</span><br><span class="line"></span><br><span class="line">http://tracker.lintk.me:2710/announce</span><br><span class="line"></span><br><span class="line">http://tracker.moxing.party:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.mywaifu.best:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.netmap.top:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.privateseedbox.xyz:2710/announce</span><br><span class="line"></span><br><span class="line">http://tracker.qu.ax:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.renfei.net:8080/announce</span><br><span class="line"></span><br><span class="line">http://tracker.skyts.net:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.tritan.gg:8080/announce</span><br><span class="line"></span><br><span class="line">http://tracker.waaa.moe:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.xiaoduola.xyz:6969/announce</span><br><span class="line"></span><br><span class="line">http://tracker.zhuqiy.top:80/announce</span><br><span class="line"></span><br><span class="line">http://tracker2.itzmx.com:6961/announce</span><br><span class="line"></span><br><span class="line">http://tracker810.xyz:11450/announce</span><br><span class="line"></span><br><span class="line">http://wepzone.net:6969/announce</span><br><span class="line"></span><br><span class="line">http://www.all4nothin.net:80/announce.php</span><br><span class="line"></span><br><span class="line">http://www.wareztorrent.com:80/announce</span><br><span class="line"></span><br><span class="line">https://1337.abcvg.info:443/announce</span><br><span class="line"></span><br><span class="line">https://sparkle.ghostchu-services.top:443/announce</span><br><span class="line"></span><br><span class="line">https://threads.canofsocks.com:443/announce</span><br><span class="line"></span><br><span class="line">https://tr.abiir.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tr.abir.ga:443/announce</span><br><span class="line"></span><br><span class="line">https://tr.nyacat.pw:443/announce</span><br><span class="line"></span><br><span class="line">https://tr.zukizuki.org:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.aburaya.live:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.bjut.jp:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.bt4g.com:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.expli.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.foreverpirates.co:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.gcrenwp.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.ghostchu-services.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.itscraftsoftware.my.id:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.jdx3.org:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.kuroy.me:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.leechshield.link:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.lilithraws.org:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.linvk.com:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.moeblog.cn:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.pmman.tech:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.yemekyedim.com:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker.zhuqiy.top:443/announce</span><br><span class="line"></span><br><span class="line">https://tracker1.520.jp:443/announce</span><br><span class="line"></span><br><span class="line">udp://207.241.226.111:6969/announce</span><br><span class="line"></span><br><span class="line">udp://207.241.231.226:6969/announce</span><br><span class="line"></span><br><span class="line">udp://52.58.128.163:6969/announce</span><br><span class="line"></span><br><span class="line">udp://[2a03:7220:8083:cd00::1]:451/announce</span><br><span class="line"></span><br><span class="line">udp://[2a04:ac00:1:3dd8::1:2710]:2710/announce</span><br><span class="line"></span><br><span class="line">udp://[2a0f:e586:f:f::81]:6969/announce</span><br><span class="line"></span><br><span class="line">udp://admin.52ywp.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://bittorrent-tracker.e-n-c-r-y-p-t.net:1337/announce</span><br><span class="line"></span><br><span class="line">udp://bt.ktrackers.com:6666/announce</span><br><span class="line"></span><br><span class="line">udp://bt.rer.lol:2710/announce</span><br><span class="line"></span><br><span class="line">udp://bt.rer.lol:6969/announce</span><br><span class="line"></span><br><span class="line">udp://concen.org:6969/announce</span><br><span class="line"></span><br><span class="line">udp://d40969.acod.regrucolo.ru:6969/announce</span><br><span class="line"></span><br><span class="line">udp://discord.heihachi.pw:6969/announce</span><br><span class="line"></span><br><span class="line">udp://evan.im:6969/announce</span><br><span class="line"></span><br><span class="line">udp://exodus.desync.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://extracker.dahrkael.net:6969/announce</span><br><span class="line"></span><br><span class="line">udp://ipv4.rer.lol:2710/announce</span><br><span class="line"></span><br><span class="line">udp://ipv4announce.sktorrent.eu:6969/announce</span><br><span class="line"></span><br><span class="line">udp://isk.richardsw.club:6969/announce</span><br><span class="line"></span><br><span class="line">udp://leet-tracker.moe:1337/announce</span><br><span class="line"></span><br><span class="line">udp://martin-gebhardt.eu:25/announce</span><br><span class="line"></span><br><span class="line">udp://open.demonii.com:1337/announce</span><br><span class="line"></span><br><span class="line">udp://open.dstud.io:6969/announce</span><br><span class="line"></span><br><span class="line">udp://open.free-tracker.ga:6969/announce</span><br><span class="line"></span><br><span class="line">udp://open.stealth.si:80/announce</span><br><span class="line"></span><br><span class="line">udp://opentor.org:2710/announce</span><br><span class="line"></span><br><span class="line">udp://opentracker.io:6969/announce</span><br><span class="line"></span><br><span class="line">udp://p2p.publictracker.xyz:6969/announce</span><br><span class="line"></span><br><span class="line">udp://p4p.arenabg.com:1337/announce</span><br><span class="line"></span><br><span class="line">udp://retracker.hotplug.ru:2710/announce</span><br><span class="line"></span><br><span class="line">udp://retracker.lanta.me:2710/announce</span><br><span class="line"></span><br><span class="line">udp://retracker01-msk-virt.corbina.net:80/announce</span><br><span class="line"></span><br><span class="line">udp://t.overflow.biz:6969/announce</span><br><span class="line"></span><br><span class="line">udp://thouvenin.cloud:6969/announce</span><br><span class="line"></span><br><span class="line">udp://torrent.i.ng:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tr3.ysagin.top:2715/announce</span><br><span class="line"></span><br><span class="line">udp://tr4ck3r.duckdns.org:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker-udp.gbitt.info:80/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.0x7c0.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.bitcoinindia.space:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.bittor.pw:1337/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.breizh.pm:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.cyberia.is:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.darkness.services:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.ddunlimited.net:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.deadorbit.nl:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.dler.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.dler.org:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.ducks.party:1984/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.filemail.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.fnix.net:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.gigantino.net:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.gmi.gd:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.iperson.xyz:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.kmzs123.cn:17272/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.kmzs123.top:17272/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.ololosh.space:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.opentrackr.org:1337/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.qu.ax:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.skyts.net:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.srv00.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.therarbg.to:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.tiny-vps.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.torrent.eu.org:451/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.torrust-demo.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.tryhackx.org:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker.yume-hatsuyuki.moe:6969/announce</span><br><span class="line"></span><br><span class="line">udp://tracker1.myporn.club:9337/announce</span><br><span class="line"></span><br><span class="line">udp://tracker2.dler.org:80/announce</span><br><span class="line"></span><br><span class="line">udp://tracker2.itzmx.com:6961/announce</span><br><span class="line"></span><br><span class="line">udp://tracker3.itzmx.com:6961/announce</span><br><span class="line"></span><br><span class="line">udp://tracker4.itzmx.com:2710/announce</span><br><span class="line"></span><br><span class="line">udp://ttk2.nbaonlineservice.com:6969/announce</span><br><span class="line"></span><br><span class="line">udp://udp.tracker.projectk.org:23333/announce</span><br><span class="line"></span><br><span class="line">udp://wepzone.net:6969/announce</span><br><span class="line"></span><br><span class="line">udp://www.torrent.eu.org:451/announce</span><br><span class="line"></span><br><span class="line">wss://tracker.openwebtorrent.com:443/announce</span><br></pre></td></tr></table></figure><p><strong>如何添加Tracker：</strong></p><ol><li>复制上面的tracker列表</li><li>在qBittorrent中右键点击正在下载的任务</li><li>选择”属性” → “Trackers”选项卡</li><li>点击”添加”按钮，粘贴tracker列表</li><li>点击”确定”保存</li></ol><p><strong>为什么不建议全局添加Tracker?</strong></p><ul><li>因为有些网站的资源是不允许外传的，所以还是建议单个添加(反正我目前是单个添加)</li></ul><h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><ul><li>在开始使用前，先说一件<strong>重要的事</strong>，请<strong>不要使用迅雷</strong>、<strong>百度网盘</strong>等类似软件下载本网站的资源，<strong>具体原因请自行了解</strong></li><li>然而这些软件都会<strong>自行检测剪贴板内容</strong>并<strong>强行弹窗</strong>，如果遇到这种情况<strong>千万不要使用</strong>其余软件下载</li><li>如果觉得这些弹窗很烦人，可以在对应软件的设置里关闭</li></ul><h3 id="如何下载种子"><a href="#如何下载种子" class="headerlink" title="如何下载种子"></a>如何下载种子</h3><ol><li><p><strong>通过磁力链接</strong></p><ul><li>一般来说都会有类似”magnet:?……”的内容，将完整的内容复制，打开qBittorrent之后按下<strong>Ctrl+V</strong>即可打开下载选项</li><li>在弹出的下载选项里面进行如图所示的设置，即可开始下载<br><img src="/img/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B4.png" alt="下载设置"></li></ul></li><li><p><strong>拖拽添加</strong></p><ul><li>直接将.torrent文件拖拽到qBittorrent窗口(一般来说是下面中样式的文件)<br><img src="/img/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B5.png" alt="torrent文件"></li></ul></li></ol><h3 id="如何分享文件"><a href="#如何分享文件" class="headerlink" title="如何分享文件"></a>如何分享文件</h3><ol><li><p><strong>制作torrent文件并分享给别人</strong></p><ul><li>打开qBittorrent</li><li>点击”工具” → “生成 Torrent(C)”</li><li>选择要分享的文件或文件夹(推荐分享文件夹)</li><li>点击”创建”</li><li>保存.torrent文件</li></ul></li><li><p><strong>直接复制磁力链接分享给别人</strong></p><ul><li>同样要先制作种子，跟1中步骤一样</li><li>鼠标右键点击制作好的种子，选择图中的选项<br><img src="/img/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B6.png" alt="复制磁力链接"></li></ul></li></ol><h2 id="界面介绍"><a href="#界面介绍" class="headerlink" title="界面介绍"></a>界面介绍</h2><ul><li>这篇只是为了让大家能更方便的下载文件才写，关于qBittorrent的更多技巧还需要自行钻研，不过这里还是大致介绍一下主界面的内容</li><li>本人也不是这方面的专家，只是一个普通的使用者，我把自己常用的功能都在这张图上写出来了，希望能帮到你<br>   <img src="/img/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B7.png" alt="主界面"></li></ul><hr>]]></content>
+      
+      
       <categories>
-        <category>教程</category>
-        <category>软件</category>
+          
+          <category> 教程 </category>
+          
+          <category> 软件 </category>
+          
       </categories>
-      <tags>
-        <tag>软件教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html</url>
-    <content><![CDATA[博客背景图片设置说明当前背景设置目前博客使用了渐变色背景和增强的卡片样式：
-Dark主题
-页面背景: 深夜渐变 (#0d2538 → #1b3b52 → #0f2027)
-卡片背景: 深色渐变 + 毛玻璃效果
-头像背景: 青绿色渐变光晕
-
-Light主题
-页面背景: 温暖日光渐变 (#ffecd2 → #fcb69f → #ff9a9e)
-卡片背景: 浅色渐变 + 毛玻璃效果
-头像背景: 粉色渐变光晕
-
-如何更换为背景图片1. 准备图片将背景图片放置在 source/img/ 目录下，建议：
-
-分辨率: 1920x1080 或更高
-格式: JPG&#x2F;PNG&#x2F;WebP
-文件大小: 控制在 500KB 以内
-命名示例: bg-dark.jpg, bg-light.jpg
-
-2. 修改CSS文件Dark主题背景图片 (custom-dark.css)/* 将这段代码 */html[data-theme=&#x27;dark&#x27;] body &#123;  background: linear-gradient(135deg, #0d2538 0%, #1b3b52 50%, #0f2027 100%) fixed;  color: rgba(255, 255, 255, 0.88);&#125;/* 替换为 */html[data-theme=&#x27;dark&#x27;] body &#123;  background:     linear-gradient(135deg, rgba(13, 37, 56, 0.7) 0%, rgba(27, 59, 82, 0.5) 50%, rgba(15, 32, 39, 0.7) 100%),    url(&#x27;/img/bg-dark.jpg&#x27;) center/cover fixed;  color: rgba(255, 255, 255, 0.88);&#125;
-
-Light主题背景图片 (custom-light.css)/* 将这段代码 */html[data-theme=&#x27;light&#x27;] body &#123;  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%) fixed;  color: rgba(51, 51, 51, 0.88);&#125;/* 替换为 */html[data-theme=&#x27;light&#x27;] body &#123;  background:     linear-gradient(135deg, rgba(255, 236, 210, 0.6) 0%, rgba(252, 182, 159, 0.4) 50%, rgba(255, 154, 158, 0.6) 100%),    url(&#x27;/img/bg-light.jpg&#x27;) center/cover fixed;  color: rgba(51, 51, 51, 0.88);&#125;
-
-3. 卡片背景调整使用背景图片后，建议增加卡片的不透明度以保持可读性：
-/* Dark主题卡片调整 */html[data-theme=&#x27;dark&#x27;] .card-widget,html[data-theme=&#x27;dark&#x27;] .card &#123;  background: linear-gradient(135deg, rgba(13, 37, 56, 0.85) 0%, rgba(27, 59, 82, 0.75) 50%, rgba(15, 32, 39, 0.85) 100%);  backdrop-filter: blur(12px);&#125;/* Light主题卡片调整 */html[data-theme=&#x27;light&#x27;] .card-widget,html[data-theme=&#x27;light&#x27;] .card &#123;  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 236, 210, 0.8) 50%, rgba(252, 182, 159, 0.75) 100%);  backdrop-filter: blur(12px);&#125;
-
-4. 应用更改修改完成后运行：
-hexo cleanhexo generatehexo server
-
-背景图片建议Dark主题适合的图片
-星空、夜景、深色抽象图案
-色调偏冷色系 (蓝、紫、青)
-避免过于明亮的图片
-
-Light主题适合的图片
-日出日落、温暖风景、浅色纹理
-色调偏暖色系 (橙、粉、黄)
-避免过于深暗的图片
-
-注意事项
-性能考虑: 背景图片会影响加载速度，建议压缩优化
-响应式: 确保图片在不同设备上显示良好
-可读性: 始终保持文字内容的清晰可读
-备份: 修改前备份原始CSS文件
-
-恢复渐变背景如需恢复当前的渐变背景，只需删除 url() 部分，保留 linear-gradient() 即可。
-]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom-dark.css</url>
-    <content><![CDATA[/* Butterfly主题自定义深色渐变样式覆盖 */
-
-/* 基础深色渐变背景和排版 */
-html[data-theme='dark'] body {
-  /* 深夜渐变: #0d2538 -> #1b3b52 -> #0f2027 */
-  background: linear-gradient(135deg, #0d2538 0%, #1b3b52 50%, #0f2027 100%) fixed;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-/* 卡片带有微妙的半透明和模糊效果 */
-html[data-theme='dark'] .card-widget,
-html[data-theme='dark'] .card,
-html[data-theme='dark'] .recent-posts .recent-post-item,
-html[data-theme='dark'] .post,
-html[data-theme='dark'] .aside-list > .aside-list-item,
-html[data-theme='dark'] .relatedPosts > .relatedPosts-list > div {
-  background: linear-gradient(135deg, rgba(13, 37, 56, 0.75) 0%, rgba(27, 59, 82, 0.65) 50%, rgba(15, 32, 39, 0.75) 100%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(139, 178, 217, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-/* 卡片悬停效果 */
-html[data-theme='dark'] .card-widget:hover,
-html[data-theme='dark'] .card:hover,
-html[data-theme='dark'] .recent-posts .recent-post-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border-color: rgba(139, 178, 217, 0.25);
-  transition: all 0.3s ease;
-}
-
-/* 头像背景增强 */
-html[data-theme='dark'] .avatar-img {
-  background: linear-gradient(135deg, rgba(18, 194, 233, 0.2) 0%, rgba(0, 164, 151, 0.2) 100%);
-  border: 2px solid rgba(139, 178, 217, 0.3);
-  box-shadow: 0 0 20px rgba(18, 194, 233, 0.3);
-}
-
-/* 页头和页脚与渐变融合 */
-html[data-theme='dark'] #page-header,
-html[data-theme='dark'] #footer {
-  background: transparent;
-}
-
-/* 强调色：青绿色渐变用于链接和选择 */
-html[data-theme='dark'] a,
-html[data-theme='dark'] .links-of-author a,
-html[data-theme='dark'] .article-meta__categories a,
-html[data-theme='dark'] .article-meta__tags a {
-  color: #8cb2d9;
-  transition: color .2s ease, text-shadow .2s ease;
-}
-html[data-theme='dark'] a:hover {
-  color: #12c2e9;
-  text-shadow: 0 0 8px rgba(18, 194, 233, 0.4);
-}
-
-/* 按钮样式 */
-html[data-theme='dark'] :root {
-  --btn-bg: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);
-  --btn-hover-color: linear-gradient(135deg, #12c2e9 0%, #00a497 100%);
-  --btn-color: #0a1118;
-  --text-highlight-color: #8cb2d9;
-  --scrollbar-color: #12c2e9;
-}
-
-/* 侧边栏、搜索框等 */
-html[data-theme='dark'] .sidebar,
-html[data-theme='dark'] .sidebar #aside-content > .card-widget,
-html[data-theme='dark'] .search-dialog .search-dialog__title,
-html[data-theme='dark'] .search-dialog .search-nav {
-  background: rgba(10, 20, 28, 0.5);
-}
-
-
-/* 引用块条纹强调 */
-html[data-theme='dark'] blockquote {
-  border-left: 3px solid #12c2e9;
-  background: rgba(18, 194, 233, 0.06);
-}
-
-/* 分割线微妙样式 */
-html[data-theme='dark'] hr {
-  border-color: #2a4356;
-}
-
-/* 目录链接颜色和悬停效果 */
-html[data-theme='dark'] #aside-content .toc .toc-item a {
-  color: #12c2e9;
-}
-html[data-theme='dark'] #aside-content .toc .toc-item a:hover {
-  color: #8cb2d9;
-}
-
-/* 分页和标签 */
-html[data-theme='dark'] .pagination .page-number,
-html[data-theme='dark'] .tag-cloud a,
-html[data-theme='dark'] .article-tags .tag {
-  background: rgba(10, 20, 28, 0.6);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-/* 文章标题的精美悬停效果 */
-html[data-theme='dark'] .recent-post-info .article-title a:hover,
-html[data-theme='dark'] .post-title a:hover {
-  color: #12c2e9;
-}
-
-/* 主题切换的平滑过渡 */
-html[data-theme='dark'] body, html[data-theme='dark'] .card, html[data-theme='dark'] .card-widget {
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
-}
-
-/* 移除远程网络字体：使用渐变艺术文字代替以避免外部依赖 */
-
-/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
-html[data-theme='dark'] #site-info #site-title.custom-title-art {
-  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 800 !important;
-  font-size: clamp(3rem, 6vw, 6rem) !important;
-  letter-spacing: 0.04em !important;
-  /* 不支持background-clip的浏览器的备用颜色 */
-  color: #12c2e9 !important;
-  background: linear-gradient(135deg, #f8f9fb 0%, #b7e3ff 35%, #67e8f9 55%, #12c2e9 80%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 2px 24px rgba(18,194,233,0.15), 0 2px 40px rgba(103,232,249,0.12) !important;
-  /* 强制居中 */
-  display: block !important;
-  text-align: center !important;
-  margin: 0 auto !important;
-}
-
-/* 确保在不支持background-clip时文字可见 */
-@supports not (-webkit-background-clip: text) {
-  html[data-theme='dark'] #site-info #site-title.custom-title-art {
-    color: #12c2e9 !important;
-    -webkit-text-fill-color: #12c2e9 !important;
-  }
-}
-
-/* AnuPpuccin主题风格的Markdown样式 - 基于Catppuccin调色板 */
-/* Catppuccin Mocha颜色变量定义 */
-:root {
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo: #f2cdcd;
-  --ctp-pink: #f5c2e7;
-  --ctp-mauve: #cba6f7;
-  --ctp-red: #f38ba8;
-  --ctp-maroon: #eba0ac;
-  --ctp-peach: #fab387;
-  --ctp-yellow: #f9e2af;
-  --ctp-green: #a6e3a1;
-  --ctp-teal: #94e2d5;
-  --ctp-sky: #89dceb;
-  --ctp-sapphire: #74c7ec;
-  --ctp-blue: #89b4fa;
-  --ctp-lavender: #b4befe;
-  --ctp-text: #cdd6f4;
-  --ctp-subtext1: #bac2de;
-  --ctp-subtext0: #a6adc8;
-  --ctp-overlay2: #9399b2;
-  --ctp-overlay1: #7f849c;
-  --ctp-overlay0: #6c7086;
-  --ctp-surface2: #585b70;
-  --ctp-surface1: #45475a;
-  --ctp-surface0: #313244;
-  --ctp-base: #1e1e2e;
-  --ctp-mantle: #181825;
-  --ctp-crust: #11111b;
-}
-
-/* Markdown标题样式 */
-html[data-theme='dark'] .post-content h1 {
-  color: var(--ctp-red) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h2 {
-  color: var(--ctp-peach) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.6em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h3 {
-  color: var(--ctp-green) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.37em;
-  line-height: 1.3;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h4 {
-  color: var(--ctp-teal) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.25em;
-  line-height: 1.4;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h5 {
-  color: var(--ctp-lavender) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h6 {
-  color: var(--ctp-mauve) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-/* Markdown加粗文字样式 - 使用蓝色调 */
-html[data-theme='dark'] .post-content strong,
-html[data-theme='dark'] .post-content b {
-  color: var(--ctp-blue) !important;
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(137, 180, 250, 0.15) 0%, rgba(69, 71, 90, 0.1) 100%);
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  border: 1px solid rgba(137, 180, 250, 0.2);
-  transition: all 0.2s ease;
-}
-
-/* 加粗文字悬停效果 */
-html[data-theme='dark'] .post-content strong:hover,
-html[data-theme='dark'] .post-content b:hover {
-  background: linear-gradient(135deg, rgba(137, 180, 250, 0.25) 0%, rgba(69, 71, 90, 0.15) 100%);
-  border-color: rgba(137, 180, 250, 0.4);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(137, 180, 250, 0.2);
-}
-
-/* Markdown斜体文字样式 - 使用浅蓝色调 */
-html[data-theme='dark'] .post-content em,
-html[data-theme='dark'] .post-content i {
-  color: var(--ctp-lavender) !important;
-  font-style: italic;
-  background: linear-gradient(135deg, rgba(180, 190, 254, 0.1) 0%, transparent 100%);
-  padding: 0.05em 0.2em;
-  border-radius: 2px;
-}
-
-/* Markdown列表样式优化 - 使用Overlay1 */
-html[data-theme='dark'] .post-content ul li::marker,
-html[data-theme='dark'] .post-content ol li::marker {
-  color: var(--ctp-overlay1);
-}
-
-html[data-theme='dark'] .post-content ul li,
-html[data-theme='dark'] .post-content ol li {
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-  color: var(--ctp-text);
-}
-
-/* Markdown链接样式 - 使用Sapphire */
-html[data-theme='dark'] .post-content a {
-  color: var(--ctp-sapphire) !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(116, 199, 236, 0.3);
-  transition: all 0.2s ease;
-}
-
-html[data-theme='dark'] .post-content a:hover {
-  color: var(--ctp-sky) !important;
-  border-bottom-color: var(--ctp-sky);
-  text-shadow: 0 0 8px rgba(137, 220, 235, 0.4);
-}
-
-/* Markdown表格样式 - 使用Surface和Overlay色调 */
-html[data-theme='dark'] .post-content table {
-  border-collapse: collapse;
-  margin: 1em 0;
-  background: var(--ctp-surface0);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-html[data-theme='dark'] .post-content table th {
-  background: linear-gradient(135deg, rgba(203, 166, 247, 0.2) 0%, rgba(69, 71, 90, 0.2) 100%);
-  color: var(--ctp-mauve) !important;
-  font-weight: 700;
-  padding: 0.8em;
-  border: 1px solid rgba(203, 166, 247, 0.2);
-}
-
-html[data-theme='dark'] .post-content table td {
-  padding: 0.6em 0.8em;
-  border: 1px solid var(--ctp-overlay0);
-  color: var(--ctp-text);
-}
-
-html[data-theme='dark'] .post-content table tr:nth-child(even) {
-  background: rgba(69, 71, 90, 0.3);
-}
-
-
-
-/* 引用块样式 - 使用Peach */
-html[data-theme='dark'] .post-content blockquote {
-  border-left: 4px solid var(--ctp-peach);
-  background: linear-gradient(135deg, rgba(250, 179, 135, 0.1) 0%, transparent 100%);
-  padding: 1em 1.5em;
-  margin: 1em 0;
-  color: var(--ctp-subtext1);
-  border-radius: 0 8px 8px 0;
-}
-
-/* 动画极光叠加层以丰富第二屏背景 */
-/* 带有更深蓝绿色调的动画极光叠加层 */
-html[data-theme='dark'] body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(60vw 60vh at 20% 20%, rgba(18, 158, 190, 0.15), transparent 60%),
-    radial-gradient(50vw 50vh at 78% 28%, rgba(0, 120, 140, 0.14), transparent 60%),
-    radial-gradient(70vw 70vh at 52% 84%, rgba(40, 70, 120, 0.10), transparent 60%);
-  mix-blend-mode: screen;
-  opacity: .55;
-  animation: auroraFloat 26s ease-in-out infinite alternate;
-}
-
-@keyframes auroraFloat {
-  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
-  50% { transform: translate3d(0,-1.2%,0) scale(1.02); filter: saturate(1.05); }
-  100% { transform: translate3d(0,-2.4%,0) scale(1.03); filter: saturate(1.1); }
-}
-
-/* 右上角自定义菜单 */
-.custom-right-menus .menu-item {
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform .2s ease, background .2s ease, color .2s ease;
-}
-#nav.nav-fixed .custom-right-menus .menu-item,
-#page-header.not-top-img #nav .custom-right-menus .menu-item {
-  color: var(--font-color);
-}
-.custom-right-menus .menu-item:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);
-  color: #0a1118 !important;
-}
-
-html[data-theme='dark'] figure.highlight table,
-html[data-theme='dark'] figure.highlight td,
-html[data-theme='dark'] figure.highlight th {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-html[data-theme='dark'] figure.highlight table,
-html[data-theme='dark'] figure.highlight td,
-html[data-theme='dark'] figure.highlight th {
-  border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
-}
-
-/* 避免表格样式对代码块工具栏/容器产生影响 */
-html[data-theme='dark'] figure.highlight,
-html[data-theme='dark'] figure.highlight .highlight-tools {
-  box-shadow: none !important;
-}
-
-/* 调整代码块工具栏复制与展开按钮的间距（dark） */
-html[data-theme='dark'] figure.highlight .highlight-tools {
-  gap: 6px; /* 相邻控件之间增加 6px 间距 */
-}
-html[data-theme='dark'] figure.highlight .highlight-tools .expand {
-  margin-left: 4px; /* 展开图标与前一元素稍微拉开 */
-}
-
-
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom.css</url>
-    <content><![CDATA[/* Unified custom interactions for both themes */
-@media (min-width: 901px) {
-  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
-  #aside-content .card-info .avatar-img,
-  #aside-content .card-info .avatar-img img,
-  #sidebar-menus .avatar-img,
-  #sidebar-menus .avatar-img img {
-    animation: none !important;
-  }
-
-  /* 覆盖任何 img:hover 的旋转 */
-  #aside-content .card-info .avatar-img img:hover,
-  #sidebar-menus .avatar-img img:hover {
-    transform: none !important;
-  }
-
-  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
-  #aside-content .card-info .avatar-img,
-  #sidebar-menus .avatar-img {
-    transform-origin: center center;
-    transition: transform 0.25s ease-in-out !important;
-    will-change: transform;
-  }
-  #aside-content .card-info .avatar-img:hover,
-  #sidebar-menus .avatar-img:hover {
-    transform: scale(1.06) !important;
-  }
-
-  /* 3) 侧栏社交图标悬停放大 */
-  #aside-content .card-info .card-info-social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  #aside-content .card-info .card-info-social-icons .social-icon:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-
-/* 固定吸底、水平居中显示网易云外链播放器 */
-.netease-fixed-player {
-  position: fixed;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  z-index: 2000;
-  width: 330px; /* 与 iframe 一致，避免拉伸 */
-  height: 110px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  pointer-events: auto;
-}
-
-/* 让 iframe 完整撑满容器 */
-.netease-fixed-player iframe {
-  width: 330px !important;
-  height: 110px !important;
-  border: 0;
-}
-
-/* 移动端自适应：略微缩小宽度，避免遮挡 */
-@media (max-width: 420px) {
-  .netease-fixed-player,
-  .netease-fixed-player iframe {
-    width: 300px !important;
-    height: 110px !important;
-  }
-}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom-light.css</url>
-    <content><![CDATA[/* Butterfly主题自定义浅色渐变样式覆盖 */
-
-/* 基础浅色渐变背景和排版 */
-html[data-theme='light'] body {
-  /* 温暖日光渐变: #ffecd2 -> #fcb69f -> #ff9a9e */
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%) fixed;
-  color: rgba(51, 51, 51, 0.88);
-}
-
-/* 卡片带有微妙的半透明和模糊效果 */
-html[data-theme='light'] .card-widget,
-html[data-theme='light'] .card,
-html[data-theme='light'] .recent-posts .recent-post-item,
-html[data-theme='light'] .post,
-html[data-theme='light'] .aside-list > .aside-list-item,
-html[data-theme='light'] .relatedPosts > .relatedPosts-list > div {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 236, 210, 0.75) 50%, rgba(252, 182, 159, 0.65) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(225, 112, 85, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  position: relative;
-  overflow: hidden;
-}
-
-/* 卡片悬停效果 */
-html[data-theme='light'] .card-widget:hover,
-html[data-theme='light'] .card:hover,
-html[data-theme='light'] .recent-posts .recent-post-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  border-color: rgba(225, 112, 85, 0.35);
-  transition: all 0.3s ease;
-}
-
-/* 头像背景增强 */
-html[data-theme='light'] .avatar-img {
-  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(232, 67, 147, 0.2) 100%);
-  border: 2px solid rgba(225, 112, 85, 0.4);
-  box-shadow: 0 0 20px rgba(232, 67, 147, 0.3);
-}
-
-/* 页头和页脚与渐变融合 */
-html[data-theme='light'] #page-header,
-html[data-theme='light'] #footer {
-  background: transparent;
-}
-
-/* 强调色：温暖橙红色渐变用于链接和选择 */
-html[data-theme='light'] a,
-html[data-theme='light'] .links-of-author a,
-html[data-theme='light'] .article-meta__categories a,
-html[data-theme='light'] .article-meta__tags a {
-  color: #e17055;
-  transition: color .2s ease, text-shadow .2s ease;
-}
-html[data-theme='light'] a:hover {
-  color: #d63031;
-  text-shadow: 0 0 8px rgba(214, 48, 49, 0.4);
-}
-
-/* 按钮样式 */
-html[data-theme='light'] :root {
-  --btn-bg: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
-  --btn-hover-color: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
-  --btn-color: #ffffff;
-  --text-highlight-color: #e17055;
-  --scrollbar-color: #e84393;
-}
-
-/* 侧边栏、搜索框等 */
-html[data-theme='light'] .sidebar,
-html[data-theme='light'] .sidebar #aside-content > .card-widget,
-html[data-theme='light'] .search-dialog .search-dialog__title,
-html[data-theme='light'] .search-dialog .search-nav {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-
-/* 引用块条纹强调 */
-html[data-theme='light'] blockquote {
-  border-left: 3px solid #e84393;
-  background: rgba(232, 67, 147, 0.08);
-}
-
-/* 分割线微妙样式 */
-html[data-theme='light'] hr {
-  border-color: #fab1a0;
-}
-
-/* 目录链接颜色和悬停效果 */
-html[data-theme='light'] #aside-content .toc .toc-item a {
-  color: #e84393;
-}
-html[data-theme='light'] #aside-content .toc .toc-item a:hover {
-  color: #e17055;
-}
-
-/* 分页和标签 */
-html[data-theme='light'] .pagination .page-number,
-html[data-theme='light'] .tag-cloud a,
-html[data-theme='light'] .article-tags .tag {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(232, 67, 147, 0.2);
-}
-
-/* 文章标题的精美悬停效果 */
-html[data-theme='light'] .recent-post-info .article-title a:hover,
-html[data-theme='light'] .post-title a:hover {
-  color: #e84393;
-}
-
-/* 主题切换的平滑过渡 */
-html[data-theme='light'] body, html[data-theme='light'] .card, html[data-theme='light'] .card-widget {
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
-}
-
-/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
-html[data-theme='light'] #site-info #site-title.custom-title-art {
-  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 800 !important;
-  font-size: clamp(3rem, 6vw, 6rem) !important;
-  letter-spacing: 0.04em !important;
-  /* 不支持background-clip的浏览器的备用颜色 */
-  color: #e84393 !important;
-  background: linear-gradient(135deg, #fd79a8 0%, #e84393 35%, #d63031 55%, #e17055 80%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 2px 24px rgba(232,67,147,0.15), 0 2px 40px rgba(253,121,168,0.12) !important;
-  /* 强制居中 */
-  display: block !important;
-  text-align: center !important;
-  margin: 0 auto !important;
-}
-
-/* 确保在不支持background-clip时文字可见 */
-@supports not (-webkit-background-clip: text) {
-  html[data-theme='light'] #site-info #site-title.custom-title-art {
-    color: #e84393 !important;
-    -webkit-text-fill-color: #e84393 !important;
-  }
-}
-
-/* 温暖主题风格的Markdown样式 - 基于温暖调色板 */
-/* 温暖色调变量定义 */
-:root {
-  --warm-coral: #ff7675;
-  --warm-pink: #fd79a8;
-  --warm-purple: #e84393;
-  --warm-violet: #a29bfe;
-  --warm-red: #d63031;
-  --warm-orange: #e17055;
-  --warm-peach: #fab1a0;
-  --warm-yellow: #fdcb6e;
-  --warm-green: #00b894;
-  --warm-mint: #00cec9;
-  --warm-cyan: #74b9ff;
-  --warm-blue: #0984e3;
-  --warm-indigo: #6c5ce7;
-  --warm-lavender: #a29bfe;
-  --warm-text: #2d3436;
-  --warm-subtext1: #636e72;
-  --warm-subtext0: #74b9ff;
-  --warm-overlay2: #b2bec3;
-  --warm-overlay1: #ddd;
-  --warm-overlay0: #f1f2f6;
-  --warm-surface2: #ffeaa7;
-  --warm-surface1: #fff5f5;
-  --warm-surface0: #ffffff;
-  --warm-base: #ffecd2;
-  --warm-mantle: #fcb69f;
-  --warm-crust: #ff9a9e;
-}
-
-/* Markdown标题样式 */
-html[data-theme='light'] .post-content h1 {
-  color: var(--warm-red) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h2 {
-  color: var(--warm-orange) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.6em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h3 {
-  color: var(--warm-green) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.37em;
-  line-height: 1.3;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h4 {
-  color: var(--warm-mint) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.25em;
-  line-height: 1.4;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h5 {
-  color: var(--warm-lavender) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h6 {
-  color: var(--warm-violet) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-/* Markdown加粗文字样式 - 使用蓝色调 */
-html[data-theme='light'] .post-content strong,
-html[data-theme='light'] .post-content b {
-  color: var(--warm-blue) !important;
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(116, 185, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  border: 1px solid rgba(116, 185, 255, 0.3);
-  transition: all 0.2s ease;
-}
-
-/* 加粗文字悬停效果 */
-html[data-theme='light'] .post-content strong:hover,
-html[data-theme='light'] .post-content b:hover {
-  background: linear-gradient(135deg, rgba(116, 185, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
-  border-color: rgba(116, 185, 255, 0.5);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(116, 185, 255, 0.3);
-}
-
-/* Markdown斜体文字样式 - 使用浅紫色调 */
-html[data-theme='light'] .post-content em,
-html[data-theme='light'] .post-content i {
-  color: var(--warm-lavender) !important;
-  font-style: italic;
-  background: linear-gradient(135deg, rgba(162, 155, 254, 0.1) 0%, transparent 100%);
-  padding: 0.05em 0.2em;
-  border-radius: 2px;
-}
-
-/* Markdown列表样式优化 */
-html[data-theme='light'] .post-content ul li::marker,
-html[data-theme='light'] .post-content ol li::marker {
-  color: var(--warm-overlay1);
-}
-
-html[data-theme='light'] .post-content ul li,
-html[data-theme='light'] .post-content ol li {
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-  color: var(--warm-text);
-}
-
-/* Markdown链接样式 */
-html[data-theme='light'] .post-content a {
-  color: var(--warm-cyan) !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 206, 201, 0.3);
-  transition: all 0.2s ease;
-}
-
-html[data-theme='light'] .post-content a:hover {
-  color: var(--warm-blue) !important;
-  border-bottom-color: var(--warm-blue);
-  text-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
-}
-
-/* Markdown表格样式 */
-html[data-theme='light'] .post-content table {
-  border-collapse: collapse;
-  margin: 1em 0;
-  background: var(--warm-surface0);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-html[data-theme='light'] .post-content table th {
-  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-  color: var(--warm-purple) !important;
-  font-weight: 700;
-  padding: 0.8em;
-  border: 1px solid rgba(253, 121, 168, 0.3);
-}
-
-html[data-theme='light'] .post-content table td {
-  padding: 0.6em 0.8em;
-  border: 1px solid var(--warm-overlay0);
-  color: var(--warm-text);
-}
-
-html[data-theme='light'] .post-content table tr:nth-child(even) {
-  background: rgba(255, 245, 245, 0.5);
-}
-
-
-
-/* 引用块样式 */
-html[data-theme='light'] .post-content blockquote {
-  border-left: 4px solid var(--warm-peach);
-  background: linear-gradient(135deg, rgba(250, 177, 160, 0.1) 0%, transparent 100%);
-  padding: 1em 1.5em;
-  margin: 1em 0;
-  color: var(--warm-subtext1);
-  border-radius: 0 8px 8px 0;
-}
-
-/* 动画光晕叠加层以丰富背景 */
-html[data-theme='light'] body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(60vw 60vh at 20% 20%, rgba(253, 121, 168, 0.12), transparent 60%),
-    radial-gradient(50vw 50vh at 78% 28%, rgba(232, 67, 147, 0.10), transparent 60%),
-    radial-gradient(70vw 70vh at 52% 84%, rgba(255, 154, 158, 0.08), transparent 60%);
-  mix-blend-mode: multiply;
-  opacity: .6;
-  animation: lightAuroraFloat 28s ease-in-out infinite alternate;
-}
-
-@keyframes lightAuroraFloat {
-  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
-  50% { transform: translate3d(0,1.2%,0) scale(1.01); filter: saturate(1.05); }
-  100% { transform: translate3d(0,2.4%,0) scale(1.02); filter: saturate(1.1); }
-}
-
-/* 右上角自定义菜单 */
-html[data-theme='light'] .custom-right-menus .menu-item {
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.8);
-  border: 1px solid rgba(232, 67, 147, 0.2);
-  transition: transform .2s ease, background .2s ease, color .2s ease;
-  color: var(--warm-text);
-}
-html[data-theme='light'] #nav.nav-fixed .custom-right-menus .menu-item,
-html[data-theme='light'] #page-header.not-top-img #nav .custom-right-menus .menu-item {
-  color: var(--font-color);
-}
-html[data-theme='light'] .custom-right-menus .menu-item:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);
-}
-
-/* 修复：恢复代码块（包括 plaintext）为 Butterfly 默认背景（light） */
-html[data-theme='light'] figure.highlight table,
-html[data-theme='light'] figure.highlight td,
-html[data-theme='light'] figure.highlight th {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-html[data-theme='light'] figure.highlight table,
-html[data-theme='light'] figure.highlight td,
-html[data-theme='light'] figure.highlight th {
-  border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
-}
-
-html[data-theme='light'] figure.highlight,
-html[data-theme='light'] figure.highlight .highlight-tools {
-  box-shadow: none !important;
-}
-/* 调整代码块工具栏复制与展开按钮的间距（light） */
-html[data-theme='light'] figure.highlight .highlight-tools {
-  gap: 6px;
-}
-html[data-theme='light'] figure.highlight .highlight-tools .expand {
-  margin-left: 4px;
-}
-
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/loading-bar.css</url>
-    <content><![CDATA[.pace {
-	-webkit-pointer-events: none;
-	pointer-events: none;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
-
-	z-index: 2000;
-	position: fixed;
-	margin: auto;
-	top: 12px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 200px;
-	height: 50px;
-	overflow: hidden;
-}
-
-.pace .pace-progress {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
-
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-
-	display: block;
-	position: absolute;
-	right: 100%;
-	margin-right: -7px;
-	width: 93%;
-	top: 7px;
-	height: 14px;
-	font-size: 12px;
-	background: #29d;
-	color: #29d;
-	line-height: 60px;
-	font-weight: bold;
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
-
-	-webkit-box-shadow: 120px 0 #fff, 240px 0 #fff;
-	-ms-box-shadow: 120px 0 #fff, 240px 0 #fff;
-	box-shadow: 120px 0 #fff, 240px 0 #fff;
-}
-
-.pace .pace-progress:after {
-	content: attr(data-progress-text);
-	display: inline-block;
-	position: fixed;
-	width: 45px;
-	text-align: right;
-	right: 0;
-	padding-right: 16px;
-	top: 4px;
-}
-
-.pace .pace-progress[data-progress-text="0%"]:after { right: -200px }
-.pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px }
-.pace .pace-progress[data-progress-text="2%"]:after { right: -196.28px }
-.pace .pace-progress[data-progress-text="3%"]:after { right: -194.42px }
-.pace .pace-progress[data-progress-text="4%"]:after { right: -192.56px }
-.pace .pace-progress[data-progress-text="5%"]:after { right: -190.7px }
-.pace .pace-progress[data-progress-text="6%"]:after { right: -188.84px }
-.pace .pace-progress[data-progress-text="7%"]:after { right: -186.98px }
-.pace .pace-progress[data-progress-text="8%"]:after { right: -185.12px }
-.pace .pace-progress[data-progress-text="9%"]:after { right: -183.26px }
-.pace .pace-progress[data-progress-text="10%"]:after { right: -181.4px }
-.pace .pace-progress[data-progress-text="11%"]:after { right: -179.54px }
-.pace .pace-progress[data-progress-text="12%"]:after { right: -177.68px }
-.pace .pace-progress[data-progress-text="13%"]:after { right: -175.82px }
-.pace .pace-progress[data-progress-text="14%"]:after { right: -173.96px }
-.pace .pace-progress[data-progress-text="15%"]:after { right: -172.1px }
-.pace .pace-progress[data-progress-text="16%"]:after { right: -170.24px }
-.pace .pace-progress[data-progress-text="17%"]:after { right: -168.38px }
-.pace .pace-progress[data-progress-text="18%"]:after { right: -166.52px }
-.pace .pace-progress[data-progress-text="19%"]:after { right: -164.66px }
-.pace .pace-progress[data-progress-text="20%"]:after { right: -162.8px }
-.pace .pace-progress[data-progress-text="21%"]:after { right: -160.94px }
-.pace .pace-progress[data-progress-text="22%"]:after { right: -159.08px }
-.pace .pace-progress[data-progress-text="23%"]:after { right: -157.22px }
-.pace .pace-progress[data-progress-text="24%"]:after { right: -155.36px }
-.pace .pace-progress[data-progress-text="25%"]:after { right: -153.5px }
-.pace .pace-progress[data-progress-text="26%"]:after { right: -151.64px }
-.pace .pace-progress[data-progress-text="27%"]:after { right: -149.78px }
-.pace .pace-progress[data-progress-text="28%"]:after { right: -147.92px }
-.pace .pace-progress[data-progress-text="29%"]:after { right: -146.06px }
-.pace .pace-progress[data-progress-text="30%"]:after { right: -144.2px }
-.pace .pace-progress[data-progress-text="31%"]:after { right: -142.34px }
-.pace .pace-progress[data-progress-text="32%"]:after { right: -140.48px }
-.pace .pace-progress[data-progress-text="33%"]:after { right: -138.62px }
-.pace .pace-progress[data-progress-text="34%"]:after { right: -136.76px }
-.pace .pace-progress[data-progress-text="35%"]:after { right: -134.9px }
-.pace .pace-progress[data-progress-text="36%"]:after { right: -133.04px }
-.pace .pace-progress[data-progress-text="37%"]:after { right: -131.18px }
-.pace .pace-progress[data-progress-text="38%"]:after { right: -129.32px }
-.pace .pace-progress[data-progress-text="39%"]:after { right: -127.46px }
-.pace .pace-progress[data-progress-text="40%"]:after { right: -125.6px }
-.pace .pace-progress[data-progress-text="41%"]:after { right: -123.74px }
-.pace .pace-progress[data-progress-text="42%"]:after { right: -121.88px }
-.pace .pace-progress[data-progress-text="43%"]:after { right: -120.02px }
-.pace .pace-progress[data-progress-text="44%"]:after { right: -118.16px }
-.pace .pace-progress[data-progress-text="45%"]:after { right: -116.3px }
-.pace .pace-progress[data-progress-text="46%"]:after { right: -114.44px }
-.pace .pace-progress[data-progress-text="47%"]:after { right: -112.58px }
-.pace .pace-progress[data-progress-text="48%"]:after { right: -110.72px }
-.pace .pace-progress[data-progress-text="49%"]:after { right: -108.86px }
-.pace .pace-progress[data-progress-text="50%"]:after { right: -107px }
-.pace .pace-progress[data-progress-text="51%"]:after { right: -105.14px }
-.pace .pace-progress[data-progress-text="52%"]:after { right: -103.28px }
-.pace .pace-progress[data-progress-text="53%"]:after { right: -101.42px }
-.pace .pace-progress[data-progress-text="54%"]:after { right: -99.56px }
-.pace .pace-progress[data-progress-text="55%"]:after { right: -97.7px }
-.pace .pace-progress[data-progress-text="56%"]:after { right: -95.84px }
-.pace .pace-progress[data-progress-text="57%"]:after { right: -93.98px }
-.pace .pace-progress[data-progress-text="58%"]:after { right: -92.12px }
-.pace .pace-progress[data-progress-text="59%"]:after { right: -90.26px }
-.pace .pace-progress[data-progress-text="60%"]:after { right: -88.4px }
-.pace .pace-progress[data-progress-text="61%"]:after { right: -86.53999999999999px }
-.pace .pace-progress[data-progress-text="62%"]:after { right: -84.68px }
-.pace .pace-progress[data-progress-text="63%"]:after { right: -82.82px }
-.pace .pace-progress[data-progress-text="64%"]:after { right: -80.96000000000001px }
-.pace .pace-progress[data-progress-text="65%"]:after { right: -79.1px }
-.pace .pace-progress[data-progress-text="66%"]:after { right: -77.24px }
-.pace .pace-progress[data-progress-text="67%"]:after { right: -75.38px }
-.pace .pace-progress[data-progress-text="68%"]:after { right: -73.52px }
-.pace .pace-progress[data-progress-text="69%"]:after { right: -71.66px }
-.pace .pace-progress[data-progress-text="70%"]:after { right: -69.8px }
-.pace .pace-progress[data-progress-text="71%"]:after { right: -67.94px }
-.pace .pace-progress[data-progress-text="72%"]:after { right: -66.08px }
-.pace .pace-progress[data-progress-text="73%"]:after { right: -64.22px }
-.pace .pace-progress[data-progress-text="74%"]:after { right: -62.36px }
-.pace .pace-progress[data-progress-text="75%"]:after { right: -60.5px }
-.pace .pace-progress[data-progress-text="76%"]:after { right: -58.64px }
-.pace .pace-progress[data-progress-text="77%"]:after { right: -56.78px }
-.pace .pace-progress[data-progress-text="78%"]:after { right: -54.92px }
-.pace .pace-progress[data-progress-text="79%"]:after { right: -53.06px }
-.pace .pace-progress[data-progress-text="80%"]:after { right: -51.2px }
-.pace .pace-progress[data-progress-text="81%"]:after { right: -49.34px }
-.pace .pace-progress[data-progress-text="82%"]:after { right: -47.480000000000004px }
-.pace .pace-progress[data-progress-text="83%"]:after { right: -45.62px }
-.pace .pace-progress[data-progress-text="84%"]:after { right: -43.76px }
-.pace .pace-progress[data-progress-text="85%"]:after { right: -41.9px }
-.pace .pace-progress[data-progress-text="86%"]:after { right: -40.04px }
-.pace .pace-progress[data-progress-text="87%"]:after { right: -38.18px }
-.pace .pace-progress[data-progress-text="88%"]:after { right: -36.32px }
-.pace .pace-progress[data-progress-text="89%"]:after { right: -34.46px }
-.pace .pace-progress[data-progress-text="90%"]:after { right: -32.6px }
-.pace .pace-progress[data-progress-text="91%"]:after { right: -30.740000000000002px }
-.pace .pace-progress[data-progress-text="92%"]:after { right: -28.880000000000003px }
-.pace .pace-progress[data-progress-text="93%"]:after { right: -27.02px }
-.pace .pace-progress[data-progress-text="94%"]:after { right: -25.16px }
-.pace .pace-progress[data-progress-text="95%"]:after { right: -23.3px }
-.pace .pace-progress[data-progress-text="96%"]:after { right: -21.439999999999998px }
-.pace .pace-progress[data-progress-text="97%"]:after { right: -19.58px }
-.pace .pace-progress[data-progress-text="98%"]:after { right: -17.72px }
-.pace .pace-progress[data-progress-text="99%"]:after { right: -15.86px }
-.pace .pace-progress[data-progress-text="100%"]:after { right: -14px }
-
-
-.pace .pace-activity {
-	position: absolute;
-	width: 100%;
-	height: 28px;
-	z-index: 2001;
-	box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;
-	border-radius: 10px;
-}
-
-.pace.pace-inactive {
-	display: none;
-}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/title.js</url>
-    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
-(function () {
-  var OriginTitle = document.title;
-  var timer = null;
-  var awayStart = 0;
-  var thresholdMs = 120000; // 超过 120s 进入后续池
-
-  // 前期池（离开至 120s 内，随机展示 1-5）
-  var earlyPool = [
-    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
-    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
-    { text: '正在上厕所，别偷看！！！', ms: 5000 },
-    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
-    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
-    { text: '封印解除！开始吞噬内存！', ms: 10000 },
-    { text: '警告！页面即将自毁...', ms: 10000 },
-    { text: '检测到时空波动，请抓稳！', ms: 10000 }
-  ];
-
-  // 后续池（超过 120s 后，随机展示 6-11）
-  var latePool = [
-    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
-    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
-    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
-  ];
-
-  // 回来时提示（随机展示一个，3s 后恢复原标题）
-  var backPool = [
-    '啊！你回来啦！（迅速切换回正经脸）',
-    '咳咳，刚刚什么都没发生'
-  ];
-  var backHoldMs = 3000;
-
-  var lastIndex = -1;
-  function pickRandom(pool) {
-    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
-    var idx = Math.floor(Math.random() * pool.length);
-    // 避免连续两次相同
-    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
-    lastIndex = idx;
-    return pool[idx];
-  }
-
-  function scheduleNext() {
-    if (!document.hidden) return; // 可见时不再调度
-    var now = Date.now();
-    var elapsed = now - awayStart; // 本次离开累计时间
-
-    var pool = elapsed < thresholdMs ? earlyPool : latePool;
-    var choice = pickRandom(pool);
-    document.title = choice.text;
-
-    var wait = choice.ms;
-    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
-    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
-      wait = thresholdMs - elapsed;
-    }
-
-    clearTimeout(timer);
-    timer = setTimeout(scheduleNext, Math.max(500, wait));
-  }
-
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      // 开始离开
-      awayStart = Date.now();
-      clearTimeout(timer);
-      scheduleNext(); // 立即显示第一条并进入调度
-    } else {
-      // 回到页面
-      clearTimeout(timer);
-      var msg = backPool[Math.floor(Math.random() * backPool.length)];
-      document.title = msg;
-      setTimeout(function () {
-        document.title = OriginTitle;
-      }, backHoldMs);
-    }
-  });
-})();]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/custom.js</url>
-    <content><![CDATA[(function () {
-  // 右侧添加五个菜单
-  function addCustomMenus() {
-    const nav = document.querySelector('#nav .menus')
-    if (!nav) return
-
-    const customMenus = [
-      { name: '首页', url: '/', icon: 'fas fa-home' },
-      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
-      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
-      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
-    ]
-
-    const menuContainer = document.createElement('div')
-    menuContainer.className = 'custom-right-menus'
-    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
-
-    customMenus.forEach(menu => {
-      const menuItem = document.createElement('a')
-      menuItem.href = menu.url
-      menuItem.className = 'menu-item'
-      menuItem.innerHTML = ` ${menu.name}`
-      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
-      menuContainer.appendChild(menuItem)
-    })
-
-    nav.appendChild(menuContainer)
-  }
-
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn)
-    } else {
-      fn()
-    }
-  }
-
-  function applyUI() {
-    // 1) 添加右侧菜单
-    addCustomMenus()
-
-    // 2) 首页标题样式设置
-    const title = document.querySelector('#site-title')
-    if (title) {
-      // 添加艺术字体类
-      title.classList.add('custom-title-art')
-      // 强制让标题容器按内容宽度居中
-      title.style.display = 'block'
-      title.style.marginLeft = 'auto'
-      title.style.marginRight = 'auto'
-      title.style.width = 'max-content'
-      title.style.textAlign = 'center'
-    }
-
-    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
-    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
-    if (blogInfo) {
-      // 移除所有可能的动画类
-      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
-    }
-  }
-
-  onReady(applyUI)
-  // 兼容Butterfly的PJAX（如果启用）
-  window.addEventListener('pjax:complete', applyUI)
-})()]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d-models/xiaomai/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d-models/xiaomai/xiaomai.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.8376,"center_x":-0.0507,"center_y":-0.089},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":500,"fade_out":500,"expressions":"F00"}],"start":[{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"26","expressions":"F00"},{"file":"mtn/rita_Live2D_001.mtn","msg_id":"1","expressions":"F00"},{"file":"mtn/rita_Live2D_002.mtn","msg_id":"2","expressions":"F00"},{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_004.mtn","msg_id":"4","expressions":"F00"},{"file":"mtn/rita_Live2D_005.mtn","msg_id":"5","expressions":"F00"},{"file":"mtn/rita_Live2D_006.mtn","msg_id":"6","expressions":"F00"},{"file":"mtn/rita_Live2D_007.mtn","msg_id":"7","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","msg_id":"8","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","msg_id":"9","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","msg_id":"10","expressions":"F00"}],"tap_head":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_011.mtn","msg_id":"11","expressions":"F00"},{"file":"mtn/rita_Live2D_012.mtn","msg_id":"12","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","msg_id":"13","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","msg_id":"14","expressions":"F00"},{"file":"mtn/rita_Live2D_015.mtn","msg_id":"15"},{"file":"mtn/rita_Live2D_016.mtn","msg_id":"16","expressions":"F00"},{"file":"mtn/rita_Live2D_017.mtn","msg_id":"17","expressions":"F00"},{"file":"mtn/rita_Live2D_018.mtn","msg_id":"18","expressions":"F00"},{"file":"mtn/rita_Live2D_019.mtn","msg_id":"19","expressions":"F00"},{"file":"mtn/rita_Live2D_020.mtn","msg_id":"20","fade_in":500,"fade_out":1000}],"shake":[{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"random":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"new_msg":[{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"}]}}]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 软件教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2025/09/14/hello-world/"/>
+      <url>/2025/09/14/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title></title>
+      <link href="/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html"/>
+      <url>/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="博客背景图片设置说明"><a href="#博客背景图片设置说明" class="headerlink" title="博客背景图片设置说明"></a>博客背景图片设置说明</h1><h2 id="当前背景设置"><a href="#当前背景设置" class="headerlink" title="当前背景设置"></a>当前背景设置</h2><p>目前博客使用了渐变色背景和增强的卡片样式：</p><h3 id="Dark主题"><a href="#Dark主题" class="headerlink" title="Dark主题"></a>Dark主题</h3><ul><li><strong>页面背景</strong>: 深夜渐变 (#0d2538 → #1b3b52 → #0f2027)</li><li><strong>卡片背景</strong>: 深色渐变 + 毛玻璃效果</li><li><strong>头像背景</strong>: 青绿色渐变光晕</li></ul><h3 id="Light主题"><a href="#Light主题" class="headerlink" title="Light主题"></a>Light主题</h3><ul><li><strong>页面背景</strong>: 温暖日光渐变 (#ffecd2 → #fcb69f → #ff9a9e)</li><li><strong>卡片背景</strong>: 浅色渐变 + 毛玻璃效果</li><li><strong>头像背景</strong>: 粉色渐变光晕</li></ul><h2 id="如何更换为背景图片"><a href="#如何更换为背景图片" class="headerlink" title="如何更换为背景图片"></a>如何更换为背景图片</h2><h3 id="1-准备图片"><a href="#1-准备图片" class="headerlink" title="1. 准备图片"></a>1. 准备图片</h3><p>将背景图片放置在 <code>source/img/</code> 目录下，建议：</p><ul><li>分辨率: 1920x1080 或更高</li><li>格式: JPG&#x2F;PNG&#x2F;WebP</li><li>文件大小: 控制在 500KB 以内</li><li>命名示例: <code>bg-dark.jpg</code>, <code>bg-light.jpg</code></li></ul><h3 id="2-修改CSS文件"><a href="#2-修改CSS文件" class="headerlink" title="2. 修改CSS文件"></a>2. 修改CSS文件</h3><h4 id="Dark主题背景图片-custom-dark-css"><a href="#Dark主题背景图片-custom-dark-css" class="headerlink" title="Dark主题背景图片 (custom-dark.css)"></a>Dark主题背景图片 (custom-dark.css)</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 将这段代码 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="number">#0d2538</span> <span class="number">0%</span>, <span class="number">#1b3b52</span> <span class="number">50%</span>, <span class="number">#0f2027</span> <span class="number">100%</span>) fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 替换为 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: </span><br><span class="line">    <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">13</span>, <span class="number">37</span>, <span class="number">56</span>, <span class="number">0.7</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">27</span>, <span class="number">59</span>, <span class="number">82</span>, <span class="number">0.5</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">15</span>, <span class="number">32</span>, <span class="number">39</span>, <span class="number">0.7</span>) <span class="number">100%</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">&#x27;/img/bg-dark.jpg&#x27;</span>) center/cover fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="Light主题背景图片-custom-light-css"><a href="#Light主题背景图片-custom-light-css" class="headerlink" title="Light主题背景图片 (custom-light.css)"></a>Light主题背景图片 (custom-light.css)</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 将这段代码 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="number">#ffecd2</span> <span class="number">0%</span>, <span class="number">#fcb69f</span> <span class="number">50%</span>, <span class="number">#ff9a9e</span> <span class="number">100%</span>) fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">51</span>, <span class="number">51</span>, <span class="number">51</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 替换为 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: </span><br><span class="line">    <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">236</span>, <span class="number">210</span>, <span class="number">0.6</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">252</span>, <span class="number">182</span>, <span class="number">159</span>, <span class="number">0.4</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">154</span>, <span class="number">158</span>, <span class="number">0.6</span>) <span class="number">100%</span>),</span><br><span class="line">    <span class="built_in">url</span>(<span class="string">&#x27;/img/bg-light.jpg&#x27;</span>) center/cover fixed;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">51</span>, <span class="number">51</span>, <span class="number">51</span>, <span class="number">0.88</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="3-卡片背景调整"><a href="#3-卡片背景调整" class="headerlink" title="3. 卡片背景调整"></a>3. 卡片背景调整</h3><p>使用背景图片后，建议增加卡片的不透明度以保持可读性：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Dark主题卡片调整 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;dark&#x27;</span>]</span> <span class="selector-class">.card</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">13</span>, <span class="number">37</span>, <span class="number">56</span>, <span class="number">0.85</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">27</span>, <span class="number">59</span>, <span class="number">82</span>, <span class="number">0.75</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">15</span>, <span class="number">32</span>, <span class="number">39</span>, <span class="number">0.85</span>) <span class="number">100%</span>);</span><br><span class="line">  <span class="attribute">backdrop-filter</span>: <span class="built_in">blur</span>(<span class="number">12px</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Light主题卡片调整 */</span></span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-class">.card-widget</span>,</span><br><span class="line"><span class="selector-tag">html</span><span class="selector-attr">[data-theme=<span class="string">&#x27;light&#x27;</span>]</span> <span class="selector-class">.card</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.9</span>) <span class="number">0%</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">236</span>, <span class="number">210</span>, <span class="number">0.8</span>) <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">252</span>, <span class="number">182</span>, <span class="number">159</span>, <span class="number">0.75</span>) <span class="number">100%</span>);</span><br><span class="line">  <span class="attribute">backdrop-filter</span>: <span class="built_in">blur</span>(<span class="number">12px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="4-应用更改"><a href="#4-应用更改" class="headerlink" title="4. 应用更改"></a>4. 应用更改</h3><p>修改完成后运行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><h2 id="背景图片建议"><a href="#背景图片建议" class="headerlink" title="背景图片建议"></a>背景图片建议</h2><h3 id="Dark主题适合的图片"><a href="#Dark主题适合的图片" class="headerlink" title="Dark主题适合的图片"></a>Dark主题适合的图片</h3><ul><li>星空、夜景、深色抽象图案</li><li>色调偏冷色系 (蓝、紫、青)</li><li>避免过于明亮的图片</li></ul><h3 id="Light主题适合的图片"><a href="#Light主题适合的图片" class="headerlink" title="Light主题适合的图片"></a>Light主题适合的图片</h3><ul><li>日出日落、温暖风景、浅色纹理</li><li>色调偏暖色系 (橙、粉、黄)</li><li>避免过于深暗的图片</li></ul><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol><li><strong>性能考虑</strong>: 背景图片会影响加载速度，建议压缩优化</li><li><strong>响应式</strong>: 确保图片在不同设备上显示良好</li><li><strong>可读性</strong>: 始终保持文字内容的清晰可读</li><li><strong>备份</strong>: 修改前备份原始CSS文件</li></ol><h2 id="恢复渐变背景"><a href="#恢复渐变背景" class="headerlink" title="恢复渐变背景"></a>恢复渐变背景</h2><p>如需恢复当前的渐变背景，只需删除 <code>url()</code> 部分，保留 <code>linear-gradient()</code> 即可。</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/fps.js"/>
+      <url>/js/fps.js</url>
+      
+        <content type="html"><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {    var rAF = function () {        return (            window.requestAnimationFrame ||            window.webkitRequestAnimationFrame ||            function (callback) {                window.setTimeout(callback, 1000 / 60);            }        );    }();    var frame = 0;    var allFrameCount = 0;    var lastTime = Date.now();    var lastFameTime = Date.now();    var loop = function () {        var now = Date.now();        var fs = (now - lastFameTime);        var fps = Math.round(1000 / fs);        lastFameTime = now;        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS        allFrameCount++;        frame++;        if (now > 1000 + lastTime) {            var fps = Math.round((frame * 1000) / (now - lastTime));            if (fps <= 5) {                var kd = `<span style="color:#bd0000">卡成PPT(≥﹏ ≤)</span>`            }  else if (fps <= 25) {                var kd = `<span style="color:orange">电竞级帧率</span>`            } else if (fps <= 70) {                var kd = `<span style="color:#08b7e4">不错啊 ✪ω✪</span>`            } else {                var kd = `<span style="color:#39c5bb">你配置这么好(*☉౪⊙*)</span>`            }            document.getElementById("fps").innerHTML = `FPS:${fps} ${kd}`;            frame = 0;            lastTime = now;        };        rAF(loop);    }    loop();} else {    document.getElementById("fps").style = "display:none!important"}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/custom.js"/>
+      <url>/js/custom.js</url>
+      
+        <content type="html"><![CDATA[(function () {  // 右侧添加五个菜单  function addCustomMenus() {    const nav = document.querySelector('#nav .menus')    if (!nav) return    const customMenus = [      { name: '首页', url: '/', icon: 'fas fa-home' },      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },      { name: '关于', url: '/about/', icon: 'fas fa-heart' }    ]    const menuContainer = document.createElement('div')    menuContainer.className = 'custom-right-menus'    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'    customMenus.forEach(menu => {      const menuItem = document.createElement('a')      menuItem.href = menu.url      menuItem.className = 'menu-item'      menuItem.innerHTML = `<i class="${menu.icon}"></i> ${menu.name}`      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'      menuContainer.appendChild(menuItem)    })    nav.appendChild(menuContainer)  }  function onReady(fn) {    if (document.readyState === 'loading') {      document.addEventListener('DOMContentLoaded', fn)    } else {      fn()    }  }  function applyUI() {    // 1) 添加右侧菜单    addCustomMenus()    // 2) 首页标题样式设置    const title = document.querySelector('#site-title')    if (title) {      // 添加艺术字体类      title.classList.add('custom-title-art')      // 强制让标题容器按内容宽度居中      title.style.display = 'block'      title.style.marginLeft = 'auto'      title.style.marginRight = 'auto'      title.style.width = 'max-content'      title.style.textAlign = 'center'    }    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')    if (blogInfo) {      // 移除所有可能的动画类      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()    }  }  onReady(applyUI)  // 兼容Butterfly的PJAX（如果启用）  window.addEventListener('pjax:complete', applyUI)})()]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/title.js"/>
+      <url>/js/title.js</url>
+      
+        <content type="html"><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）(function () {  var OriginTitle = document.title;  var timer = null;  var awayStart = 0;  var thresholdMs = 120000; // 超过 120s 进入后续池  // 前期池（离开至 120s 内，随机展示 1-5）  var earlyPool = [    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },    { text: '正在上厕所，别偷看！！！', ms: 5000 },    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },    { text: '封印解除！开始吞噬内存！', ms: 10000 },    { text: '警告！页面即将自毁...', ms: 10000 },    { text: '检测到时空波动，请抓稳！', ms: 10000 }  ];  // 后续池（超过 120s 后，随机展示 6-11）  var latePool = [    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },    { text: '你去哪了？我好想你 QAQ', ms: 10000 },    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }  ];  // 回来时提示（随机展示一个，3s 后恢复原标题）  var backPool = [    '啊！你回来啦！（迅速切换回正经脸）',    '咳咳，刚刚什么都没发生'  ];  var backHoldMs = 3000;  var lastIndex = -1;  function pickRandom(pool) {    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };    var idx = Math.floor(Math.random() * pool.length);    // 避免连续两次相同    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;    lastIndex = idx;    return pool[idx];  }  function scheduleNext() {    if (!document.hidden) return; // 可见时不再调度    var now = Date.now();    var elapsed = now - awayStart; // 本次离开累计时间    var pool = elapsed < thresholdMs ? earlyPool : latePool;    var choice = pickRandom(pool);    document.title = choice.text;    var wait = choice.ms;    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {      wait = thresholdMs - elapsed;    }    clearTimeout(timer);    timer = setTimeout(scheduleNext, Math.max(500, wait));  }  document.addEventListener('visibilitychange', function () {    if (document.hidden) {      // 开始离开      awayStart = Date.now();      clearTimeout(timer);      scheduleNext(); // 立即显示第一条并进入调度    } else {      // 回到页面      clearTimeout(timer);      var msg = backPool[Math.floor(Math.random() * backPool.length)];      document.title = msg;      setTimeout(function () {        document.title = OriginTitle;      }, backHoldMs);    }  });})();]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom-dark.css"/>
+      <url>/css/custom-dark.css</url>
+      
+        <content type="html"><![CDATA[/* Butterfly主题自定义深色渐变样式覆盖 *//* 基础深色渐变背景和排版 */html[data-theme='dark'] body {  /* 深夜渐变: #0d2538 -> #1b3b52 -> #0f2027 */  background: linear-gradient(135deg, #0d2538 0%, #1b3b52 50%, #0f2027 100%) fixed;  color: rgba(255, 255, 255, 0.88);}/* 卡片带有微妙的半透明和模糊效果 */html[data-theme='dark'] .card-widget,html[data-theme='dark'] .card,html[data-theme='dark'] .recent-posts .recent-post-item,html[data-theme='dark'] .post,html[data-theme='dark'] .aside-list > .aside-list-item,html[data-theme='dark'] .relatedPosts > .relatedPosts-list > div {  background: linear-gradient(135deg, rgba(13, 37, 56, 0.75) 0%, rgba(27, 59, 82, 0.65) 50%, rgba(15, 32, 39, 0.75) 100%);  backdrop-filter: blur(8px);  -webkit-backdrop-filter: blur(8px);  border: 1px solid rgba(139, 178, 217, 0.15);  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);  position: relative;  overflow: hidden;}/* 卡片悬停效果 */html[data-theme='dark'] .card-widget:hover,html[data-theme='dark'] .card:hover,html[data-theme='dark'] .recent-posts .recent-post-item:hover {  transform: translateY(-2px);  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);  border-color: rgba(139, 178, 217, 0.25);  transition: all 0.3s ease;}/* 头像背景增强 */html[data-theme='dark'] .avatar-img {  background: linear-gradient(135deg, rgba(18, 194, 233, 0.2) 0%, rgba(0, 164, 151, 0.2) 100%);  border: 2px solid rgba(139, 178, 217, 0.3);  box-shadow: 0 0 20px rgba(18, 194, 233, 0.3);}/* 页头和页脚与渐变融合 */html[data-theme='dark'] #page-header,html[data-theme='dark'] #footer {  background: transparent;}/* 强调色：青绿色渐变用于链接和选择 */html[data-theme='dark'] a,html[data-theme='dark'] .links-of-author a,html[data-theme='dark'] .article-meta__categories a,html[data-theme='dark'] .article-meta__tags a {  color: #8cb2d9;  transition: color .2s ease, text-shadow .2s ease;}html[data-theme='dark'] a:hover {  color: #12c2e9;  text-shadow: 0 0 8px rgba(18, 194, 233, 0.4);}/* 按钮样式 */html[data-theme='dark'] :root {  --btn-bg: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);  --btn-hover-color: linear-gradient(135deg, #12c2e9 0%, #00a497 100%);  --btn-color: #0a1118;  --text-highlight-color: #8cb2d9;  --scrollbar-color: #12c2e9;}/* 侧边栏、搜索框等 */html[data-theme='dark'] .sidebar,html[data-theme='dark'] .sidebar #aside-content > .card-widget,html[data-theme='dark'] .search-dialog .search-dialog__title,html[data-theme='dark'] .search-dialog .search-nav {  background: rgba(10, 20, 28, 0.5);}/* 引用块条纹强调 */html[data-theme='dark'] blockquote {  border-left: 3px solid #12c2e9;  background: rgba(18, 194, 233, 0.06);}/* 分割线微妙样式 */html[data-theme='dark'] hr {  border-color: #2a4356;}/* 目录链接颜色和悬停效果 */html[data-theme='dark'] #aside-content .toc .toc-item a {  color: #12c2e9;}html[data-theme='dark'] #aside-content .toc .toc-item a:hover {  color: #8cb2d9;}/* 分页和标签 */html[data-theme='dark'] .pagination .page-number,html[data-theme='dark'] .tag-cloud a,html[data-theme='dark'] .article-tags .tag {  background: rgba(10, 20, 28, 0.6);  border: 1px solid rgba(255,255,255,0.06);}/* 文章标题的精美悬停效果 */html[data-theme='dark'] .recent-post-info .article-title a:hover,html[data-theme='dark'] .post-title a:hover {  color: #12c2e9;}/* 主题切换的平滑过渡 */html[data-theme='dark'] body, html[data-theme='dark'] .card, html[data-theme='dark'] .card-widget {  transition: background .3s ease, color .3s ease, border-color .3s ease;}/* 移除远程网络字体：使用渐变艺术文字代替以避免外部依赖 *//* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */html[data-theme='dark'] #site-info #site-title.custom-title-art {  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;  font-weight: 800 !important;  font-size: clamp(3rem, 6vw, 6rem) !important;  letter-spacing: 0.04em !important;  /* 不支持background-clip的浏览器的备用颜色 */  color: #12c2e9 !important;  background: linear-gradient(135deg, #f8f9fb 0%, #b7e3ff 35%, #67e8f9 55%, #12c2e9 80%) !important;  -webkit-background-clip: text !important;  background-clip: text !important;  -webkit-text-fill-color: transparent !important;  text-shadow: 0 2px 24px rgba(18,194,233,0.15), 0 2px 40px rgba(103,232,249,0.12) !important;  /* 强制居中 */  display: block !important;  text-align: center !important;  margin: 0 auto !important;}/* 确保在不支持background-clip时文字可见 */@supports not (-webkit-background-clip: text) {  html[data-theme='dark'] #site-info #site-title.custom-title-art {    color: #12c2e9 !important;    -webkit-text-fill-color: #12c2e9 !important;  }}/* AnuPpuccin主题风格的Markdown样式 - 基于Catppuccin调色板 *//* Catppuccin Mocha颜色变量定义 */:root {  --ctp-rosewater: #f5e0dc;  --ctp-flamingo: #f2cdcd;  --ctp-pink: #f5c2e7;  --ctp-mauve: #cba6f7;  --ctp-red: #f38ba8;  --ctp-maroon: #eba0ac;  --ctp-peach: #fab387;  --ctp-yellow: #f9e2af;  --ctp-green: #a6e3a1;  --ctp-teal: #94e2d5;  --ctp-sky: #89dceb;  --ctp-sapphire: #74c7ec;  --ctp-blue: #89b4fa;  --ctp-lavender: #b4befe;  --ctp-text: #cdd6f4;  --ctp-subtext1: #bac2de;  --ctp-subtext0: #a6adc8;  --ctp-overlay2: #9399b2;  --ctp-overlay1: #7f849c;  --ctp-overlay0: #6c7086;  --ctp-surface2: #585b70;  --ctp-surface1: #45475a;  --ctp-surface0: #313244;  --ctp-base: #1e1e2e;  --ctp-mantle: #181825;  --ctp-crust: #11111b;}/* Markdown标题样式 */html[data-theme='dark'] .post-content h1 {  color: var(--ctp-red) !important;  font-family: "Noto Serif", serif;  font-weight: 700;  font-size: 2em;  line-height: 1.2;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='dark'] .post-content h2 {  color: var(--ctp-peach) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.6em;  line-height: 1.2;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='dark'] .post-content h3 {  color: var(--ctp-green) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.37em;  line-height: 1.3;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='dark'] .post-content h4 {  color: var(--ctp-teal) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.25em;  line-height: 1.4;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='dark'] .post-content h5 {  color: var(--ctp-lavender) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.12em;  line-height: 1.5;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='dark'] .post-content h6 {  color: var(--ctp-mauve) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.12em;  line-height: 1.5;  margin: 15px 0;  transition: color 0.3s ease;}/* Markdown加粗文字样式 - 使用蓝色调 */html[data-theme='dark'] .post-content strong,html[data-theme='dark'] .post-content b {  color: var(--ctp-blue) !important;  font-weight: 700;  background: linear-gradient(135deg, rgba(137, 180, 250, 0.15) 0%, rgba(69, 71, 90, 0.1) 100%);  padding: 0.1em 0.3em;  border-radius: 3px;  border: 1px solid rgba(137, 180, 250, 0.2);  transition: all 0.2s ease;}/* 加粗文字悬停效果 */html[data-theme='dark'] .post-content strong:hover,html[data-theme='dark'] .post-content b:hover {  background: linear-gradient(135deg, rgba(137, 180, 250, 0.25) 0%, rgba(69, 71, 90, 0.15) 100%);  border-color: rgba(137, 180, 250, 0.4);  transform: translateY(-1px);  box-shadow: 0 2px 8px rgba(137, 180, 250, 0.2);}/* Markdown斜体文字样式 - 使用浅蓝色调 */html[data-theme='dark'] .post-content em,html[data-theme='dark'] .post-content i {  color: var(--ctp-lavender) !important;  font-style: italic;  background: linear-gradient(135deg, rgba(180, 190, 254, 0.1) 0%, transparent 100%);  padding: 0.05em 0.2em;  border-radius: 2px;}/* Markdown列表样式优化 - 使用Overlay1 */html[data-theme='dark'] .post-content ul li::marker,html[data-theme='dark'] .post-content ol li::marker {  color: var(--ctp-overlay1);}html[data-theme='dark'] .post-content ul li,html[data-theme='dark'] .post-content ol li {  margin-bottom: 0.5em;  line-height: 1.6;  color: var(--ctp-text);}/* Markdown链接样式 - 使用Sapphire */html[data-theme='dark'] .post-content a {  color: var(--ctp-sapphire) !important;  text-decoration: none;  border-bottom: 1px solid rgba(116, 199, 236, 0.3);  transition: all 0.2s ease;}html[data-theme='dark'] .post-content a:hover {  color: var(--ctp-sky) !important;  border-bottom-color: var(--ctp-sky);  text-shadow: 0 0 8px rgba(137, 220, 235, 0.4);}/* Markdown表格样式 - 使用Surface和Overlay色调 */html[data-theme='dark'] .post-content table {  border-collapse: collapse;  margin: 1em 0;  background: var(--ctp-surface0);  border-radius: 8px;  overflow: hidden;}html[data-theme='dark'] .post-content table th {  background: linear-gradient(135deg, rgba(203, 166, 247, 0.2) 0%, rgba(69, 71, 90, 0.2) 100%);  color: var(--ctp-mauve) !important;  font-weight: 700;  padding: 0.8em;  border: 1px solid rgba(203, 166, 247, 0.2);}html[data-theme='dark'] .post-content table td {  padding: 0.6em 0.8em;  border: 1px solid var(--ctp-overlay0);  color: var(--ctp-text);}html[data-theme='dark'] .post-content table tr:nth-child(even) {  background: rgba(69, 71, 90, 0.3);}/* 引用块样式 - 使用Peach */html[data-theme='dark'] .post-content blockquote {  border-left: 4px solid var(--ctp-peach);  background: linear-gradient(135deg, rgba(250, 179, 135, 0.1) 0%, transparent 100%);  padding: 1em 1.5em;  margin: 1em 0;  color: var(--ctp-subtext1);  border-radius: 0 8px 8px 0;}/* 动画极光叠加层以丰富第二屏背景 *//* 带有更深蓝绿色调的动画极光叠加层 */html[data-theme='dark'] body::before {  content: '';  position: fixed;  inset: 0;  pointer-events: none;  background:    radial-gradient(60vw 60vh at 20% 20%, rgba(18, 158, 190, 0.15), transparent 60%),    radial-gradient(50vw 50vh at 78% 28%, rgba(0, 120, 140, 0.14), transparent 60%),    radial-gradient(70vw 70vh at 52% 84%, rgba(40, 70, 120, 0.10), transparent 60%);  mix-blend-mode: screen;  opacity: .55;  animation: auroraFloat 26s ease-in-out infinite alternate;}@keyframes auroraFloat {  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }  50% { transform: translate3d(0,-1.2%,0) scale(1.02); filter: saturate(1.05); }  100% { transform: translate3d(0,-2.4%,0) scale(1.03); filter: saturate(1.1); }}/* 右上角自定义菜单 */.custom-right-menus .menu-item {  padding: 6px 10px;  border-radius: 8px;  background: rgba(255,255,255,0.06);  border: 1px solid rgba(255,255,255,0.08);  transition: transform .2s ease, background .2s ease, color .2s ease;}#nav.nav-fixed .custom-right-menus .menu-item,#page-header.not-top-img #nav .custom-right-menus .menu-item {  color: var(--font-color);}.custom-right-menus .menu-item:hover {  transform: translateY(-1px);  background: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);  color: #0a1118 !important;}html[data-theme='dark'] figure.highlight table,html[data-theme='dark'] figure.highlight td,html[data-theme='dark'] figure.highlight th {  background: transparent !important;  box-shadow: none !important;}html[data-theme='dark'] figure.highlight table,html[data-theme='dark'] figure.highlight td,html[data-theme='dark'] figure.highlight th {  border: none !important;  outline: none !important;  border-radius: 0 !important;}/* 避免表格样式对代码块工具栏/容器产生影响 */html[data-theme='dark'] figure.highlight,html[data-theme='dark'] figure.highlight .highlight-tools {  box-shadow: none !important;}/* 调整代码块工具栏复制与展开按钮的间距（dark） */html[data-theme='dark'] figure.highlight .highlight-tools {  gap: 6px; /* 相邻控件之间增加 6px 间距 */}html[data-theme='dark'] figure.highlight .highlight-tools .expand {  margin-left: 4px; /* 展开图标与前一元素稍微拉开 */}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* Unified custom interactions for both themes */@media (min-width: 901px) {  /* 1) 禁用主题默认头像旋转动画（容器与图片） */  #aside-content .card-info .avatar-img,  #aside-content .card-info .avatar-img img,  #sidebar-menus .avatar-img,  #sidebar-menus .avatar-img img {    animation: none !important;  }  /* 覆盖任何 img:hover 的旋转 */  #aside-content .card-info .avatar-img img:hover,  #sidebar-menus .avatar-img img:hover {    transform: none !important;  }  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */  #aside-content .card-info .avatar-img,  #sidebar-menus .avatar-img {    transform-origin: center center;    transition: transform 0.25s ease-in-out !important;    will-change: transform;  }  #aside-content .card-info .avatar-img:hover,  #sidebar-menus .avatar-img:hover {    transform: scale(1.06) !important;  }  /* 3) 侧栏社交图标悬停放大 */  #aside-content .card-info .card-info-social-icons .social-icon {    display: inline-flex;    align-items: center;    justify-content: center;    transition: transform 0.2s ease-in-out;  }  #aside-content .card-info .card-info-social-icons .social-icon:hover {    transform: scale(1.2);  }}/* 帧率检测 */#fps {  position: fixed;  /* 指定位置 */  left: 10px;  bottom: 10px;  z-index: 1919810;}[data-theme="light"] #fps {  background-color: rgba(255, 255, 255, 0.85);  backdrop-filter: var(--backdrop-filter);  padding: 4px;  border-radius: 4px;}[data-theme="dark"] #fps {  background-color: rgba(0, 0, 0, 0.72);  backdrop-filter: var(--backdrop-filter);  padding: 4px;  border-radius: 4px;}/* 固定吸底、水平居中显示网易云外链播放器 */.netease-fixed-player {  position: fixed;  left: 50%;  bottom: 0;  transform: translateX(-50%);  z-index: 2000;  width: 330px; /* 与 iframe 一致，避免拉伸 */  height: 110px;  display: flex;  align-items: flex-end;  justify-content: center;  pointer-events: auto;}/* 让 iframe 完整撑满容器 */.netease-fixed-player iframe {  width: 330px !important;  height: 110px !important;  border: 0;}/* 移动端自适应：略微缩小宽度，避免遮挡 */@media (max-width: 420px) {  .netease-fixed-player,  .netease-fixed-player iframe {    width: 300px !important;    height: 110px !important;  }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/custom-light.css"/>
+      <url>/css/custom-light.css</url>
+      
+        <content type="html"><![CDATA[/* Butterfly主题自定义浅色渐变样式覆盖 *//* 基础浅色渐变背景和排版 */html[data-theme='light'] body {  /* 温暖日光渐变: #ffecd2 -> #fcb69f -> #ff9a9e */  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%) fixed;  color: rgba(51, 51, 51, 0.88);}/* 卡片带有微妙的半透明和模糊效果 */html[data-theme='light'] .card-widget,html[data-theme='light'] .card,html[data-theme='light'] .recent-posts .recent-post-item,html[data-theme='light'] .post,html[data-theme='light'] .aside-list > .aside-list-item,html[data-theme='light'] .relatedPosts > .relatedPosts-list > div {  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 236, 210, 0.75) 50%, rgba(252, 182, 159, 0.65) 100%);  backdrop-filter: blur(10px);  -webkit-backdrop-filter: blur(10px);  border: 1px solid rgba(225, 112, 85, 0.2);  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);  position: relative;  overflow: hidden;}/* 卡片悬停效果 */html[data-theme='light'] .card-widget:hover,html[data-theme='light'] .card:hover,html[data-theme='light'] .recent-posts .recent-post-item:hover {  transform: translateY(-2px);  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);  border-color: rgba(225, 112, 85, 0.35);  transition: all 0.3s ease;}/* 头像背景增强 */html[data-theme='light'] .avatar-img {  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(232, 67, 147, 0.2) 100%);  border: 2px solid rgba(225, 112, 85, 0.4);  box-shadow: 0 0 20px rgba(232, 67, 147, 0.3);}/* 页头和页脚与渐变融合 */html[data-theme='light'] #page-header,html[data-theme='light'] #footer {  background: transparent;}/* 强调色：温暖橙红色渐变用于链接和选择 */html[data-theme='light'] a,html[data-theme='light'] .links-of-author a,html[data-theme='light'] .article-meta__categories a,html[data-theme='light'] .article-meta__tags a {  color: #e17055;  transition: color .2s ease, text-shadow .2s ease;}html[data-theme='light'] a:hover {  color: #d63031;  text-shadow: 0 0 8px rgba(214, 48, 49, 0.4);}/* 按钮样式 */html[data-theme='light'] :root {  --btn-bg: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);  --btn-hover-color: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);  --btn-color: #ffffff;  --text-highlight-color: #e17055;  --scrollbar-color: #e84393;}/* 侧边栏、搜索框等 */html[data-theme='light'] .sidebar,html[data-theme='light'] .sidebar #aside-content > .card-widget,html[data-theme='light'] .search-dialog .search-dialog__title,html[data-theme='light'] .search-dialog .search-nav {  background: rgba(255, 255, 255, 0.8);}/* 引用块条纹强调 */html[data-theme='light'] blockquote {  border-left: 3px solid #e84393;  background: rgba(232, 67, 147, 0.08);}/* 分割线微妙样式 */html[data-theme='light'] hr {  border-color: #fab1a0;}/* 目录链接颜色和悬停效果 */html[data-theme='light'] #aside-content .toc .toc-item a {  color: #e84393;}html[data-theme='light'] #aside-content .toc .toc-item a:hover {  color: #e17055;}/* 分页和标签 */html[data-theme='light'] .pagination .page-number,html[data-theme='light'] .tag-cloud a,html[data-theme='light'] .article-tags .tag {  background: rgba(255, 255, 255, 0.8);  border: 1px solid rgba(232, 67, 147, 0.2);}/* 文章标题的精美悬停效果 */html[data-theme='light'] .recent-post-info .article-title a:hover,html[data-theme='light'] .post-title a:hover {  color: #e84393;}/* 主题切换的平滑过渡 */html[data-theme='light'] body, html[data-theme='light'] .card, html[data-theme='light'] .card-widget {  transition: background .3s ease, color .3s ease, border-color .3s ease;}/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */html[data-theme='light'] #site-info #site-title.custom-title-art {  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;  font-weight: 800 !important;  font-size: clamp(3rem, 6vw, 6rem) !important;  letter-spacing: 0.04em !important;  /* 不支持background-clip的浏览器的备用颜色 */  color: #e84393 !important;  background: linear-gradient(135deg, #fd79a8 0%, #e84393 35%, #d63031 55%, #e17055 80%) !important;  -webkit-background-clip: text !important;  background-clip: text !important;  -webkit-text-fill-color: transparent !important;  text-shadow: 0 2px 24px rgba(232,67,147,0.15), 0 2px 40px rgba(253,121,168,0.12) !important;  /* 强制居中 */  display: block !important;  text-align: center !important;  margin: 0 auto !important;}/* 确保在不支持background-clip时文字可见 */@supports not (-webkit-background-clip: text) {  html[data-theme='light'] #site-info #site-title.custom-title-art {    color: #e84393 !important;    -webkit-text-fill-color: #e84393 !important;  }}/* 温暖主题风格的Markdown样式 - 基于温暖调色板 *//* 温暖色调变量定义 */:root {  --warm-coral: #ff7675;  --warm-pink: #fd79a8;  --warm-purple: #e84393;  --warm-violet: #a29bfe;  --warm-red: #d63031;  --warm-orange: #e17055;  --warm-peach: #fab1a0;  --warm-yellow: #fdcb6e;  --warm-green: #00b894;  --warm-mint: #00cec9;  --warm-cyan: #74b9ff;  --warm-blue: #0984e3;  --warm-indigo: #6c5ce7;  --warm-lavender: #a29bfe;  --warm-text: #2d3436;  --warm-subtext1: #636e72;  --warm-subtext0: #74b9ff;  --warm-overlay2: #b2bec3;  --warm-overlay1: #ddd;  --warm-overlay0: #f1f2f6;  --warm-surface2: #ffeaa7;  --warm-surface1: #fff5f5;  --warm-surface0: #ffffff;  --warm-base: #ffecd2;  --warm-mantle: #fcb69f;  --warm-crust: #ff9a9e;}/* Markdown标题样式 */html[data-theme='light'] .post-content h1 {  color: var(--warm-red) !important;  font-family: "Noto Serif", serif;  font-weight: 700;  font-size: 2em;  line-height: 1.2;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='light'] .post-content h2 {  color: var(--warm-orange) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.6em;  line-height: 1.2;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='light'] .post-content h3 {  color: var(--warm-green) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.37em;  line-height: 1.3;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='light'] .post-content h4 {  color: var(--warm-mint) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.25em;  line-height: 1.4;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='light'] .post-content h5 {  color: var(--warm-lavender) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.12em;  line-height: 1.5;  margin: 15px 0;  transition: color 0.3s ease;}html[data-theme='light'] .post-content h6 {  color: var(--warm-violet) !important;  font-family: "Noto Serif", serif;  font-weight: 600;  font-size: 1.12em;  line-height: 1.5;  margin: 15px 0;  transition: color 0.3s ease;}/* Markdown加粗文字样式 - 使用蓝色调 */html[data-theme='light'] .post-content strong,html[data-theme='light'] .post-content b {  color: var(--warm-blue) !important;  font-weight: 700;  background: linear-gradient(135deg, rgba(116, 185, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);  padding: 0.1em 0.3em;  border-radius: 3px;  border: 1px solid rgba(116, 185, 255, 0.3);  transition: all 0.2s ease;}/* 加粗文字悬停效果 */html[data-theme='light'] .post-content strong:hover,html[data-theme='light'] .post-content b:hover {  background: linear-gradient(135deg, rgba(116, 185, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);  border-color: rgba(116, 185, 255, 0.5);  transform: translateY(-1px);  box-shadow: 0 2px 8px rgba(116, 185, 255, 0.3);}/* Markdown斜体文字样式 - 使用浅紫色调 */html[data-theme='light'] .post-content em,html[data-theme='light'] .post-content i {  color: var(--warm-lavender) !important;  font-style: italic;  background: linear-gradient(135deg, rgba(162, 155, 254, 0.1) 0%, transparent 100%);  padding: 0.05em 0.2em;  border-radius: 2px;}/* Markdown列表样式优化 */html[data-theme='light'] .post-content ul li::marker,html[data-theme='light'] .post-content ol li::marker {  color: var(--warm-overlay1);}html[data-theme='light'] .post-content ul li,html[data-theme='light'] .post-content ol li {  margin-bottom: 0.5em;  line-height: 1.6;  color: var(--warm-text);}/* Markdown链接样式 */html[data-theme='light'] .post-content a {  color: var(--warm-cyan) !important;  text-decoration: none;  border-bottom: 1px solid rgba(0, 206, 201, 0.3);  transition: all 0.2s ease;}html[data-theme='light'] .post-content a:hover {  color: var(--warm-blue) !important;  border-bottom-color: var(--warm-blue);  text-shadow: 0 0 8px rgba(9, 132, 227, 0.4);}/* Markdown表格样式 */html[data-theme='light'] .post-content table {  border-collapse: collapse;  margin: 1em 0;  background: var(--warm-surface0);  border-radius: 8px;  overflow: hidden;  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);}html[data-theme='light'] .post-content table th {  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);  color: var(--warm-purple) !important;  font-weight: 700;  padding: 0.8em;  border: 1px solid rgba(253, 121, 168, 0.3);}html[data-theme='light'] .post-content table td {  padding: 0.6em 0.8em;  border: 1px solid var(--warm-overlay0);  color: var(--warm-text);}html[data-theme='light'] .post-content table tr:nth-child(even) {  background: rgba(255, 245, 245, 0.5);}/* 引用块样式 */html[data-theme='light'] .post-content blockquote {  border-left: 4px solid var(--warm-peach);  background: linear-gradient(135deg, rgba(250, 177, 160, 0.1) 0%, transparent 100%);  padding: 1em 1.5em;  margin: 1em 0;  color: var(--warm-subtext1);  border-radius: 0 8px 8px 0;}/* 动画光晕叠加层以丰富背景 */html[data-theme='light'] body::before {  content: '';  position: fixed;  inset: 0;  pointer-events: none;  background:    radial-gradient(60vw 60vh at 20% 20%, rgba(253, 121, 168, 0.12), transparent 60%),    radial-gradient(50vw 50vh at 78% 28%, rgba(232, 67, 147, 0.10), transparent 60%),    radial-gradient(70vw 70vh at 52% 84%, rgba(255, 154, 158, 0.08), transparent 60%);  mix-blend-mode: multiply;  opacity: .6;  animation: lightAuroraFloat 28s ease-in-out infinite alternate;}@keyframes lightAuroraFloat {  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }  50% { transform: translate3d(0,1.2%,0) scale(1.01); filter: saturate(1.05); }  100% { transform: translate3d(0,2.4%,0) scale(1.02); filter: saturate(1.1); }}/* 右上角自定义菜单 */html[data-theme='light'] .custom-right-menus .menu-item {  padding: 6px 10px;  border-radius: 8px;  background: rgba(255,255,255,0.8);  border: 1px solid rgba(232, 67, 147, 0.2);  transition: transform .2s ease, background .2s ease, color .2s ease;  color: var(--warm-text);}html[data-theme='light'] #nav.nav-fixed .custom-right-menus .menu-item,html[data-theme='light'] #page-header.not-top-img #nav .custom-right-menus .menu-item {  color: var(--font-color);}html[data-theme='light'] .custom-right-menus .menu-item:hover {  transform: translateY(-1px);  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);  color: #ffffff !important;  box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);}/* 修复：恢复代码块（包括 plaintext）为 Butterfly 默认背景（light） */html[data-theme='light'] figure.highlight table,html[data-theme='light'] figure.highlight td,html[data-theme='light'] figure.highlight th {  background: transparent !important;  box-shadow: none !important;}html[data-theme='light'] figure.highlight table,html[data-theme='light'] figure.highlight td,html[data-theme='light'] figure.highlight th {  border: none !important;  outline: none !important;  border-radius: 0 !important;}html[data-theme='light'] figure.highlight,html[data-theme='light'] figure.highlight .highlight-tools {  box-shadow: none !important;}/* 调整代码块工具栏复制与展开按钮的间距（light） */html[data-theme='light'] figure.highlight .highlight-tools {  gap: 6px;}html[data-theme='light'] figure.highlight .highlight-tools .expand {  margin-left: 4px;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/loading-bar.css"/>
+      <url>/css/loading-bar.css</url>
+      
+        <content type="html"><![CDATA[.pace {-webkit-pointer-events: none;pointer-events: none;-webkit-user-select: none;-moz-user-select: none;user-select: none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;-webkit-background-clip: padding-box;-moz-background-clip: padding;background-clip: padding-box;z-index: 2000;position: fixed;margin: auto;top: 12px;left: 0;right: 0;bottom: 0;width: 200px;height: 50px;overflow: hidden;}.pace .pace-progress {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;-webkit-background-clip: padding-box;-moz-background-clip: padding;background-clip: padding-box;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);display: block;position: absolute;right: 100%;margin-right: -7px;width: 93%;top: 7px;height: 14px;font-size: 12px;background: #29d;color: #29d;line-height: 60px;font-weight: bold;font-family: Helvetica, Arial, "Lucida Grande", sans-serif;-webkit-box-shadow: 120px 0 #fff, 240px 0 #fff;-ms-box-shadow: 120px 0 #fff, 240px 0 #fff;box-shadow: 120px 0 #fff, 240px 0 #fff;}.pace .pace-progress:after {content: attr(data-progress-text);display: inline-block;position: fixed;width: 45px;text-align: right;right: 0;padding-right: 16px;top: 4px;}.pace .pace-progress[data-progress-text="0%"]:after { right: -200px }.pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px }.pace .pace-progress[data-progress-text="2%"]:after { right: -196.28px }.pace .pace-progress[data-progress-text="3%"]:after { right: -194.42px }.pace .pace-progress[data-progress-text="4%"]:after { right: -192.56px }.pace .pace-progress[data-progress-text="5%"]:after { right: -190.7px }.pace .pace-progress[data-progress-text="6%"]:after { right: -188.84px }.pace .pace-progress[data-progress-text="7%"]:after { right: -186.98px }.pace .pace-progress[data-progress-text="8%"]:after { right: -185.12px }.pace .pace-progress[data-progress-text="9%"]:after { right: -183.26px }.pace .pace-progress[data-progress-text="10%"]:after { right: -181.4px }.pace .pace-progress[data-progress-text="11%"]:after { right: -179.54px }.pace .pace-progress[data-progress-text="12%"]:after { right: -177.68px }.pace .pace-progress[data-progress-text="13%"]:after { right: -175.82px }.pace .pace-progress[data-progress-text="14%"]:after { right: -173.96px }.pace .pace-progress[data-progress-text="15%"]:after { right: -172.1px }.pace .pace-progress[data-progress-text="16%"]:after { right: -170.24px }.pace .pace-progress[data-progress-text="17%"]:after { right: -168.38px }.pace .pace-progress[data-progress-text="18%"]:after { right: -166.52px }.pace .pace-progress[data-progress-text="19%"]:after { right: -164.66px }.pace .pace-progress[data-progress-text="20%"]:after { right: -162.8px }.pace .pace-progress[data-progress-text="21%"]:after { right: -160.94px }.pace .pace-progress[data-progress-text="22%"]:after { right: -159.08px }.pace .pace-progress[data-progress-text="23%"]:after { right: -157.22px }.pace .pace-progress[data-progress-text="24%"]:after { right: -155.36px }.pace .pace-progress[data-progress-text="25%"]:after { right: -153.5px }.pace .pace-progress[data-progress-text="26%"]:after { right: -151.64px }.pace .pace-progress[data-progress-text="27%"]:after { right: -149.78px }.pace .pace-progress[data-progress-text="28%"]:after { right: -147.92px }.pace .pace-progress[data-progress-text="29%"]:after { right: -146.06px }.pace .pace-progress[data-progress-text="30%"]:after { right: -144.2px }.pace .pace-progress[data-progress-text="31%"]:after { right: -142.34px }.pace .pace-progress[data-progress-text="32%"]:after { right: -140.48px }.pace .pace-progress[data-progress-text="33%"]:after { right: -138.62px }.pace .pace-progress[data-progress-text="34%"]:after { right: -136.76px }.pace .pace-progress[data-progress-text="35%"]:after { right: -134.9px }.pace .pace-progress[data-progress-text="36%"]:after { right: -133.04px }.pace .pace-progress[data-progress-text="37%"]:after { right: -131.18px }.pace .pace-progress[data-progress-text="38%"]:after { right: -129.32px }.pace .pace-progress[data-progress-text="39%"]:after { right: -127.46px }.pace .pace-progress[data-progress-text="40%"]:after { right: -125.6px }.pace .pace-progress[data-progress-text="41%"]:after { right: -123.74px }.pace .pace-progress[data-progress-text="42%"]:after { right: -121.88px }.pace .pace-progress[data-progress-text="43%"]:after { right: -120.02px }.pace .pace-progress[data-progress-text="44%"]:after { right: -118.16px }.pace .pace-progress[data-progress-text="45%"]:after { right: -116.3px }.pace .pace-progress[data-progress-text="46%"]:after { right: -114.44px }.pace .pace-progress[data-progress-text="47%"]:after { right: -112.58px }.pace .pace-progress[data-progress-text="48%"]:after { right: -110.72px }.pace .pace-progress[data-progress-text="49%"]:after { right: -108.86px }.pace .pace-progress[data-progress-text="50%"]:after { right: -107px }.pace .pace-progress[data-progress-text="51%"]:after { right: -105.14px }.pace .pace-progress[data-progress-text="52%"]:after { right: -103.28px }.pace .pace-progress[data-progress-text="53%"]:after { right: -101.42px }.pace .pace-progress[data-progress-text="54%"]:after { right: -99.56px }.pace .pace-progress[data-progress-text="55%"]:after { right: -97.7px }.pace .pace-progress[data-progress-text="56%"]:after { right: -95.84px }.pace .pace-progress[data-progress-text="57%"]:after { right: -93.98px }.pace .pace-progress[data-progress-text="58%"]:after { right: -92.12px }.pace .pace-progress[data-progress-text="59%"]:after { right: -90.26px }.pace .pace-progress[data-progress-text="60%"]:after { right: -88.4px }.pace .pace-progress[data-progress-text="61%"]:after { right: -86.53999999999999px }.pace .pace-progress[data-progress-text="62%"]:after { right: -84.68px }.pace .pace-progress[data-progress-text="63%"]:after { right: -82.82px }.pace .pace-progress[data-progress-text="64%"]:after { right: -80.96000000000001px }.pace .pace-progress[data-progress-text="65%"]:after { right: -79.1px }.pace .pace-progress[data-progress-text="66%"]:after { right: -77.24px }.pace .pace-progress[data-progress-text="67%"]:after { right: -75.38px }.pace .pace-progress[data-progress-text="68%"]:after { right: -73.52px }.pace .pace-progress[data-progress-text="69%"]:after { right: -71.66px }.pace .pace-progress[data-progress-text="70%"]:after { right: -69.8px }.pace .pace-progress[data-progress-text="71%"]:after { right: -67.94px }.pace .pace-progress[data-progress-text="72%"]:after { right: -66.08px }.pace .pace-progress[data-progress-text="73%"]:after { right: -64.22px }.pace .pace-progress[data-progress-text="74%"]:after { right: -62.36px }.pace .pace-progress[data-progress-text="75%"]:after { right: -60.5px }.pace .pace-progress[data-progress-text="76%"]:after { right: -58.64px }.pace .pace-progress[data-progress-text="77%"]:after { right: -56.78px }.pace .pace-progress[data-progress-text="78%"]:after { right: -54.92px }.pace .pace-progress[data-progress-text="79%"]:after { right: -53.06px }.pace .pace-progress[data-progress-text="80%"]:after { right: -51.2px }.pace .pace-progress[data-progress-text="81%"]:after { right: -49.34px }.pace .pace-progress[data-progress-text="82%"]:after { right: -47.480000000000004px }.pace .pace-progress[data-progress-text="83%"]:after { right: -45.62px }.pace .pace-progress[data-progress-text="84%"]:after { right: -43.76px }.pace .pace-progress[data-progress-text="85%"]:after { right: -41.9px }.pace .pace-progress[data-progress-text="86%"]:after { right: -40.04px }.pace .pace-progress[data-progress-text="87%"]:after { right: -38.18px }.pace .pace-progress[data-progress-text="88%"]:after { right: -36.32px }.pace .pace-progress[data-progress-text="89%"]:after { right: -34.46px }.pace .pace-progress[data-progress-text="90%"]:after { right: -32.6px }.pace .pace-progress[data-progress-text="91%"]:after { right: -30.740000000000002px }.pace .pace-progress[data-progress-text="92%"]:after { right: -28.880000000000003px }.pace .pace-progress[data-progress-text="93%"]:after { right: -27.02px }.pace .pace-progress[data-progress-text="94%"]:after { right: -25.16px }.pace .pace-progress[data-progress-text="95%"]:after { right: -23.3px }.pace .pace-progress[data-progress-text="96%"]:after { right: -21.439999999999998px }.pace .pace-progress[data-progress-text="97%"]:after { right: -19.58px }.pace .pace-progress[data-progress-text="98%"]:after { right: -17.72px }.pace .pace-progress[data-progress-text="99%"]:after { right: -15.86px }.pace .pace-progress[data-progress-text="100%"]:after { right: -14px }.pace .pace-activity {position: absolute;width: 100%;height: 28px;z-index: 2001;box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;border-radius: 10px;}.pace.pace-inactive {display: none;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d-models/xiaomai/physics.json"/>
+      <url>/live2d-models/xiaomai/physics.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d-models/xiaomai/xiaomai.model.json"/>
+      <url>/live2d-models/xiaomai/xiaomai.model.json</url>
+      
+        <content type="html"><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.8376,"center_x":-0.0507,"center_y":-0.089},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":500,"fade_out":500,"expressions":"F00"}],"start":[{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"26","expressions":"F00"},{"file":"mtn/rita_Live2D_001.mtn","msg_id":"1","expressions":"F00"},{"file":"mtn/rita_Live2D_002.mtn","msg_id":"2","expressions":"F00"},{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_004.mtn","msg_id":"4","expressions":"F00"},{"file":"mtn/rita_Live2D_005.mtn","msg_id":"5","expressions":"F00"},{"file":"mtn/rita_Live2D_006.mtn","msg_id":"6","expressions":"F00"},{"file":"mtn/rita_Live2D_007.mtn","msg_id":"7","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","msg_id":"8","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","msg_id":"9","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","msg_id":"10","expressions":"F00"}],"tap_head":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_011.mtn","msg_id":"11","expressions":"F00"},{"file":"mtn/rita_Live2D_012.mtn","msg_id":"12","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","msg_id":"13","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","msg_id":"14","expressions":"F00"},{"file":"mtn/rita_Live2D_015.mtn","msg_id":"15"},{"file":"mtn/rita_Live2D_016.mtn","msg_id":"16","expressions":"F00"},{"file":"mtn/rita_Live2D_017.mtn","msg_id":"17","expressions":"F00"},{"file":"mtn/rita_Live2D_018.mtn","msg_id":"18","expressions":"F00"},{"file":"mtn/rita_Live2D_019.mtn","msg_id":"19","expressions":"F00"},{"file":"mtn/rita_Live2D_020.mtn","msg_id":"20","fade_in":500,"fade_out":1000}],"shake":[{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"random":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"new_msg":[{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"}]}}]]></content>
+      
+    </entry>
+    
+    
+  
 </search>
