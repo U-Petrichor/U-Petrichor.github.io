@@ -1,68 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Shared Inventory Mod（共享存储模组）</title>
-    <url>/2025/09/15/Minecraft/SharedInventoryMod/</url>
-    <content><![CDATA[介绍
-Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段
-这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求
-这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能
-
-最终目标
-实现远程交换物品
-实现大容量背包
-实现多种工作台(工作台、熔炉、锻造台等等)
-实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)
-实现物品排序以及搜索功能
-更好看的外观以及UI
-移植到基岩版本以及Forge版本（太过遥远）
-
-最新版已实现功能
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-没法排序和搜索
-版本都没有移植完
-
-已知BUG暂无
-下次更新已实现功能预告暂无
-反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
-
-邮件: u_petrichor@163.com
-QQ群:970039533（我是群主，也欢迎你来水群）
-Bilibili私信或视频评论区发送消息（不太可靠）
-
-下载链接
-百度网盘:https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3
-qBittorrent：SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里
-如果你不会用qBittorrent：三分钟学会用磁力链接
-请不要使用百度网盘、迅雷等下载这个磁力链接
-
-
-Q群：970039533（我是群主，也欢迎你来水群）
-
-使用教程安装模组的教程我就省略了
-关键物品合成表存储核心(Shared Inventory Core)共享背包(Shared Inventory Backpack)历代更新内容介绍0.4第一个发布的版本（bushi，主要是之前的版本删掉了）
-
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-
-
-]]></content>
-      <categories>
-        <category>游戏</category>
-        <category>Minecraft</category>
-        <category>SharedInventoryMod</category>
-      </categories>
-      <tags>
-        <tag>Minecraft</tag>
-        <tag>SharedInventoryMod</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Waline的配置以及去掉部分登录选项</title>
     <url>/2025/09/16/tutorials/Waline%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%8E%BB%E6%8E%89%E9%83%A8%E5%88%86%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/</url>
     <content><![CDATA[&#x2F;&#x2F;还没搞完，先写在这里占位置
@@ -167,6 +105,127 @@ http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya
       <tags>
         <tag>软件教程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Shared Inventory Mod（共享存储模组）</title>
+    <url>/2025/09/15/Game/Minecraft/SharedInventoryMod/</url>
+    <content><![CDATA[介绍
+Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段
+这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求
+这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能
+
+最终目标
+实现远程交换物品
+实现大容量背包
+实现多种工作台(工作台、熔炉、锻造台等等)
+实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)
+实现物品排序以及搜索功能
+更好看的外观以及UI
+移植到基岩版本以及Forge版本（太过遥远）
+
+最新版已实现功能
+实现了远程交换物品
+实现了大容量背包
+仅仅实现了内嵌工作台
+糟糕的贴图
+没法排序和搜索
+版本都没有移植完
+
+已知BUG暂无
+下次更新已实现功能预告暂无
+反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
+
+邮件: u_petrichor@163.com
+QQ群:970039533（我是群主，也欢迎你来水群）
+Bilibili私信或视频评论区发送消息（不太可靠）
+
+下载链接
+百度网盘:https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3
+qBittorrent：SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里
+如果你不会用qBittorrent：三分钟学会用磁力链接
+请不要使用百度网盘、迅雷等下载这个磁力链接
+
+
+Q群：970039533（我是群主，也欢迎你来水群）
+
+使用教程安装模组的教程我就省略了
+关键物品合成表存储核心(Shared Inventory Core)共享背包(Shared Inventory Backpack)历代更新内容介绍0.4第一个发布的版本（bushi，主要是之前的版本删掉了）
+
+实现了远程交换物品
+实现了大容量背包
+仅仅实现了内嵌工作台
+糟糕的贴图
+
+
+]]></content>
+      <categories>
+        <category>游戏</category>
+        <category>Minecraft</category>
+        <category>SharedInventoryMod</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+        <tag>SharedInventoryMod</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>免费开DDNet服务器</title>
+    <url>/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[前言2025年9月初，DDNet国服似乎不运营了，大陆玩家只能去连港服，然而港服延迟较高，还非常不稳定，即使开了加速器也很糟糕，外服虽然稳定一些，但是延迟更高，所以说为了能玩到更加稳定的服务器，我折腾了一个下午找到了个免费开服的方法，根据本文你就可以实现开服与朋友联机，不过这个方法也是有一些缺陷，就是服务器不会显示在DDNet的互联网频道，所以说聚集在一起是很重要的（咳咳，Q群：970039533）
+后续惊喜！！我不知道什么原理，居然有路人可以直接加入到我的服务器！！！
+本文是保姆式教程，电脑0基础的玩家跟着做也可以实现联机
+了解开服的事项这一个大标题如果你着急看开服可以不看，只是如果后续碰到一些问题或者自己钻研新方法的时候可能会对你有帮助
+官网提供的信息打开DDNet官网然后翻译之后可以看到主页面有own server的链接，点击即可跳转跳转之后有许多选项，选择Server Setting就可以跳转到有关服务器设置的相关内容，这里你可以根据其解释来进行设置，所以请自己备好翻译
+要配置的文件在哪我们先尝试点击游戏里的运行服务器，发现弹出来一个终端，有这些内容，具体看图中解析唉！到现在我们已知的内容有哪些？
+
+使用的是udp通信（这个其实蛮重要的，因为不是所有免费的内网穿透都支持udp，大部分都是支持tcp）
+端口是8303起所以到这里其实我有两个思路，一个是使用Radmin LAN开局域网，还有就是想办法使用内网穿透，如果说你有其他思路但是自己没有尝试的话，欢迎在评论区分享，我有空会尝试并且根据结果更新文档
+
+开服方法
+目前只研究了一个，后续可能还会折腾一些新方法，所以现在这里了个二级标题
+
+SakuraFrp 樱花内网穿透没想到想当年MC联机的方法还能用到DDNet上，内网穿透的原理就是将本地的端口映射到公网的端口，这样就可以通过公网的端口访问到本地的服务了，而SakuraFrp就是一个免费的内网穿透工具，它支持udp和tcp，所以说我们可以使用它来开服（还有个比较出名的内网穿透工具ngrok，这个并不支持udp传输，至少2025&#x2F;9&#x2F;18这天是不行的）
+配置SakuraFrp
+打开SakuraFrp的官网
+点击注册，注册流程我就不说了
+跳转到下一个页面之后，点击Sakura Frp 
+优先完成实名认证 
+按照图中的流程找到创建隧道 
+任选一个节点，根据服务器的状态自己选择，注意上面有支持 UDP的选项 
+按照如图所示创建隧道即可
+
+下载客户端并启用
+点击下载客户端，根据自己的操作系统下载对应的客户端，具体的下载流程请根据下载页的教程一步步执行，我这里就不提供了 
+先根据图中位置”复制密钥“ 
+再把密钥复制到安装好的客户端，点击登录 
+登录之后会有如图所示的两个选项，选择有UDP的这一项选择开启 
+开启之后根据图找到需要复制的内容
+
+准备并开始联机
+先找到配置的文件，根据图找到autoexec_server.cfg文件 
+回头看看我一开始提到的有关服务器配置信息的网站，我这里只会做必须项的修改
+打开autoexec_server.cfg文件（鼠标右击之后打开方式选择记事本或者VScode之类的都行）
+按ctrl+f，搜索sv_register，将这个参数后面的数字改为1，这个为必须项，如果你想要服务器有一些额外的限制，请自行看上面说的官网 
+按ctrl+s保存文件，然后打开你的DDNet，点击运行服务器
+终端会出现这个报错，但是不要在意，出现这个报错的原因是DDNet服务器想要连接连接你的IPv4地址的8303端口，但是因为我们使用的都是经过NAT转换的内网，所以说DDNet服务器是连不上的，而内网穿透就像是一个桥梁，别人先帮你接收，然后再转交给你，所以说只要别人把数据传到要转交给你的人，你一样可以实现数据传输 
+让朋友在互联网这里输入你刚刚在Sakura Frp里复制的内容，即可加入到你的服务器 
+加入成功的图片
+
+]]></content>
+      <categories>
+        <category>游戏</category>
+        <category>Else</category>
+        <category>DDNet</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>DDNet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
@@ -630,6 +689,345 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
+    <url>/css/custom.css</url>
+    <content><![CDATA[/* Unified custom interactions for both themes */
+@media (min-width: 901px) {
+  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
+  }
+
+  /* 覆盖任何 img:hover 的旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
+  }
+
+  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
+  #aside-content .card-info .avatar-img,
+  #sidebar-menus .avatar-img {
+    transform-origin: center center;
+    transition: transform 0.25s ease-in-out !important;
+    will-change: transform;
+  }
+  #aside-content .card-info .avatar-img:hover,
+  #sidebar-menus .avatar-img:hover {
+    transform: scale(1.06) !important;
+  }
+
+  /* 3) 侧栏社交图标悬停放大 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  left: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/loading-bar.css</url>
+    <content><![CDATA[.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+
+	z-index: 2000;
+	position: fixed;
+	margin: auto;
+	top: 12px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 200px;
+	height: 50px;
+	overflow: hidden;
+}
+
+.pace .pace-progress {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+
+	display: block;
+	position: absolute;
+	right: 100%;
+	margin-right: -7px;
+	width: 93%;
+	top: 7px;
+	height: 14px;
+	font-size: 12px;
+	background: #29d;
+	color: #29d;
+	line-height: 60px;
+	font-weight: bold;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+
+	-webkit-box-shadow: 120px 0 #fff, 240px 0 #fff;
+	-ms-box-shadow: 120px 0 #fff, 240px 0 #fff;
+	box-shadow: 120px 0 #fff, 240px 0 #fff;
+}
+
+.pace .pace-progress:after {
+	content: attr(data-progress-text);
+	display: inline-block;
+	position: fixed;
+	width: 45px;
+	text-align: right;
+	right: 0;
+	padding-right: 16px;
+	top: 4px;
+}
+
+.pace .pace-progress[data-progress-text="0%"]:after { right: -200px }
+.pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px }
+.pace .pace-progress[data-progress-text="2%"]:after { right: -196.28px }
+.pace .pace-progress[data-progress-text="3%"]:after { right: -194.42px }
+.pace .pace-progress[data-progress-text="4%"]:after { right: -192.56px }
+.pace .pace-progress[data-progress-text="5%"]:after { right: -190.7px }
+.pace .pace-progress[data-progress-text="6%"]:after { right: -188.84px }
+.pace .pace-progress[data-progress-text="7%"]:after { right: -186.98px }
+.pace .pace-progress[data-progress-text="8%"]:after { right: -185.12px }
+.pace .pace-progress[data-progress-text="9%"]:after { right: -183.26px }
+.pace .pace-progress[data-progress-text="10%"]:after { right: -181.4px }
+.pace .pace-progress[data-progress-text="11%"]:after { right: -179.54px }
+.pace .pace-progress[data-progress-text="12%"]:after { right: -177.68px }
+.pace .pace-progress[data-progress-text="13%"]:after { right: -175.82px }
+.pace .pace-progress[data-progress-text="14%"]:after { right: -173.96px }
+.pace .pace-progress[data-progress-text="15%"]:after { right: -172.1px }
+.pace .pace-progress[data-progress-text="16%"]:after { right: -170.24px }
+.pace .pace-progress[data-progress-text="17%"]:after { right: -168.38px }
+.pace .pace-progress[data-progress-text="18%"]:after { right: -166.52px }
+.pace .pace-progress[data-progress-text="19%"]:after { right: -164.66px }
+.pace .pace-progress[data-progress-text="20%"]:after { right: -162.8px }
+.pace .pace-progress[data-progress-text="21%"]:after { right: -160.94px }
+.pace .pace-progress[data-progress-text="22%"]:after { right: -159.08px }
+.pace .pace-progress[data-progress-text="23%"]:after { right: -157.22px }
+.pace .pace-progress[data-progress-text="24%"]:after { right: -155.36px }
+.pace .pace-progress[data-progress-text="25%"]:after { right: -153.5px }
+.pace .pace-progress[data-progress-text="26%"]:after { right: -151.64px }
+.pace .pace-progress[data-progress-text="27%"]:after { right: -149.78px }
+.pace .pace-progress[data-progress-text="28%"]:after { right: -147.92px }
+.pace .pace-progress[data-progress-text="29%"]:after { right: -146.06px }
+.pace .pace-progress[data-progress-text="30%"]:after { right: -144.2px }
+.pace .pace-progress[data-progress-text="31%"]:after { right: -142.34px }
+.pace .pace-progress[data-progress-text="32%"]:after { right: -140.48px }
+.pace .pace-progress[data-progress-text="33%"]:after { right: -138.62px }
+.pace .pace-progress[data-progress-text="34%"]:after { right: -136.76px }
+.pace .pace-progress[data-progress-text="35%"]:after { right: -134.9px }
+.pace .pace-progress[data-progress-text="36%"]:after { right: -133.04px }
+.pace .pace-progress[data-progress-text="37%"]:after { right: -131.18px }
+.pace .pace-progress[data-progress-text="38%"]:after { right: -129.32px }
+.pace .pace-progress[data-progress-text="39%"]:after { right: -127.46px }
+.pace .pace-progress[data-progress-text="40%"]:after { right: -125.6px }
+.pace .pace-progress[data-progress-text="41%"]:after { right: -123.74px }
+.pace .pace-progress[data-progress-text="42%"]:after { right: -121.88px }
+.pace .pace-progress[data-progress-text="43%"]:after { right: -120.02px }
+.pace .pace-progress[data-progress-text="44%"]:after { right: -118.16px }
+.pace .pace-progress[data-progress-text="45%"]:after { right: -116.3px }
+.pace .pace-progress[data-progress-text="46%"]:after { right: -114.44px }
+.pace .pace-progress[data-progress-text="47%"]:after { right: -112.58px }
+.pace .pace-progress[data-progress-text="48%"]:after { right: -110.72px }
+.pace .pace-progress[data-progress-text="49%"]:after { right: -108.86px }
+.pace .pace-progress[data-progress-text="50%"]:after { right: -107px }
+.pace .pace-progress[data-progress-text="51%"]:after { right: -105.14px }
+.pace .pace-progress[data-progress-text="52%"]:after { right: -103.28px }
+.pace .pace-progress[data-progress-text="53%"]:after { right: -101.42px }
+.pace .pace-progress[data-progress-text="54%"]:after { right: -99.56px }
+.pace .pace-progress[data-progress-text="55%"]:after { right: -97.7px }
+.pace .pace-progress[data-progress-text="56%"]:after { right: -95.84px }
+.pace .pace-progress[data-progress-text="57%"]:after { right: -93.98px }
+.pace .pace-progress[data-progress-text="58%"]:after { right: -92.12px }
+.pace .pace-progress[data-progress-text="59%"]:after { right: -90.26px }
+.pace .pace-progress[data-progress-text="60%"]:after { right: -88.4px }
+.pace .pace-progress[data-progress-text="61%"]:after { right: -86.53999999999999px }
+.pace .pace-progress[data-progress-text="62%"]:after { right: -84.68px }
+.pace .pace-progress[data-progress-text="63%"]:after { right: -82.82px }
+.pace .pace-progress[data-progress-text="64%"]:after { right: -80.96000000000001px }
+.pace .pace-progress[data-progress-text="65%"]:after { right: -79.1px }
+.pace .pace-progress[data-progress-text="66%"]:after { right: -77.24px }
+.pace .pace-progress[data-progress-text="67%"]:after { right: -75.38px }
+.pace .pace-progress[data-progress-text="68%"]:after { right: -73.52px }
+.pace .pace-progress[data-progress-text="69%"]:after { right: -71.66px }
+.pace .pace-progress[data-progress-text="70%"]:after { right: -69.8px }
+.pace .pace-progress[data-progress-text="71%"]:after { right: -67.94px }
+.pace .pace-progress[data-progress-text="72%"]:after { right: -66.08px }
+.pace .pace-progress[data-progress-text="73%"]:after { right: -64.22px }
+.pace .pace-progress[data-progress-text="74%"]:after { right: -62.36px }
+.pace .pace-progress[data-progress-text="75%"]:after { right: -60.5px }
+.pace .pace-progress[data-progress-text="76%"]:after { right: -58.64px }
+.pace .pace-progress[data-progress-text="77%"]:after { right: -56.78px }
+.pace .pace-progress[data-progress-text="78%"]:after { right: -54.92px }
+.pace .pace-progress[data-progress-text="79%"]:after { right: -53.06px }
+.pace .pace-progress[data-progress-text="80%"]:after { right: -51.2px }
+.pace .pace-progress[data-progress-text="81%"]:after { right: -49.34px }
+.pace .pace-progress[data-progress-text="82%"]:after { right: -47.480000000000004px }
+.pace .pace-progress[data-progress-text="83%"]:after { right: -45.62px }
+.pace .pace-progress[data-progress-text="84%"]:after { right: -43.76px }
+.pace .pace-progress[data-progress-text="85%"]:after { right: -41.9px }
+.pace .pace-progress[data-progress-text="86%"]:after { right: -40.04px }
+.pace .pace-progress[data-progress-text="87%"]:after { right: -38.18px }
+.pace .pace-progress[data-progress-text="88%"]:after { right: -36.32px }
+.pace .pace-progress[data-progress-text="89%"]:after { right: -34.46px }
+.pace .pace-progress[data-progress-text="90%"]:after { right: -32.6px }
+.pace .pace-progress[data-progress-text="91%"]:after { right: -30.740000000000002px }
+.pace .pace-progress[data-progress-text="92%"]:after { right: -28.880000000000003px }
+.pace .pace-progress[data-progress-text="93%"]:after { right: -27.02px }
+.pace .pace-progress[data-progress-text="94%"]:after { right: -25.16px }
+.pace .pace-progress[data-progress-text="95%"]:after { right: -23.3px }
+.pace .pace-progress[data-progress-text="96%"]:after { right: -21.439999999999998px }
+.pace .pace-progress[data-progress-text="97%"]:after { right: -19.58px }
+.pace .pace-progress[data-progress-text="98%"]:after { right: -17.72px }
+.pace .pace-progress[data-progress-text="99%"]:after { right: -15.86px }
+.pace .pace-progress[data-progress-text="100%"]:after { right: -14px }
+
+
+.pace .pace-activity {
+	position: absolute;
+	width: 100%;
+	height: 28px;
+	z-index: 2001;
+	box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;
+	border-radius: 10px;
+}
+
+.pace.pace-inactive {
+	display: none;
+}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/custom.js</url>
+    <content><![CDATA[(function () {
+  // 右侧添加五个菜单
+  function addCustomMenus() {
+    const nav = document.querySelector('#nav .menus')
+    if (!nav) return
+
+    const customMenus = [
+      { name: '首页', url: '/', icon: 'fas fa-home' },
+      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
+      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
+      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
+      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
+    ]
+
+    const menuContainer = document.createElement('div')
+    menuContainer.className = 'custom-right-menus'
+    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
+
+    customMenus.forEach(menu => {
+      const menuItem = document.createElement('a')
+      menuItem.href = menu.url
+      menuItem.className = 'menu-item'
+      menuItem.innerHTML = ` ${menu.name}`
+      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
+      menuContainer.appendChild(menuItem)
+    })
+
+    nav.appendChild(menuContainer)
+  }
+
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn)
+    } else {
+      fn()
+    }
+  }
+
+  function applyUI() {
+    // 1) 添加右侧菜单
+    addCustomMenus()
+
+    // 2) 首页标题样式设置
+    const title = document.querySelector('#site-title')
+    if (title) {
+      // 添加艺术字体类
+      title.classList.add('custom-title-art')
+      // 强制让标题容器按内容宽度居中
+      title.style.display = 'block'
+      title.style.marginLeft = 'auto'
+      title.style.marginRight = 'auto'
+      title.style.width = 'max-content'
+      title.style.textAlign = 'center'
+    }
+
+    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
+    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
+    if (blogInfo) {
+      // 移除所有可能的动画类
+      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
+    }
+  }
+  
+
+  onReady(applyUI)
+  // 兼容Butterfly的PJAX（如果启用）
+  window.addEventListener('pjax:complete', applyUI)
+})()
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/css/custom-light.css</url>
     <content><![CDATA[/* Butterfly主题自定义浅色渐变样式覆盖 */
 
@@ -1038,345 +1436,34 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
-    <url>/css/custom.css</url>
-    <content><![CDATA[/* Unified custom interactions for both themes */
-@media (min-width: 901px) {
-  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
-  #aside-content .card-info .avatar-img,
-  #aside-content .card-info .avatar-img img,
-  #sidebar-menus .avatar-img,
-  #sidebar-menus .avatar-img img {
-    animation: none !important;
-  }
+    <url>/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
 
-  /* 覆盖任何 img:hover 的旋转 */
-  #aside-content .card-info .avatar-img img:hover,
-  #sidebar-menus .avatar-img img:hover {
-    transform: none !important;
-  }
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
 
-  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
-  #aside-content .card-info .avatar-img,
-  #sidebar-menus .avatar-img {
-    transform-origin: center center;
-    transition: transform 0.25s ease-in-out !important;
-    will-change: transform;
-  }
-  #aside-content .card-info .avatar-img:hover,
-  #sidebar-menus .avatar-img:hover {
-    transform: scale(1.06) !important;
-  }
-
-  /* 3) 侧栏社交图标悬停放大 */
-  #aside-content .card-info .card-info-social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  #aside-content .card-info .card-info-social-icons .social-icon:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/loading-bar.css</url>
-    <content><![CDATA[.pace {
-	-webkit-pointer-events: none;
-	pointer-events: none;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
-
-	z-index: 2000;
-	position: fixed;
-	margin: auto;
-	top: 12px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 200px;
-	height: 50px;
-	overflow: hidden;
-}
-
-.pace .pace-progress {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
-
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-
-	display: block;
-	position: absolute;
-	right: 100%;
-	margin-right: -7px;
-	width: 93%;
-	top: 7px;
-	height: 14px;
-	font-size: 12px;
-	background: #29d;
-	color: #29d;
-	line-height: 60px;
-	font-weight: bold;
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
-
-	-webkit-box-shadow: 120px 0 #fff, 240px 0 #fff;
-	-ms-box-shadow: 120px 0 #fff, 240px 0 #fff;
-	box-shadow: 120px 0 #fff, 240px 0 #fff;
-}
-
-.pace .pace-progress:after {
-	content: attr(data-progress-text);
-	display: inline-block;
-	position: fixed;
-	width: 45px;
-	text-align: right;
-	right: 0;
-	padding-right: 16px;
-	top: 4px;
-}
-
-.pace .pace-progress[data-progress-text="0%"]:after { right: -200px }
-.pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px }
-.pace .pace-progress[data-progress-text="2%"]:after { right: -196.28px }
-.pace .pace-progress[data-progress-text="3%"]:after { right: -194.42px }
-.pace .pace-progress[data-progress-text="4%"]:after { right: -192.56px }
-.pace .pace-progress[data-progress-text="5%"]:after { right: -190.7px }
-.pace .pace-progress[data-progress-text="6%"]:after { right: -188.84px }
-.pace .pace-progress[data-progress-text="7%"]:after { right: -186.98px }
-.pace .pace-progress[data-progress-text="8%"]:after { right: -185.12px }
-.pace .pace-progress[data-progress-text="9%"]:after { right: -183.26px }
-.pace .pace-progress[data-progress-text="10%"]:after { right: -181.4px }
-.pace .pace-progress[data-progress-text="11%"]:after { right: -179.54px }
-.pace .pace-progress[data-progress-text="12%"]:after { right: -177.68px }
-.pace .pace-progress[data-progress-text="13%"]:after { right: -175.82px }
-.pace .pace-progress[data-progress-text="14%"]:after { right: -173.96px }
-.pace .pace-progress[data-progress-text="15%"]:after { right: -172.1px }
-.pace .pace-progress[data-progress-text="16%"]:after { right: -170.24px }
-.pace .pace-progress[data-progress-text="17%"]:after { right: -168.38px }
-.pace .pace-progress[data-progress-text="18%"]:after { right: -166.52px }
-.pace .pace-progress[data-progress-text="19%"]:after { right: -164.66px }
-.pace .pace-progress[data-progress-text="20%"]:after { right: -162.8px }
-.pace .pace-progress[data-progress-text="21%"]:after { right: -160.94px }
-.pace .pace-progress[data-progress-text="22%"]:after { right: -159.08px }
-.pace .pace-progress[data-progress-text="23%"]:after { right: -157.22px }
-.pace .pace-progress[data-progress-text="24%"]:after { right: -155.36px }
-.pace .pace-progress[data-progress-text="25%"]:after { right: -153.5px }
-.pace .pace-progress[data-progress-text="26%"]:after { right: -151.64px }
-.pace .pace-progress[data-progress-text="27%"]:after { right: -149.78px }
-.pace .pace-progress[data-progress-text="28%"]:after { right: -147.92px }
-.pace .pace-progress[data-progress-text="29%"]:after { right: -146.06px }
-.pace .pace-progress[data-progress-text="30%"]:after { right: -144.2px }
-.pace .pace-progress[data-progress-text="31%"]:after { right: -142.34px }
-.pace .pace-progress[data-progress-text="32%"]:after { right: -140.48px }
-.pace .pace-progress[data-progress-text="33%"]:after { right: -138.62px }
-.pace .pace-progress[data-progress-text="34%"]:after { right: -136.76px }
-.pace .pace-progress[data-progress-text="35%"]:after { right: -134.9px }
-.pace .pace-progress[data-progress-text="36%"]:after { right: -133.04px }
-.pace .pace-progress[data-progress-text="37%"]:after { right: -131.18px }
-.pace .pace-progress[data-progress-text="38%"]:after { right: -129.32px }
-.pace .pace-progress[data-progress-text="39%"]:after { right: -127.46px }
-.pace .pace-progress[data-progress-text="40%"]:after { right: -125.6px }
-.pace .pace-progress[data-progress-text="41%"]:after { right: -123.74px }
-.pace .pace-progress[data-progress-text="42%"]:after { right: -121.88px }
-.pace .pace-progress[data-progress-text="43%"]:after { right: -120.02px }
-.pace .pace-progress[data-progress-text="44%"]:after { right: -118.16px }
-.pace .pace-progress[data-progress-text="45%"]:after { right: -116.3px }
-.pace .pace-progress[data-progress-text="46%"]:after { right: -114.44px }
-.pace .pace-progress[data-progress-text="47%"]:after { right: -112.58px }
-.pace .pace-progress[data-progress-text="48%"]:after { right: -110.72px }
-.pace .pace-progress[data-progress-text="49%"]:after { right: -108.86px }
-.pace .pace-progress[data-progress-text="50%"]:after { right: -107px }
-.pace .pace-progress[data-progress-text="51%"]:after { right: -105.14px }
-.pace .pace-progress[data-progress-text="52%"]:after { right: -103.28px }
-.pace .pace-progress[data-progress-text="53%"]:after { right: -101.42px }
-.pace .pace-progress[data-progress-text="54%"]:after { right: -99.56px }
-.pace .pace-progress[data-progress-text="55%"]:after { right: -97.7px }
-.pace .pace-progress[data-progress-text="56%"]:after { right: -95.84px }
-.pace .pace-progress[data-progress-text="57%"]:after { right: -93.98px }
-.pace .pace-progress[data-progress-text="58%"]:after { right: -92.12px }
-.pace .pace-progress[data-progress-text="59%"]:after { right: -90.26px }
-.pace .pace-progress[data-progress-text="60%"]:after { right: -88.4px }
-.pace .pace-progress[data-progress-text="61%"]:after { right: -86.53999999999999px }
-.pace .pace-progress[data-progress-text="62%"]:after { right: -84.68px }
-.pace .pace-progress[data-progress-text="63%"]:after { right: -82.82px }
-.pace .pace-progress[data-progress-text="64%"]:after { right: -80.96000000000001px }
-.pace .pace-progress[data-progress-text="65%"]:after { right: -79.1px }
-.pace .pace-progress[data-progress-text="66%"]:after { right: -77.24px }
-.pace .pace-progress[data-progress-text="67%"]:after { right: -75.38px }
-.pace .pace-progress[data-progress-text="68%"]:after { right: -73.52px }
-.pace .pace-progress[data-progress-text="69%"]:after { right: -71.66px }
-.pace .pace-progress[data-progress-text="70%"]:after { right: -69.8px }
-.pace .pace-progress[data-progress-text="71%"]:after { right: -67.94px }
-.pace .pace-progress[data-progress-text="72%"]:after { right: -66.08px }
-.pace .pace-progress[data-progress-text="73%"]:after { right: -64.22px }
-.pace .pace-progress[data-progress-text="74%"]:after { right: -62.36px }
-.pace .pace-progress[data-progress-text="75%"]:after { right: -60.5px }
-.pace .pace-progress[data-progress-text="76%"]:after { right: -58.64px }
-.pace .pace-progress[data-progress-text="77%"]:after { right: -56.78px }
-.pace .pace-progress[data-progress-text="78%"]:after { right: -54.92px }
-.pace .pace-progress[data-progress-text="79%"]:after { right: -53.06px }
-.pace .pace-progress[data-progress-text="80%"]:after { right: -51.2px }
-.pace .pace-progress[data-progress-text="81%"]:after { right: -49.34px }
-.pace .pace-progress[data-progress-text="82%"]:after { right: -47.480000000000004px }
-.pace .pace-progress[data-progress-text="83%"]:after { right: -45.62px }
-.pace .pace-progress[data-progress-text="84%"]:after { right: -43.76px }
-.pace .pace-progress[data-progress-text="85%"]:after { right: -41.9px }
-.pace .pace-progress[data-progress-text="86%"]:after { right: -40.04px }
-.pace .pace-progress[data-progress-text="87%"]:after { right: -38.18px }
-.pace .pace-progress[data-progress-text="88%"]:after { right: -36.32px }
-.pace .pace-progress[data-progress-text="89%"]:after { right: -34.46px }
-.pace .pace-progress[data-progress-text="90%"]:after { right: -32.6px }
-.pace .pace-progress[data-progress-text="91%"]:after { right: -30.740000000000002px }
-.pace .pace-progress[data-progress-text="92%"]:after { right: -28.880000000000003px }
-.pace .pace-progress[data-progress-text="93%"]:after { right: -27.02px }
-.pace .pace-progress[data-progress-text="94%"]:after { right: -25.16px }
-.pace .pace-progress[data-progress-text="95%"]:after { right: -23.3px }
-.pace .pace-progress[data-progress-text="96%"]:after { right: -21.439999999999998px }
-.pace .pace-progress[data-progress-text="97%"]:after { right: -19.58px }
-.pace .pace-progress[data-progress-text="98%"]:after { right: -17.72px }
-.pace .pace-progress[data-progress-text="99%"]:after { right: -15.86px }
-.pace .pace-progress[data-progress-text="100%"]:after { right: -14px }
-
-
-.pace .pace-activity {
-	position: absolute;
-	width: 100%;
-	height: 28px;
-	z-index: 2001;
-	box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;
-	border-radius: 10px;
-}
-
-.pace.pace-inactive {
-	display: none;
-}]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/custom.js</url>
-    <content><![CDATA[(function () {
-  // 右侧添加五个菜单
-  function addCustomMenus() {
-    const nav = document.querySelector('#nav .menus')
-    if (!nav) return
-
-    const customMenus = [
-      { name: '首页', url: '/', icon: 'fas fa-home' },
-      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
-      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
-      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
-    ]
-
-    const menuContainer = document.createElement('div')
-    menuContainer.className = 'custom-right-menus'
-    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
-
-    customMenus.forEach(menu => {
-      const menuItem = document.createElement('a')
-      menuItem.href = menu.url
-      menuItem.className = 'menu-item'
-      menuItem.innerHTML = ` ${menu.name}`
-      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
-      menuContainer.appendChild(menuItem)
-    })
-
-    nav.appendChild(menuContainer)
-  }
-
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn)
-    } else {
-      fn()
-    }
-  }
-
-  function applyUI() {
-    // 1) 添加右侧菜单
-    addCustomMenus()
-
-    // 2) 首页标题样式设置
-    const title = document.querySelector('#site-title')
-    if (title) {
-      // 添加艺术字体类
-      title.classList.add('custom-title-art')
-      // 强制让标题容器按内容宽度居中
-      title.style.display = 'block'
-      title.style.marginLeft = 'auto'
-      title.style.marginRight = 'auto'
-      title.style.width = 'max-content'
-      title.style.textAlign = 'center'
-    }
-
-    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
-    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
-    if (blogInfo) {
-      // 移除所有可能的动画类
-      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
-    }
-  }
-
-  onReady(applyUI)
-  // 兼容Butterfly的PJAX（如果启用）
-  window.addEventListener('pjax:complete', applyUI)
-})()]]></content>
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps ]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1463,44 +1550,13 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
+    <url>/live2d-models/xiaomai/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
   </entry>
   <entry>
     <title>标签</title>
     <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d-models/xiaomai/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
   </entry>
   <entry>
     <title></title>

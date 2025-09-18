@@ -60,6 +60,7 @@
       blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
     }
   }
+  
 
   onReady(applyUI)
   // 兼容Butterfly的PJAX（如果启用）
