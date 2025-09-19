@@ -20,7 +20,6 @@ html[data-theme='dark'] .relatedPosts > .relatedPosts-list > div {
   border: 1px solid rgba(139, 178, 217, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
-  overflow: hidden;
 }
 
 /* 卡片悬停效果 */
@@ -115,7 +114,6 @@ html[data-theme='dark'] body, html[data-theme='dark'] .card, html[data-theme='da
   transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 
-/* 移除远程网络字体：使用渐变艺术文字代替以避免外部依赖 */
 
 /* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
 html[data-theme='dark'] #site-info #site-title.custom-title-art {
