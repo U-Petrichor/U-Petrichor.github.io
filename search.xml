@@ -17,6 +17,69 @@
       </tags>
   </entry>
   <entry>
+    <title>Shared Inventory Mod（共享存储模组）</title>
+    <url>/2025/09/15/Game/Minecraft/SharedInventoryMod/</url>
+    <content><![CDATA[介绍
+Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段
+这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求
+这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能
+
+最终目标
+实现远程交换物品
+实现大容量背包
+实现多种工作台(工作台、熔炉、锻造台等等)
+实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)
+实现物品排序以及搜索功能
+更好看的外观以及UI
+移植到基岩版本以及Forge版本（太过遥远）
+
+最新版已实现功能
+实现了远程交换物品
+实现了大容量背包
+仅仅实现了内嵌工作台
+糟糕的贴图
+没法排序和搜索
+版本都没有移植完
+
+已知BUG暂无
+下次更新已实现功能预告暂无
+反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
+
+邮件: u_petrichor@163.com
+QQ群:970039533（我是群主，也欢迎你来水群）
+Bilibili私信或视频评论区发送消息（不太可靠）
+
+下载链接
+百度网盘:https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3
+qBittorrent：SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里
+如果你不会用qBittorrent：三分钟学会用磁力链接
+请不要使用百度网盘、迅雷等下载这个磁力链接
+
+
+Q群：970039533（我是群主，也欢迎你来水群）
+
+使用教程安装模组的教程我就省略了
+关键物品合成表存储核心(Shared Inventory Core)共享背包(Shared Inventory Backpack)历代更新内容介绍0.4第一个发布的版本（bushi，主要是之前的版本删掉了）
+
+实现了远程交换物品
+实现了大容量背包
+仅仅实现了内嵌工作台
+糟糕的贴图
+
+
+]]></content>
+      <categories>
+        <category>游戏</category>
+        <category>Minecraft</category>
+        <category>SharedInventoryMod</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>Minecraft</tag>
+        <tag>SharedInventoryMod</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>qBittorrent使用教程</title>
     <url>/2025/09/14/tutorials/qBittorrent%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[本站的所有资源都提供百度网盘、磁力链接以及Q群文件（970039533）三种下载方式，百度网盘无会员龟速下载，所以根据自己的情况选择下载方式
@@ -107,69 +170,6 @@ http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya
       </tags>
   </entry>
   <entry>
-    <title>Shared Inventory Mod（共享存储模组）</title>
-    <url>/2025/09/15/Game/Minecraft/SharedInventoryMod/</url>
-    <content><![CDATA[介绍
-Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段
-这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求
-这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能
-
-最终目标
-实现远程交换物品
-实现大容量背包
-实现多种工作台(工作台、熔炉、锻造台等等)
-实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)
-实现物品排序以及搜索功能
-更好看的外观以及UI
-移植到基岩版本以及Forge版本（太过遥远）
-
-最新版已实现功能
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-没法排序和搜索
-版本都没有移植完
-
-已知BUG暂无
-下次更新已实现功能预告暂无
-反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
-
-邮件: u_petrichor@163.com
-QQ群:970039533（我是群主，也欢迎你来水群）
-Bilibili私信或视频评论区发送消息（不太可靠）
-
-下载链接
-百度网盘:https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3
-qBittorrent：SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里
-如果你不会用qBittorrent：三分钟学会用磁力链接
-请不要使用百度网盘、迅雷等下载这个磁力链接
-
-
-Q群：970039533（我是群主，也欢迎你来水群）
-
-使用教程安装模组的教程我就省略了
-关键物品合成表存储核心(Shared Inventory Core)共享背包(Shared Inventory Backpack)历代更新内容介绍0.4第一个发布的版本（bushi，主要是之前的版本删掉了）
-
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-
-
-]]></content>
-      <categories>
-        <category>游戏</category>
-        <category>Minecraft</category>
-        <category>SharedInventoryMod</category>
-      </categories>
-      <tags>
-        <tag>Game</tag>
-        <tag>Minecraft</tag>
-        <tag>SharedInventoryMod</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>免费开DDNet服务器</title>
     <url>/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[前言2025年9月初，DDNet国服似乎不运营了，大陆玩家只能去连港服，然而港服延迟较高，还非常不稳定，即使开了加速器也很糟糕，外服虽然稳定一些，但是延迟更高，所以说为了能玩到更加稳定的服务器，我折腾了一个下午找到了个免费开服的方法，根据本文你就可以实现开服与朋友联机，不过这个方法也是有一些缺陷，就是服务器不会显示在DDNet的互联网频道，所以说聚集在一起是很重要的（咳咳，Q群：970039533）
@@ -231,79 +231,6 @@ SakuraFrp 樱花内网穿透没想到想当年MC联机的方法还能用到DDNet
   </entry>
   <entry>
     <title></title>
-    <url>/js/custom.js</url>
-    <content><![CDATA[(function () {
-  // 右侧添加五个菜单
-  function addCustomMenus() {
-    const nav = document.querySelector('#nav .menus')
-    if (!nav) return
-
-    const customMenus = [
-      { name: '首页', url: '/', icon: 'fas fa-home' },
-      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
-      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
-      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
-    ]
-
-    const menuContainer = document.createElement('div')
-    menuContainer.className = 'custom-right-menus'
-    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
-
-    customMenus.forEach(menu => {
-      const menuItem = document.createElement('a')
-      menuItem.href = menu.url
-      menuItem.className = 'menu-item'
-      menuItem.innerHTML = ` ${menu.name}`
-      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
-      menuContainer.appendChild(menuItem)
-    })
-
-    nav.appendChild(menuContainer)
-  }
-
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn)
-    } else {
-      fn()
-    }
-  }
-
-  function applyUI() {
-    // 1) 添加右侧菜单
-    addCustomMenus()
-
-    // 2) 首页标题样式设置
-    const title = document.querySelector('#site-title')
-    if (title) {
-      // 添加艺术字体类
-      title.classList.add('custom-title-art')
-      // 强制让标题容器按内容宽度居中
-      title.style.display = 'block'
-      title.style.marginLeft = 'auto'
-      title.style.marginRight = 'auto'
-      title.style.width = 'max-content'
-      title.style.textAlign = 'center'
-    }
-
-    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
-    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
-    if (blogInfo) {
-      // 移除所有可能的动画类
-      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
-    }
-  }
-  
-
-  onReady(applyUI)
-  // 兼容Butterfly的PJAX（如果启用）
-  window.addEventListener('pjax:complete', applyUI)
-})()
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html</url>
     <content><![CDATA[博客背景图片设置说明当前背景设置目前博客使用了渐变色背景和增强的卡片样式：
 Dark主题
@@ -351,125 +278,6 @@ Light主题适合的图片
 
 恢复渐变背景如需恢复当前的渐变背景，只需删除 url() 部分，保留 linear-gradient() 即可。
 ]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/title.js</url>
-    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
-(function () {
-  var OriginTitle = document.title;
-  var timer = null;
-  var awayStart = 0;
-  var thresholdMs = 120000; // 超过 120s 进入后续池
-
-  // 前期池（离开至 120s 内，随机展示 1-5）
-  var earlyPool = [
-    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
-    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
-    { text: '正在上厕所，别偷看！！！', ms: 5000 },
-    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
-    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
-    { text: '封印解除！开始吞噬内存！', ms: 10000 },
-    { text: '警告！页面即将自毁...', ms: 10000 },
-    { text: '检测到时空波动，请抓稳！', ms: 10000 }
-  ];
-
-  // 后续池（超过 120s 后，随机展示 6-11）
-  var latePool = [
-    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
-    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
-    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
-  ];
-
-  // 回来时提示（随机展示一个，3s 后恢复原标题）
-  var backPool = [
-    '啊！你回来啦！（迅速切换回正经脸）',
-    '咳咳，刚刚什么都没发生'
-  ];
-  var backHoldMs = 3000;
-
-  var lastIndex = -1;
-  function pickRandom(pool) {
-    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
-    var idx = Math.floor(Math.random() * pool.length);
-    // 避免连续两次相同
-    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
-    lastIndex = idx;
-    return pool[idx];
-  }
-
-  function scheduleNext() {
-    if (!document.hidden) return; // 可见时不再调度
-    var now = Date.now();
-    var elapsed = now - awayStart; // 本次离开累计时间
-
-    var pool = elapsed < thresholdMs ? earlyPool : latePool;
-    var choice = pickRandom(pool);
-    document.title = choice.text;
-
-    var wait = choice.ms;
-    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
-    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
-      wait = thresholdMs - elapsed;
-    }
-
-    clearTimeout(timer);
-    timer = setTimeout(scheduleNext, Math.max(500, wait));
-  }
-
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      // 开始离开
-      awayStart = Date.now();
-      clearTimeout(timer);
-      scheduleNext(); // 立即显示第一条并进入调度
-    } else {
-      // 回到页面
-      clearTimeout(timer);
-      var msg = backPool[Math.floor(Math.random() * backPool.length)];
-      document.title = msg;
-      setTimeout(function () {
-        document.title = OriginTitle;
-      }, backHoldMs);
-    }
-  });
-})();]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1288,6 +1096,162 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
+    <url>/js/custom.js</url>
+    <content><![CDATA[(function () {
+  // 右侧添加五个菜单
+  function addCustomMenus() {
+    const nav = document.querySelector('#nav .menus')
+    if (!nav) return
+
+    const customMenus = [
+      { name: '首页', url: '/', icon: 'fas fa-home' },
+      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
+      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
+      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
+      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
+    ]
+
+    const menuContainer = document.createElement('div')
+    menuContainer.className = 'custom-right-menus'
+    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
+
+    customMenus.forEach(menu => {
+      const menuItem = document.createElement('a')
+      menuItem.href = menu.url
+      menuItem.className = 'menu-item'
+      menuItem.innerHTML = ` ${menu.name}`
+      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
+      menuContainer.appendChild(menuItem)
+    })
+
+    nav.appendChild(menuContainer)
+  }
+
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn)
+    } else {
+      fn()
+    }
+  }
+
+  function applyUI() {
+    // 1) 添加右侧菜单
+    addCustomMenus()
+
+    // 2) 首页标题样式设置
+    const title = document.querySelector('#site-title')
+    if (title) {
+      // 添加艺术字体类
+      title.classList.add('custom-title-art')
+      // 强制让标题容器按内容宽度居中
+      title.style.display = 'block'
+      title.style.marginLeft = 'auto'
+      title.style.marginRight = 'auto'
+      title.style.width = 'max-content'
+      title.style.textAlign = 'center'
+    }
+
+    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
+    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
+    if (blogInfo) {
+      // 移除所有可能的动画类
+      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
+    }
+  }
+  
+
+  onReady(applyUI)
+  // 兼容Butterfly的PJAX（如果启用）
+  window.addEventListener('pjax:complete', applyUI)
+})()
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/title.js</url>
+    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
+(function () {
+  var OriginTitle = document.title;
+  var timer = null;
+  var awayStart = 0;
+  var thresholdMs = 120000; // 超过 120s 进入后续池
+
+  // 前期池（离开至 120s 内，随机展示 1-5）
+  var earlyPool = [
+    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
+    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
+    { text: '正在上厕所，别偷看！！！', ms: 5000 },
+    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
+    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
+    { text: '封印解除！开始吞噬内存！', ms: 10000 },
+    { text: '警告！页面即将自毁...', ms: 10000 },
+    { text: '检测到时空波动，请抓稳！', ms: 10000 }
+  ];
+
+  // 后续池（超过 120s 后，随机展示 6-11）
+  var latePool = [
+    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
+    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
+    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
+  ];
+
+  // 回来时提示（随机展示一个，3s 后恢复原标题）
+  var backPool = [
+    '啊！你回来啦！（迅速切换回正经脸）',
+    '咳咳，刚刚什么都没发生'
+  ];
+  var backHoldMs = 3000;
+
+  var lastIndex = -1;
+  function pickRandom(pool) {
+    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
+    var idx = Math.floor(Math.random() * pool.length);
+    // 避免连续两次相同
+    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
+    lastIndex = idx;
+    return pool[idx];
+  }
+
+  function scheduleNext() {
+    if (!document.hidden) return; // 可见时不再调度
+    var now = Date.now();
+    var elapsed = now - awayStart; // 本次离开累计时间
+
+    var pool = elapsed < thresholdMs ? earlyPool : latePool;
+    var choice = pickRandom(pool);
+    document.title = choice.text;
+
+    var wait = choice.ms;
+    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
+    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
+      wait = thresholdMs - elapsed;
+    }
+
+    clearTimeout(timer);
+    timer = setTimeout(scheduleNext, Math.max(500, wait));
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      // 开始离开
+      awayStart = Date.now();
+      clearTimeout(timer);
+      scheduleNext(); // 立即显示第一条并进入调度
+    } else {
+      // 回到页面
+      clearTimeout(timer);
+      var msg = backPool[Math.floor(Math.random() * backPool.length)];
+      document.title = msg;
+      setTimeout(function () {
+        document.title = OriginTitle;
+      }, backHoldMs);
+    }
+  });
+})();]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/css/custom.css</url>
     <content><![CDATA[/* Unified custom interactions for both themes */
 @media (min-width: 901px) {
@@ -1350,6 +1314,52 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
   border-radius: 4px;
 }
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps ]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/live2d-models/xiaomai/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/live2d-models/xiaomai/xiaomai.model.json</url>
+    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.8376,"center_x":-0.0507,"center_y":-0.089},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":500,"fade_out":500,"expressions":"F00"}],"start":[{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"26","expressions":"F00"},{"file":"mtn/rita_Live2D_001.mtn","msg_id":"1","expressions":"F00"},{"file":"mtn/rita_Live2D_002.mtn","msg_id":"2","expressions":"F00"},{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_004.mtn","msg_id":"4","expressions":"F00"},{"file":"mtn/rita_Live2D_005.mtn","msg_id":"5","expressions":"F00"},{"file":"mtn/rita_Live2D_006.mtn","msg_id":"6","expressions":"F00"},{"file":"mtn/rita_Live2D_007.mtn","msg_id":"7","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","msg_id":"8","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","msg_id":"9","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","msg_id":"10","expressions":"F00"}],"tap_head":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_011.mtn","msg_id":"11","expressions":"F00"},{"file":"mtn/rita_Live2D_012.mtn","msg_id":"12","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","msg_id":"13","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","msg_id":"14","expressions":"F00"},{"file":"mtn/rita_Live2D_015.mtn","msg_id":"15"},{"file":"mtn/rita_Live2D_016.mtn","msg_id":"16","expressions":"F00"},{"file":"mtn/rita_Live2D_017.mtn","msg_id":"17","expressions":"F00"},{"file":"mtn/rita_Live2D_018.mtn","msg_id":"18","expressions":"F00"},{"file":"mtn/rita_Live2D_019.mtn","msg_id":"19","expressions":"F00"},{"file":"mtn/rita_Live2D_020.mtn","msg_id":"20","fade_in":500,"fade_out":1000}],"shake":[{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"random":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"new_msg":[{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"}]}}]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1553,18 +1563,8 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
 }]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
+    <title>分类</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d-models/xiaomai/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/live2d-models/xiaomai/xiaomai.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.8376,"center_x":-0.0507,"center_y":-0.089},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":500,"fade_out":500,"expressions":"F00"}],"start":[{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"26","expressions":"F00"},{"file":"mtn/rita_Live2D_001.mtn","msg_id":"1","expressions":"F00"},{"file":"mtn/rita_Live2D_002.mtn","msg_id":"2","expressions":"F00"},{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_004.mtn","msg_id":"4","expressions":"F00"},{"file":"mtn/rita_Live2D_005.mtn","msg_id":"5","expressions":"F00"},{"file":"mtn/rita_Live2D_006.mtn","msg_id":"6","expressions":"F00"},{"file":"mtn/rita_Live2D_007.mtn","msg_id":"7","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","msg_id":"8","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","msg_id":"9","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","msg_id":"10","expressions":"F00"}],"tap_head":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_011.mtn","msg_id":"11","expressions":"F00"},{"file":"mtn/rita_Live2D_012.mtn","msg_id":"12","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","msg_id":"13","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","msg_id":"14","expressions":"F00"},{"file":"mtn/rita_Live2D_015.mtn","msg_id":"15"},{"file":"mtn/rita_Live2D_016.mtn","msg_id":"16","expressions":"F00"},{"file":"mtn/rita_Live2D_017.mtn","msg_id":"17","expressions":"F00"},{"file":"mtn/rita_Live2D_018.mtn","msg_id":"18","expressions":"F00"},{"file":"mtn/rita_Live2D_019.mtn","msg_id":"19","expressions":"F00"},{"file":"mtn/rita_Live2D_020.mtn","msg_id":"20","fade_in":500,"fade_out":1000}],"shake":[{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"random":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"new_msg":[{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"}]}}]]></content>
   </entry>
 </search>
