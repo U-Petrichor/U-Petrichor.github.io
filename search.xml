@@ -225,6 +225,11 @@ Q群：970039533（我是群主，也欢迎你来水群）
       </tags>
   </entry>
   <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html</url>
     <content><![CDATA[博客背景图片设置说明当前背景设置目前博客使用了渐变色背景和增强的卡片样式：
@@ -273,6 +278,193 @@ Light主题适合的图片
 
 恢复渐变背景如需恢复当前的渐变背景，只需删除 url() 部分，保留 linear-gradient() 即可。
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/custom.js</url>
+    <content><![CDATA[(function () {
+  // 右侧添加五个菜单
+  function addCustomMenus() {
+    const nav = document.querySelector('#nav .menus')
+    if (!nav) return
+
+    const customMenus = [
+      { name: '首页', url: '/', icon: 'fas fa-home' },
+      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
+      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
+      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
+      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
+    ]
+
+    const menuContainer = document.createElement('div')
+    menuContainer.className = 'custom-right-menus'
+    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
+
+    customMenus.forEach(menu => {
+      const menuItem = document.createElement('a')
+      menuItem.href = menu.url
+      menuItem.className = 'menu-item'
+      menuItem.innerHTML = ` ${menu.name}`
+      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
+      menuContainer.appendChild(menuItem)
+    })
+
+    nav.appendChild(menuContainer)
+  }
+
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn)
+    } else {
+      fn()
+    }
+  }
+
+  function applyUI() {
+    // 1) 添加右侧菜单
+    addCustomMenus()
+
+    // 2) 首页标题样式设置
+    const title = document.querySelector('#site-title')
+    if (title) {
+      // 添加艺术字体类
+      title.classList.add('custom-title-art')
+      // 强制让标题容器按内容宽度居中
+      title.style.display = 'block'
+      title.style.marginLeft = 'auto'
+      title.style.marginRight = 'auto'
+      title.style.width = 'max-content'
+      title.style.textAlign = 'center'
+    }
+
+    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
+    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
+    if (blogInfo) {
+      // 移除所有可能的动画类
+      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
+    }
+  }
+  
+
+  onReady(applyUI)
+  // 兼容Butterfly的PJAX（如果启用）
+  window.addEventListener('pjax:complete', applyUI)
+})()
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/title.js</url>
+    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
+(function () {
+  var OriginTitle = document.title;
+  var timer = null;
+  var awayStart = 0;
+  var thresholdMs = 120000; // 超过 120s 进入后续池
+
+  // 前期池（离开至 120s 内，随机展示 1-5）
+  var earlyPool = [
+    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
+    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
+    { text: '正在上厕所，别偷看！！！', ms: 5000 },
+    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
+    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
+    { text: '封印解除！开始吞噬内存！', ms: 10000 },
+    { text: '警告！页面即将自毁...', ms: 10000 },
+    { text: '检测到时空波动，请抓稳！', ms: 10000 }
+  ];
+
+  // 后续池（超过 120s 后，随机展示 6-11）
+  var latePool = [
+    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
+    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
+    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
+  ];
+
+  // 回来时提示（随机展示一个，3s 后恢复原标题）
+  var backPool = [
+    '啊！你回来啦！（迅速切换回正经脸）',
+    '咳咳，刚刚什么都没发生'
+  ];
+  var backHoldMs = 3000;
+
+  var lastIndex = -1;
+  function pickRandom(pool) {
+    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
+    var idx = Math.floor(Math.random() * pool.length);
+    // 避免连续两次相同
+    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
+    lastIndex = idx;
+    return pool[idx];
+  }
+
+  function scheduleNext() {
+    if (!document.hidden) return; // 可见时不再调度
+    var now = Date.now();
+    var elapsed = now - awayStart; // 本次离开累计时间
+
+    var pool = elapsed < thresholdMs ? earlyPool : latePool;
+    var choice = pickRandom(pool);
+    document.title = choice.text;
+
+    var wait = choice.ms;
+    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
+    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
+      wait = thresholdMs - elapsed;
+    }
+
+    clearTimeout(timer);
+    timer = setTimeout(scheduleNext, Math.max(500, wait));
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      // 开始离开
+      awayStart = Date.now();
+      clearTimeout(timer);
+      scheduleNext(); // 立即显示第一条并进入调度
+    } else {
+      // 回到页面
+      clearTimeout(timer);
+      var msg = backPool[Math.floor(Math.random() * backPool.length)];
+      document.title = msg;
+      setTimeout(function () {
+        document.title = OriginTitle;
+      }, backHoldMs);
+    }
+  });
+})();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -680,76 +872,6 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
 }
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom.css</url>
-    <content><![CDATA[/* Unified custom interactions for both themes */
-@media (min-width: 901px) {
-  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
-  #aside-content .card-info .avatar-img,
-  #aside-content .card-info .avatar-img img,
-  #sidebar-menus .avatar-img,
-  #sidebar-menus .avatar-img img {
-    animation: none !important;
-  }
-
-  /* 覆盖任何 img:hover 的旋转 */
-  #aside-content .card-info .avatar-img img:hover,
-  #sidebar-menus .avatar-img img:hover {
-    transform: none !important;
-  }
-
-  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
-  #aside-content .card-info .avatar-img,
-  #sidebar-menus .avatar-img {
-    transform-origin: center center;
-    transition: transform 0.25s ease-in-out !important;
-    will-change: transform;
-  }
-  #aside-content .card-info .avatar-img:hover,
-  #sidebar-menus .avatar-img:hover {
-    transform: scale(1.06) !important;
-  }
-
-  /* 3) 侧栏社交图标悬停放大 */
-  #aside-content .card-info .card-info-social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  #aside-content .card-info .card-info-social-icons .social-icon:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
 ]]></content>
   </entry>
   <entry>
@@ -1161,6 +1283,71 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
+    <url>/css/custom.css</url>
+    <content><![CDATA[/* Unified custom interactions for both themes */
+@media (min-width: 901px) {
+  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
+  }
+
+  /* 覆盖任何 img:hover 的旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
+  }
+
+  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
+  #aside-content .card-info .avatar-img,
+  #sidebar-menus .avatar-img {
+    transform-origin: center center;
+    transition: transform 0.25s ease-in-out !important;
+    will-change: transform;
+  }
+  #aside-content .card-info .avatar-img:hover,
+  #sidebar-menus .avatar-img:hover {
+    transform: scale(1.06) !important;
+  }
+
+  /* 3) 侧栏社交图标悬停放大 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  left: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/css/loading-bar.css</url>
     <content><![CDATA[.pace {
 	-webkit-pointer-events: none;
@@ -1359,193 +1546,6 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
 .pace.pace-inactive {
 	display: none;
 }]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/custom.js</url>
-    <content><![CDATA[(function () {
-  // 右侧添加五个菜单
-  function addCustomMenus() {
-    const nav = document.querySelector('#nav .menus')
-    if (!nav) return
-
-    const customMenus = [
-      { name: '首页', url: '/', icon: 'fas fa-home' },
-      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
-      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
-      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
-    ]
-
-    const menuContainer = document.createElement('div')
-    menuContainer.className = 'custom-right-menus'
-    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
-
-    customMenus.forEach(menu => {
-      const menuItem = document.createElement('a')
-      menuItem.href = menu.url
-      menuItem.className = 'menu-item'
-      menuItem.innerHTML = ` ${menu.name}`
-      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
-      menuContainer.appendChild(menuItem)
-    })
-
-    nav.appendChild(menuContainer)
-  }
-
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn)
-    } else {
-      fn()
-    }
-  }
-
-  function applyUI() {
-    // 1) 添加右侧菜单
-    addCustomMenus()
-
-    // 2) 首页标题样式设置
-    const title = document.querySelector('#site-title')
-    if (title) {
-      // 添加艺术字体类
-      title.classList.add('custom-title-art')
-      // 强制让标题容器按内容宽度居中
-      title.style.display = 'block'
-      title.style.marginLeft = 'auto'
-      title.style.marginRight = 'auto'
-      title.style.width = 'max-content'
-      title.style.textAlign = 'center'
-    }
-
-    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
-    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
-    if (blogInfo) {
-      // 移除所有可能的动画类
-      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
-    }
-  }
-  
-
-  onReady(applyUI)
-  // 兼容Butterfly的PJAX（如果启用）
-  window.addEventListener('pjax:complete', applyUI)
-})()
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/title.js</url>
-    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
-(function () {
-  var OriginTitle = document.title;
-  var timer = null;
-  var awayStart = 0;
-  var thresholdMs = 120000; // 超过 120s 进入后续池
-
-  // 前期池（离开至 120s 内，随机展示 1-5）
-  var earlyPool = [
-    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
-    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
-    { text: '正在上厕所，别偷看！！！', ms: 5000 },
-    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
-    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
-    { text: '封印解除！开始吞噬内存！', ms: 10000 },
-    { text: '警告！页面即将自毁...', ms: 10000 },
-    { text: '检测到时空波动，请抓稳！', ms: 10000 }
-  ];
-
-  // 后续池（超过 120s 后，随机展示 6-11）
-  var latePool = [
-    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
-    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
-    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
-  ];
-
-  // 回来时提示（随机展示一个，3s 后恢复原标题）
-  var backPool = [
-    '啊！你回来啦！（迅速切换回正经脸）',
-    '咳咳，刚刚什么都没发生'
-  ];
-  var backHoldMs = 3000;
-
-  var lastIndex = -1;
-  function pickRandom(pool) {
-    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
-    var idx = Math.floor(Math.random() * pool.length);
-    // 避免连续两次相同
-    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
-    lastIndex = idx;
-    return pool[idx];
-  }
-
-  function scheduleNext() {
-    if (!document.hidden) return; // 可见时不再调度
-    var now = Date.now();
-    var elapsed = now - awayStart; // 本次离开累计时间
-
-    var pool = elapsed < thresholdMs ? earlyPool : latePool;
-    var choice = pickRandom(pool);
-    document.title = choice.text;
-
-    var wait = choice.ms;
-    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
-    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
-      wait = thresholdMs - elapsed;
-    }
-
-    clearTimeout(timer);
-    timer = setTimeout(scheduleNext, Math.max(500, wait));
-  }
-
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      // 开始离开
-      awayStart = Date.now();
-      clearTimeout(timer);
-      scheduleNext(); // 立即显示第一条并进入调度
-    } else {
-      // 回到页面
-      clearTimeout(timer);
-      var msg = backPool[Math.floor(Math.random() * backPool.length)];
-      document.title = msg;
-      setTimeout(function () {
-        document.title = OriginTitle;
-      }, backHoldMs);
-    }
-  });
-})();]]></content>
   </entry>
   <entry>
     <title>标签</title>

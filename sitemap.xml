@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://u-petrichor.github.io/2025/09/15/Game/Minecraft/SharedInventoryMod/</loc>
+    <loc>https://u-petrichor.github.io/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     
-    <lastmod>2025-09-19</lastmod>
+    <lastmod>2025-09-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://u-petrichor.github.io/2025/09/15/Game/Minecraft/SharedInventoryMod/</loc>
     
-    <lastmod>2025-09-18</lastmod>
+    <lastmod>2025-09-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -143,6 +143,13 @@
   </url>
   
   <url>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2025-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://u-petrichor.github.io/categories/%E6%95%99%E7%A8%8B/%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -151,13 +158,6 @@
   
   <url>
     <loc>https://u-petrichor.github.io/categories/%E6%95%99%E7%A8%8B/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2025-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2025-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
