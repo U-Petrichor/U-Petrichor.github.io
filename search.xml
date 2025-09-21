@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>用163邮箱设置Waline评论自动通知</title>
-    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
-    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
-配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
-找到SMTP_PASS
-在手机上下载网易邮箱，并且打开
-点击我→邮箱管理
-选择你想要使用的邮箱
-点击第三方登陆管理
-勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
-成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
-将此授权码配置到Vercel的环境变量中，并且重新部署
-测试功能
+    <title>Waline的配置以及去掉部分登录选项</title>
+    <url>/2025/09/16/tutorials/Waline%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%8E%BB%E6%8E%89%E9%83%A8%E5%88%86%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/</url>
+    <content><![CDATA[&#x2F;&#x2F;还没搞完，先写在这里占位置
+开篇吐槽（可以不看）：煎熬的几天，抱着先搞定功能再调整网页外观，没想到这个评论的配置卡我这么久，其实昨天就已经可以正常登录了，但是waline默认提供的登录方式足足有5种，但对于我这种大概率没什么人看的内容，费心思去争取国内的登陆方式是没有必要的，所以我就想能不能仅仅留几个我目前会实现的登陆方式，比如说只留下此时我实现的Github登录。为了这个目的我是到处找攻略，问AI，但还是没有找到一个能自始至终一步步详细指导的文章，所以就有了这篇文章。
+前情提要我先简单说一下我当时的情况
 
-修改自动发送邮件的格式
-根据下图所示，在vercel上配置环境变量
-具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
-多用本身提供的变量，可以实现更丰富的自定义格式
+用Hexo配置的网页,主题选择的是Butterfly
+根据https://waline.js.org/guide/deploy/vercel.html部署了waline
+注册和链接了MongoDB数据库,在跟着AI和一些博客的教程时碰到了一些问题,在参考Anthony大佬的文章后得以解决https://runtimes.cc/8693/完成以上几步之后实现了基本的评论功能,但是此时我有一些不满意的地方,我现在并没有实现QQ、微博等其余登陆方式，所以我想去掉这些登陆选项
+
 
 ]]></content>
       <categories>
         <category>教程</category>
-        <category>配置</category>
+        <category>博客配置</category>
       </categories>
       <tags>
-        <tag>配置</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -120,19 +112,87 @@ http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya
       </tags>
   </entry>
   <entry>
-    <title>Waline的配置以及去掉部分登录选项</title>
-    <url>/2025/09/16/tutorials/Waline%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%8E%BB%E6%8E%89%E9%83%A8%E5%88%86%E7%99%BB%E5%BD%95%E9%80%89%E9%A1%B9/</url>
-    <content><![CDATA[&#x2F;&#x2F;还没搞完，先写在这里占位置
-开篇吐槽（可以不看）：煎熬的几天，抱着先搞定功能再调整网页外观，没想到这个评论的配置卡我这么久，其实昨天就已经可以正常登录了，但是waline默认提供的登录方式足足有5种，但对于我这种大概率没什么人看的内容，费心思去争取国内的登陆方式是没有必要的，所以我就想能不能仅仅留几个我目前会实现的登陆方式，比如说只留下此时我实现的Github登录。为了这个目的我是到处找攻略，问AI，但还是没有找到一个能自始至终一步步详细指导的文章，所以就有了这篇文章。
-前情提要我先简单说一下我当时的情况
+    <title>免费开DDNet服务器</title>
+    <url>/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[前言2025年9月初，DDNet国服似乎不运营了，大陆玩家只能去连港服，然而港服延迟较高，还非常不稳定，即使开了加速器也很糟糕，外服虽然稳定一些，但是延迟更高，所以说为了能玩到更加稳定的服务器，我折腾了一个下午找到了个免费开服的方法，根据本文你就可以实现开服与朋友联机，不过这个方法也是有一些缺陷，就是服务器不会显示在DDNet的互联网频道，所以说聚集在一起是很重要的（咳咳，Q群：970039533）
+后续惊喜！！我不知道什么原理，居然有路人可以直接加入到我的服务器！！！ 
+本文是保姆式教程，电脑0基础的玩家跟着做也可以实现联机
+了解开服的事项这一个大标题如果你着急看开服可以不看，只是如果后续碰到一些问题或者自己钻研新方法的时候可能会对你有帮助
+官网提供的信息打开DDNet官网然后翻译之后可以看到主页面有own server的链接，点击即可跳转跳转之后有许多选项，选择Server Setting就可以跳转到有关服务器设置的相关内容，这里你可以根据其解释来进行设置，所以请自己备好翻译
+要配置的文件在哪我们先尝试点击游戏里的运行服务器，发现弹出来一个终端，有这些内容，具体看图中解析唉！到现在我们已知的内容有哪些？
+
+使用的是udp通信（这个其实蛮重要的，因为不是所有免费的内网穿透都支持udp，大部分都是支持tcp）
+端口是8303起所以到这里其实我有两个思路，一个是使用Radmin LAN开局域网，还有就是想办法使用内网穿透，如果说你有其他思路但是自己没有尝试的话，欢迎在评论区分享，我有空会尝试并且根据结果更新文档
+
+开服方法
+目前只研究了一个，后续可能还会折腾一些新方法，所以现在这里了个二级标题
+
+SakuraFrp 樱花内网穿透没想到想当年MC联机的方法还能用到DDNet上，内网穿透的原理就是将本地的端口映射到公网的端口，这样就可以通过公网的端口访问到本地的服务了，而SakuraFrp就是一个免费的内网穿透工具，它支持udp和tcp，所以说我们可以使用它来开服（还有个比较出名的内网穿透工具ngrok，这个并不支持udp传输，至少2025&#x2F;9&#x2F;18这天是不行的）
+配置SakuraFrp
+打开SakuraFrp的官网
+点击注册，注册流程我就不说了
+跳转到下一个页面之后，点击Sakura Frp 
+优先完成实名认证 
+按照图中的流程找到创建隧道 
+任选一个节点，根据服务器的状态自己选择，注意上面有支持 UDP的选项 
+按照如图所示创建隧道即可
+
+下载客户端并启用
+点击下载客户端，根据自己的操作系统下载对应的客户端，具体的下载流程请根据下载页的教程一步步执行，我这里就不提供了 
+先根据图中位置”复制密钥“ 
+再把密钥复制到安装好的客户端，点击登录  
+登录之后会有如图所示的两个选项，选择有UDP的这一项选择开启 
+开启之后根据图找到需要复制的内容
+
+准备并开始联机
+先找到配置的文件，根据图找到autoexec_server.cfg文件 
+回头看看我一开始提到的有关服务器配置信息的网站，我这里只会做必须项的修改
+打开autoexec_server.cfg文件（鼠标右击之后打开方式选择记事本或者VScode之类的都行）
+按ctrl+f，搜索sv_register，将这个参数后面的数字改为1，这个为必须项，如果你想要服务器有一些额外的限制，请自行看上面说的官网 
+按ctrl+s保存文件，然后打开你的DDNet，点击运行服务器
+终端会出现这个报错，但是不要在意，出现这个报错的原因是DDNet服务器想要连接连接你的IPv4地址的8303端口，但是因为我们使用的都是经过NAT转换的内网，所以说DDNet服务器是连不上的，而内网穿透就像是一个桥梁，别人先帮你接收，然后再转交给你，所以说只要别人把数据传到要转交给你的人，你一样可以实现数据传输 
+让朋友在互联网这里输入你刚刚在Sakura Frp里复制的内容，即可加入到你的服务器 
+加入成功的图片 
+后续意外之喜，路人也可以进入，但是暂时没搞清楚路人那里是什么原理
+
+添加地图（暂未研究）]]></content>
+      <categories>
+        <category>游戏</category>
+        <category>Else</category>
+        <category>DDNet</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>DDNet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用163邮箱设置Waline评论自动通知</title>
+    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
+    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
+配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
+找到SMTP_PASS
+在手机上下载网易邮箱，并且打开
+点击我→邮箱管理
+选择你想要使用的邮箱
+点击第三方登陆管理
+勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
+成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
+将此授权码配置到Vercel的环境变量中，并且重新部署
+测试功能
+
+修改自动发送邮件的格式
+根据下图所示，在vercel上配置环境变量
+具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
+多用本身提供的变量，可以实现更丰富的自定义格式
 
 ]]></content>
       <categories>
         <category>教程</category>
-        <category>配置</category>
+        <category>博客配置</category>
       </categories>
       <tags>
-        <tag>配置</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -199,61 +259,6 @@ Q群：970039533（我是群主，也欢迎你来水群）
       </tags>
   </entry>
   <entry>
-    <title>免费开DDNet服务器</title>
-    <url>/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
-    <content><![CDATA[前言2025年9月初，DDNet国服似乎不运营了，大陆玩家只能去连港服，然而港服延迟较高，还非常不稳定，即使开了加速器也很糟糕，外服虽然稳定一些，但是延迟更高，所以说为了能玩到更加稳定的服务器，我折腾了一个下午找到了个免费开服的方法，根据本文你就可以实现开服与朋友联机，不过这个方法也是有一些缺陷，就是服务器不会显示在DDNet的互联网频道，所以说聚集在一起是很重要的（咳咳，Q群：970039533）
-后续惊喜！！我不知道什么原理，居然有路人可以直接加入到我的服务器！！！ 
-本文是保姆式教程，电脑0基础的玩家跟着做也可以实现联机
-了解开服的事项这一个大标题如果你着急看开服可以不看，只是如果后续碰到一些问题或者自己钻研新方法的时候可能会对你有帮助
-官网提供的信息打开DDNet官网然后翻译之后可以看到主页面有own server的链接，点击即可跳转跳转之后有许多选项，选择Server Setting就可以跳转到有关服务器设置的相关内容，这里你可以根据其解释来进行设置，所以请自己备好翻译
-要配置的文件在哪我们先尝试点击游戏里的运行服务器，发现弹出来一个终端，有这些内容，具体看图中解析唉！到现在我们已知的内容有哪些？
-
-使用的是udp通信（这个其实蛮重要的，因为不是所有免费的内网穿透都支持udp，大部分都是支持tcp）
-端口是8303起所以到这里其实我有两个思路，一个是使用Radmin LAN开局域网，还有就是想办法使用内网穿透，如果说你有其他思路但是自己没有尝试的话，欢迎在评论区分享，我有空会尝试并且根据结果更新文档
-
-开服方法
-目前只研究了一个，后续可能还会折腾一些新方法，所以现在这里了个二级标题
-
-SakuraFrp 樱花内网穿透没想到想当年MC联机的方法还能用到DDNet上，内网穿透的原理就是将本地的端口映射到公网的端口，这样就可以通过公网的端口访问到本地的服务了，而SakuraFrp就是一个免费的内网穿透工具，它支持udp和tcp，所以说我们可以使用它来开服（还有个比较出名的内网穿透工具ngrok，这个并不支持udp传输，至少2025&#x2F;9&#x2F;18这天是不行的）
-配置SakuraFrp
-打开SakuraFrp的官网
-点击注册，注册流程我就不说了
-跳转到下一个页面之后，点击Sakura Frp 
-优先完成实名认证 
-按照图中的流程找到创建隧道 
-任选一个节点，根据服务器的状态自己选择，注意上面有支持 UDP的选项 
-按照如图所示创建隧道即可
-
-下载客户端并启用
-点击下载客户端，根据自己的操作系统下载对应的客户端，具体的下载流程请根据下载页的教程一步步执行，我这里就不提供了 
-先根据图中位置”复制密钥“ 
-再把密钥复制到安装好的客户端，点击登录 
-登录之后会有如图所示的两个选项，选择有UDP的这一项选择开启 
-开启之后根据图找到需要复制的内容
-
-准备并开始联机
-先找到配置的文件，根据图找到autoexec_server.cfg文件 
-回头看看我一开始提到的有关服务器配置信息的网站，我这里只会做必须项的修改
-打开autoexec_server.cfg文件（鼠标右击之后打开方式选择记事本或者VScode之类的都行）
-按ctrl+f，搜索sv_register，将这个参数后面的数字改为1，这个为必须项，如果你想要服务器有一些额外的限制，请自行看上面说的官网 
-按ctrl+s保存文件，然后打开你的DDNet，点击运行服务器
-终端会出现这个报错，但是不要在意，出现这个报错的原因是DDNet服务器想要连接连接你的IPv4地址的8303端口，但是因为我们使用的都是经过NAT转换的内网，所以说DDNet服务器是连不上的，而内网穿透就像是一个桥梁，别人先帮你接收，然后再转交给你，所以说只要别人把数据传到要转交给你的人，你一样可以实现数据传输 
-让朋友在互联网这里输入你刚刚在Sakura Frp里复制的内容，即可加入到你的服务器 
-加入成功的图片 
-后续意外之喜，路人也可以进入，但是暂时没搞清楚路人那里是什么原理
-
-添加地图（暂未研究）]]></content>
-      <categories>
-        <category>游戏</category>
-        <category>Else</category>
-        <category>DDNet</category>
-      </categories>
-      <tags>
-        <tag>Game</tag>
-        <tag>DDNet</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html</url>
     <content><![CDATA[博客背景图片设置说明当前背景设置目前博客使用了渐变色背景和增强的卡片样式：
@@ -304,270 +309,416 @@ Light主题适合的图片
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/css/custom.css</url>
-    <content><![CDATA[/* Unified custom interactions for both themes */
-@media (min-width: 901px) {
-  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
-  #aside-content .card-info .avatar-img,
-  #aside-content .card-info .avatar-img img,
-  #sidebar-menus .avatar-img,
-  #sidebar-menus .avatar-img img {
-    animation: none !important;
-  }
-
-  /* 覆盖任何 img:hover 的旋转 */
-  #aside-content .card-info .avatar-img img:hover,
-  #sidebar-menus .avatar-img img:hover {
-    transform: none !important;
-  }
-
-  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
-  #aside-content .card-info .avatar-img,
-  #sidebar-menus .avatar-img {
-    transform-origin: center center;
-    transition: transform 0.25s ease-in-out !important;
-    will-change: transform;
-  }
-  #aside-content .card-info .avatar-img:hover,
-  #sidebar-menus .avatar-img:hover {
-    transform: scale(1.06) !important;
-  }
-
-  /* 3) 侧栏社交图标悬停放大 */
-  #aside-content .card-info .card-info-social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  #aside-content .card-info .card-info-social-icons .social-icon:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-]]></content>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/css/loading-bar.css</url>
-    <content><![CDATA[.pace {
-	-webkit-pointer-events: none;
-	pointer-events: none;
+    <url>/css/custom-light.css</url>
+    <content><![CDATA[/* Butterfly主题自定义浅色渐变样式覆盖 */
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
-
-	z-index: 2000;
-	position: fixed;
-	margin: auto;
-	top: 12px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 200px;
-	height: 50px;
-	overflow: hidden;
+/* 基础浅色渐变背景和排版 */
+html[data-theme='light'] body {
+  /* 温暖日光渐变: #ffecd2 -> #fcb69f -> #ff9a9e */
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%) fixed;
+  color: rgba(51, 51, 51, 0.88);
 }
 
-.pace .pace-progress {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	box-sizing: border-box;
-
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;
-
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-
-	display: block;
-	position: absolute;
-	right: 100%;
-	margin-right: -7px;
-	width: 93%;
-	top: 7px;
-	height: 14px;
-	font-size: 12px;
-	background: #29d;
-	color: #29d;
-	line-height: 60px;
-	font-weight: bold;
-	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
-
-	-webkit-box-shadow: 120px 0 #fff, 240px 0 #fff;
-	-ms-box-shadow: 120px 0 #fff, 240px 0 #fff;
-	box-shadow: 120px 0 #fff, 240px 0 #fff;
+/* 卡片带有微妙的半透明和模糊效果 */
+html[data-theme='light'] .card-widget,
+html[data-theme='light'] .card,
+html[data-theme='light'] .recent-posts .recent-post-item,
+html[data-theme='light'] .post,
+html[data-theme='light'] .aside-list > .aside-list-item,
+html[data-theme='light'] .relatedPosts > .relatedPosts-list > div {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 236, 210, 0.75) 50%, rgba(252, 182, 159, 0.65) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(225, 112, 85, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
 }
 
-.pace .pace-progress:after {
-	content: attr(data-progress-text);
-	display: inline-block;
-	position: fixed;
-	width: 45px;
-	text-align: right;
-	right: 0;
-	padding-right: 16px;
-	top: 4px;
+/* 卡片悬停效果 */
+html[data-theme='light'] .card-widget:hover,
+html[data-theme='light'] .card:hover,
+html[data-theme='light'] .recent-posts .recent-post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(225, 112, 85, 0.35);
+  transition: all 0.3s ease;
 }
 
-.pace .pace-progress[data-progress-text="0%"]:after { right: -200px }
-.pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px }
-.pace .pace-progress[data-progress-text="2%"]:after { right: -196.28px }
-.pace .pace-progress[data-progress-text="3%"]:after { right: -194.42px }
-.pace .pace-progress[data-progress-text="4%"]:after { right: -192.56px }
-.pace .pace-progress[data-progress-text="5%"]:after { right: -190.7px }
-.pace .pace-progress[data-progress-text="6%"]:after { right: -188.84px }
-.pace .pace-progress[data-progress-text="7%"]:after { right: -186.98px }
-.pace .pace-progress[data-progress-text="8%"]:after { right: -185.12px }
-.pace .pace-progress[data-progress-text="9%"]:after { right: -183.26px }
-.pace .pace-progress[data-progress-text="10%"]:after { right: -181.4px }
-.pace .pace-progress[data-progress-text="11%"]:after { right: -179.54px }
-.pace .pace-progress[data-progress-text="12%"]:after { right: -177.68px }
-.pace .pace-progress[data-progress-text="13%"]:after { right: -175.82px }
-.pace .pace-progress[data-progress-text="14%"]:after { right: -173.96px }
-.pace .pace-progress[data-progress-text="15%"]:after { right: -172.1px }
-.pace .pace-progress[data-progress-text="16%"]:after { right: -170.24px }
-.pace .pace-progress[data-progress-text="17%"]:after { right: -168.38px }
-.pace .pace-progress[data-progress-text="18%"]:after { right: -166.52px }
-.pace .pace-progress[data-progress-text="19%"]:after { right: -164.66px }
-.pace .pace-progress[data-progress-text="20%"]:after { right: -162.8px }
-.pace .pace-progress[data-progress-text="21%"]:after { right: -160.94px }
-.pace .pace-progress[data-progress-text="22%"]:after { right: -159.08px }
-.pace .pace-progress[data-progress-text="23%"]:after { right: -157.22px }
-.pace .pace-progress[data-progress-text="24%"]:after { right: -155.36px }
-.pace .pace-progress[data-progress-text="25%"]:after { right: -153.5px }
-.pace .pace-progress[data-progress-text="26%"]:after { right: -151.64px }
-.pace .pace-progress[data-progress-text="27%"]:after { right: -149.78px }
-.pace .pace-progress[data-progress-text="28%"]:after { right: -147.92px }
-.pace .pace-progress[data-progress-text="29%"]:after { right: -146.06px }
-.pace .pace-progress[data-progress-text="30%"]:after { right: -144.2px }
-.pace .pace-progress[data-progress-text="31%"]:after { right: -142.34px }
-.pace .pace-progress[data-progress-text="32%"]:after { right: -140.48px }
-.pace .pace-progress[data-progress-text="33%"]:after { right: -138.62px }
-.pace .pace-progress[data-progress-text="34%"]:after { right: -136.76px }
-.pace .pace-progress[data-progress-text="35%"]:after { right: -134.9px }
-.pace .pace-progress[data-progress-text="36%"]:after { right: -133.04px }
-.pace .pace-progress[data-progress-text="37%"]:after { right: -131.18px }
-.pace .pace-progress[data-progress-text="38%"]:after { right: -129.32px }
-.pace .pace-progress[data-progress-text="39%"]:after { right: -127.46px }
-.pace .pace-progress[data-progress-text="40%"]:after { right: -125.6px }
-.pace .pace-progress[data-progress-text="41%"]:after { right: -123.74px }
-.pace .pace-progress[data-progress-text="42%"]:after { right: -121.88px }
-.pace .pace-progress[data-progress-text="43%"]:after { right: -120.02px }
-.pace .pace-progress[data-progress-text="44%"]:after { right: -118.16px }
-.pace .pace-progress[data-progress-text="45%"]:after { right: -116.3px }
-.pace .pace-progress[data-progress-text="46%"]:after { right: -114.44px }
-.pace .pace-progress[data-progress-text="47%"]:after { right: -112.58px }
-.pace .pace-progress[data-progress-text="48%"]:after { right: -110.72px }
-.pace .pace-progress[data-progress-text="49%"]:after { right: -108.86px }
-.pace .pace-progress[data-progress-text="50%"]:after { right: -107px }
-.pace .pace-progress[data-progress-text="51%"]:after { right: -105.14px }
-.pace .pace-progress[data-progress-text="52%"]:after { right: -103.28px }
-.pace .pace-progress[data-progress-text="53%"]:after { right: -101.42px }
-.pace .pace-progress[data-progress-text="54%"]:after { right: -99.56px }
-.pace .pace-progress[data-progress-text="55%"]:after { right: -97.7px }
-.pace .pace-progress[data-progress-text="56%"]:after { right: -95.84px }
-.pace .pace-progress[data-progress-text="57%"]:after { right: -93.98px }
-.pace .pace-progress[data-progress-text="58%"]:after { right: -92.12px }
-.pace .pace-progress[data-progress-text="59%"]:after { right: -90.26px }
-.pace .pace-progress[data-progress-text="60%"]:after { right: -88.4px }
-.pace .pace-progress[data-progress-text="61%"]:after { right: -86.53999999999999px }
-.pace .pace-progress[data-progress-text="62%"]:after { right: -84.68px }
-.pace .pace-progress[data-progress-text="63%"]:after { right: -82.82px }
-.pace .pace-progress[data-progress-text="64%"]:after { right: -80.96000000000001px }
-.pace .pace-progress[data-progress-text="65%"]:after { right: -79.1px }
-.pace .pace-progress[data-progress-text="66%"]:after { right: -77.24px }
-.pace .pace-progress[data-progress-text="67%"]:after { right: -75.38px }
-.pace .pace-progress[data-progress-text="68%"]:after { right: -73.52px }
-.pace .pace-progress[data-progress-text="69%"]:after { right: -71.66px }
-.pace .pace-progress[data-progress-text="70%"]:after { right: -69.8px }
-.pace .pace-progress[data-progress-text="71%"]:after { right: -67.94px }
-.pace .pace-progress[data-progress-text="72%"]:after { right: -66.08px }
-.pace .pace-progress[data-progress-text="73%"]:after { right: -64.22px }
-.pace .pace-progress[data-progress-text="74%"]:after { right: -62.36px }
-.pace .pace-progress[data-progress-text="75%"]:after { right: -60.5px }
-.pace .pace-progress[data-progress-text="76%"]:after { right: -58.64px }
-.pace .pace-progress[data-progress-text="77%"]:after { right: -56.78px }
-.pace .pace-progress[data-progress-text="78%"]:after { right: -54.92px }
-.pace .pace-progress[data-progress-text="79%"]:after { right: -53.06px }
-.pace .pace-progress[data-progress-text="80%"]:after { right: -51.2px }
-.pace .pace-progress[data-progress-text="81%"]:after { right: -49.34px }
-.pace .pace-progress[data-progress-text="82%"]:after { right: -47.480000000000004px }
-.pace .pace-progress[data-progress-text="83%"]:after { right: -45.62px }
-.pace .pace-progress[data-progress-text="84%"]:after { right: -43.76px }
-.pace .pace-progress[data-progress-text="85%"]:after { right: -41.9px }
-.pace .pace-progress[data-progress-text="86%"]:after { right: -40.04px }
-.pace .pace-progress[data-progress-text="87%"]:after { right: -38.18px }
-.pace .pace-progress[data-progress-text="88%"]:after { right: -36.32px }
-.pace .pace-progress[data-progress-text="89%"]:after { right: -34.46px }
-.pace .pace-progress[data-progress-text="90%"]:after { right: -32.6px }
-.pace .pace-progress[data-progress-text="91%"]:after { right: -30.740000000000002px }
-.pace .pace-progress[data-progress-text="92%"]:after { right: -28.880000000000003px }
-.pace .pace-progress[data-progress-text="93%"]:after { right: -27.02px }
-.pace .pace-progress[data-progress-text="94%"]:after { right: -25.16px }
-.pace .pace-progress[data-progress-text="95%"]:after { right: -23.3px }
-.pace .pace-progress[data-progress-text="96%"]:after { right: -21.439999999999998px }
-.pace .pace-progress[data-progress-text="97%"]:after { right: -19.58px }
-.pace .pace-progress[data-progress-text="98%"]:after { right: -17.72px }
-.pace .pace-progress[data-progress-text="99%"]:after { right: -15.86px }
-.pace .pace-progress[data-progress-text="100%"]:after { right: -14px }
-
-
-.pace .pace-activity {
-	position: absolute;
-	width: 100%;
-	height: 28px;
-	z-index: 2001;
-	box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;
-	border-radius: 10px;
+/* 头像背景增强 */
+html[data-theme='light'] .avatar-img {
+  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(232, 67, 147, 0.2) 100%);
+  border: 2px solid rgba(225, 112, 85, 0.4);
+  box-shadow: 0 0 20px rgba(232, 67, 147, 0.3);
 }
 
-.pace.pace-inactive {
-	display: none;
-}]]></content>
+/* 页头和页脚与渐变融合 */
+html[data-theme='light'] #page-header,
+html[data-theme='light'] #footer {
+  background: transparent;
+}
+
+/* 强调色：温暖橙红色渐变用于链接和选择 */
+html[data-theme='light'] a,
+html[data-theme='light'] .links-of-author a,
+html[data-theme='light'] .article-meta__categories a,
+html[data-theme='light'] .article-meta__tags a {
+  color: #e17055;
+  transition: color .2s ease, text-shadow .2s ease;
+}
+html[data-theme='light'] a:hover {
+  color: #d63031;
+  text-shadow: 0 0 8px rgba(214, 48, 49, 0.4);
+}
+
+/* 按钮样式 */
+html[data-theme='light'] :root {
+  --btn-bg: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  --btn-hover-color: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+  --btn-color: #ffffff;
+  --text-highlight-color: #e17055;
+  --scrollbar-color: #e84393;
+}
+
+/* 侧边栏、搜索框等 */
+html[data-theme='light'] .sidebar,
+html[data-theme='light'] .sidebar #aside-content > .card-widget,
+html[data-theme='light'] .search-dialog .search-dialog__title,
+html[data-theme='light'] .search-dialog .search-nav {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* 引用块条纹强调 */
+html[data-theme='light'] blockquote {
+  border-left: 3px solid #e84393;
+  background: rgba(232, 67, 147, 0.08);
+}
+
+/* 分割线微妙样式 */
+html[data-theme='light'] hr {
+  border-color: #fab1a0;
+}
+
+/* 目录链接颜色和悬停效果 */
+html[data-theme='light'] #aside-content .toc .toc-item a {
+  color: #e84393;
+}
+html[data-theme='light'] #aside-content .toc .toc-item a:hover {
+  color: #e17055;
+}
+
+/* 分页和标签 */
+html[data-theme='light'] .pagination .page-number,
+html[data-theme='light'] .tag-cloud a,
+html[data-theme='light'] .article-tags .tag {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(232, 67, 147, 0.2);
+}
+
+/* 文章标题的精美悬停效果 */
+html[data-theme='light'] .recent-post-info .article-title a:hover,
+html[data-theme='light'] .post-title a:hover {
+  color: #e84393;
+}
+
+/* 主题切换的平滑过渡 */
+html[data-theme='light'] body, html[data-theme='light'] .card, html[data-theme='light'] .card-widget {
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+
+/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
+html[data-theme='light'] #site-info #site-title.custom-title-art {
+  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(3rem, 6vw, 6rem) !important;
+  letter-spacing: 0.04em !important;
+  /* 不支持background-clip的浏览器的备用颜色 */
+  color: #e84393 !important;
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 35%, #d63031 55%, #e17055 80%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 2px 24px rgba(232,67,147,0.15), 0 2px 40px rgba(253,121,168,0.12) !important;
+  /* 强制居中 */
+  display: block !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* 确保在不支持background-clip时文字可见 */
+@supports not (-webkit-background-clip: text) {
+  html[data-theme='light'] #site-info #site-title.custom-title-art {
+    color: #e84393 !important;
+    -webkit-text-fill-color: #e84393 !important;
+  }
+}
+
+/* 温暖主题风格的Markdown样式 - 基于温暖调色板 */
+/* 温暖色调变量定义 */
+:root {
+  --warm-coral: #ff7675;
+  --warm-pink: #fd79a8;
+  --warm-purple: #e84393;
+  --warm-violet: #a29bfe;
+  --warm-red: #d63031;
+  --warm-orange: #e17055;
+  --warm-peach: #fab1a0;
+  --warm-yellow: #fdcb6e;
+  --warm-green: #00b894;
+  --warm-mint: #00cec9;
+  --warm-cyan: #74b9ff;
+  --warm-blue: #0984e3;
+  --warm-indigo: #6c5ce7;
+  --warm-lavender: #a29bfe;
+  --warm-text: #2d3436;
+  --warm-subtext1: #636e72;
+  --warm-subtext0: #74b9ff;
+  --warm-overlay2: #b2bec3;
+  --warm-overlay1: #ddd;
+  --warm-overlay0: #f1f2f6;
+  --warm-surface2: #ffeaa7;
+  --warm-surface1: #fff5f5;
+  --warm-surface0: #ffffff;
+  --warm-base: #ffecd2;
+  --warm-mantle: #fcb69f;
+  --warm-crust: #ff9a9e;
+}
+
+/* Markdown标题样式 */
+html[data-theme='light'] .post-content h1 {
+  color: var(--warm-red) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h2 {
+  color: var(--warm-orange) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.6em;
+  line-height: 1.2;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h3 {
+  color: var(--warm-green) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.37em;
+  line-height: 1.3;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h4 {
+  color: var(--warm-mint) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h5 {
+  color: var(--warm-lavender) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  line-height: 1.5;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h6 {
+  color: var(--warm-violet) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  line-height: 1.5;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+/* Markdown加粗文字样式 - 使用蓝色调 */
+html[data-theme='light'] .post-content strong,
+html[data-theme='light'] .post-content b {
+  color: var(--warm-blue) !important;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(116, 185, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  border: 1px solid rgba(116, 185, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+/* 加粗文字悬停效果 */
+html[data-theme='light'] .post-content strong:hover,
+html[data-theme='light'] .post-content b:hover {
+  background: linear-gradient(135deg, rgba(116, 185, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+  border-color: rgba(116, 185, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(116, 185, 255, 0.3);
+}
+
+/* Markdown斜体文字样式 - 使用浅紫色调 */
+html[data-theme='light'] .post-content em,
+html[data-theme='light'] .post-content i {
+  color: var(--warm-lavender) !important;
+  font-style: italic;
+  background: linear-gradient(135deg, rgba(162, 155, 254, 0.1) 0%, transparent 100%);
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+
+/* Markdown列表样式优化 */
+html[data-theme='light'] .post-content ul li::marker,
+html[data-theme='light'] .post-content ol li::marker {
+  color: var(--warm-overlay1);
+}
+
+html[data-theme='light'] .post-content ul li,
+html[data-theme='light'] .post-content ol li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+  color: var(--warm-text);
+}
+
+/* Markdown链接样式 */
+html[data-theme='light'] .post-content a {
+  color: var(--warm-cyan) !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 206, 201, 0.3);
+  transition: all 0.2s ease;
+}
+
+html[data-theme='light'] .post-content a:hover {
+  color: var(--warm-blue) !important;
+  border-bottom-color: var(--warm-blue);
+  text-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
+}
+
+/* Markdown表格样式 */
+html[data-theme='light'] .post-content table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: var(--warm-surface0);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='light'] .post-content table th {
+  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+  color: var(--warm-purple) !important;
+  font-weight: 700;
+  padding: 0.8em;
+  border: 1px solid rgba(253, 121, 168, 0.3);
+}
+
+html[data-theme='light'] .post-content table td {
+  padding: 0.6em 0.8em;
+  border: 1px solid var(--warm-overlay0);
+  color: var(--warm-text);
+}
+
+html[data-theme='light'] .post-content table tr:nth-child(even) {
+  background: rgba(255, 245, 245, 0.5);
+}
+
+
+
+/* 引用块样式 */
+html[data-theme='light'] .post-content blockquote {
+  border-left: 4px solid var(--warm-peach);
+  background: linear-gradient(135deg, rgba(250, 177, 160, 0.1) 0%, transparent 100%);
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  color: var(--warm-subtext1);
+  border-radius: 0 8px 8px 0;
+}
+
+/* 动画光晕叠加层以丰富背景 */
+html[data-theme='light'] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60vw 60vh at 20% 20%, rgba(253, 121, 168, 0.12), transparent 60%),
+    radial-gradient(50vw 50vh at 78% 28%, rgba(232, 67, 147, 0.10), transparent 60%),
+    radial-gradient(70vw 70vh at 52% 84%, rgba(255, 154, 158, 0.08), transparent 60%);
+  mix-blend-mode: multiply;
+  opacity: .6;
+  animation: lightAuroraFloat 28s ease-in-out infinite alternate;
+}
+
+@keyframes lightAuroraFloat {
+  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
+  50% { transform: translate3d(0,1.2%,0) scale(1.01); filter: saturate(1.05); }
+  100% { transform: translate3d(0,2.4%,0) scale(1.02); filter: saturate(1.1); }
+}
+
+/* 右上角自定义菜单 */
+html[data-theme='light'] .custom-right-menus .menu-item {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(232, 67, 147, 0.2);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+  color: var(--warm-text);
+}
+html[data-theme='light'] #nav.nav-fixed .custom-right-menus .menu-item,
+html[data-theme='light'] #page-header.not-top-img #nav .custom-right-menus .menu-item {
+  color: var(--font-color);
+}
+html[data-theme='light'] .custom-right-menus .menu-item:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);
+}
+
+/* 修复：恢复代码块（包括 plaintext）为 Butterfly 默认背景（light） */
+html[data-theme='light'] figure.highlight table,
+html[data-theme='light'] figure.highlight td,
+html[data-theme='light'] figure.highlight th {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='light'] figure.highlight table,
+html[data-theme='light'] figure.highlight td,
+html[data-theme='light'] figure.highlight th {
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+html[data-theme='light'] figure.highlight,
+html[data-theme='light'] figure.highlight .highlight-tools {
+  box-shadow: none !important;
+}
+/* 调整代码块工具栏复制与展开按钮的间距（light） */
+html[data-theme='light'] figure.highlight .highlight-tools {
+  gap: 6px;
+}
+html[data-theme='light'] figure.highlight .highlight-tools .expand {
+  margin-left: 4px;
+}
+
+]]></content>
   </entry>
   <entry>
     <title></title>
@@ -979,6 +1130,471 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
+    <url>/css/loading-bar.css</url>
+    <content><![CDATA[.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+
+	z-index: 2000;
+	position: fixed;
+	margin: auto;
+	top: 12px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 200px;
+	height: 50px;
+	overflow: hidden;
+}
+
+.pace .pace-progress {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+
+	display: block;
+	position: absolute;
+	right: 100%;
+	margin-right: -7px;
+	width: 93%;
+	top: 7px;
+	height: 14px;
+	font-size: 12px;
+	background: #29d;
+	color: #29d;
+	line-height: 60px;
+	font-weight: bold;
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+
+	-webkit-box-shadow: 120px 0 #fff, 240px 0 #fff;
+	-ms-box-shadow: 120px 0 #fff, 240px 0 #fff;
+	box-shadow: 120px 0 #fff, 240px 0 #fff;
+}
+
+.pace .pace-progress:after {
+	content: attr(data-progress-text);
+	display: inline-block;
+	position: fixed;
+	width: 45px;
+	text-align: right;
+	right: 0;
+	padding-right: 16px;
+	top: 4px;
+}
+
+.pace .pace-progress[data-progress-text="0%"]:after { right: -200px }
+.pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px }
+.pace .pace-progress[data-progress-text="2%"]:after { right: -196.28px }
+.pace .pace-progress[data-progress-text="3%"]:after { right: -194.42px }
+.pace .pace-progress[data-progress-text="4%"]:after { right: -192.56px }
+.pace .pace-progress[data-progress-text="5%"]:after { right: -190.7px }
+.pace .pace-progress[data-progress-text="6%"]:after { right: -188.84px }
+.pace .pace-progress[data-progress-text="7%"]:after { right: -186.98px }
+.pace .pace-progress[data-progress-text="8%"]:after { right: -185.12px }
+.pace .pace-progress[data-progress-text="9%"]:after { right: -183.26px }
+.pace .pace-progress[data-progress-text="10%"]:after { right: -181.4px }
+.pace .pace-progress[data-progress-text="11%"]:after { right: -179.54px }
+.pace .pace-progress[data-progress-text="12%"]:after { right: -177.68px }
+.pace .pace-progress[data-progress-text="13%"]:after { right: -175.82px }
+.pace .pace-progress[data-progress-text="14%"]:after { right: -173.96px }
+.pace .pace-progress[data-progress-text="15%"]:after { right: -172.1px }
+.pace .pace-progress[data-progress-text="16%"]:after { right: -170.24px }
+.pace .pace-progress[data-progress-text="17%"]:after { right: -168.38px }
+.pace .pace-progress[data-progress-text="18%"]:after { right: -166.52px }
+.pace .pace-progress[data-progress-text="19%"]:after { right: -164.66px }
+.pace .pace-progress[data-progress-text="20%"]:after { right: -162.8px }
+.pace .pace-progress[data-progress-text="21%"]:after { right: -160.94px }
+.pace .pace-progress[data-progress-text="22%"]:after { right: -159.08px }
+.pace .pace-progress[data-progress-text="23%"]:after { right: -157.22px }
+.pace .pace-progress[data-progress-text="24%"]:after { right: -155.36px }
+.pace .pace-progress[data-progress-text="25%"]:after { right: -153.5px }
+.pace .pace-progress[data-progress-text="26%"]:after { right: -151.64px }
+.pace .pace-progress[data-progress-text="27%"]:after { right: -149.78px }
+.pace .pace-progress[data-progress-text="28%"]:after { right: -147.92px }
+.pace .pace-progress[data-progress-text="29%"]:after { right: -146.06px }
+.pace .pace-progress[data-progress-text="30%"]:after { right: -144.2px }
+.pace .pace-progress[data-progress-text="31%"]:after { right: -142.34px }
+.pace .pace-progress[data-progress-text="32%"]:after { right: -140.48px }
+.pace .pace-progress[data-progress-text="33%"]:after { right: -138.62px }
+.pace .pace-progress[data-progress-text="34%"]:after { right: -136.76px }
+.pace .pace-progress[data-progress-text="35%"]:after { right: -134.9px }
+.pace .pace-progress[data-progress-text="36%"]:after { right: -133.04px }
+.pace .pace-progress[data-progress-text="37%"]:after { right: -131.18px }
+.pace .pace-progress[data-progress-text="38%"]:after { right: -129.32px }
+.pace .pace-progress[data-progress-text="39%"]:after { right: -127.46px }
+.pace .pace-progress[data-progress-text="40%"]:after { right: -125.6px }
+.pace .pace-progress[data-progress-text="41%"]:after { right: -123.74px }
+.pace .pace-progress[data-progress-text="42%"]:after { right: -121.88px }
+.pace .pace-progress[data-progress-text="43%"]:after { right: -120.02px }
+.pace .pace-progress[data-progress-text="44%"]:after { right: -118.16px }
+.pace .pace-progress[data-progress-text="45%"]:after { right: -116.3px }
+.pace .pace-progress[data-progress-text="46%"]:after { right: -114.44px }
+.pace .pace-progress[data-progress-text="47%"]:after { right: -112.58px }
+.pace .pace-progress[data-progress-text="48%"]:after { right: -110.72px }
+.pace .pace-progress[data-progress-text="49%"]:after { right: -108.86px }
+.pace .pace-progress[data-progress-text="50%"]:after { right: -107px }
+.pace .pace-progress[data-progress-text="51%"]:after { right: -105.14px }
+.pace .pace-progress[data-progress-text="52%"]:after { right: -103.28px }
+.pace .pace-progress[data-progress-text="53%"]:after { right: -101.42px }
+.pace .pace-progress[data-progress-text="54%"]:after { right: -99.56px }
+.pace .pace-progress[data-progress-text="55%"]:after { right: -97.7px }
+.pace .pace-progress[data-progress-text="56%"]:after { right: -95.84px }
+.pace .pace-progress[data-progress-text="57%"]:after { right: -93.98px }
+.pace .pace-progress[data-progress-text="58%"]:after { right: -92.12px }
+.pace .pace-progress[data-progress-text="59%"]:after { right: -90.26px }
+.pace .pace-progress[data-progress-text="60%"]:after { right: -88.4px }
+.pace .pace-progress[data-progress-text="61%"]:after { right: -86.53999999999999px }
+.pace .pace-progress[data-progress-text="62%"]:after { right: -84.68px }
+.pace .pace-progress[data-progress-text="63%"]:after { right: -82.82px }
+.pace .pace-progress[data-progress-text="64%"]:after { right: -80.96000000000001px }
+.pace .pace-progress[data-progress-text="65%"]:after { right: -79.1px }
+.pace .pace-progress[data-progress-text="66%"]:after { right: -77.24px }
+.pace .pace-progress[data-progress-text="67%"]:after { right: -75.38px }
+.pace .pace-progress[data-progress-text="68%"]:after { right: -73.52px }
+.pace .pace-progress[data-progress-text="69%"]:after { right: -71.66px }
+.pace .pace-progress[data-progress-text="70%"]:after { right: -69.8px }
+.pace .pace-progress[data-progress-text="71%"]:after { right: -67.94px }
+.pace .pace-progress[data-progress-text="72%"]:after { right: -66.08px }
+.pace .pace-progress[data-progress-text="73%"]:after { right: -64.22px }
+.pace .pace-progress[data-progress-text="74%"]:after { right: -62.36px }
+.pace .pace-progress[data-progress-text="75%"]:after { right: -60.5px }
+.pace .pace-progress[data-progress-text="76%"]:after { right: -58.64px }
+.pace .pace-progress[data-progress-text="77%"]:after { right: -56.78px }
+.pace .pace-progress[data-progress-text="78%"]:after { right: -54.92px }
+.pace .pace-progress[data-progress-text="79%"]:after { right: -53.06px }
+.pace .pace-progress[data-progress-text="80%"]:after { right: -51.2px }
+.pace .pace-progress[data-progress-text="81%"]:after { right: -49.34px }
+.pace .pace-progress[data-progress-text="82%"]:after { right: -47.480000000000004px }
+.pace .pace-progress[data-progress-text="83%"]:after { right: -45.62px }
+.pace .pace-progress[data-progress-text="84%"]:after { right: -43.76px }
+.pace .pace-progress[data-progress-text="85%"]:after { right: -41.9px }
+.pace .pace-progress[data-progress-text="86%"]:after { right: -40.04px }
+.pace .pace-progress[data-progress-text="87%"]:after { right: -38.18px }
+.pace .pace-progress[data-progress-text="88%"]:after { right: -36.32px }
+.pace .pace-progress[data-progress-text="89%"]:after { right: -34.46px }
+.pace .pace-progress[data-progress-text="90%"]:after { right: -32.6px }
+.pace .pace-progress[data-progress-text="91%"]:after { right: -30.740000000000002px }
+.pace .pace-progress[data-progress-text="92%"]:after { right: -28.880000000000003px }
+.pace .pace-progress[data-progress-text="93%"]:after { right: -27.02px }
+.pace .pace-progress[data-progress-text="94%"]:after { right: -25.16px }
+.pace .pace-progress[data-progress-text="95%"]:after { right: -23.3px }
+.pace .pace-progress[data-progress-text="96%"]:after { right: -21.439999999999998px }
+.pace .pace-progress[data-progress-text="97%"]:after { right: -19.58px }
+.pace .pace-progress[data-progress-text="98%"]:after { right: -17.72px }
+.pace .pace-progress[data-progress-text="99%"]:after { right: -15.86px }
+.pace .pace-progress[data-progress-text="100%"]:after { right: -14px }
+
+
+.pace .pace-activity {
+	position: absolute;
+	width: 100%;
+	height: 28px;
+	z-index: 2001;
+	box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;
+	border-radius: 10px;
+}
+
+.pace.pace-inactive {
+	display: none;
+}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/custom.css</url>
+    <content><![CDATA[/* Unified custom interactions for both themes */
+@media (min-width: 901px) {
+  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
+  }
+
+  /* 覆盖任何 img:hover 的旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
+  }
+
+  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
+  #aside-content .card-info .avatar-img,
+  #sidebar-menus .avatar-img {
+    transform-origin: center center;
+    transition: transform 0.25s ease-in-out !important;
+    will-change: transform;
+  }
+  #aside-content .card-info .avatar-img:hover,
+  #sidebar-menus .avatar-img:hover {
+    transform: scale(1.06) !important;
+  }
+
+  /* 3) 侧栏社交图标悬停放大 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  left: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/waline_css.css</url>
+    <content><![CDATA[/* 专用于 Butterfly 的 waline_css 接口覆盖：仅保留 GitHub 登录入口 */
+/* 说明：本文件通过主题 plugins.yml -> waline_css 配置加载，尽量只作用于 Waline 相关区域 */
+
+/* 优先在 Waline 容器与登录弹窗作用域下隐藏非 GitHub 提供商 */
+:where(#waline, .wl-modal, .wl-login, .wl-social) [data-provider]:not([data-provider="github"]) {
+  display: none !important;
+}
+
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/weibo" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/twitter" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/facebook" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/google" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/qq" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/gitee" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/gitlab" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/discord" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/linkedin" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/wechat" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/microsoft" i] {
+  display: none !important;
+}
+
+/* 兜底：若弹窗挂载到 body，仍隐藏非 GitHub 提供商（谨慎作用于 data-provider/典型路径）*/
+[data-provider="weibo"],
+[data-provider="twitter"],
+[data-provider="facebook"],
+[data-provider="google"],
+[data-provider="qq"],
+[data-provider="gitee"],
+[data-provider="gitlab"],
+[data-provider="discord"],
+[data-provider="linkedin"],
+[data-provider="wechat"],
+[data-provider="microsoft"],
+
+a[href*="/weibo" i],
+a[href*="/twitter" i],
+a[href*="/facebook" i],
+a[href*="/google" i],
+a[href*="/qq" i],
+a[href*="/gitee" i],
+a[href*="/gitlab" i],
+a[href*="/discord" i],
+a[href*="/linkedin" i],
+a[href*="/wechat" i],
+a[href*="/microsoft" i] {
+  display: none !important;
+}
+
+/* 明确允许 GitHub 入口显示（即使主题或其它样式做了覆盖）*/
+[data-provider="github"],
+a[href*="/github" i] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/click-throw.js</url>
+    <content><![CDATA[/*
+  点击生成文字“抛物运动”效果（Hexo Butterfly）
+  在点击位置创建文字：先上抛，然后受重力加速度下落，超出视口或寿命结束后移除
+*/
+(() => {
+  const SCRIPT_ID = 'click-show-text' // 主题注入的脚本标签 id（保持此 id 以读取 data-* 配置）
+  const scriptEl = document.getElementById(SCRIPT_ID) // 通过它读取 data-text、data-fontsize、data-random、data-mobile
+  if (!scriptEl) return
+
+  // Read config from data attributes injected by Butterfly
+  // 从 data-* 属性读取配置（与主题 _config.butterfly.yml->clickShowText 对应）
+  const data = scriptEl.dataset || {}
+  const mobileEnabled = String(data.mobile).toLowerCase() === 'true' // 是否在移动端启用
+  const fontSize = data.fontsize || '15px' // 文字字号
+  const isRandom = String(data.random).toLowerCase() === 'true' // 是否随机颜色
+  const textList = (data.text || '').split(',').map(s => s.trim()).filter(Boolean) // 文本列表
+
+  // Do not enable on mobile unless explicitly allowed
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) // 是否为移动端
+  // 若禁止移动端且当前为移动端，则不启用
+  if (isMobile && !mobileEnabled) return
+  if (!textList.length) return
+
+  let seqIndex = 0 // 顺序轮播时的当前索引
+
+  // Utility: random color (pleasant pastel range)
+  const randColor = () => {
+    const h = Math.floor(Math.random() * 360)
+    const s = 70 + Math.floor(Math.random() * 20) // 70% - 90%
+    const l = 50 + Math.floor(Math.random() * 10) // 50% - 60%
+    return `hsl(${h} ${s}% ${l}%)`
+  }
+
+  const activeParticles = new Set()
+
+  const createParticle = (x, y, text) => {
+    const el = document.createElement('span')
+    el.textContent = text
+    el.style.position = 'fixed'
+    el.style.left = x + 'px'
+    el.style.top = y + 'px'
+    el.style.transform = 'translate(-50%, -50%) translateZ(0)' // 居中锚点 + 开启 GPU 加速
+    el.style.fontSize = fontSize // 使用主题配置的字号
+    el.style.fontWeight = '700'
+    el.style.whiteSpace = 'pre'
+    el.style.pointerEvents = 'none'
+    el.style.userSelect = 'none'
+    el.style.willChange = 'transform, opacity'
+    el.style.zIndex = '99999'
+    el.style.opacity = '1'
+    el.style.color = isRandom ? randColor() : 'var(--theme-color, #49B1F5)' // 随机颜色或主题主色
+
+    document.body.appendChild(el)
+
+    // 设置速度
+    const maxVx = 200 // 水平初速度范围
+    const minVy = 300, maxVy = 600 // 竖直初速度范围（上抛初速度越大，抛得越高）
+    const g = 2000 // 重力加速度
+
+    const vx = (Math.random() * 2 - 1) * maxVx // 水平速度（随机向左或向右）
+    const vy0 = - (minVy + Math.random() * (maxVy - minVy)) // 竖直初速度（负号表示向上）
+    const rot = (Math.random() * 2 - 1) * 30 // 旋转角度（仅为更美观）
+
+    const lifetime = 1.6 // 粒子存活时长（秒）
+    let t = 0
+    let last = performance.now()
+
+    const particle = { el, x, y, vx, vy0, rot, t, last, lifetime }
+    activeParticles.add(particle)
+
+    const step = () => {
+      if (!document.body.contains(el)) {
+        activeParticles.delete(particle)
+        return
+      }
+      const now = performance.now()
+      const dt = Math.min(0.033, (now - last) / 1000) // 限制帧间隔，避免切换标签导致位移突变（最大约 33ms）
+      last = now
+      t += dt
+
+      // Kinematics: y(t) = y0 + vy0 * t + 0.5 * g * t^2
+      const nx = x + vx * t
+      const ny = y + (vy0 * t + 0.5 * g * t * t)
+
+      // Fade out towards end of life
+      const lifeRatio = Math.min(1, t / lifetime)
+      const opacity = 1 - lifeRatio
+
+      el.style.opacity = opacity.toFixed(3)
+      el.style.transform = `translate(-50%, -50%) translate(${nx - x}px, ${ny - y}px) rotate(${rot}deg)`
+
+      // Remove when out of viewport or life ended
+      const vh = window.innerHeight
+      const vw = window.innerWidth
+      const outOfView = ny < -50 || ny > vh + 50 || nx < -50 || nx > vw + 50
+      if (t >= lifetime || opacity  {
+    if (isRandom) return textList[Math.floor(Math.random() * textList.length)]
+    const t = textList[seqIndex]
+    seqIndex = (seqIndex + 1) % textList.length
+    return t
+  }
+
+  // Attach once
+  const onClick = (e) => {
+    // Ignore right/middle clicks
+    if (e.button !== 0) return
+    const text = pickText()
+    createParticle(e.clientX, e.clientY, text)
+  }
+
+  // Debounced resize cleanup (optional)
+  const onVisibility = () => {
+    if (document.hidden) {
+      // Clean up off-screen particles when tab hidden
+      for (const p of activeParticles) {
+        p.el.remove()
+      }
+      activeParticles.clear()
+    }
+  }
+
+  // Listen at capture phase to trigger early and avoid being blocked by other handlers
+  window.addEventListener('click', onClick, true)
+  document.addEventListener('visibilitychange', onVisibility)
+
+  // Provide a small API for future control
+  window.ClickThrowText = {
+    dispose() {
+      window.removeEventListener('click', onClick, true)
+      document.removeEventListener('visibilitychange', onVisibility)
+      for (const p of activeParticles) p.el.remove()
+      activeParticles.clear()
+    }
+  }
+})()]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/js/custom.js</url>
     <content><![CDATA[(function () {
   // 右侧添加五个菜单
@@ -991,7 +1607,7 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
       { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
       { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
       { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
+      { name: '友链', url: '/link/', icon: 'fas fa-link' }
     ]
 
     const menuContainer = document.createElement('div')
@@ -1049,444 +1665,6 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
   window.addEventListener('pjax:complete', applyUI)
 })()
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom-light.css</url>
-    <content><![CDATA[/* Butterfly主题自定义浅色渐变样式覆盖 */
-
-/* 基础浅色渐变背景和排版 */
-html[data-theme='light'] body {
-  /* 温暖日光渐变: #ffecd2 -> #fcb69f -> #ff9a9e */
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%) fixed;
-  color: rgba(51, 51, 51, 0.88);
-}
-
-/* 卡片带有微妙的半透明和模糊效果 */
-html[data-theme='light'] .card-widget,
-html[data-theme='light'] .card,
-html[data-theme='light'] .recent-posts .recent-post-item,
-html[data-theme='light'] .post,
-html[data-theme='light'] .aside-list > .aside-list-item,
-html[data-theme='light'] .relatedPosts > .relatedPosts-list > div {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 236, 210, 0.75) 50%, rgba(252, 182, 159, 0.65) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(225, 112, 85, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  position: relative;
-}
-
-/* 卡片悬停效果 */
-html[data-theme='light'] .card-widget:hover,
-html[data-theme='light'] .card:hover,
-html[data-theme='light'] .recent-posts .recent-post-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  border-color: rgba(225, 112, 85, 0.35);
-  transition: all 0.3s ease;
-}
-
-/* 头像背景增强 */
-html[data-theme='light'] .avatar-img {
-  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(232, 67, 147, 0.2) 100%);
-  border: 2px solid rgba(225, 112, 85, 0.4);
-  box-shadow: 0 0 20px rgba(232, 67, 147, 0.3);
-}
-
-/* 页头和页脚与渐变融合 */
-html[data-theme='light'] #page-header,
-html[data-theme='light'] #footer {
-  background: transparent;
-}
-
-/* 强调色：温暖橙红色渐变用于链接和选择 */
-html[data-theme='light'] a,
-html[data-theme='light'] .links-of-author a,
-html[data-theme='light'] .article-meta__categories a,
-html[data-theme='light'] .article-meta__tags a {
-  color: #e17055;
-  transition: color .2s ease, text-shadow .2s ease;
-}
-html[data-theme='light'] a:hover {
-  color: #d63031;
-  text-shadow: 0 0 8px rgba(214, 48, 49, 0.4);
-}
-
-/* 按钮样式 */
-html[data-theme='light'] :root {
-  --btn-bg: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
-  --btn-hover-color: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
-  --btn-color: #ffffff;
-  --text-highlight-color: #e17055;
-  --scrollbar-color: #e84393;
-}
-
-/* 侧边栏、搜索框等 */
-html[data-theme='light'] .sidebar,
-html[data-theme='light'] .sidebar #aside-content > .card-widget,
-html[data-theme='light'] .search-dialog .search-dialog__title,
-html[data-theme='light'] .search-dialog .search-nav {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-
-/* 引用块条纹强调 */
-html[data-theme='light'] blockquote {
-  border-left: 3px solid #e84393;
-  background: rgba(232, 67, 147, 0.08);
-}
-
-/* 分割线微妙样式 */
-html[data-theme='light'] hr {
-  border-color: #fab1a0;
-}
-
-/* 目录链接颜色和悬停效果 */
-html[data-theme='light'] #aside-content .toc .toc-item a {
-  color: #e84393;
-}
-html[data-theme='light'] #aside-content .toc .toc-item a:hover {
-  color: #e17055;
-}
-
-/* 分页和标签 */
-html[data-theme='light'] .pagination .page-number,
-html[data-theme='light'] .tag-cloud a,
-html[data-theme='light'] .article-tags .tag {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(232, 67, 147, 0.2);
-}
-
-/* 文章标题的精美悬停效果 */
-html[data-theme='light'] .recent-post-info .article-title a:hover,
-html[data-theme='light'] .post-title a:hover {
-  color: #e84393;
-}
-
-/* 主题切换的平滑过渡 */
-html[data-theme='light'] body, html[data-theme='light'] .card, html[data-theme='light'] .card-widget {
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
-}
-
-/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
-html[data-theme='light'] #site-info #site-title.custom-title-art {
-  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 800 !important;
-  font-size: clamp(3rem, 6vw, 6rem) !important;
-  letter-spacing: 0.04em !important;
-  /* 不支持background-clip的浏览器的备用颜色 */
-  color: #e84393 !important;
-  background: linear-gradient(135deg, #fd79a8 0%, #e84393 35%, #d63031 55%, #e17055 80%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 2px 24px rgba(232,67,147,0.15), 0 2px 40px rgba(253,121,168,0.12) !important;
-  /* 强制居中 */
-  display: block !important;
-  text-align: center !important;
-  margin: 0 auto !important;
-}
-
-/* 确保在不支持background-clip时文字可见 */
-@supports not (-webkit-background-clip: text) {
-  html[data-theme='light'] #site-info #site-title.custom-title-art {
-    color: #e84393 !important;
-    -webkit-text-fill-color: #e84393 !important;
-  }
-}
-
-/* 温暖主题风格的Markdown样式 - 基于温暖调色板 */
-/* 温暖色调变量定义 */
-:root {
-  --warm-coral: #ff7675;
-  --warm-pink: #fd79a8;
-  --warm-purple: #e84393;
-  --warm-violet: #a29bfe;
-  --warm-red: #d63031;
-  --warm-orange: #e17055;
-  --warm-peach: #fab1a0;
-  --warm-yellow: #fdcb6e;
-  --warm-green: #00b894;
-  --warm-mint: #00cec9;
-  --warm-cyan: #74b9ff;
-  --warm-blue: #0984e3;
-  --warm-indigo: #6c5ce7;
-  --warm-lavender: #a29bfe;
-  --warm-text: #2d3436;
-  --warm-subtext1: #636e72;
-  --warm-subtext0: #74b9ff;
-  --warm-overlay2: #b2bec3;
-  --warm-overlay1: #ddd;
-  --warm-overlay0: #f1f2f6;
-  --warm-surface2: #ffeaa7;
-  --warm-surface1: #fff5f5;
-  --warm-surface0: #ffffff;
-  --warm-base: #ffecd2;
-  --warm-mantle: #fcb69f;
-  --warm-crust: #ff9a9e;
-}
-
-/* Markdown标题样式 */
-html[data-theme='light'] .post-content h1 {
-  color: var(--warm-red) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h2 {
-  color: var(--warm-orange) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.6em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h3 {
-  color: var(--warm-green) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.37em;
-  line-height: 1.3;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h4 {
-  color: var(--warm-mint) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.25em;
-  line-height: 1.4;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h5 {
-  color: var(--warm-lavender) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h6 {
-  color: var(--warm-violet) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-/* Markdown加粗文字样式 - 使用蓝色调 */
-html[data-theme='light'] .post-content strong,
-html[data-theme='light'] .post-content b {
-  color: var(--warm-blue) !important;
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(116, 185, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  border: 1px solid rgba(116, 185, 255, 0.3);
-  transition: all 0.2s ease;
-}
-
-/* 加粗文字悬停效果 */
-html[data-theme='light'] .post-content strong:hover,
-html[data-theme='light'] .post-content b:hover {
-  background: linear-gradient(135deg, rgba(116, 185, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
-  border-color: rgba(116, 185, 255, 0.5);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(116, 185, 255, 0.3);
-}
-
-/* Markdown斜体文字样式 - 使用浅紫色调 */
-html[data-theme='light'] .post-content em,
-html[data-theme='light'] .post-content i {
-  color: var(--warm-lavender) !important;
-  font-style: italic;
-  background: linear-gradient(135deg, rgba(162, 155, 254, 0.1) 0%, transparent 100%);
-  padding: 0.05em 0.2em;
-  border-radius: 2px;
-}
-
-/* Markdown列表样式优化 */
-html[data-theme='light'] .post-content ul li::marker,
-html[data-theme='light'] .post-content ol li::marker {
-  color: var(--warm-overlay1);
-}
-
-html[data-theme='light'] .post-content ul li,
-html[data-theme='light'] .post-content ol li {
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-  color: var(--warm-text);
-}
-
-/* Markdown链接样式 */
-html[data-theme='light'] .post-content a {
-  color: var(--warm-cyan) !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 206, 201, 0.3);
-  transition: all 0.2s ease;
-}
-
-html[data-theme='light'] .post-content a:hover {
-  color: var(--warm-blue) !important;
-  border-bottom-color: var(--warm-blue);
-  text-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
-}
-
-/* Markdown表格样式 */
-html[data-theme='light'] .post-content table {
-  border-collapse: collapse;
-  margin: 1em 0;
-  background: var(--warm-surface0);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-html[data-theme='light'] .post-content table th {
-  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-  color: var(--warm-purple) !important;
-  font-weight: 700;
-  padding: 0.8em;
-  border: 1px solid rgba(253, 121, 168, 0.3);
-}
-
-html[data-theme='light'] .post-content table td {
-  padding: 0.6em 0.8em;
-  border: 1px solid var(--warm-overlay0);
-  color: var(--warm-text);
-}
-
-html[data-theme='light'] .post-content table tr:nth-child(even) {
-  background: rgba(255, 245, 245, 0.5);
-}
-
-
-
-/* 引用块样式 */
-html[data-theme='light'] .post-content blockquote {
-  border-left: 4px solid var(--warm-peach);
-  background: linear-gradient(135deg, rgba(250, 177, 160, 0.1) 0%, transparent 100%);
-  padding: 1em 1.5em;
-  margin: 1em 0;
-  color: var(--warm-subtext1);
-  border-radius: 0 8px 8px 0;
-}
-
-/* 动画光晕叠加层以丰富背景 */
-html[data-theme='light'] body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(60vw 60vh at 20% 20%, rgba(253, 121, 168, 0.12), transparent 60%),
-    radial-gradient(50vw 50vh at 78% 28%, rgba(232, 67, 147, 0.10), transparent 60%),
-    radial-gradient(70vw 70vh at 52% 84%, rgba(255, 154, 158, 0.08), transparent 60%);
-  mix-blend-mode: multiply;
-  opacity: .6;
-  animation: lightAuroraFloat 28s ease-in-out infinite alternate;
-}
-
-@keyframes lightAuroraFloat {
-  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
-  50% { transform: translate3d(0,1.2%,0) scale(1.01); filter: saturate(1.05); }
-  100% { transform: translate3d(0,2.4%,0) scale(1.02); filter: saturate(1.1); }
-}
-
-/* 右上角自定义菜单 */
-html[data-theme='light'] .custom-right-menus .menu-item {
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.8);
-  border: 1px solid rgba(232, 67, 147, 0.2);
-  transition: transform .2s ease, background .2s ease, color .2s ease;
-  color: var(--warm-text);
-}
-html[data-theme='light'] #nav.nav-fixed .custom-right-menus .menu-item,
-html[data-theme='light'] #page-header.not-top-img #nav .custom-right-menus .menu-item {
-  color: var(--font-color);
-}
-html[data-theme='light'] .custom-right-menus .menu-item:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);
-}
-
-/* 修复：恢复代码块（包括 plaintext）为 Butterfly 默认背景（light） */
-html[data-theme='light'] figure.highlight table,
-html[data-theme='light'] figure.highlight td,
-html[data-theme='light'] figure.highlight th {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-html[data-theme='light'] figure.highlight table,
-html[data-theme='light'] figure.highlight td,
-html[data-theme='light'] figure.highlight th {
-  border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
-}
-
-html[data-theme='light'] figure.highlight,
-html[data-theme='light'] figure.highlight .highlight-tools {
-  box-shadow: none !important;
-}
-/* 调整代码块工具栏复制与展开按钮的间距（light） */
-html[data-theme='light'] figure.highlight .highlight-tools {
-  gap: 6px;
-}
-html[data-theme='light'] figure.highlight .highlight-tools .expand {
-  margin-left: 4px;
-}
-
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1572,9 +1750,35 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
 })();]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
+    <title></title>
+    <url>/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps ]]></content>
   </entry>
   <entry>
     <title>标签</title>
@@ -1583,12 +1787,17 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
-    <url>/live2d-models/xiaomai/xiaomai.model.json</url>
-    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.8376,"center_x":-0.0507,"center_y":-0.089},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":500,"fade_out":500,"expressions":"F00"}],"start":[{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"26","expressions":"F00"},{"file":"mtn/rita_Live2D_001.mtn","msg_id":"1","expressions":"F00"},{"file":"mtn/rita_Live2D_002.mtn","msg_id":"2","expressions":"F00"},{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_004.mtn","msg_id":"4","expressions":"F00"},{"file":"mtn/rita_Live2D_005.mtn","msg_id":"5","expressions":"F00"},{"file":"mtn/rita_Live2D_006.mtn","msg_id":"6","expressions":"F00"},{"file":"mtn/rita_Live2D_007.mtn","msg_id":"7","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","msg_id":"8","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","msg_id":"9","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","msg_id":"10","expressions":"F00"}],"tap_head":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_011.mtn","msg_id":"11","expressions":"F00"},{"file":"mtn/rita_Live2D_012.mtn","msg_id":"12","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","msg_id":"13","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","msg_id":"14","expressions":"F00"},{"file":"mtn/rita_Live2D_015.mtn","msg_id":"15"},{"file":"mtn/rita_Live2D_016.mtn","msg_id":"16","expressions":"F00"},{"file":"mtn/rita_Live2D_017.mtn","msg_id":"17","expressions":"F00"},{"file":"mtn/rita_Live2D_018.mtn","msg_id":"18","expressions":"F00"},{"file":"mtn/rita_Live2D_019.mtn","msg_id":"19","expressions":"F00"},{"file":"mtn/rita_Live2D_020.mtn","msg_id":"20","fade_in":500,"fade_out":1000}],"shake":[{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"random":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"new_msg":[{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"}]}}]]></content>
+    <url>/live2d-models/xiaomai/physics.json</url>
+    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+  </entry>
+  <entry>
+    <title>友链</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
-    <url>/live2d-models/xiaomai/physics.json</url>
-    <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
+    <url>/live2d-models/xiaomai/xiaomai.model.json</url>
+    <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.8376,"center_x":-0.0507,"center_y":-0.089},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":500,"fade_out":500,"expressions":"F00"}],"start":[{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"26","expressions":"F00"},{"file":"mtn/rita_Live2D_001.mtn","msg_id":"1","expressions":"F00"},{"file":"mtn/rita_Live2D_002.mtn","msg_id":"2","expressions":"F00"},{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_004.mtn","msg_id":"4","expressions":"F00"},{"file":"mtn/rita_Live2D_005.mtn","msg_id":"5","expressions":"F00"},{"file":"mtn/rita_Live2D_006.mtn","msg_id":"6","expressions":"F00"},{"file":"mtn/rita_Live2D_007.mtn","msg_id":"7","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","msg_id":"8","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","msg_id":"9","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","msg_id":"10","expressions":"F00"}],"tap_head":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_011.mtn","msg_id":"11","expressions":"F00"},{"file":"mtn/rita_Live2D_012.mtn","msg_id":"12","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","msg_id":"13","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","msg_id":"14","expressions":"F00"},{"file":"mtn/rita_Live2D_015.mtn","msg_id":"15"},{"file":"mtn/rita_Live2D_016.mtn","msg_id":"16","expressions":"F00"},{"file":"mtn/rita_Live2D_017.mtn","msg_id":"17","expressions":"F00"},{"file":"mtn/rita_Live2D_018.mtn","msg_id":"18","expressions":"F00"},{"file":"mtn/rita_Live2D_019.mtn","msg_id":"19","expressions":"F00"},{"file":"mtn/rita_Live2D_020.mtn","msg_id":"20","fade_in":500,"fade_out":1000}],"shake":[{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"random":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"new_msg":[{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"}]}}]]></content>
   </entry>
 </search>

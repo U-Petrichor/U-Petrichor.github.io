@@ -9,7 +9,7 @@
       { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
       { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
       { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '关于', url: '/about/', icon: 'fas fa-heart' }
+      { name: '友链', url: '/link/', icon: 'fas fa-link' }
     ]
 
     const menuContainer = document.createElement('div')
