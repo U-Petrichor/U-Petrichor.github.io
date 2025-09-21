@@ -112,6 +112,35 @@ http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya
       </tags>
   </entry>
   <entry>
+    <title>用163邮箱设置Waline评论自动通知</title>
+    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
+    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
+配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
+找到SMTP_PASS
+在手机上下载网易邮箱，并且打开
+点击我→邮箱管理
+选择你想要使用的邮箱
+点击第三方登陆管理
+勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
+成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
+将此授权码配置到Vercel的环境变量中，并且重新部署
+测试功能
+
+修改自动发送邮件的格式
+根据下图所示，在vercel上配置环境变量
+具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
+多用本身提供的变量，可以实现更丰富的自定义格式
+
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>博客配置</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>免费开DDNet服务器</title>
     <url>/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[前言2025年9月初，DDNet国服似乎不运营了，大陆玩家只能去连港服，然而港服延迟较高，还非常不稳定，即使开了加速器也很糟糕，外服虽然稳定一些，但是延迟更高，所以说为了能玩到更加稳定的服务器，我折腾了一个下午找到了个免费开服的方法，根据本文你就可以实现开服与朋友联机，不过这个方法也是有一些缺陷，就是服务器不会显示在DDNet的互联网频道，所以说聚集在一起是很重要的（咳咳，Q群：970039533）
@@ -155,7 +184,18 @@ SakuraFrp 樱花内网穿透没想到想当年MC联机的方法还能用到DDNet
 加入成功的图片 
 后续意外之喜，路人也可以进入，但是暂时没搞清楚路人那里是什么原理
 
-添加地图（暂未研究）]]></content>
+添加地图地图下载
+官网下载：最推荐的方式Github上的DDNet地图（点击Code然后Download ZIP即可下载）
+qBittorrent：因为我不会一直更新，所以后续几种方法的地图肯定都没有Github上的全面DDNet地图的磁力链接，鼠标拖动这个链接到qBittorrent里
+如果你不会用qBittorrent：三分钟学会用磁力链接
+请不要使用百度网盘、迅雷等下载这个磁力链接
+
+
+Q群：970039533（我是群主，也欢迎你来水群）
+百度网盘：通过网盘分享的文件：DDNetMaps 链接: https://pan.baidu.com/s/1CpOtl0v-XZZOqLG3gIK_rQ?pwd=taqy 提取码: taqy
+
+地图文件里的内容（暂时没有研究）啊啊啊我现在只知道要弄到ddnet文件目录下的map的文件夹里面，但是还不太清楚下载的这些地图里面除了地图以外其他文件是干什么的，最近想做的事情有点多暂时没精力研究，等有人催更了再搞这个吧
+]]></content>
       <categories>
         <category>游戏</category>
         <category>Else</category>
@@ -164,35 +204,6 @@ SakuraFrp 樱花内网穿透没想到想当年MC联机的方法还能用到DDNet
       <tags>
         <tag>Game</tag>
         <tag>DDNet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用163邮箱设置Waline评论自动通知</title>
-    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
-    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
-配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
-找到SMTP_PASS
-在手机上下载网易邮箱，并且打开
-点击我→邮箱管理
-选择你想要使用的邮箱
-点击第三方登陆管理
-勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
-成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
-将此授权码配置到Vercel的环境变量中，并且重新部署
-测试功能
-
-修改自动发送邮件的格式
-根据下图所示，在vercel上配置环境变量
-具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
-多用本身提供的变量，可以实现更丰富的自定义格式
-
-]]></content>
-      <categories>
-        <category>教程</category>
-        <category>博客配置</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -218,10 +229,10 @@ Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作�
 仅仅实现了内嵌工作台
 糟糕的贴图
 没法排序和搜索
-版本都没有移植完
+版本没有移植完
 
-已知BUG暂无
-下次更新已实现功能预告暂无
+已知BUG未知TAT
+下次更新已实现功能预告没人用，就先不更新了TAT
 反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
 
 邮件: u_petrichor@163.com
@@ -315,410 +326,334 @@ Light主题适合的图片
   </entry>
   <entry>
     <title></title>
-    <url>/css/custom-light.css</url>
-    <content><![CDATA[/* Butterfly主题自定义浅色渐变样式覆盖 */
+    <url>/js/custom.js</url>
+    <content><![CDATA[(function () {
+  // 右侧添加五个菜单
+  function addCustomMenus() {
+    const nav = document.querySelector('#nav .menus')
+    if (!nav) return
 
-/* 基础浅色渐变背景和排版 */
-html[data-theme='light'] body {
-  /* 温暖日光渐变: #ffecd2 -> #fcb69f -> #ff9a9e */
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%) fixed;
-  color: rgba(51, 51, 51, 0.88);
-}
+    const customMenus = [
+      { name: '首页', url: '/', icon: 'fas fa-home' },
+      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
+      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
+      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
+      { name: '友链', url: '/link/', icon: 'fas fa-link' }
+    ]
 
-/* 卡片带有微妙的半透明和模糊效果 */
-html[data-theme='light'] .card-widget,
-html[data-theme='light'] .card,
-html[data-theme='light'] .recent-posts .recent-post-item,
-html[data-theme='light'] .post,
-html[data-theme='light'] .aside-list > .aside-list-item,
-html[data-theme='light'] .relatedPosts > .relatedPosts-list > div {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 236, 210, 0.75) 50%, rgba(252, 182, 159, 0.65) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(225, 112, 85, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  position: relative;
-}
+    const menuContainer = document.createElement('div')
+    menuContainer.className = 'custom-right-menus'
+    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
 
-/* 卡片悬停效果 */
-html[data-theme='light'] .card-widget:hover,
-html[data-theme='light'] .card:hover,
-html[data-theme='light'] .recent-posts .recent-post-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  border-color: rgba(225, 112, 85, 0.35);
-  transition: all 0.3s ease;
-}
+    customMenus.forEach(menu => {
+      const menuItem = document.createElement('a')
+      menuItem.href = menu.url
+      menuItem.className = 'menu-item'
+      menuItem.innerHTML = ` ${menu.name}`
+      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
+      menuContainer.appendChild(menuItem)
+    })
 
-/* 头像背景增强 */
-html[data-theme='light'] .avatar-img {
-  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(232, 67, 147, 0.2) 100%);
-  border: 2px solid rgba(225, 112, 85, 0.4);
-  box-shadow: 0 0 20px rgba(232, 67, 147, 0.3);
-}
-
-/* 页头和页脚与渐变融合 */
-html[data-theme='light'] #page-header,
-html[data-theme='light'] #footer {
-  background: transparent;
-}
-
-/* 强调色：温暖橙红色渐变用于链接和选择 */
-html[data-theme='light'] a,
-html[data-theme='light'] .links-of-author a,
-html[data-theme='light'] .article-meta__categories a,
-html[data-theme='light'] .article-meta__tags a {
-  color: #e17055;
-  transition: color .2s ease, text-shadow .2s ease;
-}
-html[data-theme='light'] a:hover {
-  color: #d63031;
-  text-shadow: 0 0 8px rgba(214, 48, 49, 0.4);
-}
-
-/* 按钮样式 */
-html[data-theme='light'] :root {
-  --btn-bg: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
-  --btn-hover-color: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
-  --btn-color: #ffffff;
-  --text-highlight-color: #e17055;
-  --scrollbar-color: #e84393;
-}
-
-/* 侧边栏、搜索框等 */
-html[data-theme='light'] .sidebar,
-html[data-theme='light'] .sidebar #aside-content > .card-widget,
-html[data-theme='light'] .search-dialog .search-dialog__title,
-html[data-theme='light'] .search-dialog .search-nav {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-
-/* 引用块条纹强调 */
-html[data-theme='light'] blockquote {
-  border-left: 3px solid #e84393;
-  background: rgba(232, 67, 147, 0.08);
-}
-
-/* 分割线微妙样式 */
-html[data-theme='light'] hr {
-  border-color: #fab1a0;
-}
-
-/* 目录链接颜色和悬停效果 */
-html[data-theme='light'] #aside-content .toc .toc-item a {
-  color: #e84393;
-}
-html[data-theme='light'] #aside-content .toc .toc-item a:hover {
-  color: #e17055;
-}
-
-/* 分页和标签 */
-html[data-theme='light'] .pagination .page-number,
-html[data-theme='light'] .tag-cloud a,
-html[data-theme='light'] .article-tags .tag {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(232, 67, 147, 0.2);
-}
-
-/* 文章标题的精美悬停效果 */
-html[data-theme='light'] .recent-post-info .article-title a:hover,
-html[data-theme='light'] .post-title a:hover {
-  color: #e84393;
-}
-
-/* 主题切换的平滑过渡 */
-html[data-theme='light'] body, html[data-theme='light'] .card, html[data-theme='light'] .card-widget {
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
-}
-
-/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
-html[data-theme='light'] #site-info #site-title.custom-title-art {
-  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 800 !important;
-  font-size: clamp(3rem, 6vw, 6rem) !important;
-  letter-spacing: 0.04em !important;
-  /* 不支持background-clip的浏览器的备用颜色 */
-  color: #e84393 !important;
-  background: linear-gradient(135deg, #fd79a8 0%, #e84393 35%, #d63031 55%, #e17055 80%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 2px 24px rgba(232,67,147,0.15), 0 2px 40px rgba(253,121,168,0.12) !important;
-  /* 强制居中 */
-  display: block !important;
-  text-align: center !important;
-  margin: 0 auto !important;
-}
-
-/* 确保在不支持background-clip时文字可见 */
-@supports not (-webkit-background-clip: text) {
-  html[data-theme='light'] #site-info #site-title.custom-title-art {
-    color: #e84393 !important;
-    -webkit-text-fill-color: #e84393 !important;
+    nav.appendChild(menuContainer)
   }
-}
 
-/* 温暖主题风格的Markdown样式 - 基于温暖调色板 */
-/* 温暖色调变量定义 */
-:root {
-  --warm-coral: #ff7675;
-  --warm-pink: #fd79a8;
-  --warm-purple: #e84393;
-  --warm-violet: #a29bfe;
-  --warm-red: #d63031;
-  --warm-orange: #e17055;
-  --warm-peach: #fab1a0;
-  --warm-yellow: #fdcb6e;
-  --warm-green: #00b894;
-  --warm-mint: #00cec9;
-  --warm-cyan: #74b9ff;
-  --warm-blue: #0984e3;
-  --warm-indigo: #6c5ce7;
-  --warm-lavender: #a29bfe;
-  --warm-text: #2d3436;
-  --warm-subtext1: #636e72;
-  --warm-subtext0: #74b9ff;
-  --warm-overlay2: #b2bec3;
-  --warm-overlay1: #ddd;
-  --warm-overlay0: #f1f2f6;
-  --warm-surface2: #ffeaa7;
-  --warm-surface1: #fff5f5;
-  --warm-surface0: #ffffff;
-  --warm-base: #ffecd2;
-  --warm-mantle: #fcb69f;
-  --warm-crust: #ff9a9e;
-}
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn)
+    } else {
+      fn()
+    }
+  }
 
-/* Markdown标题样式 */
-html[data-theme='light'] .post-content h1 {
-  color: var(--warm-red) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
+  function applyUI() {
+    // 1) 添加右侧菜单
+    addCustomMenus()
 
-html[data-theme='light'] .post-content h2 {
-  color: var(--warm-orange) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.6em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
+    // 2) 首页标题样式设置
+    const title = document.querySelector('#site-title')
+    if (title) {
+      // 添加艺术字体类
+      title.classList.add('custom-title-art')
+      // 强制让标题容器按内容宽度居中
+      title.style.display = 'block'
+      title.style.marginLeft = 'auto'
+      title.style.marginRight = 'auto'
+      title.style.width = 'max-content'
+      title.style.textAlign = 'center'
+    }
 
-html[data-theme='light'] .post-content h3 {
-  color: var(--warm-green) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.37em;
-  line-height: 1.3;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
+    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
+    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
+    if (blogInfo) {
+      // 移除所有可能的动画类
+      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
+    }
+  }
+  
 
-html[data-theme='light'] .post-content h4 {
-  color: var(--warm-mint) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.25em;
-  line-height: 1.4;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h5 {
-  color: var(--warm-lavender) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='light'] .post-content h6 {
-  color: var(--warm-violet) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-/* Markdown加粗文字样式 - 使用蓝色调 */
-html[data-theme='light'] .post-content strong,
-html[data-theme='light'] .post-content b {
-  color: var(--warm-blue) !important;
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(116, 185, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  border: 1px solid rgba(116, 185, 255, 0.3);
-  transition: all 0.2s ease;
-}
-
-/* 加粗文字悬停效果 */
-html[data-theme='light'] .post-content strong:hover,
-html[data-theme='light'] .post-content b:hover {
-  background: linear-gradient(135deg, rgba(116, 185, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
-  border-color: rgba(116, 185, 255, 0.5);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(116, 185, 255, 0.3);
-}
-
-/* Markdown斜体文字样式 - 使用浅紫色调 */
-html[data-theme='light'] .post-content em,
-html[data-theme='light'] .post-content i {
-  color: var(--warm-lavender) !important;
-  font-style: italic;
-  background: linear-gradient(135deg, rgba(162, 155, 254, 0.1) 0%, transparent 100%);
-  padding: 0.05em 0.2em;
-  border-radius: 2px;
-}
-
-/* Markdown列表样式优化 */
-html[data-theme='light'] .post-content ul li::marker,
-html[data-theme='light'] .post-content ol li::marker {
-  color: var(--warm-overlay1);
-}
-
-html[data-theme='light'] .post-content ul li,
-html[data-theme='light'] .post-content ol li {
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-  color: var(--warm-text);
-}
-
-/* Markdown链接样式 */
-html[data-theme='light'] .post-content a {
-  color: var(--warm-cyan) !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 206, 201, 0.3);
-  transition: all 0.2s ease;
-}
-
-html[data-theme='light'] .post-content a:hover {
-  color: var(--warm-blue) !important;
-  border-bottom-color: var(--warm-blue);
-  text-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
-}
-
-/* Markdown表格样式 */
-html[data-theme='light'] .post-content table {
-  border-collapse: collapse;
-  margin: 1em 0;
-  background: var(--warm-surface0);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-html[data-theme='light'] .post-content table th {
-  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-  color: var(--warm-purple) !important;
-  font-weight: 700;
-  padding: 0.8em;
-  border: 1px solid rgba(253, 121, 168, 0.3);
-}
-
-html[data-theme='light'] .post-content table td {
-  padding: 0.6em 0.8em;
-  border: 1px solid var(--warm-overlay0);
-  color: var(--warm-text);
-}
-
-html[data-theme='light'] .post-content table tr:nth-child(even) {
-  background: rgba(255, 245, 245, 0.5);
-}
-
-
-
-/* 引用块样式 */
-html[data-theme='light'] .post-content blockquote {
-  border-left: 4px solid var(--warm-peach);
-  background: linear-gradient(135deg, rgba(250, 177, 160, 0.1) 0%, transparent 100%);
-  padding: 1em 1.5em;
-  margin: 1em 0;
-  color: var(--warm-subtext1);
-  border-radius: 0 8px 8px 0;
-}
-
-/* 动画光晕叠加层以丰富背景 */
-html[data-theme='light'] body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(60vw 60vh at 20% 20%, rgba(253, 121, 168, 0.12), transparent 60%),
-    radial-gradient(50vw 50vh at 78% 28%, rgba(232, 67, 147, 0.10), transparent 60%),
-    radial-gradient(70vw 70vh at 52% 84%, rgba(255, 154, 158, 0.08), transparent 60%);
-  mix-blend-mode: multiply;
-  opacity: .6;
-  animation: lightAuroraFloat 28s ease-in-out infinite alternate;
-}
-
-@keyframes lightAuroraFloat {
-  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
-  50% { transform: translate3d(0,1.2%,0) scale(1.01); filter: saturate(1.05); }
-  100% { transform: translate3d(0,2.4%,0) scale(1.02); filter: saturate(1.1); }
-}
-
-/* 右上角自定义菜单 */
-html[data-theme='light'] .custom-right-menus .menu-item {
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.8);
-  border: 1px solid rgba(232, 67, 147, 0.2);
-  transition: transform .2s ease, background .2s ease, color .2s ease;
-  color: var(--warm-text);
-}
-html[data-theme='light'] #nav.nav-fixed .custom-right-menus .menu-item,
-html[data-theme='light'] #page-header.not-top-img #nav .custom-right-menus .menu-item {
-  color: var(--font-color);
-}
-html[data-theme='light'] .custom-right-menus .menu-item:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);
-}
-
-/* 修复：恢复代码块（包括 plaintext）为 Butterfly 默认背景（light） */
-html[data-theme='light'] figure.highlight table,
-html[data-theme='light'] figure.highlight td,
-html[data-theme='light'] figure.highlight th {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-html[data-theme='light'] figure.highlight table,
-html[data-theme='light'] figure.highlight td,
-html[data-theme='light'] figure.highlight th {
-  border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
-}
-
-html[data-theme='light'] figure.highlight,
-html[data-theme='light'] figure.highlight .highlight-tools {
-  box-shadow: none !important;
-}
-/* 调整代码块工具栏复制与展开按钮的间距（light） */
-html[data-theme='light'] figure.highlight .highlight-tools {
-  gap: 6px;
-}
-html[data-theme='light'] figure.highlight .highlight-tools .expand {
-  margin-left: 4px;
-}
-
+  onReady(applyUI)
+  // 兼容Butterfly的PJAX（如果启用）
+  window.addEventListener('pjax:complete', applyUI)
+})()
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/click-throw.js</url>
+    <content><![CDATA[/*
+  点击生成文字“抛物运动”效果（Hexo Butterfly）
+  在点击位置创建文字：先上抛，然后受重力加速度下落，超出视口或寿命结束后移除
+*/
+(() => {
+  const SCRIPT_ID = 'click-show-text' // 主题注入的脚本标签 id（保持此 id 以读取 data-* 配置）
+  const scriptEl = document.getElementById(SCRIPT_ID) // 通过它读取 data-text、data-fontsize、data-random、data-mobile
+  if (!scriptEl) return
+
+  // Read config from data attributes injected by Butterfly
+  // 从 data-* 属性读取配置（与主题 _config.butterfly.yml->clickShowText 对应）
+  const data = scriptEl.dataset || {}
+  const mobileEnabled = String(data.mobile).toLowerCase() === 'true' // 是否在移动端启用
+  const fontSize = data.fontsize || '15px' // 文字字号
+  const isRandom = String(data.random).toLowerCase() === 'true' // 是否随机颜色
+  const textList = (data.text || '').split(',').map(s => s.trim()).filter(Boolean) // 文本列表
+
+  // Do not enable on mobile unless explicitly allowed
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) // 是否为移动端
+  // 若禁止移动端且当前为移动端，则不启用
+  if (isMobile && !mobileEnabled) return
+  if (!textList.length) return
+
+  let seqIndex = 0 // 顺序轮播时的当前索引
+
+  // Utility: random color (pleasant pastel range)
+  const randColor = () => {
+    const h = Math.floor(Math.random() * 360)
+    const s = 70 + Math.floor(Math.random() * 20) // 70% - 90%
+    const l = 50 + Math.floor(Math.random() * 10) // 50% - 60%
+    return `hsl(${h} ${s}% ${l}%)`
+  }
+
+  const activeParticles = new Set()
+
+  const createParticle = (x, y, text) => {
+    const el = document.createElement('span')
+    el.textContent = text
+    el.style.position = 'fixed'
+    el.style.left = x + 'px'
+    el.style.top = y + 'px'
+    el.style.transform = 'translate(-50%, -50%) translateZ(0)' // 居中锚点 + 开启 GPU 加速
+    el.style.fontSize = fontSize // 使用主题配置的字号
+    el.style.fontWeight = '700'
+    el.style.whiteSpace = 'pre'
+    el.style.pointerEvents = 'none'
+    el.style.userSelect = 'none'
+    el.style.willChange = 'transform, opacity'
+    el.style.zIndex = '99999'
+    el.style.opacity = '1'
+    el.style.color = isRandom ? randColor() : 'var(--theme-color, #49B1F5)' // 随机颜色或主题主色
+
+    document.body.appendChild(el)
+
+    // 设置速度
+    const maxVx = 200 // 水平初速度范围
+    const minVy = 300, maxVy = 600 // 竖直初速度范围（上抛初速度越大，抛得越高）
+    const g = 2000 // 重力加速度
+
+    const vx = (Math.random() * 2 - 1) * maxVx // 水平速度（随机向左或向右）
+    const vy0 = - (minVy + Math.random() * (maxVy - minVy)) // 竖直初速度（负号表示向上）
+    const rot = (Math.random() * 2 - 1) * 30 // 旋转角度（仅为更美观）
+
+    const lifetime = 1.6 // 粒子存活时长（秒）
+    let t = 0
+    let last = performance.now()
+
+    const particle = { el, x, y, vx, vy0, rot, t, last, lifetime }
+    activeParticles.add(particle)
+
+    const step = () => {
+      if (!document.body.contains(el)) {
+        activeParticles.delete(particle)
+        return
+      }
+      const now = performance.now()
+      const dt = Math.min(0.033, (now - last) / 1000) // 限制帧间隔，避免切换标签导致位移突变（最大约 33ms）
+      last = now
+      t += dt
+
+      // Kinematics: y(t) = y0 + vy0 * t + 0.5 * g * t^2
+      const nx = x + vx * t
+      const ny = y + (vy0 * t + 0.5 * g * t * t)
+
+      // Fade out towards end of life
+      const lifeRatio = Math.min(1, t / lifetime)
+      const opacity = 1 - lifeRatio
+
+      el.style.opacity = opacity.toFixed(3)
+      el.style.transform = `translate(-50%, -50%) translate(${nx - x}px, ${ny - y}px) rotate(${rot}deg)`
+
+      // Remove when out of viewport or life ended
+      const vh = window.innerHeight
+      const vw = window.innerWidth
+      const outOfView = ny < -50 || ny > vh + 50 || nx < -50 || nx > vw + 50
+      if (t >= lifetime || opacity  {
+    if (isRandom) return textList[Math.floor(Math.random() * textList.length)]
+    const t = textList[seqIndex]
+    seqIndex = (seqIndex + 1) % textList.length
+    return t
+  }
+
+  // Attach once
+  const onClick = (e) => {
+    // Ignore right/middle clicks
+    if (e.button !== 0) return
+    const text = pickText()
+    createParticle(e.clientX, e.clientY, text)
+  }
+
+  // Debounced resize cleanup (optional)
+  const onVisibility = () => {
+    if (document.hidden) {
+      // Clean up off-screen particles when tab hidden
+      for (const p of activeParticles) {
+        p.el.remove()
+      }
+      activeParticles.clear()
+    }
+  }
+
+  // Listen at capture phase to trigger early and avoid being blocked by other handlers
+  window.addEventListener('click', onClick, true)
+  document.addEventListener('visibilitychange', onVisibility)
+
+  // Provide a small API for future control
+  window.ClickThrowText = {
+    dispose() {
+      window.removeEventListener('click', onClick, true)
+      document.removeEventListener('visibilitychange', onVisibility)
+      for (const p of activeParticles) p.el.remove()
+      activeParticles.clear()
+    }
+  }
+})()]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/title.js</url>
+    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
+(function () {
+  var OriginTitle = document.title;
+  var timer = null;
+  var awayStart = 0;
+  var thresholdMs = 120000; // 超过 120s 进入后续池
+
+  // 前期池（离开至 120s 内，随机展示 1-5）
+  var earlyPool = [
+    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
+    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
+    { text: '正在上厕所，别偷看！！！', ms: 5000 },
+    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
+    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
+    { text: '封印解除！开始吞噬内存！', ms: 10000 },
+    { text: '警告！页面即将自毁...', ms: 10000 },
+    { text: '检测到时空波动，请抓稳！', ms: 10000 }
+  ];
+
+  // 后续池（超过 120s 后，随机展示 6-11）
+  var latePool = [
+    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
+    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
+    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
+  ];
+
+  // 回来时提示（随机展示一个，3s 后恢复原标题）
+  var backPool = [
+    '啊！你回来啦！（迅速切换回正经脸）',
+    '咳咳，刚刚什么都没发生'
+  ];
+  var backHoldMs = 3000;
+
+  var lastIndex = -1;
+  function pickRandom(pool) {
+    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
+    var idx = Math.floor(Math.random() * pool.length);
+    // 避免连续两次相同
+    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
+    lastIndex = idx;
+    return pool[idx];
+  }
+
+  function scheduleNext() {
+    if (!document.hidden) return; // 可见时不再调度
+    var now = Date.now();
+    var elapsed = now - awayStart; // 本次离开累计时间
+
+    var pool = elapsed < thresholdMs ? earlyPool : latePool;
+    var choice = pickRandom(pool);
+    document.title = choice.text;
+
+    var wait = choice.ms;
+    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
+    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
+      wait = thresholdMs - elapsed;
+    }
+
+    clearTimeout(timer);
+    timer = setTimeout(scheduleNext, Math.max(500, wait));
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      // 开始离开
+      awayStart = Date.now();
+      clearTimeout(timer);
+      scheduleNext(); // 立即显示第一条并进入调度
+    } else {
+      // 回到页面
+      clearTimeout(timer);
+      var msg = backPool[Math.floor(Math.random() * backPool.length)];
+      document.title = msg;
+      setTimeout(function () {
+        document.title = OriginTitle;
+      }, backHoldMs);
+    }
+  });
+})();]]></content>
+  </entry>
+  <entry>
+    <title>友链</title>
+    <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps ]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1130,6 +1065,478 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
+    <url>/css/custom-light.css</url>
+    <content><![CDATA[/* Butterfly主题自定义浅色渐变样式覆盖 */
+
+/* 基础浅色渐变背景和排版 */
+html[data-theme='light'] body {
+  /* 温暖日光渐变: #ffecd2 -> #fcb69f -> #ff9a9e */
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%) fixed;
+  color: rgba(51, 51, 51, 0.88);
+}
+
+/* 卡片带有微妙的半透明和模糊效果 */
+html[data-theme='light'] .card-widget,
+html[data-theme='light'] .card,
+html[data-theme='light'] .recent-posts .recent-post-item,
+html[data-theme='light'] .post,
+html[data-theme='light'] .aside-list > .aside-list-item,
+html[data-theme='light'] .relatedPosts > .relatedPosts-list > div {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 236, 210, 0.75) 50%, rgba(252, 182, 159, 0.65) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(225, 112, 85, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+
+/* 卡片悬停效果 */
+html[data-theme='light'] .card-widget:hover,
+html[data-theme='light'] .card:hover,
+html[data-theme='light'] .recent-posts .recent-post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(225, 112, 85, 0.35);
+  transition: all 0.3s ease;
+}
+
+/* 头像背景增强 */
+html[data-theme='light'] .avatar-img {
+  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(232, 67, 147, 0.2) 100%);
+  border: 2px solid rgba(225, 112, 85, 0.4);
+  box-shadow: 0 0 20px rgba(232, 67, 147, 0.3);
+}
+
+/* 页头和页脚与渐变融合 */
+html[data-theme='light'] #page-header,
+html[data-theme='light'] #footer {
+  background: transparent;
+}
+
+/* 强调色：温暖橙红色渐变用于链接和选择 */
+html[data-theme='light'] a,
+html[data-theme='light'] .links-of-author a,
+html[data-theme='light'] .article-meta__categories a,
+html[data-theme='light'] .article-meta__tags a {
+  color: #e17055;
+  transition: color .2s ease, text-shadow .2s ease;
+}
+html[data-theme='light'] a:hover {
+  color: #d63031;
+  text-shadow: 0 0 8px rgba(214, 48, 49, 0.4);
+}
+
+/* 按钮样式 */
+html[data-theme='light'] :root {
+  --btn-bg: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  --btn-hover-color: linear-gradient(135deg, #e84393 0%, #fd79a8 100%);
+  --btn-color: #ffffff;
+  --text-highlight-color: #e17055;
+  --scrollbar-color: #e84393;
+}
+
+/* 侧边栏、搜索框等 */
+html[data-theme='light'] .sidebar,
+html[data-theme='light'] .sidebar #aside-content > .card-widget,
+html[data-theme='light'] .search-dialog .search-dialog__title,
+html[data-theme='light'] .search-dialog .search-nav {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* 引用块条纹强调 */
+html[data-theme='light'] blockquote {
+  border-left: 3px solid #e84393;
+  background: rgba(232, 67, 147, 0.08);
+}
+
+/* 分割线微妙样式 */
+html[data-theme='light'] hr {
+  border-color: #fab1a0;
+}
+
+/* 目录链接颜色和悬停效果 */
+html[data-theme='light'] #aside-content .toc .toc-item a {
+  color: #e84393;
+}
+html[data-theme='light'] #aside-content .toc .toc-item a:hover {
+  color: #e17055;
+}
+
+/* 分页和标签 */
+html[data-theme='light'] .pagination .page-number,
+html[data-theme='light'] .tag-cloud a,
+html[data-theme='light'] .article-tags .tag {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(232, 67, 147, 0.2);
+}
+
+/* 文章标题的精美悬停效果 */
+html[data-theme='light'] .recent-post-info .article-title a:hover,
+html[data-theme='light'] .post-title a:hover {
+  color: #e84393;
+}
+
+/* 主题切换的平滑过渡 */
+html[data-theme='light'] body, html[data-theme='light'] .card, html[data-theme='light'] .card-widget {
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+
+/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
+html[data-theme='light'] #site-info #site-title.custom-title-art {
+  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(3rem, 6vw, 6rem) !important;
+  letter-spacing: 0.04em !important;
+  /* 不支持background-clip的浏览器的备用颜色 */
+  color: #e84393 !important;
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 35%, #d63031 55%, #e17055 80%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 2px 24px rgba(232,67,147,0.15), 0 2px 40px rgba(253,121,168,0.12) !important;
+  /* 强制居中 */
+  display: block !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* 确保在不支持background-clip时文字可见 */
+@supports not (-webkit-background-clip: text) {
+  html[data-theme='light'] #site-info #site-title.custom-title-art {
+    color: #e84393 !important;
+    -webkit-text-fill-color: #e84393 !important;
+  }
+}
+
+/* 温暖主题风格的Markdown样式 - 基于温暖调色板 */
+/* 温暖色调变量定义 */
+:root {
+  --warm-coral: #ff7675;
+  --warm-pink: #fd79a8;
+  --warm-purple: #e84393;
+  --warm-violet: #a29bfe;
+  --warm-red: #d63031;
+  --warm-orange: #e17055;
+  --warm-peach: #fab1a0;
+  --warm-yellow: #fdcb6e;
+  --warm-green: #00b894;
+  --warm-mint: #00cec9;
+  --warm-cyan: #74b9ff;
+  --warm-blue: #0984e3;
+  --warm-indigo: #6c5ce7;
+  --warm-lavender: #a29bfe;
+  --warm-text: #2d3436;
+  --warm-subtext1: #636e72;
+  --warm-subtext0: #74b9ff;
+  --warm-overlay2: #b2bec3;
+  --warm-overlay1: #ddd;
+  --warm-overlay0: #f1f2f6;
+  --warm-surface2: #ffeaa7;
+  --warm-surface1: #fff5f5;
+  --warm-surface0: #ffffff;
+  --warm-base: #ffecd2;
+  --warm-mantle: #fcb69f;
+  --warm-crust: #ff9a9e;
+}
+
+/* Markdown标题样式 */
+html[data-theme='light'] .post-content h1 {
+  color: var(--warm-red) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h2 {
+  color: var(--warm-orange) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.6em;
+  line-height: 1.2;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h3 {
+  color: var(--warm-green) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.37em;
+  line-height: 1.3;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h4 {
+  color: var(--warm-mint) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h5 {
+  color: var(--warm-lavender) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  line-height: 1.5;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='light'] .post-content h6 {
+  color: var(--warm-violet) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  line-height: 1.5;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+/* Markdown加粗文字样式 - 使用蓝色调 */
+html[data-theme='light'] .post-content strong,
+html[data-theme='light'] .post-content b {
+  color: var(--warm-blue) !important;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(116, 185, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  border: 1px solid rgba(116, 185, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+/* 加粗文字悬停效果 */
+html[data-theme='light'] .post-content strong:hover,
+html[data-theme='light'] .post-content b:hover {
+  background: linear-gradient(135deg, rgba(116, 185, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+  border-color: rgba(116, 185, 255, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(116, 185, 255, 0.3);
+}
+
+/* Markdown斜体文字样式 - 使用浅紫色调 */
+html[data-theme='light'] .post-content em,
+html[data-theme='light'] .post-content i {
+  color: var(--warm-lavender) !important;
+  font-style: italic;
+  background: linear-gradient(135deg, rgba(162, 155, 254, 0.1) 0%, transparent 100%);
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+
+/* Markdown列表样式优化 */
+html[data-theme='light'] .post-content ul li::marker,
+html[data-theme='light'] .post-content ol li::marker {
+  color: var(--warm-overlay1);
+}
+
+html[data-theme='light'] .post-content ul li,
+html[data-theme='light'] .post-content ol li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+  color: var(--warm-text);
+}
+
+/* Markdown链接样式 */
+html[data-theme='light'] .post-content a {
+  color: var(--warm-cyan) !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 206, 201, 0.3);
+  transition: all 0.2s ease;
+}
+
+html[data-theme='light'] .post-content a:hover {
+  color: var(--warm-blue) !important;
+  border-bottom-color: var(--warm-blue);
+  text-shadow: 0 0 8px rgba(9, 132, 227, 0.4);
+}
+
+/* Markdown表格样式 */
+html[data-theme='light'] .post-content table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: var(--warm-surface0);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+html[data-theme='light'] .post-content table th {
+  background: linear-gradient(135deg, rgba(253, 121, 168, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+  color: var(--warm-purple) !important;
+  font-weight: 700;
+  padding: 0.8em;
+  border: 1px solid rgba(253, 121, 168, 0.3);
+}
+
+html[data-theme='light'] .post-content table td {
+  padding: 0.6em 0.8em;
+  border: 1px solid var(--warm-overlay0);
+  color: var(--warm-text);
+}
+
+html[data-theme='light'] .post-content table tr:nth-child(even) {
+  background: rgba(255, 245, 245, 0.5);
+}
+
+
+
+/* 引用块样式 */
+html[data-theme='light'] .post-content blockquote {
+  border-left: 4px solid var(--warm-peach);
+  background: linear-gradient(135deg, rgba(250, 177, 160, 0.1) 0%, transparent 100%);
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  color: var(--warm-subtext1);
+  border-radius: 0 8px 8px 0;
+}
+
+/* 动画光晕叠加层以丰富背景 */
+html[data-theme='light'] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60vw 60vh at 20% 20%, rgba(253, 121, 168, 0.12), transparent 60%),
+    radial-gradient(50vw 50vh at 78% 28%, rgba(232, 67, 147, 0.10), transparent 60%),
+    radial-gradient(70vw 70vh at 52% 84%, rgba(255, 154, 158, 0.08), transparent 60%);
+  mix-blend-mode: multiply;
+  opacity: .6;
+  animation: lightAuroraFloat 28s ease-in-out infinite alternate;
+}
+
+@keyframes lightAuroraFloat {
+  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
+  50% { transform: translate3d(0,1.2%,0) scale(1.01); filter: saturate(1.05); }
+  100% { transform: translate3d(0,2.4%,0) scale(1.02); filter: saturate(1.1); }
+}
+
+/* 右上角自定义菜单 */
+html[data-theme='light'] .custom-right-menus .menu-item {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(232, 67, 147, 0.2);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+  color: var(--warm-text);
+}
+html[data-theme='light'] #nav.nav-fixed .custom-right-menus .menu-item,
+html[data-theme='light'] #page-header.not-top-img #nav .custom-right-menus .menu-item {
+  color: var(--font-color);
+}
+html[data-theme='light'] .custom-right-menus .menu-item:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(232, 67, 147, 0.3);
+}
+
+/* 修复：恢复代码块（包括 plaintext）为 Butterfly 默认背景（light） */
+html[data-theme='light'] figure.highlight table,
+html[data-theme='light'] figure.highlight td,
+html[data-theme='light'] figure.highlight th {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='light'] figure.highlight table,
+html[data-theme='light'] figure.highlight td,
+html[data-theme='light'] figure.highlight th {
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+html[data-theme='light'] figure.highlight,
+html[data-theme='light'] figure.highlight .highlight-tools {
+  box-shadow: none !important;
+}
+/* 调整代码块工具栏复制与展开按钮的间距（light） */
+html[data-theme='light'] figure.highlight .highlight-tools {
+  gap: 6px;
+}
+html[data-theme='light'] figure.highlight .highlight-tools .expand {
+  margin-left: 4px;
+}
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/custom.css</url>
+    <content><![CDATA[/* Unified custom interactions for both themes */
+@media (min-width: 901px) {
+  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
+  }
+
+  /* 覆盖任何 img:hover 的旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
+  }
+
+  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
+  #aside-content .card-info .avatar-img,
+  #sidebar-menus .avatar-img {
+    transform-origin: center center;
+    transition: transform 0.25s ease-in-out !important;
+    will-change: transform;
+  }
+  #aside-content .card-info .avatar-img:hover,
+  #sidebar-menus .avatar-img:hover {
+    transform: scale(1.06) !important;
+  }
+
+  /* 3) 侧栏社交图标悬停放大 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  left: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/css/loading-bar.css</url>
     <content><![CDATA[.pace {
 	-webkit-pointer-events: none;
@@ -1330,69 +1737,9 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
 }]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/css/custom.css</url>
-    <content><![CDATA[/* Unified custom interactions for both themes */
-@media (min-width: 901px) {
-  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
-  #aside-content .card-info .avatar-img,
-  #aside-content .card-info .avatar-img img,
-  #sidebar-menus .avatar-img,
-  #sidebar-menus .avatar-img img {
-    animation: none !important;
-  }
-
-  /* 覆盖任何 img:hover 的旋转 */
-  #aside-content .card-info .avatar-img img:hover,
-  #sidebar-menus .avatar-img img:hover {
-    transform: none !important;
-  }
-
-  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
-  #aside-content .card-info .avatar-img,
-  #sidebar-menus .avatar-img {
-    transform-origin: center center;
-    transition: transform 0.25s ease-in-out !important;
-    will-change: transform;
-  }
-  #aside-content .card-info .avatar-img:hover,
-  #sidebar-menus .avatar-img:hover {
-    transform: scale(1.06) !important;
-  }
-
-  /* 3) 侧栏社交图标悬停放大 */
-  #aside-content .card-info .card-info-social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  #aside-content .card-info .card-info-social-icons .social-icon:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-]]></content>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1456,344 +1803,8 @@ a[href*="/github" i] {
   </entry>
   <entry>
     <title></title>
-    <url>/js/click-throw.js</url>
-    <content><![CDATA[/*
-  点击生成文字“抛物运动”效果（Hexo Butterfly）
-  在点击位置创建文字：先上抛，然后受重力加速度下落，超出视口或寿命结束后移除
-*/
-(() => {
-  const SCRIPT_ID = 'click-show-text' // 主题注入的脚本标签 id（保持此 id 以读取 data-* 配置）
-  const scriptEl = document.getElementById(SCRIPT_ID) // 通过它读取 data-text、data-fontsize、data-random、data-mobile
-  if (!scriptEl) return
-
-  // Read config from data attributes injected by Butterfly
-  // 从 data-* 属性读取配置（与主题 _config.butterfly.yml->clickShowText 对应）
-  const data = scriptEl.dataset || {}
-  const mobileEnabled = String(data.mobile).toLowerCase() === 'true' // 是否在移动端启用
-  const fontSize = data.fontsize || '15px' // 文字字号
-  const isRandom = String(data.random).toLowerCase() === 'true' // 是否随机颜色
-  const textList = (data.text || '').split(',').map(s => s.trim()).filter(Boolean) // 文本列表
-
-  // Do not enable on mobile unless explicitly allowed
-  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) // 是否为移动端
-  // 若禁止移动端且当前为移动端，则不启用
-  if (isMobile && !mobileEnabled) return
-  if (!textList.length) return
-
-  let seqIndex = 0 // 顺序轮播时的当前索引
-
-  // Utility: random color (pleasant pastel range)
-  const randColor = () => {
-    const h = Math.floor(Math.random() * 360)
-    const s = 70 + Math.floor(Math.random() * 20) // 70% - 90%
-    const l = 50 + Math.floor(Math.random() * 10) // 50% - 60%
-    return `hsl(${h} ${s}% ${l}%)`
-  }
-
-  const activeParticles = new Set()
-
-  const createParticle = (x, y, text) => {
-    const el = document.createElement('span')
-    el.textContent = text
-    el.style.position = 'fixed'
-    el.style.left = x + 'px'
-    el.style.top = y + 'px'
-    el.style.transform = 'translate(-50%, -50%) translateZ(0)' // 居中锚点 + 开启 GPU 加速
-    el.style.fontSize = fontSize // 使用主题配置的字号
-    el.style.fontWeight = '700'
-    el.style.whiteSpace = 'pre'
-    el.style.pointerEvents = 'none'
-    el.style.userSelect = 'none'
-    el.style.willChange = 'transform, opacity'
-    el.style.zIndex = '99999'
-    el.style.opacity = '1'
-    el.style.color = isRandom ? randColor() : 'var(--theme-color, #49B1F5)' // 随机颜色或主题主色
-
-    document.body.appendChild(el)
-
-    // 设置速度
-    const maxVx = 200 // 水平初速度范围
-    const minVy = 300, maxVy = 600 // 竖直初速度范围（上抛初速度越大，抛得越高）
-    const g = 2000 // 重力加速度
-
-    const vx = (Math.random() * 2 - 1) * maxVx // 水平速度（随机向左或向右）
-    const vy0 = - (minVy + Math.random() * (maxVy - minVy)) // 竖直初速度（负号表示向上）
-    const rot = (Math.random() * 2 - 1) * 30 // 旋转角度（仅为更美观）
-
-    const lifetime = 1.6 // 粒子存活时长（秒）
-    let t = 0
-    let last = performance.now()
-
-    const particle = { el, x, y, vx, vy0, rot, t, last, lifetime }
-    activeParticles.add(particle)
-
-    const step = () => {
-      if (!document.body.contains(el)) {
-        activeParticles.delete(particle)
-        return
-      }
-      const now = performance.now()
-      const dt = Math.min(0.033, (now - last) / 1000) // 限制帧间隔，避免切换标签导致位移突变（最大约 33ms）
-      last = now
-      t += dt
-
-      // Kinematics: y(t) = y0 + vy0 * t + 0.5 * g * t^2
-      const nx = x + vx * t
-      const ny = y + (vy0 * t + 0.5 * g * t * t)
-
-      // Fade out towards end of life
-      const lifeRatio = Math.min(1, t / lifetime)
-      const opacity = 1 - lifeRatio
-
-      el.style.opacity = opacity.toFixed(3)
-      el.style.transform = `translate(-50%, -50%) translate(${nx - x}px, ${ny - y}px) rotate(${rot}deg)`
-
-      // Remove when out of viewport or life ended
-      const vh = window.innerHeight
-      const vw = window.innerWidth
-      const outOfView = ny < -50 || ny > vh + 50 || nx < -50 || nx > vw + 50
-      if (t >= lifetime || opacity  {
-    if (isRandom) return textList[Math.floor(Math.random() * textList.length)]
-    const t = textList[seqIndex]
-    seqIndex = (seqIndex + 1) % textList.length
-    return t
-  }
-
-  // Attach once
-  const onClick = (e) => {
-    // Ignore right/middle clicks
-    if (e.button !== 0) return
-    const text = pickText()
-    createParticle(e.clientX, e.clientY, text)
-  }
-
-  // Debounced resize cleanup (optional)
-  const onVisibility = () => {
-    if (document.hidden) {
-      // Clean up off-screen particles when tab hidden
-      for (const p of activeParticles) {
-        p.el.remove()
-      }
-      activeParticles.clear()
-    }
-  }
-
-  // Listen at capture phase to trigger early and avoid being blocked by other handlers
-  window.addEventListener('click', onClick, true)
-  document.addEventListener('visibilitychange', onVisibility)
-
-  // Provide a small API for future control
-  window.ClickThrowText = {
-    dispose() {
-      window.removeEventListener('click', onClick, true)
-      document.removeEventListener('visibilitychange', onVisibility)
-      for (const p of activeParticles) p.el.remove()
-      activeParticles.clear()
-    }
-  }
-})()]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/custom.js</url>
-    <content><![CDATA[(function () {
-  // 右侧添加五个菜单
-  function addCustomMenus() {
-    const nav = document.querySelector('#nav .menus')
-    if (!nav) return
-
-    const customMenus = [
-      { name: '首页', url: '/', icon: 'fas fa-home' },
-      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
-      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
-      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '友链', url: '/link/', icon: 'fas fa-link' }
-    ]
-
-    const menuContainer = document.createElement('div')
-    menuContainer.className = 'custom-right-menus'
-    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
-
-    customMenus.forEach(menu => {
-      const menuItem = document.createElement('a')
-      menuItem.href = menu.url
-      menuItem.className = 'menu-item'
-      menuItem.innerHTML = ` ${menu.name}`
-      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
-      menuContainer.appendChild(menuItem)
-    })
-
-    nav.appendChild(menuContainer)
-  }
-
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn)
-    } else {
-      fn()
-    }
-  }
-
-  function applyUI() {
-    // 1) 添加右侧菜单
-    addCustomMenus()
-
-    // 2) 首页标题样式设置
-    const title = document.querySelector('#site-title')
-    if (title) {
-      // 添加艺术字体类
-      title.classList.add('custom-title-art')
-      // 强制让标题容器按内容宽度居中
-      title.style.display = 'block'
-      title.style.marginLeft = 'auto'
-      title.style.marginRight = 'auto'
-      title.style.width = 'max-content'
-      title.style.textAlign = 'center'
-    }
-
-    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
-    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
-    if (blogInfo) {
-      // 移除所有可能的动画类
-      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
-    }
-  }
-  
-
-  onReady(applyUI)
-  // 兼容Butterfly的PJAX（如果启用）
-  window.addEventListener('pjax:complete', applyUI)
-})()
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/title.js</url>
-    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
-(function () {
-  var OriginTitle = document.title;
-  var timer = null;
-  var awayStart = 0;
-  var thresholdMs = 120000; // 超过 120s 进入后续池
-
-  // 前期池（离开至 120s 内，随机展示 1-5）
-  var earlyPool = [
-    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
-    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
-    { text: '正在上厕所，别偷看！！！', ms: 5000 },
-    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
-    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
-    { text: '封印解除！开始吞噬内存！', ms: 10000 },
-    { text: '警告！页面即将自毁...', ms: 10000 },
-    { text: '检测到时空波动，请抓稳！', ms: 10000 }
-  ];
-
-  // 后续池（超过 120s 后，随机展示 6-11）
-  var latePool = [
-    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
-    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
-    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
-  ];
-
-  // 回来时提示（随机展示一个，3s 后恢复原标题）
-  var backPool = [
-    '啊！你回来啦！（迅速切换回正经脸）',
-    '咳咳，刚刚什么都没发生'
-  ];
-  var backHoldMs = 3000;
-
-  var lastIndex = -1;
-  function pickRandom(pool) {
-    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
-    var idx = Math.floor(Math.random() * pool.length);
-    // 避免连续两次相同
-    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
-    lastIndex = idx;
-    return pool[idx];
-  }
-
-  function scheduleNext() {
-    if (!document.hidden) return; // 可见时不再调度
-    var now = Date.now();
-    var elapsed = now - awayStart; // 本次离开累计时间
-
-    var pool = elapsed < thresholdMs ? earlyPool : latePool;
-    var choice = pickRandom(pool);
-    document.title = choice.text;
-
-    var wait = choice.ms;
-    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
-    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
-      wait = thresholdMs - elapsed;
-    }
-
-    clearTimeout(timer);
-    timer = setTimeout(scheduleNext, Math.max(500, wait));
-  }
-
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      // 开始离开
-      awayStart = Date.now();
-      clearTimeout(timer);
-      scheduleNext(); // 立即显示第一条并进入调度
-    } else {
-      // 回到页面
-      clearTimeout(timer);
-      var msg = backPool[Math.floor(Math.random() * backPool.length)];
-      document.title = msg;
-      setTimeout(function () {
-        document.title = OriginTitle;
-      }, backHoldMs);
-    }
-  });
-})();]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/live2d-models/xiaomai/physics.json</url>
     <content><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"hair_front","setup":{"length":0.15,"regist":0.5,"mass":0.1},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_FRONT","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_side","setup":{"length":0.35,"regist":0.6,"mass":0.22},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":1}],"targets":[{"id":"PARAM_HAIR_SIDE","ptype":"angle","scale":0.022,"weight":1}]},{"label":"hair_back","setup":{"length":0.25,"regist":0.7,"mass":0.25},"src":[{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.012,"weight":1},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":0.5},{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2,"weight":1}],"targets":[{"id":"PARAM_HAIR_BACK","ptype":"angle","scale":0.022,"weight":1}]}]}]]></content>
-  </entry>
-  <entry>
-    <title>友链</title>
-    <url>/link/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
