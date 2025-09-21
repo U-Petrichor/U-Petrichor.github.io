@@ -112,35 +112,6 @@ http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya
       </tags>
   </entry>
   <entry>
-    <title>用163邮箱设置Waline评论自动通知</title>
-    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
-    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
-配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
-找到SMTP_PASS
-在手机上下载网易邮箱，并且打开
-点击我→邮箱管理
-选择你想要使用的邮箱
-点击第三方登陆管理
-勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
-成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
-将此授权码配置到Vercel的环境变量中，并且重新部署
-测试功能
-
-修改自动发送邮件的格式
-根据下图所示，在vercel上配置环境变量
-具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
-多用本身提供的变量，可以实现更丰富的自定义格式
-
-]]></content>
-      <categories>
-        <category>教程</category>
-        <category>博客配置</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>免费开DDNet服务器</title>
     <url>/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[前言2025年9月初，DDNet国服似乎不运营了，大陆玩家只能去连港服，然而港服延迟较高，还非常不稳定，即使开了加速器也很糟糕，外服虽然稳定一些，但是延迟更高，所以说为了能玩到更加稳定的服务器，我折腾了一个下午找到了个免费开服的方法，根据本文你就可以实现开服与朋友联机，不过这个方法也是有一些缺陷，就是服务器不会显示在DDNet的互联网频道，所以说聚集在一起是很重要的（咳咳，Q群：970039533）
@@ -156,7 +127,8 @@ http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya
 开服方法
 目前只研究了一个，后续可能还会折腾一些新方法，所以现在这里了个二级标题
 
-SakuraFrp 樱花内网穿透没想到想当年MC联机的方法还能用到DDNet上，内网穿透的原理就是将本地的端口映射到公网的端口，这样就可以通过公网的端口访问到本地的服务了，而SakuraFrp就是一个免费的内网穿透工具，它支持udp和tcp，所以说我们可以使用它来开服（还有个比较出名的内网穿透工具ngrok，这个并不支持udp传输，至少2025&#x2F;9&#x2F;18这天是不行的）
+SakuraFrp 樱花内网穿透视频版教程，但是肯定没文章详细
+没想到想当年MC联机的方法还能用到DDNet上，内网穿透的原理就是将本地的端口映射到公网的端口，这样就可以通过公网的端口访问到本地的服务了，而SakuraFrp就是一个免费的内网穿透工具，它支持udp和tcp，所以说我们可以使用它来开服（还有个比较出名的内网穿透工具ngrok，这个并不支持udp传输，至少2025&#x2F;9&#x2F;18这天是不行的）
 配置SakuraFrp
 打开SakuraFrp的官网
 点击注册，注册流程我就不说了
@@ -204,6 +176,35 @@ Q群：970039533（我是群主，也欢迎你来水群）
       <tags>
         <tag>Game</tag>
         <tag>DDNet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用163邮箱设置Waline评论自动通知</title>
+    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
+    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
+配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
+找到SMTP_PASS
+在手机上下载网易邮箱，并且打开
+点击我→邮箱管理
+选择你想要使用的邮箱
+点击第三方登陆管理
+勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
+成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
+将此授权码配置到Vercel的环境变量中，并且重新部署
+测试功能
+
+修改自动发送邮件的格式
+根据下图所示，在vercel上配置环境变量
+具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
+多用本身提供的变量，可以实现更丰富的自定义格式
+
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>博客配置</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -323,79 +324,6 @@ Light主题适合的图片
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/custom.js</url>
-    <content><![CDATA[(function () {
-  // 右侧添加五个菜单
-  function addCustomMenus() {
-    const nav = document.querySelector('#nav .menus')
-    if (!nav) return
-
-    const customMenus = [
-      { name: '首页', url: '/', icon: 'fas fa-home' },
-      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
-      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
-      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '友链', url: '/link/', icon: 'fas fa-link' }
-    ]
-
-    const menuContainer = document.createElement('div')
-    menuContainer.className = 'custom-right-menus'
-    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
-
-    customMenus.forEach(menu => {
-      const menuItem = document.createElement('a')
-      menuItem.href = menu.url
-      menuItem.className = 'menu-item'
-      menuItem.innerHTML = ` ${menu.name}`
-      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
-      menuContainer.appendChild(menuItem)
-    })
-
-    nav.appendChild(menuContainer)
-  }
-
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn)
-    } else {
-      fn()
-    }
-  }
-
-  function applyUI() {
-    // 1) 添加右侧菜单
-    addCustomMenus()
-
-    // 2) 首页标题样式设置
-    const title = document.querySelector('#site-title')
-    if (title) {
-      // 添加艺术字体类
-      title.classList.add('custom-title-art')
-      // 强制让标题容器按内容宽度居中
-      title.style.display = 'block'
-      title.style.marginLeft = 'auto'
-      title.style.marginRight = 'auto'
-      title.style.width = 'max-content'
-      title.style.textAlign = 'center'
-    }
-
-    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
-    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
-    if (blogInfo) {
-      // 移除所有可能的动画类
-      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
-    }
-  }
-  
-
-  onReady(applyUI)
-  // 兼容Butterfly的PJAX（如果启用）
-  window.addEventListener('pjax:complete', applyUI)
-})()
-]]></content>
   </entry>
   <entry>
     <title></title>
@@ -538,6 +466,110 @@ Light主题适合的图片
   </entry>
   <entry>
     <title></title>
+    <url>/js/custom.js</url>
+    <content><![CDATA[(function () {
+  // 右侧添加五个菜单
+  function addCustomMenus() {
+    const nav = document.querySelector('#nav .menus')
+    if (!nav) return
+
+    const customMenus = [
+      { name: '首页', url: '/', icon: 'fas fa-home' },
+      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
+      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
+      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
+      { name: '友链', url: '/link/', icon: 'fas fa-link' }
+    ]
+
+    const menuContainer = document.createElement('div')
+    menuContainer.className = 'custom-right-menus'
+    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
+
+    customMenus.forEach(menu => {
+      const menuItem = document.createElement('a')
+      menuItem.href = menu.url
+      menuItem.className = 'menu-item'
+      menuItem.innerHTML = ` ${menu.name}`
+      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
+      menuContainer.appendChild(menuItem)
+    })
+
+    nav.appendChild(menuContainer)
+  }
+
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn)
+    } else {
+      fn()
+    }
+  }
+
+  function applyUI() {
+    // 1) 添加右侧菜单
+    addCustomMenus()
+
+    // 2) 首页标题样式设置
+    const title = document.querySelector('#site-title')
+    if (title) {
+      // 添加艺术字体类
+      title.classList.add('custom-title-art')
+      // 强制让标题容器按内容宽度居中
+      title.style.display = 'block'
+      title.style.marginLeft = 'auto'
+      title.style.marginRight = 'auto'
+      title.style.width = 'max-content'
+      title.style.textAlign = 'center'
+    }
+
+    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
+    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
+    if (blogInfo) {
+      // 移除所有可能的动画类
+      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
+    }
+  }
+  
+
+  onReady(applyUI)
+  // 兼容Butterfly的PJAX（如果启用）
+  window.addEventListener('pjax:complete', applyUI)
+})()
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps ]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/js/title.js</url>
     <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
 (function () {
@@ -623,445 +655,6 @@ Light主题适合的图片
     <title>友链</title>
     <url>/link/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom-dark.css</url>
-    <content><![CDATA[/* Butterfly主题自定义深色渐变样式覆盖 */
-
-/* 基础深色渐变背景和排版 */
-html[data-theme='dark'] body {
-  /* 深夜渐变: #0d2538 -> #1b3b52 -> #0f2027 */
-  background: linear-gradient(135deg, #0d2538 0%, #1b3b52 50%, #0f2027 100%) fixed;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-/* 卡片带有微妙的半透明和模糊效果 */
-html[data-theme='dark'] .card-widget,
-html[data-theme='dark'] .card,
-html[data-theme='dark'] .recent-posts .recent-post-item,
-html[data-theme='dark'] .post,
-html[data-theme='dark'] .aside-list > .aside-list-item,
-html[data-theme='dark'] .relatedPosts > .relatedPosts-list > div {
-  background: linear-gradient(135deg, rgba(13, 37, 56, 0.75) 0%, rgba(27, 59, 82, 0.65) 50%, rgba(15, 32, 39, 0.75) 100%);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(139, 178, 217, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-
-/* 卡片悬停效果 */
-html[data-theme='dark'] .card-widget:hover,
-html[data-theme='dark'] .card:hover,
-html[data-theme='dark'] .recent-posts .recent-post-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  border-color: rgba(139, 178, 217, 0.25);
-  transition: all 0.3s ease;
-}
-
-/* 头像背景增强 */
-html[data-theme='dark'] .avatar-img {
-  background: linear-gradient(135deg, rgba(18, 194, 233, 0.2) 0%, rgba(0, 164, 151, 0.2) 100%);
-  border: 2px solid rgba(139, 178, 217, 0.3);
-  box-shadow: 0 0 20px rgba(18, 194, 233, 0.3);
-}
-
-/* 页头和页脚与渐变融合 */
-html[data-theme='dark'] #page-header,
-html[data-theme='dark'] #footer {
-  background: transparent;
-}
-
-/* 强调色：青绿色渐变用于链接和选择 */
-html[data-theme='dark'] a,
-html[data-theme='dark'] .links-of-author a,
-html[data-theme='dark'] .article-meta__categories a,
-html[data-theme='dark'] .article-meta__tags a {
-  color: #8cb2d9;
-  transition: color .2s ease, text-shadow .2s ease;
-}
-html[data-theme='dark'] a:hover {
-  color: #12c2e9;
-  text-shadow: 0 0 8px rgba(18, 194, 233, 0.4);
-}
-
-/* 按钮样式 */
-html[data-theme='dark'] :root {
-  --btn-bg: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);
-  --btn-hover-color: linear-gradient(135deg, #12c2e9 0%, #00a497 100%);
-  --btn-color: #0a1118;
-  --text-highlight-color: #8cb2d9;
-  --scrollbar-color: #12c2e9;
-}
-
-/* 侧边栏、搜索框等 */
-html[data-theme='dark'] .sidebar,
-html[data-theme='dark'] .sidebar #aside-content > .card-widget,
-html[data-theme='dark'] .search-dialog .search-dialog__title,
-html[data-theme='dark'] .search-dialog .search-nav {
-  background: rgba(10, 20, 28, 0.5);
-}
-
-
-/* 引用块条纹强调 */
-html[data-theme='dark'] blockquote {
-  border-left: 3px solid #12c2e9;
-  background: rgba(18, 194, 233, 0.06);
-}
-
-/* 分割线微妙样式 */
-html[data-theme='dark'] hr {
-  border-color: #2a4356;
-}
-
-/* 目录链接颜色和悬停效果 */
-html[data-theme='dark'] #aside-content .toc .toc-item a {
-  color: #12c2e9;
-}
-html[data-theme='dark'] #aside-content .toc .toc-item a:hover {
-  color: #8cb2d9;
-}
-
-/* 分页和标签 */
-html[data-theme='dark'] .pagination .page-number,
-html[data-theme='dark'] .tag-cloud a,
-html[data-theme='dark'] .article-tags .tag {
-  background: rgba(10, 20, 28, 0.6);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-/* 文章标题的精美悬停效果 */
-html[data-theme='dark'] .recent-post-info .article-title a:hover,
-html[data-theme='dark'] .post-title a:hover {
-  color: #12c2e9;
-}
-
-/* 主题切换的平滑过渡 */
-html[data-theme='dark'] body, html[data-theme='dark'] .card, html[data-theme='dark'] .card-widget {
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
-}
-
-
-/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
-html[data-theme='dark'] #site-info #site-title.custom-title-art {
-  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
-  font-weight: 800 !important;
-  font-size: clamp(3rem, 6vw, 6rem) !important;
-  letter-spacing: 0.04em !important;
-  /* 不支持background-clip的浏览器的备用颜色 */
-  color: #12c2e9 !important;
-  background: linear-gradient(135deg, #f8f9fb 0%, #b7e3ff 35%, #67e8f9 55%, #12c2e9 80%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 2px 24px rgba(18,194,233,0.15), 0 2px 40px rgba(103,232,249,0.12) !important;
-  /* 强制居中 */
-  display: block !important;
-  text-align: center !important;
-  margin: 0 auto !important;
-}
-
-/* 确保在不支持background-clip时文字可见 */
-@supports not (-webkit-background-clip: text) {
-  html[data-theme='dark'] #site-info #site-title.custom-title-art {
-    color: #12c2e9 !important;
-    -webkit-text-fill-color: #12c2e9 !important;
-  }
-}
-
-/* AnuPpuccin主题风格的Markdown样式 - 基于Catppuccin调色板 */
-/* Catppuccin Mocha颜色变量定义 */
-:root {
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo: #f2cdcd;
-  --ctp-pink: #f5c2e7;
-  --ctp-mauve: #cba6f7;
-  --ctp-red: #f38ba8;
-  --ctp-maroon: #eba0ac;
-  --ctp-peach: #fab387;
-  --ctp-yellow: #f9e2af;
-  --ctp-green: #a6e3a1;
-  --ctp-teal: #94e2d5;
-  --ctp-sky: #89dceb;
-  --ctp-sapphire: #74c7ec;
-  --ctp-blue: #89b4fa;
-  --ctp-lavender: #b4befe;
-  --ctp-text: #cdd6f4;
-  --ctp-subtext1: #bac2de;
-  --ctp-subtext0: #a6adc8;
-  --ctp-overlay2: #9399b2;
-  --ctp-overlay1: #7f849c;
-  --ctp-overlay0: #6c7086;
-  --ctp-surface2: #585b70;
-  --ctp-surface1: #45475a;
-  --ctp-surface0: #313244;
-  --ctp-base: #1e1e2e;
-  --ctp-mantle: #181825;
-  --ctp-crust: #11111b;
-}
-
-/* Markdown标题样式 */
-html[data-theme='dark'] .post-content h1 {
-  color: var(--ctp-red) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h2 {
-  color: var(--ctp-peach) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.6em;
-  line-height: 1.2;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h3 {
-  color: var(--ctp-green) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.37em;
-  line-height: 1.3;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h4 {
-  color: var(--ctp-teal) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.25em;
-  line-height: 1.4;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h5 {
-  color: var(--ctp-lavender) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-html[data-theme='dark'] .post-content h6 {
-  color: var(--ctp-mauve) !important;
-  font-family: "Noto Serif", serif;
-  font-weight: 600;
-  font-size: 1.12em;
-  line-height: 1.5;
-  margin: 15px 0;
-  transition: color 0.3s ease;
-}
-
-/* Markdown加粗文字样式 - 使用蓝色调 */
-html[data-theme='dark'] .post-content strong,
-html[data-theme='dark'] .post-content b {
-  color: var(--ctp-blue) !important;
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(137, 180, 250, 0.15) 0%, rgba(69, 71, 90, 0.1) 100%);
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  border: 1px solid rgba(137, 180, 250, 0.2);
-  transition: all 0.2s ease;
-}
-
-/* 加粗文字悬停效果 */
-html[data-theme='dark'] .post-content strong:hover,
-html[data-theme='dark'] .post-content b:hover {
-  background: linear-gradient(135deg, rgba(137, 180, 250, 0.25) 0%, rgba(69, 71, 90, 0.15) 100%);
-  border-color: rgba(137, 180, 250, 0.4);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(137, 180, 250, 0.2);
-}
-
-/* Markdown斜体文字样式 - 使用浅蓝色调 */
-html[data-theme='dark'] .post-content em,
-html[data-theme='dark'] .post-content i {
-  color: var(--ctp-lavender) !important;
-  font-style: italic;
-  background: linear-gradient(135deg, rgba(180, 190, 254, 0.1) 0%, transparent 100%);
-  padding: 0.05em 0.2em;
-  border-radius: 2px;
-}
-
-/* Markdown列表样式优化 - 使用Overlay1 */
-html[data-theme='dark'] .post-content ul li::marker,
-html[data-theme='dark'] .post-content ol li::marker {
-  color: var(--ctp-overlay1);
-}
-
-html[data-theme='dark'] .post-content ul li,
-html[data-theme='dark'] .post-content ol li {
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-  color: var(--ctp-text);
-}
-
-/* Markdown链接样式 - 使用Sapphire */
-html[data-theme='dark'] .post-content a {
-  color: var(--ctp-sapphire) !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(116, 199, 236, 0.3);
-  transition: all 0.2s ease;
-}
-
-html[data-theme='dark'] .post-content a:hover {
-  color: var(--ctp-sky) !important;
-  border-bottom-color: var(--ctp-sky);
-  text-shadow: 0 0 8px rgba(137, 220, 235, 0.4);
-}
-
-/* Markdown表格样式 - 使用Surface和Overlay色调 */
-html[data-theme='dark'] .post-content table {
-  border-collapse: collapse;
-  margin: 1em 0;
-  background: var(--ctp-surface0);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-html[data-theme='dark'] .post-content table th {
-  background: linear-gradient(135deg, rgba(203, 166, 247, 0.2) 0%, rgba(69, 71, 90, 0.2) 100%);
-  color: var(--ctp-mauve) !important;
-  font-weight: 700;
-  padding: 0.8em;
-  border: 1px solid rgba(203, 166, 247, 0.2);
-}
-
-html[data-theme='dark'] .post-content table td {
-  padding: 0.6em 0.8em;
-  border: 1px solid var(--ctp-overlay0);
-  color: var(--ctp-text);
-}
-
-html[data-theme='dark'] .post-content table tr:nth-child(even) {
-  background: rgba(69, 71, 90, 0.3);
-}
-
-
-
-/* 引用块样式 - 使用Peach */
-html[data-theme='dark'] .post-content blockquote {
-  border-left: 4px solid var(--ctp-peach);
-  background: linear-gradient(135deg, rgba(250, 179, 135, 0.1) 0%, transparent 100%);
-  padding: 1em 1.5em;
-  margin: 1em 0;
-  color: var(--ctp-subtext1);
-  border-radius: 0 8px 8px 0;
-}
-
-/* 动画极光叠加层以丰富第二屏背景 */
-/* 带有更深蓝绿色调的动画极光叠加层 */
-html[data-theme='dark'] body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(60vw 60vh at 20% 20%, rgba(18, 158, 190, 0.15), transparent 60%),
-    radial-gradient(50vw 50vh at 78% 28%, rgba(0, 120, 140, 0.14), transparent 60%),
-    radial-gradient(70vw 70vh at 52% 84%, rgba(40, 70, 120, 0.10), transparent 60%);
-  mix-blend-mode: screen;
-  opacity: .55;
-  animation: auroraFloat 26s ease-in-out infinite alternate;
-}
-
-@keyframes auroraFloat {
-  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
-  50% { transform: translate3d(0,-1.2%,0) scale(1.02); filter: saturate(1.05); }
-  100% { transform: translate3d(0,-2.4%,0) scale(1.03); filter: saturate(1.1); }
-}
-
-/* 右上角自定义菜单 */
-.custom-right-menus .menu-item {
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform .2s ease, background .2s ease, color .2s ease;
-}
-#nav.nav-fixed .custom-right-menus .menu-item,
-#page-header.not-top-img #nav .custom-right-menus .menu-item {
-  color: var(--font-color);
-}
-.custom-right-menus .menu-item:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);
-  color: #0a1118 !important;
-}
-
-html[data-theme='dark'] figure.highlight table,
-html[data-theme='dark'] figure.highlight td,
-html[data-theme='dark'] figure.highlight th {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-html[data-theme='dark'] figure.highlight table,
-html[data-theme='dark'] figure.highlight td,
-html[data-theme='dark'] figure.highlight th {
-  border: none !important;
-  outline: none !important;
-  border-radius: 0 !important;
-}
-
-/* 避免表格样式对代码块工具栏/容器产生影响 */
-html[data-theme='dark'] figure.highlight,
-html[data-theme='dark'] figure.highlight .highlight-tools {
-  box-shadow: none !important;
-}
-
-/* 调整代码块工具栏复制与展开按钮的间距（dark） */
-html[data-theme='dark'] figure.highlight .highlight-tools {
-  gap: 6px; /* 相邻控件之间增加 6px 间距 */
-}
-html[data-theme='dark'] figure.highlight .highlight-tools .expand {
-  margin-left: 4px; /* 展开图标与前一元素稍微拉开 */
-}
-
-
-]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1472,71 +1065,6 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
   </entry>
   <entry>
     <title></title>
-    <url>/css/custom.css</url>
-    <content><![CDATA[/* Unified custom interactions for both themes */
-@media (min-width: 901px) {
-  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
-  #aside-content .card-info .avatar-img,
-  #aside-content .card-info .avatar-img img,
-  #sidebar-menus .avatar-img,
-  #sidebar-menus .avatar-img img {
-    animation: none !important;
-  }
-
-  /* 覆盖任何 img:hover 的旋转 */
-  #aside-content .card-info .avatar-img img:hover,
-  #sidebar-menus .avatar-img img:hover {
-    transform: none !important;
-  }
-
-  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
-  #aside-content .card-info .avatar-img,
-  #sidebar-menus .avatar-img {
-    transform-origin: center center;
-    transition: transform 0.25s ease-in-out !important;
-    will-change: transform;
-  }
-  #aside-content .card-info .avatar-img:hover,
-  #sidebar-menus .avatar-img:hover {
-    transform: scale(1.06) !important;
-  }
-
-  /* 3) 侧栏社交图标悬停放大 */
-  #aside-content .card-info .card-info-social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  #aside-content .card-info .card-info-social-icons .social-icon:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/css/loading-bar.css</url>
     <content><![CDATA[.pace {
 	-webkit-pointer-events: none;
@@ -1737,11 +1265,6 @@ html[data-theme='light'] figure.highlight .highlight-tools .expand {
 }]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/css/waline_css.css</url>
     <content><![CDATA[/* 专用于 Butterfly 的 waline_css 接口覆盖：仅保留 GitHub 登录入口 */
@@ -1800,6 +1323,484 @@ a[href*="/github" i] {
   visibility: visible !important;
   opacity: 1 !important;
 }]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/custom.css</url>
+    <content><![CDATA[/* Unified custom interactions for both themes */
+@media (min-width: 901px) {
+  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
+  }
+
+  /* 覆盖任何 img:hover 的旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
+  }
+
+  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
+  #aside-content .card-info .avatar-img,
+  #sidebar-menus .avatar-img {
+    transform-origin: center center;
+    transition: transform 0.25s ease-in-out !important;
+    will-change: transform;
+  }
+  #aside-content .card-info .avatar-img:hover,
+  #sidebar-menus .avatar-img:hover {
+    transform: scale(1.06) !important;
+  }
+
+  /* 3) 侧栏社交图标悬停放大 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  left: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/custom-dark.css</url>
+    <content><![CDATA[/* Butterfly主题自定义深色渐变样式覆盖 */
+
+/* 基础深色渐变背景和排版 */
+html[data-theme='dark'] body {
+  /* 深夜渐变: #0d2538 -> #1b3b52 -> #0f2027 */
+  background: linear-gradient(135deg, #0d2538 0%, #1b3b52 50%, #0f2027 100%) fixed;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* 卡片带有微妙的半透明和模糊效果 */
+html[data-theme='dark'] .card-widget,
+html[data-theme='dark'] .card,
+html[data-theme='dark'] .recent-posts .recent-post-item,
+html[data-theme='dark'] .post,
+html[data-theme='dark'] .aside-list > .aside-list-item,
+html[data-theme='dark'] .relatedPosts > .relatedPosts-list > div {
+  background: linear-gradient(135deg, rgba(13, 37, 56, 0.75) 0%, rgba(27, 59, 82, 0.65) 50%, rgba(15, 32, 39, 0.75) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 178, 217, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* 卡片悬停效果 */
+html[data-theme='dark'] .card-widget:hover,
+html[data-theme='dark'] .card:hover,
+html[data-theme='dark'] .recent-posts .recent-post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(139, 178, 217, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* 头像背景增强 */
+html[data-theme='dark'] .avatar-img {
+  background: linear-gradient(135deg, rgba(18, 194, 233, 0.2) 0%, rgba(0, 164, 151, 0.2) 100%);
+  border: 2px solid rgba(139, 178, 217, 0.3);
+  box-shadow: 0 0 20px rgba(18, 194, 233, 0.3);
+}
+
+/* 页头和页脚与渐变融合 */
+html[data-theme='dark'] #page-header,
+html[data-theme='dark'] #footer {
+  background: transparent;
+}
+
+/* 强调色：青绿色渐变用于链接和选择 */
+html[data-theme='dark'] a,
+html[data-theme='dark'] .links-of-author a,
+html[data-theme='dark'] .article-meta__categories a,
+html[data-theme='dark'] .article-meta__tags a {
+  color: #8cb2d9;
+  transition: color .2s ease, text-shadow .2s ease;
+}
+html[data-theme='dark'] a:hover {
+  color: #12c2e9;
+  text-shadow: 0 0 8px rgba(18, 194, 233, 0.4);
+}
+
+/* 按钮样式 */
+html[data-theme='dark'] :root {
+  --btn-bg: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);
+  --btn-hover-color: linear-gradient(135deg, #12c2e9 0%, #00a497 100%);
+  --btn-color: #0a1118;
+  --text-highlight-color: #8cb2d9;
+  --scrollbar-color: #12c2e9;
+}
+
+/* 侧边栏、搜索框等 */
+html[data-theme='dark'] .sidebar,
+html[data-theme='dark'] .sidebar #aside-content > .card-widget,
+html[data-theme='dark'] .search-dialog .search-dialog__title,
+html[data-theme='dark'] .search-dialog .search-nav {
+  background: rgba(10, 20, 28, 0.5);
+}
+
+
+/* 引用块条纹强调 */
+html[data-theme='dark'] blockquote {
+  border-left: 3px solid #12c2e9;
+  background: rgba(18, 194, 233, 0.06);
+}
+
+/* 分割线微妙样式 */
+html[data-theme='dark'] hr {
+  border-color: #2a4356;
+}
+
+/* 目录链接颜色和悬停效果 */
+html[data-theme='dark'] #aside-content .toc .toc-item a {
+  color: #12c2e9;
+}
+html[data-theme='dark'] #aside-content .toc .toc-item a:hover {
+  color: #8cb2d9;
+}
+
+/* 分页和标签 */
+html[data-theme='dark'] .pagination .page-number,
+html[data-theme='dark'] .tag-cloud a,
+html[data-theme='dark'] .article-tags .tag {
+  background: rgba(10, 20, 28, 0.6);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* 文章标题的精美悬停效果 */
+html[data-theme='dark'] .recent-post-info .article-title a:hover,
+html[data-theme='dark'] .post-title a:hover {
+  color: #12c2e9;
+}
+
+/* 主题切换的平滑过渡 */
+html[data-theme='dark'] body, html[data-theme='dark'] .card, html[data-theme='dark'] .card-widget {
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+
+
+/* 更大的艺术首页标题 - 渐变文字，无外部字体依赖 */
+html[data-theme='dark'] #site-info #site-title.custom-title-art {
+  font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(3rem, 6vw, 6rem) !important;
+  letter-spacing: 0.04em !important;
+  /* 不支持background-clip的浏览器的备用颜色 */
+  color: #12c2e9 !important;
+  background: linear-gradient(135deg, #f8f9fb 0%, #b7e3ff 35%, #67e8f9 55%, #12c2e9 80%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 2px 24px rgba(18,194,233,0.15), 0 2px 40px rgba(103,232,249,0.12) !important;
+  /* 强制居中 */
+  display: block !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* 确保在不支持background-clip时文字可见 */
+@supports not (-webkit-background-clip: text) {
+  html[data-theme='dark'] #site-info #site-title.custom-title-art {
+    color: #12c2e9 !important;
+    -webkit-text-fill-color: #12c2e9 !important;
+  }
+}
+
+/* AnuPpuccin主题风格的Markdown样式 - 基于Catppuccin调色板 */
+/* Catppuccin Mocha颜色变量定义 */
+:root {
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-maroon: #eba0ac;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #a6e3a1;
+  --ctp-teal: #94e2d5;
+  --ctp-sky: #89dceb;
+  --ctp-sapphire: #74c7ec;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext1: #bac2de;
+  --ctp-subtext0: #a6adc8;
+  --ctp-overlay2: #9399b2;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay0: #6c7086;
+  --ctp-surface2: #585b70;
+  --ctp-surface1: #45475a;
+  --ctp-surface0: #313244;
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+}
+
+/* Markdown标题样式 */
+html[data-theme='dark'] .post-content h1 {
+  color: var(--ctp-red) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.2;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='dark'] .post-content h2 {
+  color: var(--ctp-peach) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.6em;
+  line-height: 1.2;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='dark'] .post-content h3 {
+  color: var(--ctp-green) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.37em;
+  line-height: 1.3;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='dark'] .post-content h4 {
+  color: var(--ctp-teal) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='dark'] .post-content h5 {
+  color: var(--ctp-lavender) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  line-height: 1.5;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+html[data-theme='dark'] .post-content h6 {
+  color: var(--ctp-mauve) !important;
+  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-size: 1.12em;
+  line-height: 1.5;
+  margin: 15px 0;
+  transition: color 0.3s ease;
+}
+
+/* Markdown加粗文字样式 - 使用蓝色调 */
+html[data-theme='dark'] .post-content strong,
+html[data-theme='dark'] .post-content b {
+  color: var(--ctp-blue) !important;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(137, 180, 250, 0.15) 0%, rgba(69, 71, 90, 0.1) 100%);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  border: 1px solid rgba(137, 180, 250, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* 加粗文字悬停效果 */
+html[data-theme='dark'] .post-content strong:hover,
+html[data-theme='dark'] .post-content b:hover {
+  background: linear-gradient(135deg, rgba(137, 180, 250, 0.25) 0%, rgba(69, 71, 90, 0.15) 100%);
+  border-color: rgba(137, 180, 250, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(137, 180, 250, 0.2);
+}
+
+/* Markdown斜体文字样式 - 使用浅蓝色调 */
+html[data-theme='dark'] .post-content em,
+html[data-theme='dark'] .post-content i {
+  color: var(--ctp-lavender) !important;
+  font-style: italic;
+  background: linear-gradient(135deg, rgba(180, 190, 254, 0.1) 0%, transparent 100%);
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+
+/* Markdown列表样式优化 - 使用Overlay1 */
+html[data-theme='dark'] .post-content ul li::marker,
+html[data-theme='dark'] .post-content ol li::marker {
+  color: var(--ctp-overlay1);
+}
+
+html[data-theme='dark'] .post-content ul li,
+html[data-theme='dark'] .post-content ol li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+  color: var(--ctp-text);
+}
+
+/* Markdown链接样式 - 使用Sapphire */
+html[data-theme='dark'] .post-content a {
+  color: var(--ctp-sapphire) !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(116, 199, 236, 0.3);
+  transition: all 0.2s ease;
+}
+
+html[data-theme='dark'] .post-content a:hover {
+  color: var(--ctp-sky) !important;
+  border-bottom-color: var(--ctp-sky);
+  text-shadow: 0 0 8px rgba(137, 220, 235, 0.4);
+}
+
+/* Markdown表格样式 - 使用Surface和Overlay色调 */
+html[data-theme='dark'] .post-content table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: var(--ctp-surface0);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+html[data-theme='dark'] .post-content table th {
+  background: linear-gradient(135deg, rgba(203, 166, 247, 0.2) 0%, rgba(69, 71, 90, 0.2) 100%);
+  color: var(--ctp-mauve) !important;
+  font-weight: 700;
+  padding: 0.8em;
+  border: 1px solid rgba(203, 166, 247, 0.2);
+}
+
+html[data-theme='dark'] .post-content table td {
+  padding: 0.6em 0.8em;
+  border: 1px solid var(--ctp-overlay0);
+  color: var(--ctp-text);
+}
+
+html[data-theme='dark'] .post-content table tr:nth-child(even) {
+  background: rgba(69, 71, 90, 0.3);
+}
+
+
+
+/* 引用块样式 - 使用Peach */
+html[data-theme='dark'] .post-content blockquote {
+  border-left: 4px solid var(--ctp-peach);
+  background: linear-gradient(135deg, rgba(250, 179, 135, 0.1) 0%, transparent 100%);
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  color: var(--ctp-subtext1);
+  border-radius: 0 8px 8px 0;
+}
+
+/* 动画极光叠加层以丰富第二屏背景 */
+/* 带有更深蓝绿色调的动画极光叠加层 */
+html[data-theme='dark'] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60vw 60vh at 20% 20%, rgba(18, 158, 190, 0.15), transparent 60%),
+    radial-gradient(50vw 50vh at 78% 28%, rgba(0, 120, 140, 0.14), transparent 60%),
+    radial-gradient(70vw 70vh at 52% 84%, rgba(40, 70, 120, 0.10), transparent 60%);
+  mix-blend-mode: screen;
+  opacity: .55;
+  animation: auroraFloat 26s ease-in-out infinite alternate;
+}
+
+@keyframes auroraFloat {
+  0% { transform: translate3d(0,0,0) scale(1); filter: saturate(1); }
+  50% { transform: translate3d(0,-1.2%,0) scale(1.02); filter: saturate(1.05); }
+  100% { transform: translate3d(0,-2.4%,0) scale(1.03); filter: saturate(1.1); }
+}
+
+/* 右上角自定义菜单 */
+.custom-right-menus .menu-item {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+#nav.nav-fixed .custom-right-menus .menu-item,
+#page-header.not-top-img #nav .custom-right-menus .menu-item {
+  color: var(--font-color);
+}
+.custom-right-menus .menu-item:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #00a497 0%, #12c2e9 100%);
+  color: #0a1118 !important;
+}
+
+html[data-theme='dark'] figure.highlight table,
+html[data-theme='dark'] figure.highlight td,
+html[data-theme='dark'] figure.highlight th {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-theme='dark'] figure.highlight table,
+html[data-theme='dark'] figure.highlight td,
+html[data-theme='dark'] figure.highlight th {
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+/* 避免表格样式对代码块工具栏/容器产生影响 */
+html[data-theme='dark'] figure.highlight,
+html[data-theme='dark'] figure.highlight .highlight-tools {
+  box-shadow: none !important;
+}
+
+/* 调整代码块工具栏复制与展开按钮的间距（dark） */
+html[data-theme='dark'] figure.highlight .highlight-tools {
+  gap: 6px; /* 相邻控件之间增加 6px 间距 */
+}
+html[data-theme='dark'] figure.highlight .highlight-tools .expand {
+  margin-left: 4px; /* 展开图标与前一元素稍微拉开 */
+}
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
