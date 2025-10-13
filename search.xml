@@ -8,9 +8,38 @@
 前情提要我先简单说一下我当时的情况
 
 用Hexo配置的网页,主题选择的是Butterfly
-根据https://waline.js.org/guide/deploy/vercel.html部署了waline
+根据https://waline.js.org/guide/deploy/vercel.html 部署了waline
 注册和链接了MongoDB数据库,在跟着AI和一些博客的教程时碰到了一些问题,在参考Anthony大佬的文章后得以解决https://runtimes.cc/8693/完成以上几步之后实现了基本的评论功能,但是此时我有一些不满意的地方,我现在并没有实现QQ、微博等其余登陆方式，所以我想去掉这些登陆选项
 
+
+]]></content>
+      <categories>
+        <category>教程</category>
+        <category>博客配置</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用163邮箱设置Waline评论自动通知</title>
+    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
+    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
+配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
+找到SMTP_PASS
+在手机上下载网易邮箱，并且打开
+点击我→邮箱管理
+选择你想要使用的邮箱
+点击第三方登陆管理
+勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
+成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
+将此授权码配置到Vercel的环境变量中，并且重新部署
+测试功能
+
+修改自动发送邮件的格式
+根据下图所示，在vercel上配置环境变量
+具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
+多用本身提供的变量，可以实现更丰富的自定义格式
 
 ]]></content>
       <categories>
@@ -113,32 +142,66 @@ http://1337.abcvg.info:80/announcehttp://bt.okmp3.ru:2710/announcehttp://chihaya
       </tags>
   </entry>
   <entry>
-    <title>用163邮箱设置Waline评论自动通知</title>
-    <url>/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/</url>
-    <content><![CDATA[根据官网教程配置根据邮件通知右侧的目录，先想好你自己要实现的通知方式，我这里是采用网易163邮箱
-配置对应的环境变量根据下图把关键的环境变量配置好如果你选择的是不同的邮箱，需要根据图中的提示找到对应的名称如果你需要的运营商不在github文档中，需要你自行摸索其HOST和PORT两个参数的值，因为我用的163邮箱，不需要解决这个问题，所以这里不会提这里有提示SMTP_PASS对于某些运营商有特殊要求，所以接下来请跟着我的步骤走
-找到SMTP_PASS
-在手机上下载网易邮箱，并且打开
-点击我→邮箱管理
-选择你想要使用的邮箱
-点击第三方登陆管理
-勾选IMAP&#x2F;SMTP服务，勾选之后会进行一个验证操作，并不难，因为我摸索时搞完了，后续弄不出来这个页面了，所以这里无法附加图片，抱歉了TAT
-成功之后会生成授权码，注意一定要复制，授权密码只会显示一次
-将此授权码配置到Vercel的环境变量中，并且重新部署
-测试功能
+    <title>Shared Inventory Mod（共享存储模组）</title>
+    <url>/2025/09/15/Game/Minecraft/SharedInventoryMod/</url>
+    <content><![CDATA[介绍
+Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段
+这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求
+这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能
 
-修改自动发送邮件的格式
-根据下图所示，在vercel上配置环境变量
-具体如何配置，请将网站切换为英文，然后在最下方可以看到模板（中文的不知道为什么模板部分内容很少）
-多用本身提供的变量，可以实现更丰富的自定义格式
+最终目标
+实现远程交换物品
+实现大容量背包
+实现多种工作台(工作台、熔炉、锻造台等等)
+实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)
+实现物品排序以及搜索功能
+更好看的外观以及UI
+移植到基岩版本以及Forge版本（太过遥远）
+
+最新版已实现功能
+实现了远程交换物品
+实现了大容量背包
+仅仅实现了内嵌工作台
+糟糕的贴图
+没法排序和搜索
+版本没有移植完
+
+已知BUG未知TAT
+下次更新已实现功能预告没人用，就先不更新了TAT
+反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
+
+邮件: u_petrichor@163.com
+QQ群:970039533（我是群主，也欢迎你来水群）
+Bilibili私信或视频评论区发送消息（不太可靠）
+
+下载链接
+百度网盘:https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3
+qBittorrent：SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里
+如果你不会用qBittorrent：三分钟学会用磁力链接
+请不要使用百度网盘、迅雷等下载这个磁力链接
+
+
+Q群：970039533（我是群主，也欢迎你来水群）
+
+使用教程安装模组的教程我就省略了
+关键物品合成表存储核心(Shared Inventory Core)共享背包(Shared Inventory Backpack)历代更新内容介绍0.4第一个发布的版本（bushi，主要是之前的版本删掉了）
+
+实现了远程交换物品
+实现了大容量背包
+仅仅实现了内嵌工作台
+糟糕的贴图
+
 
 ]]></content>
       <categories>
-        <category>教程</category>
-        <category>博客配置</category>
+        <category>游戏</category>
+        <category>Minecraft</category>
+        <category>SharedInventoryMod</category>
       </categories>
       <tags>
-        <tag>博客</tag>
+        <tag>Game</tag>
+        <tag>Minecraft</tag>
+        <tag>SharedInventoryMod</tag>
       </tags>
   </entry>
   <entry>
@@ -223,69 +286,6 @@ Q群：970039533（我是群主，也欢迎你来水群）
       </tags>
   </entry>
   <entry>
-    <title>Shared Inventory Mod（共享存储模组）</title>
-    <url>/2025/09/15/Game/Minecraft/SharedInventoryMod/</url>
-    <content><![CDATA[介绍
-Shared Inventory Mod是适配Java版本的Fabric版模组，目前仍在制作阶段
-这个模组的创作理念是因为我懒，过去似乎没有任何一个模组可以同时满足大容量背包和远程交换物品，所以我就想自己写一个模组来满足我的需求
-这个模组的原理是多名玩家绑定同一个核心，绑定之后利用模组里的背包来实现远程交换物品，同时背包还有许多功能
-
-最终目标
-实现远程交换物品
-实现大容量背包
-实现多种工作台(工作台、熔炉、锻造台等等)
-实现“共享核心”的加密(服务器里防止路人随意绑定核心从而抢走物品)
-实现物品排序以及搜索功能
-更好看的外观以及UI
-移植到基岩版本以及Forge版本（太过遥远）
-
-最新版已实现功能
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-没法排序和搜索
-版本没有移植完
-
-已知BUG未知TAT
-下次更新已实现功能预告没人用，就先不更新了TAT
-反馈方式如果你有发现任何BUG，有任何建议，或者有合作意愿，欢迎联系我
-
-邮件: u_petrichor@163.com
-QQ群:970039533（我是群主，也欢迎你来水群）
-Bilibili私信或视频评论区发送消息（不太可靠）
-
-下载链接
-百度网盘:https://pan.baidu.com/s/1SLeBNrtxIUZn1ZoQ2uAsRA?pwd=isf3
-qBittorrent：SharedInventoryMod的磁力链接，鼠标拖动这个链接到qBittorrent里
-如果你不会用qBittorrent：三分钟学会用磁力链接
-请不要使用百度网盘、迅雷等下载这个磁力链接
-
-
-Q群：970039533（我是群主，也欢迎你来水群）
-
-使用教程安装模组的教程我就省略了
-关键物品合成表存储核心(Shared Inventory Core)共享背包(Shared Inventory Backpack)历代更新内容介绍0.4第一个发布的版本（bushi，主要是之前的版本删掉了）
-
-实现了远程交换物品
-实现了大容量背包
-仅仅实现了内嵌工作台
-糟糕的贴图
-
-
-]]></content>
-      <categories>
-        <category>游戏</category>
-        <category>Minecraft</category>
-        <category>SharedInventoryMod</category>
-      </categories>
-      <tags>
-        <tag>Game</tag>
-        <tag>Minecraft</tag>
-        <tag>SharedInventoryMod</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E8%AF%B4%E6%98%8E.html</url>
     <content><![CDATA[博客背景图片设置说明当前背景设置目前博客使用了渐变色背景和增强的卡片样式：
@@ -342,329 +342,68 @@ Light主题适合的图片
   </entry>
   <entry>
     <title></title>
-    <url>/js/click-throw.js</url>
-    <content><![CDATA[/*
-  点击生成文字“抛物运动”效果（Hexo Butterfly）
-  在点击位置创建文字：先上抛，然后受重力加速度下落，超出视口或寿命结束后移除
-*/
-(() => {
-  const SCRIPT_ID = 'click-show-text' // 主题注入的脚本标签 id（保持此 id 以读取 data-* 配置）
-  const scriptEl = document.getElementById(SCRIPT_ID) // 通过它读取 data-text、data-fontsize、data-random、data-mobile
-  if (!scriptEl) return
-
-  // Read config from data attributes injected by Butterfly
-  // 从 data-* 属性读取配置（与主题 _config.butterfly.yml->clickShowText 对应）
-  const data = scriptEl.dataset || {}
-  const mobileEnabled = String(data.mobile).toLowerCase() === 'true' // 是否在移动端启用
-  const fontSize = data.fontsize || '15px' // 文字字号
-  const isRandom = String(data.random).toLowerCase() === 'true' // 是否随机颜色
-  const textList = (data.text || '').split(',').map(s => s.trim()).filter(Boolean) // 文本列表
-
-  // Do not enable on mobile unless explicitly allowed
-  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) // 是否为移动端
-  // 若禁止移动端且当前为移动端，则不启用
-  if (isMobile && !mobileEnabled) return
-  if (!textList.length) return
-
-  let seqIndex = 0 // 顺序轮播时的当前索引
-
-  // Utility: random color (pleasant pastel range)
-  const randColor = () => {
-    const h = Math.floor(Math.random() * 360)
-    const s = 70 + Math.floor(Math.random() * 20) // 70% - 90%
-    const l = 50 + Math.floor(Math.random() * 10) // 50% - 60%
-    return `hsl(${h} ${s}% ${l}%)`
+    <url>/css/custom.css</url>
+    <content><![CDATA[/* Unified custom interactions for both themes */
+@media (min-width: 901px) {
+  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
+  #aside-content .card-info .avatar-img,
+  #aside-content .card-info .avatar-img img,
+  #sidebar-menus .avatar-img,
+  #sidebar-menus .avatar-img img {
+    animation: none !important;
   }
 
-  const activeParticles = new Set()
-
-  const createParticle = (x, y, text) => {
-    const el = document.createElement('span')
-    el.textContent = text
-    el.style.position = 'fixed'
-    el.style.left = x + 'px'
-    el.style.top = y + 'px'
-    el.style.transform = 'translate(-50%, -50%) translateZ(0)' // 居中锚点 + 开启 GPU 加速
-    el.style.fontSize = fontSize // 使用主题配置的字号
-    el.style.fontWeight = '700'
-    el.style.whiteSpace = 'pre'
-    el.style.pointerEvents = 'none'
-    el.style.userSelect = 'none'
-    el.style.willChange = 'transform, opacity'
-    el.style.zIndex = '99999'
-    el.style.opacity = '1'
-    el.style.color = isRandom ? randColor() : 'var(--theme-color, #49B1F5)' // 随机颜色或主题主色
-
-    document.body.appendChild(el)
-
-    // 设置速度
-    const maxVx = 200 // 水平初速度范围
-    const minVy = 300, maxVy = 600 // 竖直初速度范围（上抛初速度越大，抛得越高）
-    const g = 2000 // 重力加速度
-
-    const vx = (Math.random() * 2 - 1) * maxVx // 水平速度（随机向左或向右）
-    const vy0 = - (minVy + Math.random() * (maxVy - minVy)) // 竖直初速度（负号表示向上）
-    const rot = (Math.random() * 2 - 1) * 30 // 旋转角度（仅为更美观）
-
-    const lifetime = 1.6 // 粒子存活时长（秒）
-    let t = 0
-    let last = performance.now()
-
-    const particle = { el, x, y, vx, vy0, rot, t, last, lifetime }
-    activeParticles.add(particle)
-
-    const step = () => {
-      if (!document.body.contains(el)) {
-        activeParticles.delete(particle)
-        return
-      }
-      const now = performance.now()
-      const dt = Math.min(0.033, (now - last) / 1000) // 限制帧间隔，避免切换标签导致位移突变（最大约 33ms）
-      last = now
-      t += dt
-
-      // Kinematics: y(t) = y0 + vy0 * t + 0.5 * g * t^2
-      const nx = x + vx * t
-      const ny = y + (vy0 * t + 0.5 * g * t * t)
-
-      // Fade out towards end of life
-      const lifeRatio = Math.min(1, t / lifetime)
-      const opacity = 1 - lifeRatio
-
-      el.style.opacity = opacity.toFixed(3)
-      el.style.transform = `translate(-50%, -50%) translate(${nx - x}px, ${ny - y}px) rotate(${rot}deg)`
-
-      // Remove when out of viewport or life ended
-      const vh = window.innerHeight
-      const vw = window.innerWidth
-      const outOfView = ny < -50 || ny > vh + 50 || nx < -50 || nx > vw + 50
-      if (t >= lifetime || opacity  {
-    if (isRandom) return textList[Math.floor(Math.random() * textList.length)]
-    const t = textList[seqIndex]
-    seqIndex = (seqIndex + 1) % textList.length
-    return t
+  /* 覆盖任何 img:hover 的旋转 */
+  #aside-content .card-info .avatar-img img:hover,
+  #sidebar-menus .avatar-img img:hover {
+    transform: none !important;
   }
 
-  // Attach once
-  const onClick = (e) => {
-    // Ignore right/middle clicks
-    if (e.button !== 0) return
-    const text = pickText()
-    createParticle(e.clientX, e.clientY, text)
+  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
+  #aside-content .card-info .avatar-img,
+  #sidebar-menus .avatar-img {
+    transform-origin: center center;
+    transition: transform 0.25s ease-in-out !important;
+    will-change: transform;
+  }
+  #aside-content .card-info .avatar-img:hover,
+  #sidebar-menus .avatar-img:hover {
+    transform: scale(1.06) !important;
   }
 
-  // Debounced resize cleanup (optional)
-  const onVisibility = () => {
-    if (document.hidden) {
-      // Clean up off-screen particles when tab hidden
-      for (const p of activeParticles) {
-        p.el.remove()
-      }
-      activeParticles.clear()
-    }
+  /* 3) 侧栏社交图标悬停放大 */
+  #aside-content .card-info .card-info-social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
   }
-
-  // Listen at capture phase to trigger early and avoid being blocked by other handlers
-  window.addEventListener('click', onClick, true)
-  document.addEventListener('visibilitychange', onVisibility)
-
-  // Provide a small API for future control
-  window.ClickThrowText = {
-    dispose() {
-      window.removeEventListener('click', onClick, true)
-      document.removeEventListener('visibilitychange', onVisibility)
-      for (const p of activeParticles) p.el.remove()
-      activeParticles.clear()
-    }
+  #aside-content .card-info .card-info-social-icons .social-icon:hover {
+    transform: scale(1.2);
   }
-})()]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/custom.js</url>
-    <content><![CDATA[(function () {
-  // 右侧添加五个菜单
-  function addCustomMenus() {
-    const nav = document.querySelector('#nav .menus')
-    if (!nav) return
+}
 
-    const customMenus = [
-      { name: '首页', url: '/', icon: 'fas fa-home' },
-      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
-      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
-      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
-      { name: '友链', url: '/link/', icon: 'fas fa-link' }
-    ]
-
-    const menuContainer = document.createElement('div')
-    menuContainer.className = 'custom-right-menus'
-    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
-
-    customMenus.forEach(menu => {
-      const menuItem = document.createElement('a')
-      menuItem.href = menu.url
-      menuItem.className = 'menu-item'
-      menuItem.innerHTML = ` ${menu.name}`
-      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
-      menuContainer.appendChild(menuItem)
-    })
-
-    nav.appendChild(menuContainer)
-  }
-
-  function onReady(fn) {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', fn)
-    } else {
-      fn()
-    }
-  }
-
-  function applyUI() {
-    // 1) 添加右侧菜单
-    addCustomMenus()
-
-    // 2) 首页标题样式设置
-    const title = document.querySelector('#site-title')
-    if (title) {
-      // 添加艺术字体类
-      title.classList.add('custom-title-art')
-      // 强制让标题容器按内容宽度居中
-      title.style.display = 'block'
-      title.style.marginLeft = 'auto'
-      title.style.marginRight = 'auto'
-      title.style.width = 'max-content'
-      title.style.textAlign = 'center'
-    }
-
-    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
-    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
-    if (blogInfo) {
-      // 移除所有可能的动画类
-      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
-    }
-  }
-  
-
-  onReady(applyUI)
-  // 兼容Butterfly的PJAX（如果启用）
-  window.addEventListener('pjax:complete', applyUI)
-})()
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  left: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/fps.js</url>
-    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
-    var rAF = function () {
-        return (
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            }
-        );
-    }();
-    var frame = 0;
-    var allFrameCount = 0;
-    var lastTime = Date.now();
-    var lastFameTime = Date.now();
-    var loop = function () {
-        var now = Date.now();
-        var fs = (now - lastFameTime);
-        var fps = Math.round(1000 / fs);
-
-        lastFameTime = now;
-        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
-        allFrameCount++;
-        frame++;
-
-        if (now > 1000 + lastTime) {
-            var fps = Math.round((frame * 1000) / (now - lastTime));
-            if (fps ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/js/title.js</url>
-    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
-(function () {
-  var OriginTitle = document.title;
-  var timer = null;
-  var awayStart = 0;
-  var thresholdMs = 120000; // 超过 120s 进入后续池
-
-  // 前期池（离开至 120s 内，随机展示 1-5）
-  var earlyPool = [
-    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
-    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
-    { text: '正在上厕所，别偷看！！！', ms: 5000 },
-    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
-    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
-    { text: '封印解除！开始吞噬内存！', ms: 10000 },
-    { text: '警告！页面即将自毁...', ms: 10000 },
-    { text: '检测到时空波动，请抓稳！', ms: 10000 }
-  ];
-
-  // 后续池（超过 120s 后，随机展示 6-11）
-  var latePool = [
-    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
-    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
-    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
-  ];
-
-  // 回来时提示（随机展示一个，3s 后恢复原标题）
-  var backPool = [
-    '啊！你回来啦！（迅速切换回正经脸）',
-    '咳咳，刚刚什么都没发生'
-  ];
-  var backHoldMs = 3000;
-
-  var lastIndex = -1;
-  function pickRandom(pool) {
-    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
-    var idx = Math.floor(Math.random() * pool.length);
-    // 避免连续两次相同
-    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
-    lastIndex = idx;
-    return pool[idx];
-  }
-
-  function scheduleNext() {
-    if (!document.hidden) return; // 可见时不再调度
-    var now = Date.now();
-    var elapsed = now - awayStart; // 本次离开累计时间
-
-    var pool = elapsed < thresholdMs ? earlyPool : latePool;
-    var choice = pickRandom(pool);
-    document.title = choice.text;
-
-    var wait = choice.ms;
-    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
-    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
-      wait = thresholdMs - elapsed;
-    }
-
-    clearTimeout(timer);
-    timer = setTimeout(scheduleNext, Math.max(500, wait));
-  }
-
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) {
-      // 开始离开
-      awayStart = Date.now();
-      clearTimeout(timer);
-      scheduleNext(); // 立即显示第一条并进入调度
-    } else {
-      // 回到页面
-      clearTimeout(timer);
-      var msg = backPool[Math.floor(Math.random() * backPool.length)];
-      document.title = msg;
-      setTimeout(function () {
-        document.title = OriginTitle;
-      }, backHoldMs);
-    }
-  });
-})();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1072,71 +811,6 @@ html[data-theme='dark'] figure.highlight .highlight-tools .expand {
 }
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/css/custom.css</url>
-    <content><![CDATA[/* Unified custom interactions for both themes */
-@media (min-width: 901px) {
-  /* 1) 禁用主题默认头像旋转动画（容器与图片） */
-  #aside-content .card-info .avatar-img,
-  #aside-content .card-info .avatar-img img,
-  #sidebar-menus .avatar-img,
-  #sidebar-menus .avatar-img img {
-    animation: none !important;
-  }
-
-  /* 覆盖任何 img:hover 的旋转 */
-  #aside-content .card-info .avatar-img img:hover,
-  #sidebar-menus .avatar-img img:hover {
-    transform: none !important;
-  }
-
-  /* 2) 改为对容器进行微放大（圆圈+图片一起放大），并添加平滑过渡 */
-  #aside-content .card-info .avatar-img,
-  #sidebar-menus .avatar-img {
-    transform-origin: center center;
-    transition: transform 0.25s ease-in-out !important;
-    will-change: transform;
-  }
-  #aside-content .card-info .avatar-img:hover,
-  #sidebar-menus .avatar-img:hover {
-    transform: scale(1.06) !important;
-  }
-
-  /* 3) 侧栏社交图标悬停放大 */
-  #aside-content .card-info .card-info-social-icons .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.2s ease-in-out;
-  }
-  #aside-content .card-info .card-info-social-icons .social-icon:hover {
-    transform: scale(1.2);
-  }
-}
-
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 10px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
 ]]></content>
   </entry>
   <entry>
@@ -1808,8 +1482,339 @@ a[href*="/github" i] {
 }]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>/js/click-throw.js</url>
+    <content><![CDATA[/*
+  点击生成文字“抛物运动”效果（Hexo Butterfly）
+  在点击位置创建文字：先上抛，然后受重力加速度下落，超出视口或寿命结束后移除
+*/
+(() => {
+  const SCRIPT_ID = 'click-show-text' // 主题注入的脚本标签 id（保持此 id 以读取 data-* 配置）
+  const scriptEl = document.getElementById(SCRIPT_ID) // 通过它读取 data-text、data-fontsize、data-random、data-mobile
+  if (!scriptEl) return
+
+  // Read config from data attributes injected by Butterfly
+  // 从 data-* 属性读取配置（与主题 _config.butterfly.yml->clickShowText 对应）
+  const data = scriptEl.dataset || {}
+  const mobileEnabled = String(data.mobile).toLowerCase() === 'true' // 是否在移动端启用
+  const fontSize = data.fontsize || '15px' // 文字字号
+  const isRandom = String(data.random).toLowerCase() === 'true' // 是否随机颜色
+  const textList = (data.text || '').split(',').map(s => s.trim()).filter(Boolean) // 文本列表
+
+  // Do not enable on mobile unless explicitly allowed
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) // 是否为移动端
+  // 若禁止移动端且当前为移动端，则不启用
+  if (isMobile && !mobileEnabled) return
+  if (!textList.length) return
+
+  let seqIndex = 0 // 顺序轮播时的当前索引
+
+  // Utility: random color (pleasant pastel range)
+  const randColor = () => {
+    const h = Math.floor(Math.random() * 360)
+    const s = 70 + Math.floor(Math.random() * 20) // 70% - 90%
+    const l = 50 + Math.floor(Math.random() * 10) // 50% - 60%
+    return `hsl(${h} ${s}% ${l}%)`
+  }
+
+  const activeParticles = new Set()
+
+  const createParticle = (x, y, text) => {
+    const el = document.createElement('span')
+    el.textContent = text
+    el.style.position = 'fixed'
+    el.style.left = x + 'px'
+    el.style.top = y + 'px'
+    el.style.transform = 'translate(-50%, -50%) translateZ(0)' // 居中锚点 + 开启 GPU 加速
+    el.style.fontSize = fontSize // 使用主题配置的字号
+    el.style.fontWeight = '700'
+    el.style.whiteSpace = 'pre'
+    el.style.pointerEvents = 'none'
+    el.style.userSelect = 'none'
+    el.style.willChange = 'transform, opacity'
+    el.style.zIndex = '99999'
+    el.style.opacity = '1'
+    el.style.color = isRandom ? randColor() : 'var(--theme-color, #49B1F5)' // 随机颜色或主题主色
+
+    document.body.appendChild(el)
+
+    // 设置速度
+    const maxVx = 200 // 水平初速度范围
+    const minVy = 300, maxVy = 600 // 竖直初速度范围（上抛初速度越大，抛得越高）
+    const g = 2000 // 重力加速度
+
+    const vx = (Math.random() * 2 - 1) * maxVx // 水平速度（随机向左或向右）
+    const vy0 = - (minVy + Math.random() * (maxVy - minVy)) // 竖直初速度（负号表示向上）
+    const rot = (Math.random() * 2 - 1) * 30 // 旋转角度（仅为更美观）
+
+    const lifetime = 1.6 // 粒子存活时长（秒）
+    let t = 0
+    let last = performance.now()
+
+    const particle = { el, x, y, vx, vy0, rot, t, last, lifetime }
+    activeParticles.add(particle)
+
+    const step = () => {
+      if (!document.body.contains(el)) {
+        activeParticles.delete(particle)
+        return
+      }
+      const now = performance.now()
+      const dt = Math.min(0.033, (now - last) / 1000) // 限制帧间隔，避免切换标签导致位移突变（最大约 33ms）
+      last = now
+      t += dt
+
+      // Kinematics: y(t) = y0 + vy0 * t + 0.5 * g * t^2
+      const nx = x + vx * t
+      const ny = y + (vy0 * t + 0.5 * g * t * t)
+
+      // Fade out towards end of life
+      const lifeRatio = Math.min(1, t / lifetime)
+      const opacity = 1 - lifeRatio
+
+      el.style.opacity = opacity.toFixed(3)
+      el.style.transform = `translate(-50%, -50%) translate(${nx - x}px, ${ny - y}px) rotate(${rot}deg)`
+
+      // Remove when out of viewport or life ended
+      const vh = window.innerHeight
+      const vw = window.innerWidth
+      const outOfView = ny < -50 || ny > vh + 50 || nx < -50 || nx > vw + 50
+      if (t >= lifetime || opacity  {
+    if (isRandom) return textList[Math.floor(Math.random() * textList.length)]
+    const t = textList[seqIndex]
+    seqIndex = (seqIndex + 1) % textList.length
+    return t
+  }
+
+  // Attach once
+  const onClick = (e) => {
+    // Ignore right/middle clicks
+    if (e.button !== 0) return
+    const text = pickText()
+    createParticle(e.clientX, e.clientY, text)
+  }
+
+  // Debounced resize cleanup (optional)
+  const onVisibility = () => {
+    if (document.hidden) {
+      // Clean up off-screen particles when tab hidden
+      for (const p of activeParticles) {
+        p.el.remove()
+      }
+      activeParticles.clear()
+    }
+  }
+
+  // Listen at capture phase to trigger early and avoid being blocked by other handlers
+  window.addEventListener('click', onClick, true)
+  document.addEventListener('visibilitychange', onVisibility)
+
+  // Provide a small API for future control
+  window.ClickThrowText = {
+    dispose() {
+      window.removeEventListener('click', onClick, true)
+      document.removeEventListener('visibilitychange', onVisibility)
+      for (const p of activeParticles) p.el.remove()
+      activeParticles.clear()
+    }
+  }
+})()]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/custom.js</url>
+    <content><![CDATA[(function () {
+  // 右侧添加五个菜单
+  function addCustomMenus() {
+    const nav = document.querySelector('#nav .menus')
+    if (!nav) return
+
+    const customMenus = [
+      { name: '首页', url: '/', icon: 'fas fa-home' },
+      { name: '归档', url: '/archives/', icon: 'fas fa-archive' },
+      { name: '标签', url: '/tags/', icon: 'fas fa-tags' },
+      { name: '分类', url: '/categories/', icon: 'fas fa-folder-open' },
+      { name: '友链', url: '/link/', icon: 'fas fa-link' }
+    ]
+
+    const menuContainer = document.createElement('div')
+    menuContainer.className = 'custom-right-menus'
+    menuContainer.style.cssText = 'display: flex; gap: 8px; margin-left: 16px;'
+
+    customMenus.forEach(menu => {
+      const menuItem = document.createElement('a')
+      menuItem.href = menu.url
+      menuItem.className = 'menu-item'
+      menuItem.innerHTML = ` ${menu.name}`
+      menuItem.style.cssText = 'text-decoration: none; font-size: 14px; white-space: nowrap;'
+      menuContainer.appendChild(menuItem)
+    })
+
+    nav.appendChild(menuContainer)
+  }
+
+  function onReady(fn) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn)
+    } else {
+      fn()
+    }
+  }
+
+  function applyUI() {
+    // 1) 添加右侧菜单
+    addCustomMenus()
+
+    // 2) 首页标题样式设置
+    const title = document.querySelector('#site-title')
+    if (title) {
+      // 添加艺术字体类
+      title.classList.add('custom-title-art')
+      // 强制让标题容器按内容宽度居中
+      title.style.display = 'block'
+      title.style.marginLeft = 'auto'
+      title.style.marginRight = 'auto'
+      title.style.width = 'max-content'
+      title.style.textAlign = 'center'
+    }
+
+    // 3) 确保左上角站点名称没有任何动画效果（按用户要求）
+    const blogInfo = document.querySelector('#blog-info .site-name') || document.querySelector('.site-name')
+    if (blogInfo) {
+      // 移除所有可能的动画类
+      blogInfo.className = blogInfo.className.replace(/burning-reveal|burning-spark|play/g, '').trim()
+    }
+  }
+  
+
+  onReady(applyUI)
+  // 兼容Butterfly的PJAX（如果启用）
+  window.addEventListener('pjax:complete', applyUI)
+})()
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/fps.js</url>
+    <content><![CDATA[if (window.localStorage.getItem("fpson") == undefined || window.localStorage.getItem("fpson") == "1") {
+    var rAF = function () {
+        return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+            }
+        );
+    }();
+    var frame = 0;
+    var allFrameCount = 0;
+    var lastTime = Date.now();
+    var lastFameTime = Date.now();
+    var loop = function () {
+        var now = Date.now();
+        var fs = (now - lastFameTime);
+        var fps = Math.round(1000 / fs);
+
+        lastFameTime = now;
+        // 不置 0，在动画的开头及结尾记录此值的差值算出 FPS
+        allFrameCount++;
+        frame++;
+
+        if (now > 1000 + lastTime) {
+            var fps = Math.round((frame * 1000) / (now - lastTime));
+            if (fps ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/js/title.js</url>
+    <content><![CDATA[// 动态标题（可配置离开/返回时的多条随机标题与时长）
+(function () {
+  var OriginTitle = document.title;
+  var timer = null;
+  var awayStart = 0;
+  var thresholdMs = 120000; // 超过 120s 进入后续池
+
+  // 前期池（离开至 120s 内，随机展示 1-5）
+  var earlyPool = [
+    { text: '偷偷玩会儿杀戮尖塔', ms: 10000 },
+    { text: '你说得对，但是这就是奎桑提，HP 4700，护甲 329，魔抗 201的英雄。有不可阻挡，有护盾，还能过墙。有控制，甚至冷却时间只有1秒，只要15点蓝。转换姿态时甚至可以刷新W的cd，还有真实伤害。然后，护甲和魔抗提升后还能获得技能加速，缩短Q的cd，还缩短释放时间，然后还有攻击力。W就啊啊啊啊啊啊!!!', ms: 30000 },
+    { text: '正在上厕所，别偷看！！！', ms: 5000 },
+    { text: '连接断开...正在登录...艾尔登法环', ms: 10000 },
+    { text: '页面摸鱼中...请勿打扰...', ms: 10000 },
+    { text: '封印解除！开始吞噬内存！', ms: 10000 },
+    { text: '警告！页面即将自毁...', ms: 10000 },
+    { text: '检测到时空波动，请抓稳！', ms: 10000 }
+  ];
+
+  // 后续池（超过 120s 后，随机展示 6-11）
+  var latePool = [
+    { text: '你是不是外面有别的网站了？TAT', ms: 10000 },
+    { text: '你去哪了？我好想你 QAQ', ms: 10000 },
+    { text: '我不高兴了，你永远的失去我了！！！', ms: 10000 }
+  ];
+
+  // 回来时提示（随机展示一个，3s 后恢复原标题）
+  var backPool = [
+    '啊！你回来啦！（迅速切换回正经脸）',
+    '咳咳，刚刚什么都没发生'
+  ];
+  var backHoldMs = 3000;
+
+  var lastIndex = -1;
+  function pickRandom(pool) {
+    if (!pool || pool.length === 0) return { text: OriginTitle, ms: 5000 };
+    var idx = Math.floor(Math.random() * pool.length);
+    // 避免连续两次相同
+    if (idx === lastIndex && pool.length > 1) idx = (idx + 1) % pool.length;
+    lastIndex = idx;
+    return pool[idx];
+  }
+
+  function scheduleNext() {
+    if (!document.hidden) return; // 可见时不再调度
+    var now = Date.now();
+    var elapsed = now - awayStart; // 本次离开累计时间
+
+    var pool = elapsed < thresholdMs ? earlyPool : latePool;
+    var choice = pickRandom(pool);
+    document.title = choice.text;
+
+    var wait = choice.ms;
+    // 若仍在前期池，且即将跨过阈值，则在阈值点强制切换到后续池
+    if (elapsed < thresholdMs && elapsed + wait > thresholdMs) {
+      wait = thresholdMs - elapsed;
+    }
+
+    clearTimeout(timer);
+    timer = setTimeout(scheduleNext, Math.max(500, wait));
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      // 开始离开
+      awayStart = Date.now();
+      clearTimeout(timer);
+      scheduleNext(); // 立即显示第一条并进入调度
+    } else {
+      // 回到页面
+      clearTimeout(timer);
+      var msg = backPool[Math.floor(Math.random() * backPool.length)];
+      document.title = msg;
+      setTimeout(function () {
+        document.title = OriginTitle;
+      }, backHoldMs);
+    }
+  });
+})();]]></content>
+  </entry>
+  <entry>
     <title>友链</title>
     <url>/link/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -1821,10 +1826,5 @@ a[href*="/github" i] {
     <title></title>
     <url>/live2d-models/xiaomai/xiaomai.model.json</url>
     <content><![CDATA[{"version":"Sample 1.0.0","model":"umaru.moc","textures":["umaru2048/texture_00.png"],"physics":"physics.json","layout":{"width":1.8376,"center_x":-0.0507,"center_y":-0.089},"hit_areas":[{"name":"head","id":"D_REF.PT_HEAD"},{"name":"body","id":"D_REF.PT_BODY"}],"motions":{"idle":[{"file":"mtn/umaru_idle.mtn","fade_in":500,"fade_out":500,"expressions":"F00"}],"start":[{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"26","expressions":"F00"},{"file":"mtn/rita_Live2D_001.mtn","msg_id":"1","expressions":"F00"},{"file":"mtn/rita_Live2D_002.mtn","msg_id":"2","expressions":"F00"},{"file":"mtn/rita_Live2D_003.mtn","msg_id":"3","expressions":"F00"},{"file":"mtn/rita_Live2D_004.mtn","msg_id":"4","expressions":"F00"},{"file":"mtn/rita_Live2D_005.mtn","msg_id":"5","expressions":"F00"},{"file":"mtn/rita_Live2D_006.mtn","msg_id":"6","expressions":"F00"},{"file":"mtn/rita_Live2D_007.mtn","msg_id":"7","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_008.mtn","msg_id":"8","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_009.mtn","msg_id":"9","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_010.mtn","msg_id":"10","expressions":"F00"}],"tap_head":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"tap_body":[{"file":"mtn/rita_Live2D_011.mtn","msg_id":"11","expressions":"F00"},{"file":"mtn/rita_Live2D_012.mtn","msg_id":"12","fade_in":500,"fade_out":1000},{"file":"mtn/rita_Live2D_013.mtn","msg_id":"13","fade_in":500,"fade_out":500},{"file":"mtn/rita_Live2D_014.mtn","msg_id":"14","expressions":"F00"},{"file":"mtn/rita_Live2D_015.mtn","msg_id":"15"},{"file":"mtn/rita_Live2D_016.mtn","msg_id":"16","expressions":"F00"},{"file":"mtn/rita_Live2D_017.mtn","msg_id":"17","expressions":"F00"},{"file":"mtn/rita_Live2D_018.mtn","msg_id":"18","expressions":"F00"},{"file":"mtn/rita_Live2D_019.mtn","msg_id":"19","expressions":"F00"},{"file":"mtn/rita_Live2D_020.mtn","msg_id":"20","fade_in":500,"fade_out":1000}],"shake":[{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"random":[{"file":"mtn/rita_Live2D_027.mtn","msg_id":"28","expressions":"F00"},{"file":"mtn/rita_Live2D_028.mtn","msg_id":"29","expressions":"F00"},{"file":"mtn/rita_Live2D_029.mtn","msg_id":"30","expressions":"F00"},{"file":"mtn/rita_Live2D_030.mtn","msg_id":"31","expressions":"F00"},{"file":"mtn/rita_Live2D_031.mtn","msg_id":"32","expressions":"F00"},{"file":"mtn/rita_Live2D_032.mtn","msg_id":"33","expressions":"F00"},{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"35","expressions":"F00"},{"file":"mtn/rita_Live2D_034.mtn","msg_id":"36","expressions":"F00"},{"file":"mtn/rita_Live2D_021.mtn","msg_id":"21"},{"file":"mtn/rita_Live2D_022.mtn","msg_id":"22"},{"file":"mtn/rita_Live2D_023.mtn","msg_id":"23"},{"file":"mtn/rita_Live2D_024.mtn","msg_id":"24"},{"file":"mtn/rita_Live2D_025.mtn","msg_id":"25"},{"file":"mtn/rita_Live2D_026.mtn","msg_id":"27","expressions":"F00"}],"new_msg":[{"file":"mtn/rita_Live2D_033.mtn","msg_id":"34","expressions":"F00"}]}}]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
