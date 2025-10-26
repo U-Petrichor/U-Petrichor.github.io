@@ -140,13 +140,6 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/tags/DDNet/</loc>
-    <lastmod>2025-10-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://u-petrichor.github.io/tags/Minecraft/</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -155,6 +148,13 @@
   
   <url>
     <loc>https://u-petrichor.github.io/tags/SharedInventoryMod/</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://u-petrichor.github.io/tags/DDNet/</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -226,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Else/</loc>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/</loc>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Else/</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Else/DDNet/</loc>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/SharedInventoryMod/</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/SharedInventoryMod/</loc>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Else/DDNet/</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
