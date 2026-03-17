@@ -1,0 +1,56 @@
+/* 专用于 Butterfly 的 waline_css 接口覆盖：仅保留 GitHub 登录入口 */
+/* 说明：本文件通过主题 plugins.yml -> waline_css 配置加载，尽量只作用于 Waline 相关区域 */
+
+/* 优先在 Waline 容器与登录弹窗作用域下隐藏非 GitHub 提供商 */
+:where(#waline, .wl-modal, .wl-login, .wl-social) [data-provider]:not([data-provider="github"]) {
+  display: none !important;
+}
+
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/weibo" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/twitter" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/facebook" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/google" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/qq" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/gitee" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/gitlab" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/discord" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/linkedin" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/wechat" i],
+:where(#waline, .wl-modal, .wl-login, .wl-social) a[href*="/microsoft" i] {
+  display: none !important;
+}
+
+/* 兜底：若弹窗挂载到 body，仍隐藏非 GitHub 提供商（谨慎作用于 data-provider/典型路径）*/
+[data-provider="weibo"],
+[data-provider="twitter"],
+[data-provider="facebook"],
+[data-provider="google"],
+[data-provider="qq"],
+[data-provider="gitee"],
+[data-provider="gitlab"],
+[data-provider="discord"],
+[data-provider="linkedin"],
+[data-provider="wechat"],
+[data-provider="microsoft"],
+
+a[href*="/weibo" i],
+a[href*="/twitter" i],
+a[href*="/facebook" i],
+a[href*="/google" i],
+a[href*="/qq" i],
+a[href*="/gitee" i],
+a[href*="/gitlab" i],
+a[href*="/discord" i],
+a[href*="/linkedin" i],
+a[href*="/wechat" i],
+a[href*="/microsoft" i] {
+  display: none !important;
+}
+
+/* 明确允许 GitHub 入口显示（即使主题或其它样式做了覆盖）*/
+[data-provider="github"],
+a[href*="/github" i] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
