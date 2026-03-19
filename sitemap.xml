@@ -153,6 +153,13 @@
   </url>
   
   <url>
+    <loc>https://u-petrichor.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://u-petrichor.github.io/tags/Unity3D/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -188,14 +195,14 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://u-petrichor.github.io/tags/Game/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/tags/Game/</loc>
+    <loc>https://u-petrichor.github.io/tags/DDNet/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -210,13 +217,6 @@
   
   <url>
     <loc>https://u-petrichor.github.io/tags/SharedInventoryMod/</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://u-petrichor.github.io/tags/DDNet/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -260,13 +260,6 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/Game/</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://u-petrichor.github.io/categories/%E6%95%99%E7%A8%8B/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -281,7 +274,7 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/Game/Demo/</loc>
+    <loc>https://u-petrichor.github.io/categories/Game/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -295,14 +288,14 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/Lesson/</loc>
+    <loc>https://u-petrichor.github.io/categories/Game/Demo/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/</loc>
+    <loc>https://u-petrichor.github.io/categories/Lesson/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -316,6 +309,13 @@
   </url>
   
   <url>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://u-petrichor.github.io/categories/Lesson/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -323,14 +323,14 @@
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/SharedInventoryMod/</loc>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Else/DDNet/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Else/DDNet/</loc>
+    <loc>https://u-petrichor.github.io/categories/%E6%B8%B8%E6%88%8F/Minecraft/SharedInventoryMod/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
