@@ -1,3 +1,4 @@
+https://u-petrichor.github.io/2026/03/26/Game/Demo/Day6/
 https://u-petrichor.github.io/2026/03/25/Game/Demo/Day5/
 https://u-petrichor.github.io/2026/03/23/Game/Demo/Day4/
 https://u-petrichor.github.io/2026/03/20/Game/Demo/Day3/
@@ -7,4 +8,3 @@ https://u-petrichor.github.io/2026/03/18/Game/Demo/Day1/
 https://u-petrichor.github.io/2025/10/21/Lesson/%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/%E6%90%AD%E5%BB%BATor%E9%9A%90%E8%97%8F%E6%9C%8D%E5%8A%A1/
 https://u-petrichor.github.io/2025/09/20/tutorials/%E7%94%A8163%E9%82%AE%E7%AE%B1%E8%AE%BE%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%E8%87%AA%E5%8A%A8%E9%80%9A%E7%9F%A5/
 https://u-petrichor.github.io/2025/09/18/Game/Else/%E5%85%8D%E8%B4%B9%E5%BC%80DDNet%E6%9C%8D%E5%8A%A1%E5%99%A8/
-https://u-petrichor.github.io/2025/09/15/Game/Minecraft/SharedInventoryMod/
